@@ -1,0 +1,15 @@
+// general styles
+@import 'general/reset';
+@import 'general/colors';
+@import 'general/globals';
+@import 'general/base';
+@import 'general/fonts';
+@import 'general/mixins';
+
+// libs
+@import 'libs/swiper';
+
+// component styles
+@import './components/header.scss';
+@import './components/buttons.scss';
+@import './components/banner.scss';

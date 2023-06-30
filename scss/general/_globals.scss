@@ -1,0 +1,50 @@
+// fonts
+$fontFamily1: 'Raleway', sans-serif;
+$fontFamily2: 'Gotu', sans-serif;
+
+$transition: all 0.3s ease;
+$transition_2: all 0.6s ease;
+$translateY: -40px;
+$translateY-2: -20px;
+
+* {
+	box-sizing: border-box;
+	outline: none !important;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+html,
+body {
+	font-family: $fontFamily1;
+	font-weight: 400;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+// svg
+svg {
+	text-decoration: none;
+	transition: $transition;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	// overflow: hidden;
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
