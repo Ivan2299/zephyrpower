@@ -5,6 +5,7 @@
 @import 'general/base';
 @import 'general/fonts';
 @import 'general/mixins';
+@import 'general/ui';
 
 // libs
 @import 'libs/swiper';
@@ -13,3 +14,4 @@
 @import './components/header.scss';
 @import './components/buttons.scss';
 @import './components/banner.scss';
+@import './components/new.scss';
