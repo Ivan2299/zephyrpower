@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		// // grabCursor: true,
 		// // slideToClickedSlice: true,
 		slidesPerGroup: 1,
-		// // autoHeight: true,
-		// speed: 800,
+		// autoHeight: true,
+		speed: 800,
 		// effect: 'slide',
 		// // autoplay: {
 		// 	delay: 1000,
