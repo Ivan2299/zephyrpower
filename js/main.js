@@ -103,10 +103,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let slider3 = new Swiper(sliderNew, {
 		direction: 'horizontal',
-		// // paralax: true,
-		// observer: true,
-		// observeParents: true,
-		// watchOverflow: true,
+		// paralax: true,
+		observer: true,
+		observeParents: true,
+		watchOverflow: true,
 		centeredSlides: true,
 		slidesPerView: 3,
 		// spaceBetween: 50,
@@ -115,10 +115,21 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerGroup: 1,
 		// autoHeight: true,
 		speed: 800,
-		// effect: 'slide',
-		// // autoplay: {
-		// 	delay: 1000,
+		effect: {
+			slide: {
+				// Slide effect options
+				shadow: true, // Add shadow to the slides
+				fadeEffect: {
+					crossFade: true, // Cross-fade transition effect
+				},
+			},
+		},
+
+		// autoplay: {
+		// 	delay: 4000, // Delay between slide transitions (in milliseconds)
+		// 	disableOnInteraction: false, // Autoplay continues even when the user interacts with the slider
 		// },
+
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
