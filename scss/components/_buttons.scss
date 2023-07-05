@@ -5,6 +5,8 @@
 	display: inline-flex;
 	font-size: 18px;
 	transition: $transition;
+	position: relative;
+	z-index: 1;
 
 	&-accent {
 		background-color: $mainLightPink;
