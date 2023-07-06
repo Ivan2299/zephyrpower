@@ -3,7 +3,8 @@
 	&-slider {
 		max-width: 1400px;
 		width: 100%;
-		padding: 40px 45px;
+		padding: 50px 45px 0;
+		padding-bottom: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
 	}
 	.swiper-slide {
 	}
@@ -25,7 +26,6 @@
 	}
 
 	// .bestsellers__item
-
 	&__item {
 		position: relative;
 		padding: 20px;
