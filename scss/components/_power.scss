@@ -1,12 +1,13 @@
 .power {
 	position: relative;
-	margin-bottom: clamp(3.125rem, 2.216rem + 4.55vw, 5.625rem);
+	padding-bottom: clamp(3.125rem, 2.216rem + 4.55vw, 5.625rem);
 	.power-clouds {
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
+		pointer-events: none;
 	}
 	.power-cloud {
 		position: absolute;
@@ -61,7 +62,7 @@
 
 		&-box {
 			position: absolute;
-			top: 25%;
+			top: 20%;
 			left: 22.5%;
 			width: calc(600px / 1120px * 100%);
 			max-height: 500px;
@@ -96,12 +97,17 @@
 				justify-content: center;
 				column-gap: clamp(1.875rem, 1.42rem + 2.27vw, 3.125rem);
 				height: 90%;
+				img {
+					transition: $transition;
+				}
 			}
 
-			.power-slider-instagram {
-			}
+			.power-slider-instagram,
 			.swiper-button-next,
 			.swiper-button-prev {
+				:hover {
+					transform: scale(1.32);
+				}
 			}
 		}
 		.swiper-slide {

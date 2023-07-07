@@ -1,0 +1,123 @@
+.hi {
+	position: relative;
+	padding-bottom: 220px;
+	margin-bottom: clamp(1.25rem, 0.842rem + 2.04vw, 2.5rem);
+
+	.hi-clouds {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+	}
+	.hi-cloud {
+	}
+	.hi-cloud-1 {
+	}
+
+	&__container {
+		max-width: 1310px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	// .hi__inner
+
+	&__inner {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		// column-gap: clamp(1.25rem, -0.179rem + 7.14vw, 5.625rem);
+		column-gap: 90px;
+	}
+
+	// .hi__info
+
+	&__info {
+		max-width: 650px;
+	}
+
+	// .hi__title
+
+	&__title {
+		margin-bottom: clamp(0.938rem, 0.427rem + 2.55vw, 2.5rem);
+	}
+
+	// .hi__info-block
+
+	&__info-block {
+		&:not(:last-child) {
+			margin-bottom: clamp(1.875rem, 1.263rem + 3.06vw, 3.75rem);
+		}
+	}
+
+	// .hi__info-title
+
+	&__info-title {
+		color: black;
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: clamp(0.625rem, 0.421rem + 1.02vw, 1.25rem);
+	}
+
+	// .hi__info-text
+
+	&__info-text {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 18px;
+		color: $mainGrey;
+
+		span {
+			color: $mainGrey;
+			font-weight: 600;
+			font-style: italic;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	// .hi__image-block
+	&__image-wrapper {
+		flex: 0 0 calc(530px / 1310px * 100%);
+	}
+	&__image-block {
+		position: relative;
+		margin: 0 60px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -5%;
+			left: 50%;
+			width: 130%;
+			height: 70%;
+			border-radius: 50px;
+			background: rgba(217, 217, 217, 0.01);
+			box-shadow: 0px -80px 65px 0px rgba(212, 212, 212, 0.2) inset,
+				0px 1px 40px 0px rgba(226, 226, 226, 0.2) inset, 0px 4px 16px 0px rgba(233, 233, 233, 0.2),
+				0px 16px 32px 0px rgba(0, 0, 0, 0.17);
+			-webkit-backdrop-filter: blur(25px);
+			backdrop-filter: blur(25px);
+			z-index: -1;
+			transform: translate(-50%);
+		}
+	}
+
+	// .hi__image
+
+	&__image-ibg {
+		margin-bottom: clamp(0.625rem, 0.421rem + 1.02vw, 1.25rem);
+		padding-bottom: 147%;
+		border-radius: 30px;
+		img {
+			border-radius: 30px;
+		}
+	}
+
+	// .hi__image-name
+
+	&__image-name {
+	}
+}

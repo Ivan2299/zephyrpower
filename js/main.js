@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('#mySelect').select2();
 	});
 
-	// <sliders>
+	// sliders
 	const verrticalSliderBanner = document.querySelector('.vertical-slider');
 	const circleSlider = document.querySelector('.circle-slider');
 	const sliderNew = document.querySelector('.new-slider');
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		loop: true,
 		slidesPerView: 3,
 		initialSlide: 1,
-		spaceBetween: 60,	
+		spaceBetween: 60,
 		// // // grabCursor: true,
 		// slideToClickedSlice: false,
 		// slidesPerGroup: 1,
