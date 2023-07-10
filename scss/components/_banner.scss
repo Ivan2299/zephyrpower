@@ -33,11 +33,42 @@
 	}
 
 	.circle-slider {
-		max-width: 35%;
+		position: relative;
+		max-width: 30%;
 		max-height: 430px;
 		width: 100%;
 		overflow: hidden;
-		background-color: bisque;
+		// background-color: rgb(247 239 229);
+		.circle-slider-clouds {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+			pointer-events: none;
+		}
+		.circle-slider-cloud-1 {
+			position: absolute;
+			bottom: 10%;
+			left: 0;
+		}
+		.circle-slider-cloud-2 {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		.circle-slide-figure {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 257px;
+			height: 405px;
+			flex-shrink: 0;
+			border-radius: 290px 290px 0px 290px;
+			border: 1px solid #3f8f8d;
+		}
 
 		.swiper-wrapper {
 		}
@@ -47,10 +78,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			img {
-			}
-			&-active {
-			}
+		}
+		.swiper-slide-active {
+			// background-color: bisque;
 		}
 	}
 }

@@ -71,21 +71,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		centeredSlides: true,
 		slidesPerView: 3,
 		loop: true,
-		// spaceBetween: -70,
-		// grabCursor: true,
-		// slideToClickedSlice: true,
+		grabCursor: true,
+		slideToClickedSlice: true,
 		slidesPerGroup: 1,
-		// // autoHeight: true,
-		// speed: 800,
-		// effect: 'slide',
-		// // autoplay: {
-		// 	delay: 1000,
-		// },
-
-		// keyboard: {
-		// 	enabled: true,
-		// 	pageUpDown: true,
-		// },
+		speed: 800,
+		effect: 'slide',
 
 		// Брейкпоинты
 		// breakpoints: {
