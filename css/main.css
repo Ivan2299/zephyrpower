@@ -437,6 +437,23 @@ svg {
   display: none !important;
 }
 
+.two__sections-wrapper {
+  position: relative;
+}
+.two__sections-wrapper .two___sections-clouds > div {
+  position: absolute;
+}
+.two__sections-wrapper .cloud-1 {
+  position: absolute;
+  right: 0;
+  top: 3%;
+}
+.two__sections-wrapper .cloud-2 {
+  position: absolute;
+  left: 0;
+  top: 10%;
+}
+
 @keyframes activateSlide {
   0% {
     opacity: 0;
@@ -1606,7 +1623,7 @@ swiper-container .swiper-notification {
   max-width: 1400px;
   width: 100%;
   padding: 50px 45px 0;
-  padding-bottom: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
+  padding-bottom: 70px;
 }
 .bestsellers__item-info {
   display: flex;
@@ -1821,7 +1838,7 @@ swiper-container .swiper-notification {
 .power-slider-box .power-slider-instagram :hover,
 .power-slider-box .swiper-button-next :hover,
 .power-slider-box .swiper-button-prev :hover {
-  transform: scale(1.32);
+  transform: scale(1.12);
 }
 .power-slider .swiper-slide {
   transition: all 0.3s ease;
@@ -1847,11 +1864,17 @@ swiper-container .swiper-notification {
   padding-bottom: 220px;
   margin-bottom: clamp(1.25rem, 0.842rem + 2.04vw, 2.5rem);
 }
-.hi .hi-clouds {
+.hi .hi-cloud {
   position: absolute;
+  z-index: -1;
+}
+.hi .hi-cloud-1 {
   bottom: 0;
   right: 0;
-  z-index: -1;
+}
+.hi .hi-cloud-2 {
+  top: -60%;
+  right: 0;
 }
 .hi__container {
   max-width: 1310px;
@@ -1930,7 +1953,7 @@ swiper-container .swiper-notification {
 }
 .form-wrapper .form-cloud {
   position: absolute;
-  bottom: 0;
+  bottom: -130px;
   left: 0;
   z-index: -1;
   pointer-events: none;

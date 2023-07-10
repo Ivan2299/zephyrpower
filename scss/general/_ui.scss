@@ -15,3 +15,20 @@
 .none {
 	display: none !important;
 }
+
+.two__sections-wrapper {
+	position: relative;
+	.two___sections-clouds > div {
+		position: absolute;
+	}
+	.cloud-1 {
+		position: absolute;
+		right: 0;
+		top: 3%;
+	}
+	.cloud-2 {
+		position: absolute;
+		left: 0;
+		top: 10%;
+	}
+}

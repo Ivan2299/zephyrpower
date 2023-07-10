@@ -3,15 +3,17 @@
 	padding-bottom: 220px;
 	margin-bottom: clamp(1.25rem, 0.842rem + 2.04vw, 2.5rem);
 
-	.hi-clouds {
+	.hi-cloud {
 		position: absolute;
-		bottom: 0;
-		right: 0;
 		z-index: -1;
 	}
-	.hi-cloud {
-	}
 	.hi-cloud-1 {
+		bottom: 0;
+		right: 0;
+	}
+	.hi-cloud-2 {
+		top: -60%;
+		right: 0;
 	}
 
 	&__container {
