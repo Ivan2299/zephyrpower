@@ -4,7 +4,7 @@
 	// height: calc(100vh - 145px);
 
 	.vertical-slider {
-		max-width: 843px;
+		max-width: 60%;
 		width: 100%;
 		max-height: 423px;
 		height: 100%;
@@ -68,6 +68,22 @@
 			flex-shrink: 0;
 			border-radius: 290px 290px 0px 290px;
 			border: 1px solid #3f8f8d;
+			z-index: -1;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 30px;
+				bottom: 0;
+				right: -40px;
+				border-radius: 119.5px;
+				background: radial-gradient(
+					584.6% 104.64% at 50% 4.85%,
+					rgba(255, 211, 222, 0.4) 0%,
+					rgba(255, 230, 236, 0.15) 70.96%
+				);
+				filter: blur(7.5px);
+			}
 		}
 
 		.swiper-wrapper {
@@ -78,6 +94,8 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			filter: blur(4.5px);
+			transition: $transition;
 			img {
 				display: flex;
 				object-fit: cover;
@@ -87,6 +105,7 @@
 			}
 		}
 		.swiper-slide-active {
+			filter: blur(0px);
 			img {
 				transform: scale(1.25);
 			}

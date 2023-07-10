@@ -16,28 +16,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let slider1 = new Swiper(verrticalSliderBanner, {
 		direction: 'vertical',
-		// // paralax: true,
-		// observer: true,
-		// observeParents: true,
-		grabCursor: true,
-		watchOverflow: true,
+		allowSlideNext: false,
+		allowSlidePrev: false,
+		allowTouchMove: false,
+		mousewheel: false,
+		// grabCursor: true,
+		// watchOverflow: true,
 		centeredSlides: true,
 		slidesPerView: 2,
 		loop: true,
 		spaceBetween: -70,
 		// grabCursor: true,
 		// slideToClickedSlice: true,
-		slidesPerGroup: 1,
+		slidesPerGroup: 1.1,
 		// autoHeight: true,
 		speed: 800,
 		effect: 'slide',
+
 		// autoplay: {
 		// 	delay: 1000,
-		// },
-
-		// keyboard: {
-		// 	enabled: true,
-		// 	pageUpDown: true,
 		// },
 
 		// Брейкпоинты
@@ -68,6 +65,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		// observer: true,
 		// observeParents: true,
 		// watchOverflow: true,
+		// allowSlideNext: false,
+		// allowSlidePrev: false,
+		// allowTouchMove: false,
+		// mousewheel: false,
 		centeredSlides: true,
 		slidesPerView: 3,
 		loop: true,
@@ -76,6 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerGroup: 1,
 		speed: 800,
 		effect: 'slide',
+		autoplay: {
+			delay: 3000,
+			reverseDirection: true,
+		},
 
 		// Брейкпоинты
 		// breakpoints: {
@@ -266,4 +271,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		// 	},
 		// },
 	});
+	// slider1.controller.control = slider2;
+	slider2.controller.control = slider1;
 });
