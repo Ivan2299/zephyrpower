@@ -1493,7 +1493,7 @@ swiper-container .swiper-notification {
 }
 .hero-section .circle-slider {
   position: relative;
-  max-width: 30%;
+  max-width: 40%;
   max-height: 430px;
   width: 100%;
   overflow: hidden;
@@ -1533,6 +1533,18 @@ swiper-container .swiper-notification {
   align-items: center;
   justify-content: center;
 }
+.hero-section .circle-slider .swiper-slide img {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.hero-section .circle-slider .swiper-slide-active img {
+  transform: scale(1.25);
+}
+
 .new {
   margin-top: clamp(2.5rem, 1.295rem + 6.02vw, 5.625rem);
 }
