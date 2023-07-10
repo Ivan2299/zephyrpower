@@ -3,11 +3,12 @@
 	&-slider {
 		max-width: 1400px;
 		width: 100%;
-		padding: 50px 45px 0;
+		padding: 50px 30px 0;
 		// padding-bottom: clamp(3.125rem, 1.989rem + 5.68vw, 6.25rem);
 		padding-bottom: 70px;
 	}
 	.swiper-slide {
+		padding: 0 30px;
 	}
 
 	&__item-info {
@@ -146,9 +147,17 @@
 	.swiper-button-prev::after {
 		display: none;
 	}
+
+	// .swiper-button-next {
+	// 	right: 4%;
+	// }
+	// .swiper-button-prev {
+	// 	left: 4%;
+	// }
 	.swiper-button-next,
 	.swiper-button-prev {
 		top: 20%;
+
 		img {
 			display: flex;
 			align-items: center;
