@@ -102,12 +102,13 @@
 				align-items: center;
 				justify-content: center;
 				transition: $transition;
+				// transform: scale(0.8);
 			}
 		}
 		.swiper-slide-active {
 			filter: blur(0px);
 			img {
-				transform: scale(1.25);
+				transform: scale(1.8);
 			}
 		}
 	}

@@ -96,15 +96,18 @@
 
 	&__item-work-hours {
 		span {
+			font-family: $fontFamily1;
 			font-size: 16px;
 			color: $black;
 			font-weight: 500;
 		}
+		font-family: $fontFamily2;
 	}
 
 	// .footer__item-tel
 
 	&__item-tel {
+		font-family: $fontFamily2;
 	}
 
 	// .footer__item-socials

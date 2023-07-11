@@ -2,6 +2,12 @@
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Loaded');
 
+	// searchInput
+	const searchId = document.querySelector('.header__search');
+	searchId.addEventListener('click', function (e) {
+		document.body.classList.add('search-open');
+	});
+
 	// select
 	$(document).ready(function () {
 		$('#mySelect').select2();
@@ -20,15 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		allowSlidePrev: false,
 		allowTouchMove: false,
 		mousewheel: false,
-		// grabCursor: true,
-		// watchOverflow: true,
 		centeredSlides: true,
-		slidesPerView: 2,
+		slidesPerView: 3,
 		loop: true,
-		spaceBetween: -70,
+		spaceBetween: -200,
 		// grabCursor: true,
 		// slideToClickedSlice: true,
-		slidesPerGroup: 1.1,
+		slidesPerGroup: 1,
 		// autoHeight: true,
 		speed: 800,
 		effect: 'slide',

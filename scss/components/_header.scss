@@ -97,7 +97,7 @@
 	// .header__submenu-block
 
 	&__submenu-block {
-		z-index: 2;
+		z-index: 3;
 		position: absolute;
 		top: 100%;
 		left: -100px;
@@ -181,25 +181,23 @@
 	// .header__search
 
 	&__search {
+		position: relative;
 		display: flex;
 		align-items: flex-start;
 		gap: 10px;
 		border: none;
 		padding: 0;
 		transition: $transition_2;
-		// .header__search-input
 
+		// .header__search-input
 		&-input {
 			border-bottom: 1px solid $black;
 			width: 100px;
 			padding: 2px 5px;
 			transition: $transition_2;
-
-			&:focus {
-				width: 200px;
-			}
 		}
 	}
+
 	// .header__search-button
 
 	&__search-button {
