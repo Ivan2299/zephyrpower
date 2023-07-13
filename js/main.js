@@ -1,4 +1,5 @@
 'use strict';
+
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Loaded');
 
@@ -340,4 +341,5 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	// slider1.controller.control = slider2;
 	slider2.controller.control = slider1;
+	tabs();
 });
