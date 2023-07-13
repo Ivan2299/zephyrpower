@@ -2412,6 +2412,7 @@ swiper-container .swiper-notification {
 }
 
 .carttabs {
+  margin-bottom: clamp(2.5rem, 1.49rem + 5.05vw, 5.625rem);
   /* Reset Bootstrap tabs styles */
 }
 .carttabs__inner {
@@ -2442,9 +2443,11 @@ swiper-container .swiper-notification {
   flex: 0 1 50%;
 }
 .carttabs__tabs-image-1 {
+  border-radius: 140px 0px 0px 0px;
   z-index: 1;
 }
 .carttabs__tabs-image-2 {
+  border-radius: 0px 140.5px 0px 0px;
   align-self: flex-end;
   z-index: 1;
 }
@@ -2598,6 +2601,7 @@ swiper-container .swiper-notification {
   background-color: transparent;
   border: none;
 }
+
 .breadcrumps__list {
   display: flex;
   align-items: center;

@@ -1,4 +1,5 @@
 .carttabs {
+	margin-bottom: clamp(2.5rem, 1.49rem + 5.05vw, 5.625rem);
 	// .carttabs__inner
 
 	&__inner {
@@ -37,10 +38,12 @@
 	&__tabs-image {
 		flex: 0 1 50%;
 		&-1 {
+			border-radius: 140px 0px 0px 0px;
 			z-index: 1;
 		}
 
 		&-2 {
+			border-radius: 0px 140.5px 0px 0px;
 			align-self: flex-end;
 			z-index: 1;
 		}
@@ -250,9 +253,6 @@
 		padding: 0;
 		background-color: transparent;
 		border: none;
-	}
-
-	.tab-content .tab-pane.fade {
 	}
 }
 
