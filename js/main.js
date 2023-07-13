@@ -341,5 +341,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	// slider1.controller.control = slider2;
 	slider2.controller.control = slider1;
-	tabs();
+
+	const cartTabs = new bootstrap.Tab(document.getElementById('carttabs'));
+	myTabs.show();
+
+	const cartTabs2 = new bootstrap.Tab(document.getElementById('carttabs2'));
+	myTabs.show();
 });
