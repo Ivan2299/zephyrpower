@@ -310,8 +310,20 @@
 }
 
 .carttabs2 {
+	position: relative;
 	margin-bottom: clamp(3.125rem, 1.388rem + 8.69vw, 8.5rem); //136-40
 	// .carttabs2__content
+
+	&__bg-left {
+		position: absolute;
+		left: 0;
+		top: -30%;
+	}
+	&__bg-right {
+		position: absolute;
+		right: 0;
+		top: -200%;
+	}
 
 	&__wrapper {
 		display: flex;

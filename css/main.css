@@ -2637,7 +2637,18 @@ swiper-container .swiper-notification {
 }
 
 .carttabs2 {
+  position: relative;
   margin-bottom: clamp(3.125rem, 1.388rem + 8.69vw, 8.5rem);
+}
+.carttabs2__bg-left {
+  position: absolute;
+  left: 0;
+  top: -30%;
+}
+.carttabs2__bg-right {
+  position: absolute;
+  right: 0;
+  top: -200%;
 }
 .carttabs2__wrapper {
   display: flex;
