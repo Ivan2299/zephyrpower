@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	// select
-	// $(document).ready(function () {
-	// 	$('#mySelect').select2();
-	// });
+	$(document).ready(function () {
+		$('#mySelect').select2();
+	});
 
 	// sliders
 	const verrticalSliderBanner = document.querySelector('.vertical-slider');
