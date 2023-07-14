@@ -193,8 +193,9 @@
 							</div>
 							<!-- tabs -->
 							<div class="carttabs__tabs">
-								<div class="tab-content" id="carttabsContent">
-									<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+								<div class="tab-content" id="imagesTabsContent">
+									<div class="tab-pane fade show active" id="imagestab1" role="tabpanel"
+										aria-labelledby="imagestab1-tab">
 										<div class="carttabs__tabs-images">
 											<div class="carttabs__tabs-clouds">
 												<img class="carttabs__tabs-cloud carttabs__tabs-cloud-1"
@@ -211,7 +212,7 @@
 												src="./img/images/carttabs/image-01.png" alt="tab1" />
 										</div>
 									</div>
-									<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+									<div class="tab-pane fade" id="imagestab2" role="tabpanel" aria-labelledby="imagestab2-tab">
 										<div class="carttabs__tabs-images">
 											<div class="carttabs__tabs-clouds">
 												<img class="carttabs__tabs-cloud carttabs__tabs-cloud-1"
@@ -228,7 +229,7 @@
 												src="./img/images/bestsellers/01.jpg" alt="tab1" />
 										</div>
 									</div>
-									<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+									<div class="tab-pane fade" id="imagestab3" role="tabpanel" aria-labelledby="imagestab3-tab">
 										<div class="carttabs__tabs-images">
 											<div class="carttabs__tabs-clouds">
 												<img class="carttabs__tabs-cloud carttabs__tabs-cloud-1"
@@ -245,7 +246,7 @@
 												src="./img/images/bestsellers/02.jpg" alt="tab1" />
 										</div>
 									</div>
-									<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+									<div class="tab-pane fade" id="imagestab4" role="tabpanel" aria-labelledby="imagestab4-tab">
 										<div class="carttabs__tabs-images">
 											<div class="carttabs__tabs-clouds">
 												<img class="carttabs__tabs-cloud carttabs__tabs-cloud-1"
@@ -263,24 +264,24 @@
 										</div>
 									</div>
 								</div>
-								<ul class="carttabs__tabs-titles nav nav-tabs" id="carttabs" role="tablist">
+								<ul class="carttabs__tabs-titles nav nav-tabs" id="imagesTabs" role="tablist">
 									<li class="nav-item">
-										<a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab"
-											aria-controls="tab1" aria-selected="true"><img
+										<a class="nav-link active" id="imagestab1-tab" data-bs-toggle="tab" href="#imagestab1"
+											role="tab" aria-controls="tab1" aria-selected="true"><img
 												src="img/images/carttabs/image-breadcramp-01.jpg" alt="image"></a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab"
+										<a class="nav-link" id="imagestab2-tab" data-bs-toggle="tab" href="#imagestab2" role="tab"
 											aria-controls="tab2" aria-selected="false"><img
 												src="img/images/carttabs/image-breadcramp-02.jpg" alt="image"></a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab"
+										<a class="nav-link" id="imagestab3-tab" data-bs-toggle="tab" href="#imagestab3" role="tab"
 											aria-controls="tab3" aria-selected="false"><img
 												src="img/images/carttabs/image-breadcramp-03.jpg" alt="image"></a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" id="tab4-tab" data-bs-toggle="tab" href="#tab4" role="tab"
+										<a class="nav-link" id="imagestab4-tab" data-bs-toggle="tab" href="#imagestab4" role="tab"
 											aria-controls="tab4" aria-selected="false"><img
 												src="img/images/carttabs/image-breadcramp-04.jpg" alt="image"></a>
 									</li>
@@ -340,54 +341,74 @@
 				<img class="carttabs2__bg-right" src="img/images/carttabs/carttabs-bg-right.png" alt="imagecloud">
 				<div class="container">
 					<div class="carttabs2__wrapper">
-
 						<div class="carttabs2__tabs">
-							<ul class="carttabs2__tabs-titles" id="carttabs2" role="tablist">
+							<ul class="carttabs2__tabs-titles" id="descriptionTabs" role="tablist">
 								<li class="carttabs2-item">
-									<a class="carttabs2-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab"
-										aria-controls="tab1" aria-selected="true">Опис</a>
+									<a class="carttabs2-link active" id="descriptionTabs1-tab" data-bs-toggle="tab"
+										href="#descriptionTabs1" role="tab" aria-controls="descriptionTabs1"
+										aria-selected="true">Опис</a>
 								</li>
 								<li class="carttabs2-item">
-									<a class="carttabs2-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab"
-										aria-controls="tab2" aria-selected="false">Характеристики</a>
+									<a class="carttabs2-link" id="descriptionTabs2-tab" data-bs-toggle="tab"
+										href="#descriptionTabs2" role="tab" aria-controls="descriptionTabs2"
+										aria-selected="false">Характеристики</a>
 								</li>
 								<li class="carttabs2-item">
-									<a class="carttabs2-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab"
-										aria-controls="tab3" aria-selected="false">Склад</a>
+									<a class="carttabs2-link" id="descriptionTabs3-tab" data-bs-toggle="tab"
+										href="#descriptionTabs3" role="tab" aria-controls="descriptionTabs3"
+										aria-selected="false">Склад</a>
 								</li>
-
 							</ul>
 
-							<div class="carttabs2__body" id="carttabs2Content">
-								<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+							<div class="carttabs2__body tab-content" id="descriptionTabsContent">
+								<div class="tab-pane fade show active" id="descriptionTabs1" role="tabpanel"
+									aria-labelledby="descriptionTabs1-tab">
 									<h3 class="carttabs2__body-title">Тільки що промокнула помада, без плям!</h3>
 									<p class="carttabs2__body-text">Нарощувана, прозоро-матова помада з ідеально розсіяним
-										рум'янцем кольору. Натхненний трюком візажиста з промоканням
-										помади після нанесення, один рух ковзає по гладкому і рівному (дзеркало не потрібне!)
-										для
-										нарощування, м'якого краю,
-										щойно поцілованого вигляду.</p>
+										рум'янцем кольору.
+										Натхненний трюком візажиста з промоканням помади після нанесення, один рух ковзає по
+										гладкому і рівному
+										(дзеркало не потрібне!) для нарощування, м'якого краю, щойно поцілованого вигляду.</p>
 									<p class="carttabs2__body-text text-cursive"><span>Подаруйте своїм природним губам щось
-											додаткове</span>, з відтінками солоду, пуху, торта та лева, або скористайтеся
-										яскравими
-										Punch, Zip, Jam та Crush, щоб дійсно привернути увагу.</p>
+											додаткове</span>, з
+										відтінками солоду, пуху, торта та лева, або скористайтеся яскравими Punch, Zip, Jam та
+										Crush, щоб дійсно
+										привернути увагу.</p>
 								</div>
-								<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-									2
+								<div class="tab-pane fade" id="descriptionTabs2" role="tabpanel"
+									aria-labelledby="descriptionTabs2-tab">
+									<h3 class="carttabs2__body-title">Тільки що промокнула помада, без плям!</h3>
+									<p class="carttabs2__body-text">Нарощувана, прозоро-матова помада з ідеально розсіяним
+										рум'янцем кольору.
+										Натхненний трюком візажиста з промоканням помади після нанесення, один рух ковзає по
+										гладкому і рівному
+										(дзеркало не потрібне!) для нарощування, м'якого краю, щойно поцілованого вигляду.</p>
+									<p class="carttabs2__body-text text-cursive"><span>Подаруйте своїм природним губам щось
+											додаткове</span>, з
+										відтінками солоду, пуху, торта та лева, або скористайтеся яскравими Punch, Zip, Jam та
+										Crush, щоб дійсно
+										привернути увагу.</p>
 								</div>
-								<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-									3
-								</div>
-								<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-									4
+								<div class="tab-pane fade" id="descriptionTabs3" role="tabpanel"
+									aria-labelledby="descriptionTabs3-tab">
+									<h3 class="carttabs2__body-title">Тільки що промокнула помада, без плям!</h3>
+									<p class="carttabs2__body-text">Нарощувана, прозоро-матова помада з ідеально розсіяним
+										рум'янцем кольору.
+										Натхненний трюком візажиста з промоканням помади після нанесення, один рух ковзає по
+										гладкому і рівному
+										(дзеркало не потрібне!) для нарощування, м'якого краю, щойно поцілованого вигляду.</p>
+									<p class="carttabs2__body-text text-cursive"><span>Подаруйте своїм природним губам щось
+											додаткове</span>, з
+										відтінками солоду, пуху, торта та лева, або скористайтеся яскравими Punch, Zip, Jam та
+										Crush, щоб дійсно
+										привернути увагу.</p>
 								</div>
 							</div>
-
-
 						</div>
+
 					</div>
-				</div>
 			</section>
+
 
 
 			<!-- similar && special -->
