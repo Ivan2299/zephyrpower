@@ -10,6 +10,11 @@
 	max-width: 1150px;
 	margin: 0 auto;
 	padding: 0 15px;
+	&__big {
+		max-width: 1310px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
 }
 
 .none {

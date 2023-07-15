@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- select2 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- main style -->
+	<link rel="stylesheet" href="css/main.css" />
+
+	<title>Zehyperpower</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container__header">
+				<div class="header__inner">
+					<div class="header__logo">
+						<a href="/">
+							<img src="img/images/zephyr_power_logo 1.png" alt="logo" />
+						</a>
+					</div>
+
+					<div class="header__wrap">
+						<nav class="header__menu">
+							<ul class="header__menu-list">
+								<li class="header__menu-item">
+									<a href="/" class="header__menu-link">Каталог</a>
+								</li>
+								<li class="header__menu-item">
+									<div href="№" class="header__menu-link-inner">
+										<a href="/" class="header__menu-link">Макіяж</a>
+										<svg class="header__menu-icon-arrow" width="27" height="25" viewBox="0 0 27 25"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M18.5966 10.385C18.2671 10.0799 17.7329 10.0799 17.4034 10.385L13.5 13.9993L9.59662 10.385C9.26712 10.0799 8.73288 10.0799 8.40338 10.385C8.07387 10.6901 8.07387 11.1848 8.40338 11.4899L12.9034 15.6566C13.2329 15.9617 13.7671 15.9617 14.0966 15.6566L18.5966 11.4899C18.9261 11.1848 18.9261 10.6901 18.5966 10.385Z"
+												fill="black" />
+										</svg>
+									</div>
+
+									<div class="header__submenu-block">
+										<div class="header__submenu-block-inner">
+											<ul class="header__submenu-lists">
+												<li class="header__submenu-item">
+													<a href="#" class="header__submenu-title">Губи</a>
+													<ul>
+														<li><a href="#">Помади</a></li>
+														<li><a href="#">Бальзами</a></li>
+													</ul>
+												</li>
+												<li class="header__submenu-item">
+													<a href="#" class="header__submenu-title">Щічки</a>
+													<ul>
+														<li><a href="#">Рум’яна</a></li>
+														<li><a href="#">Хайлайтер</a></li>
+														<li><a href="#">Бронзер</a></li>
+													</ul>
+												</li>
+												<li class="header__submenu-item">
+													<a href="#" class="header__submenu-title">Бальзами</a>
+													<ul>
+														<li><a href="#">З відтінком</a></li>
+														<li><a href="#">Прозорі</a></li>
+													</ul>
+												</li>
+												<li class="header__submenu-item">
+													<a href="#" class="header__submenu-title">Очі</a>
+													<ul>
+														<li><a href="#">Туш для вій</a></li>
+														<li><a href="#">Тіні для повік</a></li>
+														<li><a href="#">Олівець/Маркер</a></li>
+													</ul>
+												</li>
+											</ul>
+											<div class="header__submenu-visual">
+												<div class="header__submenu-image header__submenu-image-ibg-contain">
+													<img src="img/images/submenu-face-img-2.png" alt="face" />
+												</div>
+												<a href="#" class="header__submenu-button button button-secondary">Всі товари</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="header__menu-item">
+									<div href="№" class="header__menu-link-inner">
+										<a href="/" class="header__menu-link">Догляд</a>
+										<svg class="header__menu-icon-arrow" width="27" height="25" viewBox="0 0 27 25"
+											fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M18.5966 10.385C18.2671 10.0799 17.7329 10.0799 17.4034 10.385L13.5 13.9993L9.59662 10.385C9.26712 10.0799 8.73288 10.0799 8.40338 10.385C8.07387 10.6901 8.07387 11.1848 8.40338 11.4899L12.9034 15.6566C13.2329 15.9617 13.7671 15.9617 14.0966 15.6566L18.5966 11.4899C18.9261 11.1848 18.9261 10.6901 18.5966 10.385Z"
+												fill="black" />
+										</svg>
+									</div>
+
+									<div class="header__submenu-block">
+										<div class="header__submenu-block-inner">
+											<ul class="header__submenu-lists">
+												<li class="header__submenu-item">
+													<a href="#" class="header__submenu-title">Обличчя</a>
+													<ul>
+														<li><a href="#">Очищення</a></li>
+														<li><a href="#">Зволоження</a></li>
+														<li><a href="#">Креми/флюїди</a></li>
+														<li><a href="#">Сироватки</a></li>
+														<li><a href="#">Тоніки</a></li>
+													</ul>
+												</li>
+												<li class="header__submenu-item">
+													<a href="#" class="header__submenu-title">Тіло</a>
+													<ul>
+														<li><a href="#">Очищення</a></li>
+														<li><a href="#">Зволоження</a></li>
+													</ul>
+												</li>
+
+												<li class="header__submenu-item">
+													<a href="#" class="header__submenu-title">Інший догляд</a>
+												</li>
+											</ul>
+											<div class="header__submenu-visual">
+												<div class="header__submenu-image header__submenu-image-ibg-contain">
+													<img src="./img/images/submenu-face-img.png" alt="face" />
+												</div>
+												<a href="#" class="header__submenu-button button button-secondary">Всі товари</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="header__menu-item">
+									<a href="/" class="header__menu-link">Парфуми</a>
+								</li>
+								<li class="header__menu-item">
+									<a href="/" class="header__menu-link active">Акції</a>
+								</li>
+							</ul>
+						</nav>
+						<form class="header__search">
+							<button type="submit" class="header__search-button">
+								<img src="/img/icons/search-icon.svg" alt="search" />
+							</button>
+							<input type="search" class="header__search-input" />
+						</form>
+					</div>
+
+					<div class="header__actions-inner">
+						<div class="header__actions">
+							<a href="#" class="header__actions-user"><img src="img/icons/user-icon.svg" alt="user" /></a>
+							<a href="#" class="header__actions-favorite"><img src="img/icons/favorite-icon.svg"
+									alt="favorite" /></a>
+							<a href="#" class="header__actions-cart"><img src="img/icons/cart-icon.svg" alt="cart" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main ">
+			<section class="catalog">
+				<div class="container__big">
+					<div class="carttabs__breadcrumps breadcrumps">
+						<ul class="breadcrumps__list">
+							<li class="breadcrumps__item">
+								<a href="/" class="breadcrumps__link"><svg width="10" height="10" viewBox="0 0 10 10"
+										fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M5.93276 1.15935C5.4115 0.703926 4.5885 0.703926 4.06724 1.15935L1.29714 3.57963C1.22927 3.63893 1.18361 3.71617 1.16665 3.80042C0.834857 5.4479 0.810366 7.13451 1.0942 8.78941L1.16157 9.18222H2.94375V5.79587C2.94375 5.57005 3.1448 5.38698 3.39281 5.38698H6.60719C6.8552 5.38698 7.05625 5.57005 7.05625 5.79587V9.18222H8.83843L8.9058 8.78941C9.18963 7.13451 9.16514 5.4479 8.83335 3.80042C8.81639 3.71617 8.77073 3.63893 8.70286 3.57963L5.93276 1.15935ZM3.44541 0.569286C4.31417 -0.189762 5.68583 -0.189762 6.55459 0.569286L9.3247 2.98956C9.52862 3.16773 9.66578 3.39981 9.71676 3.65292C10.0667 5.39077 10.0926 7.16991 9.79318 8.91559L9.68494 9.54663C9.64018 9.8076 9.39332 10 9.10324 10H6.60719C6.35917 10 6.15812 9.81693 6.15812 9.59111V6.20476H3.84188V9.59111C3.84188 9.81693 3.64083 10 3.39281 10H0.896763C0.606675 10 0.359817 9.8076 0.315057 9.54663L0.206824 8.91559C-0.0925827 7.16991 -0.066748 5.39077 0.283243 3.65292C0.334217 3.39981 0.471382 3.16773 0.6753 2.98956L3.44541 0.569286Z"
+											fill="#555555" />
+									</svg>
+								</a>
+							</li>
+							<li class="breadcrumps__item breadcrumps__item-active">
+								<a href="/" class="breadcrumps__link">Макіяж</a>
+							</li>
+						</ul>
+					</div>
+					<h1 class="catalog__title title">Макіяж</h1>
+					<div class="catalog__inner">
+						<aside class="catalog__accordion accordion-flush" id="catalogAccordion">
+							<div class="catalog__accordion-item accordion-item ">
+								<h2 class="catalog__accordion-header accordion-header " id="flush-headingOne">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+										aria-controls="flush-collapseOne">
+										Вартість
+									</button>
+								</h2>
+								<div id="flush-collapseOne" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingOne" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">
+										Placeholder content for this accordion, which is intended to
+									</div>
+								</div>
+							</div>
+							<div class=" catalog__accordion-item accordion-item ">
+								<h2 class="catalog__accordion-header accordion-header " id="flush-headingTwo">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+										aria-controls="flush-collapseTwo">
+										Категорії
+									</button>
+								</h2>
+								<div id="flush-collapseTwo" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingTwo" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body ">Placeholder content for this accordion,
+										which is intended to
+										demonstrate the
+										<code>.accordion-flush</code> class. This is the second item's accordion body. Let's
+										imagine this being
+										filled with some actual content.
+									</div>
+								</div>
+							</div>
+							<div class="catalog__accordion-item accordion-item">
+								<h2 class="catalog__accordion-header accordion-header" id="flush-headingThree">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+										aria-controls="flush-collapseThree">
+										Тип товару
+									</button>
+								</h2>
+								<div id="flush-collapseThree" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingThree" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">Placeholder content for this accordion,
+										which is intended to
+										demonstrate the
+										<code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
+										more exciting
+										happening here in terms of content, but just filling up the space to make it look, at
+										least at first glance,
+										a bit more representative of how this would look in a real-world application.
+									</div>
+								</div>
+							</div>
+							<div class="catalog__accordion-item accordion-item">
+								<h2 class="catalog__accordion-header accordion-header" id="flush-headingFour">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+										aria-controls="flush-collapseFour">
+										Бренди
+									</button>
+								</h2>
+								<div id="flush-collapseFour" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingFour" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">Placeholder content for this accordion,
+										which is intended to
+										demonstrate the
+										<code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
+										more exciting
+										happening here in terms of content, but just filling up the space to make it look, at
+										least at first glance,
+										a bit more representative of how this would look in a real-world application.
+									</div>
+								</div>
+							</div>
+							<div class="catalog__accordion-item accordion-item">
+								<h2 class="catalog__accordion-header accordion-header" id="flush-headingFive">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false"
+										aria-controls="flush-collapseFive">
+
+										Колір
+									</button>
+								</h2>
+								<div id="flush-collapseFive" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingFive" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">Placeholder content for this accordion,
+										which is intended to
+										demonstrate the
+										<code>.accordion-flush</code> class. This is the third item's accordion body. Nothing
+										more exciting
+										happening here in terms of content, but just filling up the space to make it look, at
+										least at first glance,
+										a bit more representative of how this would look in a real-world application.
+									</div>
+								</div>
+							</div>
+							<div class="catalog__accordion-item accordion-item">
+								<h2 class="catalog__accordion-header accordion-header" id="flush-headingSix">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false"
+										aria-controls="flush-collapseSix">
+
+										Об'єм
+									</button>
+								</h2>
+								<div id="flush-collapseSix" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingSix" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">Placeholder content for this accordion,
+										which is intended to
+										demonstrate the
+										<code>.accordion-flush</code> class. This is the fourth item's accordion body. Nothing
+										more exciting
+										happening here in terms of content, but just filling up the space to make it look, at
+										least at first glance,
+										a bit more representative of how this would look in a real-world application.
+									</div>
+								</div>
+							</div>
+							<div class="catalog__accordion-item accordion-item">
+								<h2 class="catalog__accordion-header accordion-header" id="flush-headingSeven">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false"
+										aria-controls="flush-collapseSeven">
+
+										Інгредієнти
+									</button>
+								</h2>
+								<div id="flush-collapseSeven" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingSeven" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">Placeholder content for this accordion,
+										which is intended to
+										demonstrate the
+										<code>.accordion-flush</code> class. This is the fifth item's accordion body. Nothing
+										more exciting
+										happening here in terms of content, but just filling up the space to make it look, at
+										least at first glance,
+										a bit more representative of how this would look in a real-world application.
+									</div>
+								</div>
+							</div>
+							<div class="catalog__accordion-item accordion-item">
+								<h2 class="catalog__accordion-header accordion-header" id="flush-headingEight">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false"
+										aria-controls="flush-collapseEight">
+
+										Початкова нота
+									</button>
+								</h2>
+								<div id="flush-collapseEight" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingEight" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">Placeholder content for the second
+										accordion block.</div>
+								</div>
+							</div>
+
+							<div class="catalog__accordion-item accordion-item">
+								<h2 class="catalog__accordion-header accordion-header" id="flush-headingNine">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false"
+										aria-controls="flush-collapseNine">
+
+										Нота сердця
+									</button>
+								</h2>
+								<div id="flush-collapseNine" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingNine" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">Placeholder content for the third
+										accordion block.</div>
+								</div>
+							</div>
+
+							<div class="catalog__accordion-item accordion-item">
+								<h2 class="catalog__accordion-header accordion-header" id="flush-headingTen">
+									<button class="catalog__accordion-button accordion-button collapsed" type="button"
+										data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false"
+										aria-controls="flush-collapseTen">
+
+										Кінцева нота
+									</button>
+								</h2>
+								<div id="flush-collapseTen" class="accordion-collapse collapse"
+									aria-labelledby="flush-headingTen" data-bs-parent="#catalogAccordion">
+									<div class="catalog__accordion-body accordion-body">Placeholder content for the fourth
+										accordion block.</div>
+								</div>
+							</div>
+
+						</aside>
+						<div class="catalog__content">
+							<div class="catalog__content-top">
+								<div class="catalog__content-top-wrapper">
+									<h3 class="catalog__content-top-title">Впорядкувати за:</h3>
+									<!-- catalog__content-accordion	 -->
+									<!-- <div class="catalog__content-top-accordion accordion-flush" id="catalogContentAccordion">
+										<div class="catalog__accordion-item accordion-item ">
+											<h2 class="catalog__accordion-header accordion-header "
+												id="flush-headingOneCatalogContent">
+												<button class="catalog__accordion-button accordion-button collapsed" type="button"
+													data-bs-toggle="collapse" data-bs-target="#flush-collapseOneCatalogContent"
+													aria-expanded="false" aria-controls="flush-collapseOneCatalogContent">
+													популярністю
+												</button>
+											</h2>
+											<div id="flush-collapseOneCatalogContent" class="accordion-collapse collapse"
+												aria-labelledby="flush-headingOneCatalogContent"
+												data-bs-parent="#catalogContentAccordion">
+												<div class="catalog__accordion-body accordion-body">
+													Placeholder content for this accordion, which is intended to
+												</div>
+											</div>
+										</div>
+									</div> -->
+									<!-- /catalog__content-accordion	 -->
+									<select class="catalog__content-top-select" id="sort-select">
+										<option class="catalog__content-option" value="popularity">Популярність</option>
+										<option class="catalog__content-option" value="price">Ціна</option>
+										<option class="catalog__content-option" value="rating">Рейтинг</option>
+									</select>
+
+
+								</div>
+							</div>
+							<div class="catalog__content-bottom">
+								<div class="catalog__content-item bestsellers__item">
+									<a href="#" class="bestsellers__item-fav-wrapper">
+										<img src="/img/icons/icon-favorite.svg" alt="favorite">
+									</a>
+									<div class="bestsellers-image">
+										<img src="./img/images/catalog/01.jpg" alt="bestsellers" />
+									</div>
+									<div class="bestsellers__item-info">
+										<a href="#" class="bestsellers__item-title">Invisible Shield</a>
+										<div class="bestsellers__item-sup">Сонцезахисний крем</div>
+										<div class="bestsellers__item-rating-wrapper">
+											<ul class="bestsellers-rating rating">
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star-half-outline"></ion-icon></li>
+											</ul>
+											<div class="bestsellers__item-rating-count">150</div>
+										</div>
+										<div class="bestsellers__item-bottom">
+											<div class="bestsellers__item-price-wrapper">
+												<span class="bestsellers__item-price">1000₴</span>
+												<span class="bestsellers__item-price-old">1000₴</span>
+											</div>
+											<div class="bestsellers__item-select">
+												<select id="mySelect" class="my-select">
+													<option value="option1">100 ml</option>
+													<option value="option2">100 ml</option>
+													<option value="option3">100 ml</option>
+												</select>
+											</div>
+											<a href="#" class="bestsellers__item-button button button-accent">Купити</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__content-item bestsellers__item">
+									<a href="#" class="bestsellers__item-fav-wrapper">
+										<img src="/img/icons/icon-favorite.svg" alt="favorite">
+									</a>
+									<div class="bestsellers-image">
+										<img src="./img/images/catalog/02.jpg" alt="bestsellers" />
+									</div>
+									<div class="bestsellers__item-info">
+										<a href="#" class="bestsellers__item-title">Invisible Shield</a>
+										<div class="bestsellers__item-sup">Сонцезахисний крем</div>
+										<div class="bestsellers__item-rating-wrapper">
+											<ul class="bestsellers-rating rating">
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star-half-outline"></ion-icon></li>
+											</ul>
+											<div class="bestsellers__item-rating-count">150</div>
+										</div>
+										<div class="bestsellers__item-bottom">
+											<div class="bestsellers__item-price-wrapper">
+												<span class="bestsellers__item-price">1000₴</span>
+												<span class="bestsellers__item-price-old">1000₴</span>
+											</div>
+											<div class="bestsellers__item-select">
+												<select id="mySelect" class="my-select">
+													<option value="option1">100 ml</option>
+													<option value="option2">100 ml</option>
+													<option value="option3">100 ml</option>
+												</select>
+											</div>
+											<a href="#" class="bestsellers__item-button button button-accent">Купити</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__content-item bestsellers__item">
+									<a href="#" class="bestsellers__item-fav-wrapper">
+										<img src="/img/icons/icon-favorite.svg" alt="favorite">
+									</a>
+									<div class="bestsellers-image">
+										<img src="./img/images/catalog/03.jpg" alt="bestsellers" />
+									</div>
+									<div class="bestsellers__item-info">
+										<a href="#" class="bestsellers__item-title">Invisible Shield</a>
+										<div class="bestsellers__item-sup">Сонцезахисний крем</div>
+										<div class="bestsellers__item-rating-wrapper">
+											<ul class="bestsellers-rating rating">
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star-half-outline"></ion-icon></li>
+											</ul>
+											<div class="bestsellers__item-rating-count">150</div>
+										</div>
+										<div class="bestsellers__item-bottom">
+											<div class="bestsellers__item-price-wrapper">
+												<span class="bestsellers__item-price">1000₴</span>
+												<span class="bestsellers__item-price-old">1000₴</span>
+											</div>
+											<div class="bestsellers__item-select">
+												<select id="mySelect" class="my-select">
+													<option value="option1">100 ml</option>
+													<option value="option2">100 ml</option>
+													<option value="option3">100 ml</option>
+												</select>
+											</div>
+											<a href="#" class="bestsellers__item-button button button-accent">Купити</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__content-item bestsellers__item">
+									<a href="#" class="bestsellers__item-fav-wrapper">
+										<img src="/img/icons/icon-favorite.svg" alt="favorite">
+									</a>
+									<div class="bestsellers-image">
+										<img src="./img/images/catalog/01.jpg" alt="bestsellers" />
+									</div>
+									<div class="bestsellers__item-info">
+										<a href="#" class="bestsellers__item-title">Invisible Shield</a>
+										<div class="bestsellers__item-sup">Сонцезахисний крем</div>
+										<div class="bestsellers__item-rating-wrapper">
+											<ul class="bestsellers-rating rating">
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star-half-outline"></ion-icon></li>
+											</ul>
+											<div class="bestsellers__item-rating-count">150</div>
+										</div>
+										<div class="bestsellers__item-bottom">
+											<div class="bestsellers__item-price-wrapper">
+												<span class="bestsellers__item-price">1000₴</span>
+												<span class="bestsellers__item-price-old">1000₴</span>
+											</div>
+											<div class="bestsellers__item-select">
+												<select id="mySelect" class="my-select">
+													<option value="option1">100 ml</option>
+													<option value="option2">100 ml</option>
+													<option value="option3">100 ml</option>
+												</select>
+											</div>
+											<a href="#" class="bestsellers__item-button button button-accent">Купити</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__content-item bestsellers__item">
+									<a href="#" class="bestsellers__item-fav-wrapper">
+										<img src="/img/icons/icon-favorite.svg" alt="favorite">
+									</a>
+									<div class="bestsellers-image">
+										<img src="./img/images/catalog/02.jpg" alt="bestsellers" />
+									</div>
+									<div class="bestsellers__item-info">
+										<a href="#" class="bestsellers__item-title">Invisible Shield</a>
+										<div class="bestsellers__item-sup">Сонцезахисний крем</div>
+										<div class="bestsellers__item-rating-wrapper">
+											<ul class="bestsellers-rating rating">
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star-half-outline"></ion-icon></li>
+											</ul>
+											<div class="bestsellers__item-rating-count">150</div>
+										</div>
+										<div class="bestsellers__item-bottom">
+											<div class="bestsellers__item-price-wrapper">
+												<span class="bestsellers__item-price">1000₴</span>
+												<span class="bestsellers__item-price-old">1000₴</span>
+											</div>
+											<div class="bestsellers__item-select">
+												<select id="mySelect" class="my-select">
+													<option value="option1">100 ml</option>
+													<option value="option2">100 ml</option>
+													<option value="option3">100 ml</option>
+												</select>
+											</div>
+											<a href="#" class="bestsellers__item-button button button-accent">Купити</a>
+										</div>
+									</div>
+								</div>
+								<div class="catalog__content-item bestsellers__item">
+									<a href="#" class="bestsellers__item-fav-wrapper">
+										<img src="/img/icons/icon-favorite.svg" alt="favorite">
+									</a>
+									<div class="bestsellers-image">
+										<img src="./img/images/catalog/03.jpg" alt="bestsellers" />
+									</div>
+									<div class="bestsellers__item-info">
+										<a href="#" class="bestsellers__item-title">Invisible Shield</a>
+										<div class="bestsellers__item-sup">Сонцезахисний крем</div>
+										<div class="bestsellers__item-rating-wrapper">
+											<ul class="bestsellers-rating rating">
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star"></ion-icon></li>
+												<li><ion-icon name="star-half-outline"></ion-icon></li>
+											</ul>
+											<div class="bestsellers__item-rating-count">150</div>
+										</div>
+										<div class="bestsellers__item-bottom">
+											<div class="bestsellers__item-price-wrapper">
+												<span class="bestsellers__item-price">1000₴</span>
+												<span class="bestsellers__item-price-old">1000₴</span>
+											</div>
+											<div class="bestsellers__item-select">
+												<select id="mySelect" class="my-select">
+													<option value="option1">100 ml</option>
+													<option value="option2">100 ml</option>
+													<option value="option3">100 ml</option>
+												</select>
+											</div>
+											<a href="#" class="bestsellers__item-button button button-accent">Купити</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="catalog__content-bottom-actions">
+								<div class="catalog__content-more">
+									<a href="#" class="catalog__content-more-btn button button-accent">Показати більше</a>
+								</div>
+								<div class="catalog__content-pagination">
+									<div class="reviews-pagination">
+										<a href="#" class="reviews-pagination__item reviews-pagination__item--active"></a>
+										<a href="#" class="reviews-pagination__item">1</a>
+										<a href="#" class="reviews-pagination__item">2</a>
+										<a href="#" class="reviews-pagination__item">3</a>
+										<a href="#" class="reviews-pagination__item">4</a>
+										<a href="#" class="reviews-pagination__item">5</a>
+										<a href="#" class="reviews-pagination__item">...</a>
+										<a href="#" class="reviews-pagination__item">1050</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	</div>
+	</section>
+
+
+
+
+	</main>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__inner">
+				<div class="footer__logo">
+					<a href="#" class="footer__logo-img">
+						<img src="/img/images/footer-logo-zephyr.png" alt="zephyr_power_logo">
+					</a>
+				</div>
+				<div class="footer__item">
+					<h3 class="footer__item-title">Про нас</h3>
+					<ul class="footer__item-list">
+						<li class="footer__item-li">
+							<a href="#" class="footer__item-link">Доставка та Оплата</a>
+						</li>
+						<li class="footer__item-li">
+							<a href="#" class="footer__item-link">Повернення та гарантії</a>
+						</li>
+						<li class="footer__item-li">
+							<a href="#" class="footer__item-link">Політика конфіденційності</a>
+						</li>
+						<li class="footer__item-li">
+							<a href="#" class="footer__item-link">Індивідуальне замовлення</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<h3 class="footer__item-title">Категорії</h3>
+					<ul class="footer__item-list">
+						<li class="footer__item-li">
+							<a href="#" class="footer__item-link">Макіяж</a>
+						</li>
+						<li class="footer__item-li">
+							<a href="#" class="footer__item-link">Догляд</a>
+						</li>
+						<li class="footer__item-li">
+							<a href="#" class="footer__item-link">Парфуми</a>
+						</li>
+						<li class="footer__item-li">
+							<a href="#" class="footer__item-link">Акції</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<ul class="footer__item-list">
+						<li class="footer__item-li">
+							Ви можете написати нам лист
+						</li>
+						<li class="footer__item-li footer__item-mail">
+							<a href="mailto:mymail@gmail.com">mymail@gmail.com</a>
+						</li>
+						<li class="footer__item-li">
+							Ми працюємо
+						</li>
+						<li class="footer__item-li footer__item-work-hours">
+							<span>Пн-Вс:</span> 7:55 - 20:05
+						</li>
+					</ul>
+				</div>
+				<div class="footer__item">
+					<ul class="footer__item-list">
+						<li class="footer__item-li">
+							Зателефонувати за номером
+						</li>
+						<li class="footer__item-li footer__item-tel">
+							<a href="tel:+88005553535" class="footer__item-link">8 800 555 3535</a>
+						</li>
+						<li class="footer__item-li footer__item-socials">
+							<a href="#" class="footer__item-socials-img">
+								<img src="./img/icons/Instagram.svg" alt="Instagram">
+							</a>
+							<a href="#" class="footer__item-socials-img">
+								<img src="./img/icons/TikTok.svg" alt="TikTok">
+							</a>
+						</li>
+						<li class="footer__item-li">
+							Дніпро, Україна
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<!-- /footer -->
+
+	<!-- swiper -->
+	<script src="js/libs/swiper.js"></script>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- icons -->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<!-- select2 -->
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<!-- bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- main.js -->
+	<script src="js/main.js"></script>
+	</div>
+</body>
+
+</html>

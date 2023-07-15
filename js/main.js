@@ -3,6 +3,22 @@
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Loaded');
 
+	// accordion
+	function accordion(accordionBtn, accordionPanel) {
+		const accordion = document.querySelector(accordionBtn);
+
+		accordion.addEventListener('click', function (e) {
+			const panel = document.querySelector(accordionPanel);
+
+			this.classList.toggle('active');
+			panel.classList.toggle('active');
+
+			panel.style.maxHeight
+				? (panel.style.maxHeight = null)
+				: (panel.style.maxHeight = panel.scrollHeight + 'px');
+		});
+	}
+
 	// Search
 	const body = document.getElementsByTagName('body')[0];
 	const searchInput = document.querySelector('.header__search-input');
@@ -80,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		// watchOverflow: true,
 		// allowSlideNext: false,
 		// allowSlidePrev: false,
-		// allowTouchMove: false,
+		allowTouchMove: false,
 		// mousewheel: false,
 		centeredSlides: true,
 		slidesPerView: 3,
 		loop: true,
-		grabCursor: true,
+		// grabCursor: true,
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
 		speed: 800,
