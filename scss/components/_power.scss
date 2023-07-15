@@ -142,6 +142,7 @@
 		.swiper-slide-active {
 			transform: scale(1.32);
 			.power__item {
+				align-self: flex-end;
 			}
 			.power-image {
 				border-radius: 15px;

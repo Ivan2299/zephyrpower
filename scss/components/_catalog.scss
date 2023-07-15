@@ -2,6 +2,18 @@
 	margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem); //128 -60
 	// .catalog__title
 
+	&__cloud-1 {
+		pointer-events: none;
+		position: absolute;
+		top: 10%;
+		right: 0;
+	}
+	&__cloud-2 {
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		left: 0;
+	}
 	&__title {
 		margin-bottom: 60px;
 		display: block;
@@ -22,6 +34,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+		z-index: 1;
 		// align-items: start;
 	}
 
@@ -64,6 +77,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+	}
+	&__content-top {
+		z-index: 1;
 	}
 
 	.accordion-button:not(.collapsed) {
@@ -126,9 +142,8 @@
 		padding: 10px;
 		@media (any-hover: hover) {
 			&:hover {
-				border-radius: 5px;
+				border-radius: 10px;
 				background: #fff;
-				box-shadow: 0px 6px 20px 4px rgba(0, 0, 0, 0.2);
 			}
 		}
 	}
