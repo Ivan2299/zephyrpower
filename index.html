@@ -7,6 +7,8 @@
 
 	<!-- select2 -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
 	<!-- main style -->
 	<link rel="stylesheet" href="css/main.css" />
@@ -149,7 +151,8 @@
 
 					<div class="header__actions-inner">
 						<div class="header__actions">
-							<a href="#" class="header__actions-user"><img src="img/icons/user-icon.svg" alt="user" /></a>
+							<a href="#" id="my-account-button" class="header__actions-user"><img src="img/icons/user-icon.svg"
+									alt="user" /></a>
 							<a href="#" class="header__actions-favorite"><img src="img/icons/favorite-icon.svg"
 									alt="favorite" /></a>
 							<a href="#" class="header__actions-cart"><img src="img/icons/cart-icon.svg" alt="cart" /></a>
@@ -249,7 +252,7 @@
 												<img src="./img/images/new/01.png" alt="" />
 											</div>
 											<div class="new__item-info">
-												<a href="#" class="new__item-title">Invisible Shield</a>
+												<a href="cartItem.html" class="new__item-title">Invisible Shield</a>
 												<div class="new__item-sup">Сонцезахисний крем</div>
 												<div class="new__item-rating-wrapper">
 													<ul class="new-rating rating">
@@ -274,7 +277,7 @@
 												<img src="./img/images/new/02.png" alt="" />
 											</div>
 											<div class="new__item-info">
-												<a href="#" class="new__item-title">Hand Cream</a>
+												<a href="cartItem.html" class="new__item-title">Hand Cream</a>
 												<div class="new__item-sup">Крем для рук</div>
 												<div class="new__item-rating-wrapper">
 													<ul class="new-rating rating">
@@ -300,7 +303,7 @@
 												<img src="./img/images/new/03.png" alt="" />
 											</div>
 											<div class="new__item-info">
-												<a href="#" class="new__item-title">G Suit</a>
+												<a href="cartItem.html" class="new__item-title">G Suit</a>
 												<div class="new__item-sup">Крем для губ</div>
 												<div class="new__item-rating-wrapper">
 													<ul class="new-rating rating">
@@ -325,7 +328,7 @@
 												<img src="./img/images/new/01.png" alt="" />
 											</div>
 											<div class="new__item-info">
-												<a href="#" class="new__item-title">Invisible Shield</h3>
+												<a href="cartItem.html" class="new__item-title">Invisible Shield</h3>
 													<div class="new__item-sup">Сонцезахисний крем</div>
 													<div class="new__item-rating-wrapper">
 														<ul class="new-rating rating">
@@ -351,7 +354,7 @@
 												<img src="./img/images/new/01.png" alt="" />
 											</div>
 											<div class="new__item-info">
-												<a href="#" class="new__item-title">Invisible Shield</a>
+												<a href="cartItem.html" class="new__item-title">Invisible Shield</a>
 												<div class="new__item-sup">Сонцезахисний крем</div>
 												<div class="new__item-rating-wrapper">
 													<ul class="new-rating rating">
@@ -376,7 +379,7 @@
 												<img src="./img/images/new/02.png" alt="images" />
 											</div>
 											<div class="new__item-info">
-												<a href="#" class="new__item-title">Hand Cream</a>
+												<a href="cartItem.html" class="new__item-title">Hand Cream</a>
 												<div class="new__item-sup">Крем для рук</div>
 												<div class="new__item-rating-wrapper">
 													<ul class="new-rating rating">
@@ -402,7 +405,7 @@
 												<img src="./img/images/new/03.png" alt="" />
 											</div>
 											<div class="new__item-info">
-												<a href="#" class="new__item-title">G Suit</a>
+												<a href="cartItem.html" class="new__item-title">G Suit</a>
 												<div class="new__item-sup">Крем для губ</div>
 												<div class="new__item-rating-wrapper">
 													<ul class="new-rating rating">
@@ -427,7 +430,7 @@
 												<img src="./img/images/new/01.png" alt="" />
 											</div>
 											<div class="new__item-info">
-												<a href="#" class="new__item-title">Invisible Shield</a>
+												<a href="cartItem.html" class="new__item-title">Invisible Shield</a>
 												<div class="new__item-sup">Сонцезахисний крем</div>
 												<div class="new__item-rating-wrapper">
 													<ul class="new-rating rating">
@@ -1000,6 +1003,68 @@
 
 				</div>
 			</div>
+			<!--  my-account popup -->
+			<div class="myaccount__popup" id="my-account-Popup">
+				<div class="myaccount__popup-content" id="my-account-Popup-content">
+					<!-- хмари -->
+					<img src="/img/images/myaccount/myaccount-popup-cloud-01.png" alt="cloud"
+						class="myaccount__popup-cloud-top-left">
+					<img src="/img/images/myaccount/myaccount-popup-cloud-02.png" alt="cloud"
+						class="myaccount__popup-cloud-top-right">
+					<img src="/img/images/myaccount/myaccount-popup-cloud-03.png" alt="cloud"
+						class="myaccount__popup-cloud-bottom-left">
+					<img src="/img/images/myaccount/myaccount-popup-cloud-04.png" alt="cloud"
+						class="myaccount__popup-cloud-bottom-right">
+					<!-- Вміст попапу тут -->
+					<h2 class="myaccount__popup-title title">Мій аккаунт</h2>
+					<div class="myaccount__popup-tabs carttabs2__tabs">
+						<ul class="myaccount__popup-titles carttabs2__tabs-titles" id="myaccountTabs" role="tablist">
+							<li class="myaccount__popup-item carttabs2-item">
+								<a class="myaccount__popup-link myaccount__popup-link-padding carttabs2-link active"
+									id="myaccountTabs1-tab" data-bs-toggle="tab" href="#myaccountTabs1" role="tab"
+									aria-controls="myaccountTabs1" aria-selected="true">Вхід</a>
+							</li>
+							<li class="myaccount__popup-item carttabs2-item">
+								<a class="myaccount__popup-link carttabs2-link" id="myaccountTabs2-tab" data-bs-toggle="tab"
+									href="#myaccountTabs2" role="tab" aria-controls="myaccountTabs2"
+									aria-selected="false">Реєстрація</a>
+							</li>
+
+						</ul>
+
+						<div class="myaccount__popup-body  tab-content" id="myaccountTabsContent">
+							<div class="myaccount__popup-body-item tab-pane fade show active" id="myaccountTabs1"
+								role="tabpanel" aria-labelledby="myaccountTabs1-tab">
+								<form action="#" class="myaccount__popup-form">
+									<input type="email" class="myaccount__popup-form-input" placeholder="Електронна пошта">
+									<input type="password" class="myaccount__popup-form-input" placeholder="Пароль">
+									<button type="submit" class="myaccount__popup-form-button button button-accent">Вхід</button>
+								</form>
+								<a href="#" class="myaccount__popup-forgot">Забули пароль?</a>
+							</div>
+							<div class="myaccount__popup-body-item tab-pane fade" id="myaccountTabs2" role="tabpanel"
+								aria-labelledby="myaccountTabs2-tab">
+								<form action="#" class="myaccount__popup-form">
+									<input type="name" class="myaccount__popup-form-input" placeholder="Ім'я">
+									<input type="text" class="myaccount__popup-form-input" placeholder="Прізвище">
+									<input type="tel" class="myaccount__popup-form-input" placeholder="Телефон">
+									<input type="email" class="myaccount__popup-form-input" placeholder="Електронна пошта">
+									<input type="password" class="myaccount__popup-form-input" placeholder="Пароль">
+
+									<input type="password" class="myaccount__popup-form-input" placeholder="Повтор пароля">
+
+									<button type="submit"
+										class="myaccount__popup-form-button button button-accent">Зареєструватися</button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- /my-account popup -->
+
 		</footer>
 		<!-- /footer -->
 
@@ -1010,6 +1075,8 @@
 		<!-- icons -->
 		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<!-- bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- select2 -->
 		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 		<!-- main.js -->

@@ -3,40 +3,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Loaded');
 
-	// accordion
-	function accordion(accordionBtn, accordionPanel) {
-		const accordion = document.querySelector(accordionBtn);
-
-		accordion.addEventListener('click', function (e) {
-			const panel = document.querySelector(accordionPanel);
-
-			this.classList.toggle('active');
-			panel.classList.toggle('active');
-
-			panel.style.maxHeight
-				? (panel.style.maxHeight = null)
-				: (panel.style.maxHeight = panel.scrollHeight + 'px');
-		});
-	}
-
-	// Search
-	const body = document.getElementsByTagName('body')[0];
-	const searchInput = document.querySelector('.header__search-input');
-	searchInput.addEventListener('focus', event => {
-		// event.target.parentElement.classList.add('active');
-		body.classList.add('search-open');
-	});
-
-	searchInput.addEventListener('blur', event => {
-		// event.target.parentElement.classList.remove('active');
-		// body.classList.remove('search-open');
-	});
-
-	// select
-	$(document).ready(function () {
-		$('#mySelect').select2();
-	});
-
 	// sliders
 	const verrticalSliderBanner = document.querySelector('.vertical-slider');
 	const circleSlider = document.querySelector('.circle-slider');
@@ -357,6 +323,103 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	// slider1.controller.control = slider2;
 	slider2.controller.control = slider1;
+
+	// accordion
+	function accordion(accordionBtn, accordionPanel) {
+		const accordion = document.querySelector(accordionBtn);
+
+		accordion.addEventListener('click', function (e) {
+			const panel = document.querySelector(accordionPanel);
+
+			this.classList.toggle('active');
+			panel.classList.toggle('active');
+
+			panel.style.maxHeight
+				? (panel.style.maxHeight = null)
+				: (panel.style.maxHeight = panel.scrollHeight + 'px');
+		});
+	}
+	// popup my-account
+	document.getElementById('my-account-button').addEventListener('click', function () {
+		var popup = document.getElementById('my-account-Popup');
+		popup.style.display = 'block';
+		fadeIn(popup, 500); // 500 - тривалість плавного відкриття в мілісекундах
+	});
+
+	document.getElementById('my-account-Popup').addEventListener('click', function (event) {
+		if (event.target === this) {
+			var popup = document.getElementById('my-account-Popup');
+			fadeOut(popup, 500); // 500 - тривалість плавного закриття в мілісекундах
+		}
+	});
+	// popup my-account
+	function fadeIn(element, duration) {
+		element.style.opacity = 0;
+		var startTime = performance.now();
+
+		requestAnimationFrame(function animate(currentTime) {
+			var elapsedTime = currentTime - startTime;
+			var progress = elapsedTime / duration;
+
+			element.style.opacity = Math.min(progress, 1);
+
+			if (progress < 1) {
+				requestAnimationFrame(animate);
+			}
+		});
+	}
+
+	function fadeOut(element, duration) {
+		var startTime = performance.now();
+		var startOpacity = parseFloat(element.style.opacity);
+
+		requestAnimationFrame(function animate(currentTime) {
+			var elapsedTime = currentTime - startTime;
+			var progress = elapsedTime / duration;
+
+			element.style.opacity = Math.max(startOpacity - progress, 0);
+
+			if (progress < 1) {
+				requestAnimationFrame(animate);
+			} else {
+				element.style.display = 'none';
+			}
+		});
+	}
+
+	function fadeIn(element, duration) {
+		element.style.opacity = 0;
+		var startTime = performance.now();
+
+		requestAnimationFrame(function animate(currentTime) {
+			var elapsedTime = currentTime - startTime;
+			var progress = elapsedTime / duration;
+
+			element.style.opacity = Math.min(progress, 1);
+
+			if (progress < 1) {
+				requestAnimationFrame(animate);
+			}
+		});
+	}
+
+	// Search
+	const body = document.getElementsByTagName('body')[0];
+	const searchInput = document.querySelector('.header__search-input');
+	searchInput.addEventListener('focus', event => {
+		// event.target.parentElement.classList.add('active');
+		body.classList.add('search-open');
+	});
+
+	searchInput.addEventListener('blur', event => {
+		// event.target.parentElement.classList.remove('active');
+		// body.classList.remove('search-open');
+	});
+
+	// select
+	$(document).ready(function () {
+		$('#mySelect').select2();
+	});
 
 	const cartTabs = new bootstrap.Tab(document.getElementById('imagesTabs'));
 	myTabs.show();

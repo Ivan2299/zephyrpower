@@ -1,0 +1,167 @@
+.myaccount {
+	// .myaccount__popup-cloud-top-left
+
+	&__popup-cloud-top-left {
+		position: absolute;
+		bottom: -40px;
+		left: -45%;
+	}
+
+	// .myaccount__popup-cloud-top-right
+
+	&__popup-cloud-top-right {
+		position: absolute;
+		bottom: -40px;
+		right: -45%;
+	}
+
+	// .myaccount__popup-cloud-bottom-left
+
+	&__popup-cloud-bottom-left {
+		position: absolute;
+		bottom: -50px;
+		left: -10%;
+	}
+
+	// .myaccount__popup-cloud-bottom-right
+
+	&__popup-cloud-bottom-right {
+		position: absolute;
+		bottom: -50px;
+		right: -10%;
+	}
+
+	&__popup {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
+		z-index: 10;
+	}
+
+	// .myaccount__popup-content
+
+	&__popup-content {
+		position: relative;
+		background-color: #fff; /* Колір вмісту попапу */
+		max-width: 670px;
+		width: 100%;
+		height: auto;
+		// overflow-y: auto;
+		margin: 100px auto;
+		border-radius: 15px;
+		background: #fff;
+		padding: 40px 200px;
+		z-index: 11;
+	}
+
+	// .myaccount__popup-title
+
+	&__popup-title {
+		white-space: nowrap;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	// .myaccount__popup-tabs-wrapper
+
+	&__popup-tabs-wrapper {
+	}
+
+	// .myaccount__popup-tabs
+
+	&__popup-tabs {
+	}
+
+	// .myaccount__popup-titles
+
+	&__popup-titles {
+		max-width: 270px;
+		width: 100%;
+		gap: 10px;
+		margin-bottom: 30px;
+	}
+
+	// .myaccount__popup-item
+
+	&__popup-item {
+	}
+
+	// .myaccount__popup-link
+
+	&__popup-link {
+		padding: 6px 23px;
+		&-padding {
+			padding: 6px 40px;
+		}
+	}
+
+	// .myaccount__popup-body
+
+	&__popup-body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: $white;
+	}
+
+	// .myaccount__popup-body-item
+
+	&__popup-body-item {
+		width: 100%;
+	}
+
+	// .myaccount__popup-form
+
+	&__popup-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .myaccount__popup-form-input
+
+	&__popup-form-input {
+		width: 100%;
+		border-bottom: 1px solid #3f8f8d;
+		padding: 10px 0;
+		color: #9e9e9e;
+		font-family: Cormorant Garamond;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+
+		&::placeholder {
+			color: #9e9e9e;
+			font-family: Cormorant Garamond;
+			font-size: 15px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	// .myaccount__popup-form-button
+
+	&__popup-form-button {
+		align-self: stretch;
+	}
+
+	// .myaccount__popup-forgot
+
+	&__popup-forgot {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #000;
+		text-align: center;
+		font-family: Cormorant Garamond;
+		font-size: 16px;
+		margin-top: 20px;
+	}
+}

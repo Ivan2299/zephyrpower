@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -190,6 +191,7 @@ a:focus {
 a:active,
 a:hover {
   outline: 0;
+  text-decoration: none;
 }
 
 img {
@@ -1514,7 +1516,7 @@ swiper-container .swiper-notification {
 }
 .button-secondary {
   font-weight: 700;
-  color: #3f8f8d;
+  color: #3f8f8d !important;
   padding: 5px 92px;
   border-radius: 5px;
   background: rgba(63, 143, 141, 0.25);
@@ -2865,4 +2867,115 @@ swiper-container .swiper-notification {
 }
 .catalog__content-pagination {
   text-align: center;
+}
+
+.myaccount__popup-cloud-top-left {
+  position: absolute;
+  bottom: -40px;
+  left: -45%;
+}
+.myaccount__popup-cloud-top-right {
+  position: absolute;
+  bottom: -40px;
+  right: -45%;
+}
+.myaccount__popup-cloud-bottom-left {
+  position: absolute;
+  bottom: -50px;
+  left: -10%;
+}
+.myaccount__popup-cloud-bottom-right {
+  position: absolute;
+  bottom: -50px;
+  right: -10%;
+}
+.myaccount__popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
+  z-index: 10;
+}
+.myaccount__popup-content {
+  position: relative;
+  background-color: #fff; /* Колір вмісту попапу */
+  max-width: 670px;
+  width: 100%;
+  height: auto;
+  margin: 100px auto;
+  border-radius: 15px;
+  background: #fff;
+  padding: 40px 200px;
+  z-index: 11;
+}
+.myaccount__popup-title {
+  white-space: nowrap;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.myaccount__popup-titles {
+  max-width: 270px;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.myaccount__popup-link {
+  padding: 6px 23px;
+}
+.myaccount__popup-link-padding {
+  padding: 6px 40px;
+}
+.myaccount__popup-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+.myaccount__popup-body-item {
+  width: 100%;
+}
+.myaccount__popup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.myaccount__popup-form-input {
+  width: 100%;
+  border-bottom: 1px solid #3f8f8d;
+  padding: 10px 0;
+  color: #9e9e9e;
+  font-family: Cormorant Garamond;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.myaccount__popup-form-input::-moz-placeholder {
+  color: #9e9e9e;
+  font-family: Cormorant Garamond;
+  font-size: 15px;
+}
+.myaccount__popup-form-input::placeholder {
+  color: #9e9e9e;
+  font-family: Cormorant Garamond;
+  font-size: 15px;
+}
+.myaccount__popup-form-input:not(:last-child) {
+  margin-bottom: 30px;
+}
+.myaccount__popup-form-button {
+  align-self: stretch;
+}
+.myaccount__popup-forgot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  text-align: center;
+  font-family: Cormorant Garamond;
+  font-size: 16px;
+  margin-top: 20px;
 }
