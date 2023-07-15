@@ -5,6 +5,7 @@
 		position: absolute;
 		bottom: -40px;
 		left: -45%;
+		pointer-events: none;
 	}
 
 	// .myaccount__popup-cloud-top-right
@@ -13,6 +14,7 @@
 		position: absolute;
 		bottom: -40px;
 		right: -45%;
+		pointer-events: none;
 	}
 
 	// .myaccount__popup-cloud-bottom-left
@@ -21,6 +23,7 @@
 		position: absolute;
 		bottom: -50px;
 		left: -10%;
+		pointer-events: none;
 	}
 
 	// .myaccount__popup-cloud-bottom-right
@@ -29,6 +32,7 @@
 		position: absolute;
 		bottom: -50px;
 		right: -10%;
+		pointer-events: none;
 	}
 
 	&__popup {

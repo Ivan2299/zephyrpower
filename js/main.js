@@ -344,12 +344,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		var popup = document.getElementById('my-account-Popup');
 		popup.style.display = 'block';
 		fadeIn(popup, 500); // 500 - тривалість плавного відкриття в мілісекундах
+		document.body.style.overflow = 'hidden'; // disable scrolling
 	});
 
 	document.getElementById('my-account-Popup').addEventListener('click', function (event) {
 		if (event.target === this) {
 			var popup = document.getElementById('my-account-Popup');
 			fadeOut(popup, 500); // 500 - тривалість плавного закриття в мілісекундах
+			document.body.style.overflow = 'auto'; // enable scrolling
 		}
 	});
 	// popup my-account
