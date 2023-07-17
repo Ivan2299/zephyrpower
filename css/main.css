@@ -480,6 +480,34 @@ svg {
   top: 22%;
 }
 
+.input {
+  padding: 18px 0;
+  color: #9e9e9e;
+  font-family: Raleway;
+  font-size: 14px;
+  border-bottom: 1px solid #ffd3de;
+}
+.input-pen {
+  padding: 12px 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  border-bottom: 1px solid #ffd3de;
+  transition: border-bottom 0.3s ease;
+  background: url("/img/icons/edit-icon.svg") no-repeat center right;
+}
+.input-pen::-moz-placeholder {
+  color: #000;
+}
+.input-pen::placeholder {
+  color: #000;
+}
+.input-pen:focus {
+  outline: none;
+  border-bottom: 1px solid #7f1f61;
+}
+
 @keyframes activateSlide {
   0% {
     opacity: 0;
@@ -2982,4 +3010,231 @@ swiper-container .swiper-notification {
   font-family: Cormorant Garamond;
   font-size: 16px;
   margin-top: 20px;
+}
+
+.myaccountpage__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.myaccountpage__tabs-container {
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: clamp(2.5rem, 1.126rem + 6.87vw, 6.75rem);
+       column-gap: clamp(2.5rem, 1.126rem + 6.87vw, 6.75rem);
+}
+.myaccountpage__tabs-wrapper {
+  flex: 0 0 305px;
+}
+.myaccountpage__tabs-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.myaccountpage__tabs-li {
+  white-space: nowrap;
+}
+.myaccountpage__tabs-link {
+  padding: 9px 25px;
+  border-radius: 10px 0px 0px 10px;
+  background: #fff;
+  border: 1px solid #ffd3de;
+  transition: all 0.3s ease;
+}
+.myaccountpage__tabs-link.active {
+  border: 1px solid #7f1f61;
+}
+.myaccountpage__tabs-content-wrapper {
+  flex: 1 1 auto;
+}
+.myaccountpage .tabs-content-item {
+  margin-bottom: 100px;
+}
+.myaccountpage .tabs-content-title {
+  font-weight: 600;
+  font-size: 20px;
+  border-bottom: 2px solid #3f8f8d;
+  max-width: 760px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.myaccountpage .tabs-content-input {
+  max-width: 325px;
+  margin-bottom: 30px;
+}
+.myaccountpage .tabs-content-form {
+  display: flex;
+  flex-direction: column;
+}
+.myaccountpage .tabs-content-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.myaccountpage .tabs-content-form-left {
+  flex: 0 1 40%;
+  display: flex;
+  flex-direction: column;
+}
+.myaccountpage .tabs-content-form-right {
+  flex: 0 1 40%;
+  display: flex;
+  flex-direction: column;
+}
+.myaccountpage .tabs-content-form-bottom {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+}
+.myaccountpage .tabs-content-button {
+  align-self: center;
+  margin-top: clamp(2.5rem, 1.49rem + 5.05vw, 5.625rem);
+}
+.myaccountpage .tabs-content-button-more-wrapper {
+  margin-top: clamp(2.5rem, 1.49rem + 5.05vw, 5.625rem);
+  text-align: center;
+}
+.myaccountpage .tabs-content-orders {
+  display: flex;
+  flex-direction: column;
+}
+.myaccountpage .tabs-content-order {
+  display: flex;
+  flex-direction: column;
+}
+.myaccountpage .tabs-content-order-top {
+  max-width: 720px;
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  justify-items: space-between;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.myaccountpage .tabs-content-order-top.active .tabs-content-order-top-arrow img {
+  transform: rotate(180deg);
+}
+.myaccountpage .tabs-content-order-top-title {
+  font-size: 16px;
+  font-family: "Gotu", sans-serif;
+  color: #555555;
+  margin-bottom: 25px;
+}
+.myaccountpage .tabs-content-order-top-title-done {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3f8f8d;
+}
+.myaccountpage .tabs-content-order-top-title-wrapper {
+  align-self: flex-start;
+}
+.myaccountpage .tabs-content-order-top-count-text {
+  margin-bottom: 24px;
+}
+.myaccountpage .tabs-content-order-top-count-wrapper {
+  align-self: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+.myaccountpage .tabs-content-order-top-count-number {
+  font-family: "Gotu", sans-serif;
+}
+.myaccountpage .tabs-content-order-top-sum-text {
+  margin-bottom: 24px;
+}
+.myaccountpage .tabs-content-order-top-sum-wrapper {
+  align-self: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+.myaccountpage .tabs-content-order-top-sum-number {
+  font-family: "Gotu", sans-serif;
+}
+.myaccountpage .tabs-content-order-top-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myaccountpage .tabs-content-order-top-arrow img {
+  transition: all 0.3s ease;
+}
+.myaccountpage .tabs-content-order-bottom {
+  max-width: 720px;
+}
+.myaccountpage .tabs-content-order-item {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr 1fr;
+  gap: 8px;
+  align-items: center;
+  justify-items: space-between;
+}
+.myaccountpage .tabs-content-order-item-left {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  flex: 0 1 55%;
+}
+.myaccountpage .tabs-content-order-item-right {
+  align-self: flex-start;
+}
+.myaccountpage .tabs-content-order-item-img {
+  flex: 0 0 109px;
+}
+.myaccountpage .tabs-content-order-item-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+.myaccountpage .tabs-content-order-item-sup {
+  font-size: 14px;
+  color: #555555;
+  line-height: normal;
+}
+.myaccountpage .tabs-content-order-item-count-text {
+  margin-bottom: 24px;
+}
+.myaccountpage .tabs-content-order-item-count-wrapper {
+  text-align: center;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+}
+.myaccountpage .tabs-content-order-item-count-num {
+  font-family: "Gotu", sans-serif;
+}
+.myaccountpage .tabs-content-order-item-price {
+  font-family: "Gotu", sans-serif;
+  color: #000;
+  text-align: center;
+}
+.myaccountpage .bestsellers__item {
+  padding: 10px;
+}
+.myaccountpage .bestsellers__item-fav-wrapper {
+  opacity: 1;
+  right: 7%;
+}
+.myaccountpage .bestsellers__item-info {
+  padding: 10px 0;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.accordion-content.active {
+  height: auto;
+  transition: 0.2s ease-out;
+  opacity: 1;
+  visibility: visible;
 }

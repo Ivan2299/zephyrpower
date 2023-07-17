@@ -326,19 +326,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// accordion
 	function accordion(accordionBtn, accordionPanel) {
-		const accordion = document.querySelector(accordionBtn);
+		const accordions = document.querySelectorAll(accordionBtn);
 
-		accordion.addEventListener('click', function (e) {
-			const panel = document.querySelector(accordionPanel);
+		accordions.forEach(accordion => {
+			accordion.addEventListener('click', function (e) {
+				const panel = document.querySelector(accordionPanel);
 
-			this.classList.toggle('active');
-			panel.classList.toggle('active');
+				this.classList.toggle('active');
+				panel.classList.toggle('active');
 
-			panel.style.maxHeight
-				? (panel.style.maxHeight = null)
-				: (panel.style.maxHeight = panel.scrollHeight + 'px');
+				panel.style.maxHeight
+					? (panel.style.maxHeight = null)
+					: (panel.style.maxHeight = panel.scrollHeight + 'px');
+			});
 		});
 	}
+	//accordionorder1
+	accordion('#accordionorder1', '#accordionorder1Body');
+	// accordionorder2
+	accordion('#accordionorder2', '#accordionorder2Body');
+
 	// popup my-account
 	document.getElementById('my-account-button').addEventListener('click', function () {
 		var popup = document.getElementById('my-account-Popup');
