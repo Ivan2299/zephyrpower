@@ -4,6 +4,9 @@
 	color: $mainPink;
 	text-transform: capitalize;
 	font-family: $fontFamily1;
+	&-cancel {
+		color: #f00 !important;
+	}
 }
 
 .container {

@@ -1,5 +1,19 @@
 .myaccountpage {
+	margin-bottom: 91px;
 	// .myaccountpage__breadcrumps
+	&-cloud-left {
+		position: absolute;
+		pointer-events: none;
+		top: 35%;
+		left: 0;
+	}
+
+	&-cloud-right {
+		position: absolute;
+		pointer-events: none;
+		top: 24%;
+		right: 0;
+	}
 
 	&__breadcrumps {
 	}
@@ -76,6 +90,11 @@
 	}
 
 	.tabs-content {
+		&-more {
+			max-width: 760px;
+			margin-top: 40px;
+			text-align: center;
+		}
 		&-item {
 			margin-bottom: 100px;
 		}
@@ -136,6 +155,8 @@
 		&-order {
 			display: flex;
 			flex-direction: column;
+			border-bottom: 2px solid $mainLightBlue;
+			max-width: 760px;
 		}
 		&-order-top {
 			max-width: 720px;
@@ -211,6 +232,19 @@
 		}
 		&-order-bottom {
 			max-width: 720px;
+
+			&-text {
+				max-width: 521px;
+				margin: 0 auto;
+				font-family: $fontFamily2;
+				font-size: 14px;
+				font-weight: 400;
+				color: $mainGrey;
+				margin-bottom: 20px;
+				span {
+					color: $black;
+				}
+			}
 		}
 		&-order-item {
 			display: grid;
@@ -218,6 +252,8 @@
 			gap: 8px;
 			align-items: center;
 			justify-items: space-between;
+			margin-bottom: 20px;
+
 			&-left {
 				display: flex;
 				gap: 20px;

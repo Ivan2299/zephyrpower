@@ -447,6 +447,9 @@ svg {
   text-transform: capitalize;
   font-family: "Raleway", sans-serif;
 }
+.title-cancel {
+  color: #f00 !important;
+}
 
 .container {
   max-width: 1150px;
@@ -3012,6 +3015,21 @@ swiper-container .swiper-notification {
   margin-top: 20px;
 }
 
+.myaccountpage {
+  margin-bottom: 91px;
+}
+.myaccountpage-cloud-left {
+  position: absolute;
+  pointer-events: none;
+  top: 35%;
+  left: 0;
+}
+.myaccountpage-cloud-right {
+  position: absolute;
+  pointer-events: none;
+  top: 24%;
+  right: 0;
+}
 .myaccountpage__title {
   text-align: center;
   margin-bottom: 40px;
@@ -3045,6 +3063,11 @@ swiper-container .swiper-notification {
 }
 .myaccountpage__tabs-content-wrapper {
   flex: 1 1 auto;
+}
+.myaccountpage .tabs-content-more {
+  max-width: 760px;
+  margin-top: 40px;
+  text-align: center;
 }
 .myaccountpage .tabs-content-item {
   margin-bottom: 100px;
@@ -3100,6 +3123,8 @@ swiper-container .swiper-notification {
 .myaccountpage .tabs-content-order {
   display: flex;
   flex-direction: column;
+  border-bottom: 2px solid #3f8f8d;
+  max-width: 760px;
 }
 .myaccountpage .tabs-content-order-top {
   max-width: 720px;
@@ -3165,12 +3190,25 @@ swiper-container .swiper-notification {
 .myaccountpage .tabs-content-order-bottom {
   max-width: 720px;
 }
+.myaccountpage .tabs-content-order-bottom-text {
+  max-width: 521px;
+  margin: 0 auto;
+  font-family: "Gotu", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.myaccountpage .tabs-content-order-bottom-text span {
+  color: #000;
+}
 .myaccountpage .tabs-content-order-item {
   display: grid;
   grid-template-columns: 5fr 1fr 1fr 1fr;
   gap: 8px;
   align-items: center;
   justify-items: space-between;
+  margin-bottom: 20px;
 }
 .myaccountpage .tabs-content-order-item-left {
   display: flex;

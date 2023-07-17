@@ -345,6 +345,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	accordion('#accordionorder1', '#accordionorder1Body');
 	// accordionorder2
 	accordion('#accordionorder2', '#accordionorder2Body');
+	// accordionorder3
+	accordion('#accordionorder3', '#accordionorder3Body');
+	// accordionorder4
+	accordion('#accordionorder4', '#accordionorder4Body');
 
 	// popup my-account
 	document.getElementById('my-account-button').addEventListener('click', function () {
