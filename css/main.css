@@ -1570,6 +1570,7 @@ swiper-container .swiper-notification {
   overflow: hidden;
 }
 .hero-section .vertical-slider .vertical-slider-slide {
+  pointer-events: none;
   max-width: 750px;
   height: 130px;
   filter: blur(7.5px);
@@ -1583,6 +1584,7 @@ swiper-container .swiper-notification {
      object-fit: cover;
 }
 .hero-section .vertical-slider .swiper-slide-active {
+  pointer-events: all;
   filter: none;
   max-width: 843px;
   max-height: 280px;
@@ -1654,8 +1656,14 @@ swiper-container .swiper-notification {
   justify-content: center;
   transition: all 0.3s ease;
 }
+.hero-section .circle-slider .swiper-slide a {
+  pointer-events: none;
+}
 .hero-section .circle-slider .swiper-slide-active {
   filter: blur(0px);
+}
+.hero-section .circle-slider .swiper-slide-active a {
+  pointer-events: all;
 }
 .hero-section .circle-slider .swiper-slide-active img {
   transform: scale(1.8);
@@ -2015,11 +2023,6 @@ swiper-container .swiper-notification {
 .power-slider-box .swiper-button-next,
 .power-slider-box .swiper-button-prev {
   filter: drop-shadow(0px 15px 8px #bf4c4c);
-}
-.power-slider-box .power-slider-instagram :hover,
-.power-slider-box .swiper-button-next :hover,
-.power-slider-box .swiper-button-prev :hover {
-  transform: scale(1.12);
 }
 .power-slider .swiper-slide {
   transition: all 0.3s ease;

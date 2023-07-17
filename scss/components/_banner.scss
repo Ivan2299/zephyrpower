@@ -11,6 +11,7 @@
 		overflow: hidden;
 
 		.vertical-slider-slide {
+			pointer-events: none;
 			max-width: 750px;
 			height: 130px;
 			filter: blur(7.5px);
@@ -23,6 +24,7 @@
 			}
 		}
 		.swiper-slide-active {
+			pointer-events: all;
 			filter: none;
 			max-width: 843px;
 			max-height: 280px;
@@ -104,8 +106,14 @@
 				transition: $transition;
 				// transform: scale(0.8);
 			}
+			a {
+				pointer-events: none;
+			}
 		}
 		.swiper-slide-active {
+			a {
+				pointer-events: all;
+			}
 			filter: blur(0px);
 			img {
 				transform: scale(1.8);
