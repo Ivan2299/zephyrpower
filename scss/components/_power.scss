@@ -55,7 +55,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 15px;
-		&-image-overlay {
+		&-overlay {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -63,6 +63,7 @@
 			height: 100%;
 			background: linear-gradient(45deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
 			pointer-events: none;
+			transition: $transition;
 		}
 	}
 	&-slider {
@@ -136,6 +137,9 @@
 		}
 
 		.swiper-slide-active {
+			.power-image-overlay {
+				opacity: 0;
+			}
 			transform: scale(1.32);
 			.power__item {
 				align-self: flex-end;
