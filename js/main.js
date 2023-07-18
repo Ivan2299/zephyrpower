@@ -29,10 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		speed: 800,
 		effect: 'slide',
 
-		// autoplay: {
-		// 	delay: 1000,
-		// },
-
 		// Брейкпоинты
 		// breakpoints: {
 		// 	640: {
@@ -73,10 +69,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerGroup: 1,
 		speed: 800,
 		effect: 'slide',
-		// autoplay: {
-		// 	delay: 3000,
-		// 	reverseDirection: true,
-		// },
+		autoplay: {
+			// delay: 3000,
+			reverseDirection: true,
+		},
 
 		// Брейкпоинты
 		// breakpoints: {
@@ -324,6 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	// slider1.controller.control = slider2;
 	slider2.controller.control = slider1;
+	slider1.controller.control = slider2;
 
 	// accordion
 	function accordion(accordionBtn, accordionPanel) {

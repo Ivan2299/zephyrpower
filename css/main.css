@@ -1571,14 +1571,14 @@ swiper-container .swiper-notification {
 }
 .hero-section .vertical-slider .vertical-slider-slide {
   border-radius: 0px 174.5px 174.5px 0px;
-  max-width: 750px;
+  max-width: 700px;
   filter: blur(7.5px);
   opacity: 0.2;
   pointer-events: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
 }
 .hero-section .vertical-slider .vertical-slider-slide img {
   display: block;
@@ -1694,11 +1694,6 @@ swiper-container .swiper-notification {
 .new__wrapper {
   margin-top: 10px;
 }
-.new__item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 .new__item-title {
   margin-bottom: 10px;
   font-size: 20px;
@@ -1745,6 +1740,11 @@ swiper-container .swiper-notification {
 .new .new-image {
   position: absolute;
   top: -40%;
+  left: 8%;
+  height: 370px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .new .new-image img {
   max-height: 370px;
