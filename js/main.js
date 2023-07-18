@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Loaded');
 
-	// sliders
+	// sliders///////////////////////////////////////////////////
 	const verrticalSliderBanner = document.querySelector('.vertical-slider');
 	const circleSlider = document.querySelector('.circle-slider');
 	const sliderNew = document.querySelector('.new-slider');
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	slider2.controller.control = slider1;
 	slider1.controller.control = slider2;
 
-	// accordion
+	// accordion///////////////////////////////////////////////////
 	function accordion(accordionBtn, accordionPanel) {
 		const accordions = document.querySelectorAll(accordionBtn);
 
@@ -353,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// accordionorder4
 	accordion('#accordionorder4', '#accordionorder4Body');
 
-	// popup my-account
+	// popup my-account///////////////////////////////////////////////////
 	document.getElementById('my-account-button').addEventListener('click', function () {
 		var popup = document.getElementById('my-account-Popup');
 		popup.style.display = 'block';
@@ -368,7 +368,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.body.style.overflow = 'auto'; // enable scrolling
 		}
 	});
-	// popup my-account
 	function fadeIn(element, duration) {
 		element.style.opacity = 0;
 		var startTime = performance.now();
@@ -419,7 +418,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	// Search
+	// Search///////////////////////////////////////////////////
 	const body = document.getElementsByTagName('body')[0];
 	const searchInput = document.querySelector('.header__search-input');
 	searchInput.addEventListener('focus', event => {
@@ -432,14 +431,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		// body.classList.remove('search-open');
 	});
 
-	// select
+	// select///////////////////////////////////////////////////
 	$(document).ready(function () {
 		$('#mySelect').select2();
 	});
 
+	// tabs///////////////////////////////////////////////////
 	const cartTabs = new bootstrap.Tab(document.getElementById('imagesTabs'));
 	myTabs.show();
-
 	const cartTabs2 = new bootstrap.Tab(document.getElementById('descriptionTabs'));
 	myTabs.show();
 });

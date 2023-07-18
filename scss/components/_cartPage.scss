@@ -1,0 +1,164 @@
+.cartpage {
+	margin-bottom: clamp(3.125rem, 1.438rem + 8.44vw, 6.5rem); //104-50px
+
+	.myaccountpage-cloud-right {
+		top: 10%;
+		right: 0;
+	}
+	.myaccountpage-cloud-left {
+		top: 10%;
+		left: 0;
+	}
+
+	// .cartpage__inner
+
+	&__inner {
+		max-height: 90vh;
+		overflow: auto;
+	}
+
+	// .cartpage__title
+
+	&__title {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	// .cartpage__item
+
+	&__item {
+		position: relative;
+		display: grid;
+		grid-template-columns: 5fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		justify-items: center;
+		gap: 8px;
+		align-items: center;
+		justify-items: space-between;
+		padding-bottom: 40px;
+		padding-top: 20px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			display: block;
+			height: 1px;
+			width: 95%;
+			bottom: 0;
+			background-color: $mainLightPink;
+		}
+	}
+	&__item-left {
+		display: flex;
+		justify-self: flex-start;
+		gap: 20px;
+	}
+
+	// .cartpage__image
+
+	&__image {
+	}
+
+	// .cartpage__item-info
+
+	&__item-info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .cartpage__item-title
+
+	&__item-title {
+		font-size: 20px;
+		font-weight: 600;
+		color: $black;
+		margin-bottom: 10px;
+	}
+
+	// .cartpage__item-sup
+
+	&__item-sup {
+		font-size: 16px;
+		font-weight: 400;
+		color: $mainGrey;
+		margin-bottom: 20px;
+		flex: 1 1 auto;
+	}
+
+	&__item-text {
+		font-size: 12px;
+		font-weight: 400;
+		color: $mainGrey;
+	}
+
+	// .cartpage__item-actions
+
+	&__item-actions {
+		font-family: $fontFamily2;
+		font-size: 16px;
+		color: $black;
+	}
+
+	// .cartpage__item-minus
+
+	&__item-minus {
+		cursor: pointer;
+	}
+
+	// .cartpage__item-count
+
+	&__item-count {
+		margin: 0 20px;
+	}
+
+	// .cartpage__item-plus
+
+	&__item-plus {
+		cursor: pointer;
+	}
+
+	// .cartpage__item-price
+
+	&__item-price {
+		font-family: $fontFamily2;
+		font-size: 16px;
+		color: $black;
+	}
+
+	// .cartpage__item-delete
+
+	&__item-delete {
+		cursor: pointer;
+	}
+
+	// .cartpage__summary
+
+	&__summary {
+		display: flex;
+		align-items: center;
+		column-gap: 47px;
+		margin-top: 50px;
+		justify-content: flex-end;
+		margin-right: 147px;
+		margin-bottom: clamp(1.813rem, 1.25rem + 2.81vw, 2.938rem); // 47-29px
+
+		span {
+			font-size: 20px;
+			font-weight: 600;
+		}
+		&-price {
+			font-size: 20px;
+			font-weight: 400;
+			font-family: $fontFamily2;
+		}
+	}
+
+	// .cartpage__summary-price
+
+	&__button-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

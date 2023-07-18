@@ -49,7 +49,7 @@ svg {
 	}
 }
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 3px;
 }
 
 /* Track */
@@ -59,10 +59,10 @@ svg {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: $mainLightPink;
+	background: $mainLightBlue;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: $mainLightPink;
+	// background: $mainLightPink;
 }
