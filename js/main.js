@@ -13,14 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let slider1 = new Swiper(verrticalSliderBanner, {
 		direction: 'vertical',
-		allowSlideNext: false,
-		allowSlidePrev: false,
-		allowTouchMove: false,
-		mousewheel: false,
+		// allowSlideNext: false,
+		// allowSlidePrev: false,
+		// allowTouchMove: false,
+		// mousewheel: false,
 		centeredSlides: true,
 		slidesPerView: 3,
 		loop: true,
-		spaceBetween: -200,
+		height: 430,
+		// spaceBetween: 10,
 		// grabCursor: true,
 		// slideToClickedSlice: true,
 		slidesPerGroup: 1,
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		// watchOverflow: true,
 		// allowSlideNext: false,
 		// allowSlidePrev: false,
-		allowTouchMove: false,
+		allowTouchMove: true,
 		// mousewheel: false,
 		centeredSlides: true,
 		slidesPerView: 3,
@@ -72,10 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerGroup: 1,
 		speed: 800,
 		effect: 'slide',
-		autoplay: {
-			delay: 3000,
-			reverseDirection: true,
-		},
+		// autoplay: {
+		// 	delay: 3000,
+		// 	reverseDirection: true,
+		// },
 
 		// Брейкпоинты
 		// breakpoints: {
