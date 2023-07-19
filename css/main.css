@@ -446,6 +446,9 @@ svg {
 .title-cancel {
   color: #f00 !important;
 }
+.title-cart {
+  font-size: 25px;
+}
 
 .container {
   max-width: 1150px;
@@ -492,7 +495,7 @@ svg {
   border-bottom: 1px solid #ffd3de;
 }
 .input-pen {
-  padding: 12px 0;
+  padding: 12px 30px 12px 0;
   color: #000;
   font-size: 18px;
   font-weight: 500;
@@ -1549,9 +1552,10 @@ swiper-container .swiper-notification {
 .button-secondary {
   font-weight: 700;
   color: #3f8f8d !important;
-  padding: 5px 92px;
-  border-radius: 5px;
+  padding: 15px 51px;
+  border-radius: 10px;
   background: rgba(63, 143, 141, 0.25);
+  box-shadow: 0px 2px 4px 0px #3f8f8d;
 }
 @media (any-hover: hover) {
   .button-secondary:hover {
@@ -3320,6 +3324,7 @@ swiper-container .swiper-notification {
   justify-items: space-between;
   padding-bottom: 40px;
   padding-top: 20px;
+  border-right: 1px solid #ffd3de;
 }
 .cartpage__item::after {
   content: "";
@@ -3402,5 +3407,46 @@ swiper-container .swiper-notification {
 .cartpage__button-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.emptycart__popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
+  z-index: 10;
+}
+.emptycart__popup-body {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.emptycart__popup-content {
+  position: relative;
+  background-color: #fff; /* Колір вмісту попапу */
+  max-width: 846px;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: 140px auto;
+  border-radius: 15px;
+  background: #fff;
+  padding: 20px 40px 45px;
+  z-index: 11;
+}
+.emptycart__popup-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+.emptycart__popup-close-wrapper {
+  cursor: pointer;
+}
+.emptycart__popup-summary {
+  margin-right: 0;
   justify-content: center;
 }

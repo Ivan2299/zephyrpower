@@ -7,6 +7,9 @@
 	&-cancel {
 		color: #f00 !important;
 	}
+	&-cart {
+		font-size: 25px;
+	}
 }
 
 .container {
@@ -55,7 +58,7 @@
 	border-bottom: 1px solid #ffd3de;
 
 	&-pen {
-		padding: 12px 0;
+		padding: 12px 30px 12px 0;
 		color: $black;
 		font-size: 18px;
 		font-weight: 500;

@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// popup my-account///////////////////////////////////////////////////
 	document.getElementById('my-account-button').addEventListener('click', function () {
-		var popup = document.getElementById('my-account-Popup');
+		let popup = document.getElementById('my-account-Popup');
 		popup.style.display = 'block';
 		fadeIn(popup, 500); // 500 - тривалість плавного відкриття в мілісекундах
 		document.body.style.overflow = 'hidden'; // disable scrolling
@@ -363,34 +363,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	document.getElementById('my-account-Popup').addEventListener('click', function (event) {
 		if (event.target === this) {
-			var popup = document.getElementById('my-account-Popup');
+			let popup = document.getElementById('my-account-Popup');
 			fadeOut(popup, 500); // 500 - тривалість плавного закриття в мілісекундах
 			document.body.style.overflow = 'auto'; // enable scrolling
 		}
 	});
-	function fadeIn(element, duration) {
-		element.style.opacity = 0;
-		var startTime = performance.now();
+	// POPUP EMPTY CART///////////////////////////////////////////////////
+	document.getElementById('emptycart-Popup-button').addEventListener('click', function () {
+		let popup = document.getElementById('emptycart-Popup');
+		popup.style.display = 'block';
+		fadeIn(popup, 500); // 500 - тривалість плавного відкриття в мілісекундах
+		document.body.style.overflow = 'hidden'; // disable scrolling
+	});
 
-		requestAnimationFrame(function animate(currentTime) {
-			var elapsedTime = currentTime - startTime;
-			var progress = elapsedTime / duration;
+	document.getElementById('emptycart-Popup').addEventListener('click', function (event) {
+		if (event.target === this || event.target.closest('#emptycart-Popup-button-close') !== null) {
+			let popup = document.getElementById('emptycart-Popup');
+			fadeOut(popup, 500); // 500 - duration of the fade out animation in milliseconds
+			document.body.style.overflow = 'auto'; // enable scrolling
+		}
+	});
+	// ///////////////////////////////////////////////////
 
-			element.style.opacity = Math.min(progress, 1);
-
-			if (progress < 1) {
-				requestAnimationFrame(animate);
-			}
-		});
-	}
-
+	// FUNCTIONS FOR POPUP SMOOTH
 	function fadeOut(element, duration) {
-		var startTime = performance.now();
-		var startOpacity = parseFloat(element.style.opacity);
+		let startTime = performance.now();
+		let startOpacity = parseFloat(element.style.opacity);
 
 		requestAnimationFrame(function animate(currentTime) {
-			var elapsedTime = currentTime - startTime;
-			var progress = elapsedTime / duration;
+			let elapsedTime = currentTime - startTime;
+			let progress = elapsedTime / duration;
 
 			element.style.opacity = Math.max(startOpacity - progress, 0);
 
@@ -401,7 +403,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
-
 	function fadeIn(element, duration) {
 		element.style.opacity = 0;
 		var startTime = performance.now();

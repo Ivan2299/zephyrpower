@@ -1,0 +1,47 @@
+.emptycart {
+	&__popup {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
+		z-index: 10;
+	}
+
+	&__popup-body {
+		max-height: 50vh;
+		overflow-y: auto;
+	}
+
+	&__popup-content {
+		position: relative;
+		background-color: #fff; /* Колір вмісту попапу */
+		max-width: 846px;
+		width: 100%;
+		height: auto;
+		overflow: auto;
+		margin: 140px auto;
+		border-radius: 15px;
+		background: #fff;
+		padding: 20px 40px 45px;
+		z-index: 11;
+	}
+
+	&__popup-top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
+		gap: 10px;
+	}
+
+	&__popup-close-wrapper {
+		cursor: pointer;
+	}
+
+	&__popup-summary {
+		margin-right: 0;
+		justify-content: center;
+	}
+}
