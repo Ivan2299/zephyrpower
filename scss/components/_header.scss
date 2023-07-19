@@ -177,6 +177,9 @@
 
 	&__submenu-button {
 		white-space: nowrap;
+		display: flex;
+		justify-content: center;
+		width: 250px;
 	}
 
 	// .header__search
