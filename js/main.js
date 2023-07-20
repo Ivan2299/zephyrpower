@@ -436,10 +436,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	$(document).ready(function () {
 		$('#mySelect').select2();
 	});
+	// burger ///////////////////////////////////////////////////
+	$(document).ready(function () {
+		$('.burger-menu-icon').click(function (event) {
+			$('.burger-menu-icon, .burger-menu-body').toggleClass('active');
+		});
+	});
 
 	// tabs///////////////////////////////////////////////////
 	const cartTabs = new bootstrap.Tab(document.getElementById('imagesTabs'));
 	myTabs.show();
 	const cartTabs2 = new bootstrap.Tab(document.getElementById('descriptionTabs'));
 	myTabs.show();
+
+	//header scrol change height ///////////////////////////////////////////////////
 });

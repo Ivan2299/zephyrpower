@@ -141,12 +141,17 @@
 								</li>
 							</ul>
 						</nav>
-						<form class="header__search">
-							<button type="submit" class="header__search-button">
-								<img src="/img/icons/search-icon.svg" alt="search" />
-							</button>
-							<input type="search" class="header__search-input" />
-						</form>
+						<div class="header__search-wrapper">
+							<form class="header__search">
+								<button type="submit" class="header__search-button">
+									<img src="/img/icons/search-icon.svg" alt="search" />
+								</button>
+								<input type="search" class="header__search-input" />
+							</form>
+							<div class="header__search-body">
+								<h1>body</h1>
+							</div>
+						</div>
 					</div>
 
 					<div class="header__actions-inner">
@@ -159,12 +164,33 @@
 									alt="cart" /></a>
 						</div>
 					</div>
+
+
+					<!-- burger  -->
+					<!-- Бургер-меню іконка -->
+					<div class="burger-menu">
+						<div class="burger-menu-icon" onclick="toggleMenu()">
+							<span></span>
+						</div>
+						<!-- Пункти бургер-меню -->
+						<div class="burger-menu-body">
+							<ul class="burger-menu-lists">
+								<li><a href="cartItem.html">Макіяж</a></li>
+								<li><a href="about.html">Про нас</a></li>
+								<li><a href="cartItem.html">Послуги</a></li>
+								<li><a href="cartItem.html">Контакти</a></li>
+							</ul>
+						</div>
+					</div>
+
+
+					<!-- /burger -->
 				</div>
 			</div>
 		</header>
 		<!-- /header -->
 
-		<main class="main ">
+		<main class="main  ">
 			<!-- Hero -->
 			<div class="hero-section ">
 				<!-- slider-banner-vertical -->
@@ -1028,8 +1054,8 @@
 						</ul>
 
 						<div class="myaccount__popup-body  tab-content" id="myaccountTabsContent">
-							<div class="myaccount__popup-body-item tab-pane fade show active" id="myaccountTabs1" role="tabpanel"
-								aria-labelledby="myaccountTabs1-tab">
+							<div class="myaccount__popup-body-item tab-pane fade show active" id="myaccountTabs1"
+								role="tabpanel" aria-labelledby="myaccountTabs1-tab">
 								<form action="#" class="myaccount__popup-form">
 									<input type="email" class="myaccount__popup-form-input" placeholder="Електронна пошта">
 									<input type="password" class="myaccount__popup-form-input" placeholder="Пароль">
@@ -1230,7 +1256,8 @@
 						<div class="cartpage__summary-price">2000₴</div>
 					</div>
 					<div class="emptycart__popup-button cartpage__button-wrapper">
-						<a href="orderPage.html" id="emptycart-button" class="cartpage__button button button-secondary">Оформити
+						<a href="orderPage.html" id="emptycart-button"
+							class="cartpage__button button button-secondary">Оформити
 							замовлення</a>
 					</div>
 
