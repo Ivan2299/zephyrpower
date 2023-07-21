@@ -95,8 +95,12 @@
 
 	&__menu-link {
 		&.active {
-			color: $mainLightRed;
+			color: $mainLightRed !important;
 			padding-bottom: 5px;
+		}
+
+		&-red {
+			color: $mainLightRed !important;
 		}
 
 		// .header__menu-link-inner

@@ -11,6 +11,21 @@
 		z-index: 10;
 	}
 
+	&__popup-cloud {
+		position: absolute;
+		pointer-events: none;
+		z-index: -1;
+		&-left {
+			top: 0;
+			left: 0;
+		}
+
+		&-right {
+			bottom: 0;
+			right: 0;
+		}
+	}
+
 	&__popup-body {
 		max-height: 50vh;
 		overflow-y: auto;
