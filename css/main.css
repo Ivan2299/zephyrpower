@@ -2738,6 +2738,9 @@ swiper-container .swiper-notification {
   display: flex;
   gap: 20px;
 }
+.carttabs__tabs-content {
+  position: relative;
+}
 .carttabs__content {
   display: flex;
   flex-direction: column;

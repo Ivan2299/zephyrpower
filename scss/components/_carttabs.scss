@@ -154,6 +154,11 @@
 		gap: 20px;
 	}
 
+	&__tabs-content {
+		position: relative;
+		// min-height: 525px;
+	}
+
 	&__content {
 		display: flex;
 		flex-direction: column;
