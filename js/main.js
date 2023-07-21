@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerGroup: 1,
 		speed: 800,
 		effect: 'slide',
-		autoplay: {
-			// delay: 3000,
-			reverseDirection: true,
-		},
+		// autoplay: {
+		// 	// delay: 3000,
+		// 	reverseDirection: true,
+		// },
 
 		// Брейкпоинты
 		// breakpoints: {

@@ -1372,6 +1372,9 @@ swiper-container .swiper-notification {
     transform: rotateX(0deg);
   }
 }
+.header__menu-link {
+  transition: all 0.3s ease;
+}
 .header__menu-link.active {
   color: #ff3f6f !important;
   padding-bottom: 5px;
@@ -1383,6 +1386,12 @@ swiper-container .swiper-notification {
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+@media (any-hover: hover) {
+  .header__menu-link:hover {
+    color: #3f8f8d !important;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
 }
 .header__submenu-block-inner {
   display: flex;
@@ -1444,7 +1453,6 @@ swiper-container .swiper-notification {
 }
 .header__submenu-image {
   padding-bottom: 152%;
-  filter: drop-shadow(0px 8px 26px rgba(0, 0, 0, 0.2));
   margin-bottom: 10px;
 }
 .header__submenu-button {
@@ -2018,7 +2026,7 @@ swiper-container .swiper-notification {
   .bestsellers__item:hover {
     border-radius: 5px;
     background: #fff;
-    box-shadow: 0px 16px 53px 14px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 13px 32px 3px rgba(0, 0, 0, 0.2);
     z-index: 2;
   }
   .bestsellers__item:hover .bestsellers__item-fav-wrapper {
@@ -3137,7 +3145,7 @@ swiper-container .swiper-notification {
 }
 .myaccount__popup-form-input {
   width: 100%;
-  border-bottom: 1px solid #3f8f8d;
+  border-bottom: 1px solid #ffd3de;
   padding: 10px 0;
   color: #9e9e9e;
   font-family: Cormorant Garamond;
@@ -3145,6 +3153,7 @@ swiper-container .swiper-notification {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  transition: all 0.3s ease;
 }
 .myaccount__popup-form-input::-moz-placeholder {
   color: #9e9e9e;
@@ -3158,6 +3167,9 @@ swiper-container .swiper-notification {
 }
 .myaccount__popup-form-input:not(:last-child) {
   margin-bottom: 30px;
+}
+.myaccount__popup-form-input:focus {
+  border-bottom: 1px solid #3f8f8d;
 }
 .myaccount__popup-form-button {
   align-self: stretch;
@@ -3181,7 +3193,7 @@ swiper-container .swiper-notification {
 .myaccountpage-cloud-left {
   position: absolute;
   pointer-events: none;
-  top: 35%;
+  top: 47%;
   left: 0;
 }
 .myaccountpage-cloud-right {
@@ -3451,7 +3463,7 @@ swiper-container .swiper-notification {
   left: 0;
 }
 .cartpage__inner {
-  max-height: 90vh;
+  max-height: 45vh;
   overflow: auto;
 }
 .cartpage__title {
@@ -3608,4 +3620,8 @@ swiper-container .swiper-notification {
 .emptycart__popup-summary {
   margin-right: 0;
   justify-content: center;
+}
+
+.order {
+  padding-top: 150px;
 }

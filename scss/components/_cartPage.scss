@@ -2,7 +2,6 @@
 	margin-bottom: clamp(3.125rem, 1.438rem + 8.44vw, 6.5rem); //104-50px
 	margin-top: 150px;
 
-
 	.myaccountpage-cloud-right {
 		top: 10%;
 		right: 0;
@@ -15,7 +14,7 @@
 	// .cartpage__inner
 
 	&__inner {
-		max-height: 90vh;
+		max-height: 45vh;
 		overflow: auto;
 	}
 
