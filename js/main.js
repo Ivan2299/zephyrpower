@@ -327,30 +327,43 @@ document.addEventListener('DOMContentLoaded', function () {
 	slider1.controller.control = slider2;
 
 	// accordion///////////////////////////////////////////////////
+
 	function accordion(accordionBtn, accordionPanel) {
 		const accordions = document.querySelectorAll(accordionBtn);
 
 		accordions.forEach(accordion => {
 			accordion.addEventListener('click', function (e) {
-				const panel = document.querySelector(accordionPanel);
+				e.preventDefault();
+				const panel = this.nextElementSibling; // Get the sibling (accordion content) element
 
 				this.classList.toggle('active');
 				panel.classList.toggle('active');
 
-				panel.style.maxHeight
-					? (panel.style.maxHeight = null)
-					: (panel.style.maxHeight = panel.scrollHeight + 'px');
+				if (panel.classList.contains('active')) {
+					panel.style.maxHeight = panel.scrollHeight + 'px';
+					const checkbox = this.querySelector('input[type="radio"]');
+					if (checkbox) {
+						checkbox.checked = true; // Activate the checkbox when the accordion is active
+					}
+				} else {
+					panel.style.maxHeight = null;
+					const checkbox = this.querySelector('input[type="radio"]');
+					if (checkbox) {
+						checkbox.checked = false; // Deactivate the checkbox when the accordion is inactive
+					}
+				}
 			});
 		});
 	}
-	//accordionorder1
+
+	//accordionorder
 	accordion('#accordionorder1', '#accordionorder1Body');
-	// accordionorder2
 	accordion('#accordionorder2', '#accordionorder2Body');
-	// accordionorder3
 	accordion('#accordionorder3', '#accordionorder3Body');
-	// accordionorder4
 	accordion('#accordionorder4', '#accordionorder4Body');
+	// accordionOrderPage1
+	accordion('#accordionOrderPage1', '#accordionOrderPage1Body');
+	accordion('#accordionOrderPage2', '#accordionOrderPage2Body');
 
 	// popup my-account///////////////////////////////////////////////////
 	document.getElementById('my-account-button').addEventListener('click', function () {

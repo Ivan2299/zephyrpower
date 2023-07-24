@@ -76,8 +76,8 @@
 
 	&__inner {
 		display: flex;
-		justify-content: space-between;
 		align-items: flex-start;
+		justify-content: space-between;
 		column-gap: clamp(3.125rem, 1.509rem + 8.08vw, 8.125rem); //130 -50px
 	}
 
@@ -87,6 +87,8 @@
 		display: flex;
 		flex-direction: column;
 		margin-top: 35px;
+		max-width: 500px;
+		padding-left: 32px;
 	}
 
 	&__title {
@@ -179,13 +181,11 @@
 		pointer-events: none;
 	}
 
-	// .form-order__payment-checkbox-wrapper
-
-	// .form-order__payment-checkbox-label
-
-	// .form-order__delivery
-
 	&__delivery {
+		&-wrapper {
+			display: grid;
+			row-gap: 20px;
+		}
 		&-title {
 			margin-bottom: 40px;
 		}
@@ -194,11 +194,29 @@
 			display: grid;
 			row-gap: 60px;
 		}
+
+		&-body {
+			display: grid;
+			row-gap: 30px;
+			padding-left: 60px;
+			padding-top: 30px;
+			padding-bottom: 10px;
+		}
+		&-input {
+			padding: 10px 0;
+		}
+
+		&__inputs-row {
+			align-items: center;
+			display: flex;
+			column-gap: 25px;
+		}
 	}
 
 	// .form-order__item
 
 	&__item {
+		flex: 0 1 628px;
 		position: relative;
 		z-index: 1;
 		padding: 40px 62px 40px 28px;
@@ -211,7 +229,6 @@
 
 	&__item-inner {
 		display: grid;
-		padding-left: 33px;
 	}
 
 	// .form-order__item-title
@@ -236,6 +253,11 @@
 	// .form-order__item-card
 
 	&__item-card {
+	}
+
+	&__item-footer {
+		display: grid;
+		padding-left: 33px;
 	}
 
 	// .form-order__item-promo
@@ -350,6 +372,7 @@
 	// .form-order__item-button-order
 
 	&__item-button-order {
+		padding: 10px 50px;
 	}
 
 	// .form-order__item-individual-link
@@ -369,11 +392,12 @@
 	}
 	.tabs-content-order-item {
 		display: grid;
-		grid-template-columns: 5fr 1fr 1fr 1fr;
+		grid-template-columns: 5fr 1fr 1fr;
 		gap: 8px;
 		align-items: center;
 		justify-items: space-between;
 		margin-bottom: 20px;
+		max-width: 510px;
 		&:last-child {
 			margin-bottom: 0;
 			padding-bottom: 20px;
@@ -387,6 +411,10 @@
 		// flex: 0 1 55%;
 	}
 	.tabs-content-order-item-img {
+		img {
+			width: 108px;
+			height: 117px;
+		}
 	}
 	.tabs-content-order-item-left-info {
 	}
