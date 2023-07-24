@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerGroup: 1,
 		speed: 800,
 		effect: 'slide',
-		// autoplay: {
 		// 	// delay: 3000,
 		// 	reverseDirection: true,
 		// },
@@ -420,12 +419,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// Search///////////////////////////////////////////////////
-	const body = document.getElementsByTagName('body')[0];
-	const searchInput = document.querySelector('.header__search-input');
-	searchInput.addEventListener('focus', event => {
-		// event.target.parentElement.classList.add('active');
-		body.classList.add('search-open');
-	});
+	// const body = document.getElementsByTagName('body')[0];
+	// const searchInput = document.querySelector('.header__search-input');
+	// searchInput.addEventListener('focus', event => {
+	// 	// event.target.parentElement.classList.add('active');
+	// 	body.classList.add('search-open');
+	// });
 
 	searchInput.addEventListener('blur', event => {
 		// event.target.parentElement.classList.remove('active');

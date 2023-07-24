@@ -165,8 +165,16 @@
 
 		<main class="main ">
 			<section class="order">
-				<div class="container">
-					<div class="order__breadcrumps rmyaccountpage__breadcrumps">
+				<div class="order-clouds">
+					<img class="order-cloud order-cloud-1 " src="/img/images/order/cloud-top-right.png"
+						alt="cloud">
+					<img class="order-cloud order-cloud-2 "
+						src="/img/images/order/cloud-bottom-left.png" alt="cloud">
+					<img class="order-cloud order-cloud-3 "
+						src="/img/images/order/cloud-bottom-right.png" alt="cloud">
+				</div>
+				<div class="container__big">
+					<div class="order__breadcrumps myaccountpage__breadcrumps">
 						<div class="carttabs__breadcrumps breadcrumps">
 							<ul class="breadcrumps__list">
 								<li class="breadcrumps__item">
@@ -189,10 +197,158 @@
 						<div class="order__form form-order">
 							<div class="form-order__inner">
 								<form class="form-order__info">
-									<div class="form-order__contacts">
-										
-									</div>
+									<ol class="form-order__list">
+										<li class="form-order__contacts">
+											<h3 class="form-order__contacts-title form-order__title">Контактні данні</h3>
+											<div class="form-order__contacts-inputs">
+												<input type="name" class="form-order__contacts-input input
+											" placeholder="Ім'я">
+												<input type="name" class="form-order__contacts-input input
+											" placeholder="Прізвище">
+												<input type="tel" class="form-order__contacts-input input
+											" placeholder="Телефон">
+												<input type="email" class="form-order__contacts-input input
+											" placeholder="Електронна пошта">
+											</div>
+										</li>
+										<li class="form-order__payment">
+											<h3 class="form-order__payment-title form-order__title">Оплата</h3>
+											<div class="form-order__payment-buttons">
+												<label for="checkboxPayment1" class="form-order__payment__label">
+													<input class="form-order__payment__input" type="radio" name="checkboxPayment"
+														id="checkboxPayment1" value="checkboxPayment1">
+													<span class="checkmark"></span>
+													Оплата карткою Visa/MasterCard
+												</label>
+												<label for="checkboxPayment2" class="form-order__payment__label">
+													<input class="form-order__payment__input" type="radio" name="checkboxPayment"
+														id="checkboxPayment2" value="checkboxPayment2">
+													<span class="checkmark"></span>
+													Оплата при отриманні товару
+												</label>
+											</div>
+										</li>
+										<li class="form-order__delivery">
+											<h3 class="form-order__delivery-title form-order__title">Доставка</h3>
+											<div class="form-order__delivery-buttons">
+												<label for="checkboxDelivery1"
+													class="form-order__delivery__label form-order__payment__label">
+													<input class="form-order__delivery__input form-order__payment__input"
+														type="radio" name="checkboxDelivery" id="checkboxDelivery1"
+														value="checkboxDelivery1">
+													<span class="checkmark"></span>
+													Самовивіз з Новой Пошти
+												</label>
+												<label for="checkboxDelivery2"
+													class="form-order__delivery__label form-order__payment__label">
+													<input class="form-order__delivery__input form-order__payment__input"
+														type="radio" name="checkboxDelivery" id="checkboxDelivery2"
+														value="checkboxDelivery2">
+													<span class="checkmark"></span>
+													Доставка кур'єром Новой Пошти
+												</label>
+											</div>
+										</li>
+									</ol>
 								</form>
+								<div class="form-order__item">
+
+									<div class="form-order__item-inner">
+										<h2 class="form-order__item-title">Замовлення</h2>
+										<div class="form-order__item-cards">
+											<div class="form-order__item-card tabs-content-order-item">
+												<div class="tabs-content-order-item-left">
+													<div class="tabs-content-order-item-img">
+														<img src="./img/images/myaccountpage/02.jpg" alt="bestsellers" />
+													</div>
+													<div class="tabs-content-order-item-left-info">
+														<a href="cartItem.html" class="tabs-content-order-item-title">Generation
+															G</a>
+														<h4 class="tabs-content-order-item-sup">Прозора матова помада</h4>
+													</div>
+												</div>
+
+
+												<div class="tabs-content-order-item-count-num">
+													1
+												</div>
+												<div class="tabs-content-order-item-price price-item">1000₴</div>
+											</div>
+											<div class="form-order__item-card tabs-content-order-item">
+												<div class="tabs-content-order-item-left">
+													<div class="tabs-content-order-item-img">
+														<img src="./img/images/myaccountpage/02.jpg" alt="bestsellers" />
+													</div>
+													<div class="tabs-content-order-item-left-info">
+														<a href="cartItem.html" class="tabs-content-order-item-title">Lip Gloss
+														</a>
+														<h4 class="tabs-content-order-item-sup">Блиск для губ</h4>
+													</div>
+												</div>
+
+
+												<div class="tabs-content-order-item-count-num">
+													1
+												</div>
+												<div class="tabs-content-order-item-price price-item">1000₴</div>
+											</div>
+											<div class="form-order__item-card tabs-content-order-item">
+												<div class="tabs-content-order-item-left">
+													<div class="tabs-content-order-item-img">
+														<img src="./img/images/myaccountpage/02.jpg" alt="bestsellers" />
+													</div>
+													<div class="tabs-content-order-item-left-info">
+														<a href="cartItem.html" class="tabs-content-order-item-title">Generation
+															G</a>
+														<h4 class="tabs-content-order-item-sup">Прозора матова помада</h4>
+													</div>
+												</div>
+
+
+												<div class="tabs-content-order-item-count-num">
+													1
+												</div>
+												<div class="tabs-content-order-item-price price-item">1000₴</div>
+											</div>
+										</div>
+										<input type="text" class="form-order__item-promo input" placeholder="Введіть промокод">
+										<button class="form-order__item-promo-button button-secondary">Застосувати
+											промокод</button>
+										<div class="form-order__item-bottom">
+											<div class="form-order__item-price-wrapper">
+												<div class="form-order__item-price-label">Ціна товарів</div>
+												<div class="form-order__item-price price-item">1000₴</div>
+											</div>
+											<div class="form-order__item-delivery-price-wrapper">
+												<div class="form-order__item-delivery-price-label">Доставка</div>
+												<div class="form-order__item-delivery-price price-item ">1000₴</div>
+											</div>
+											<div class="form-order__item-summary-price-wrapper">
+												<div class="form-order__item-summary-price-label">Разом</div>
+												<div class="form-order__item-summary-price price-item">2000₴</div>
+											</div>
+											<div class="form-order__item-callback-wrapper">
+												<label for="checkboxCallback"
+													class="form-order__item-callback-label form-order__payment__label">
+													<input class="form-order__item-callback-input form-order__payment__input"
+														type="checkbox" name="checkboxCallback" id="checkboxCallback"
+														value="checkboxCallback">
+													<span class="checkmark"></span>
+													передзвонювати для підтвердження замовлення
+												</label>
+												<input class="form-order__item-callback-checkbox" type="radio" name="chekboxrecall"
+													id="chekboxrecall" value="chekboxrecall">
+											</div>
+											<div class="form-order__item-actions">
+												<button type="submit"
+													class="form-order__item-button-order button button-accent">Замовити</button>
+												<a href="specialOrder.html" class="form-order__item-individual-link">Індивідуальне
+													замовлення</a>
+											</div>
+
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -200,7 +356,7 @@
 
 		</main>
 		<!-- footer -->
-		<footer class="footer">
+		<footer class=" footer">
 			<div class="footer__container">
 				<div class="footer__inner">
 					<div class="footer__logo">
