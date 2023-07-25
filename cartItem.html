@@ -1143,7 +1143,8 @@
 								</div>
 								<textarea name="message" class="reviews__form-area"
 									placeholder="Розкажіть нам про свої враження"></textarea>
-								<button type="submit" class="reviews__form-button button button-accent">Залишити
+								<button type="submit" class="reviews__form-button button button-accent"
+									id="review-popup-btn">Залишити
 									відгук</button>
 							</form>
 							</h3>
@@ -1162,7 +1163,8 @@
 						<h2 class="form-title title">Поговоримо про новинки!</h2>
 						<div class="form-group">
 							<input class="form-input " type="email" placeholder=" Електронна пошта" required>
-							<button class="form-button button button-accent" type="submit">Підписатися</button>
+							<button class="form-button button button-accent" type="submit"
+								id="subscribe-popup-btn">Підписатися</button>
 						</div>
 					</div>
 				</div>
@@ -1497,6 +1499,50 @@
 				</div>
 			</div>
 			<!-- /empty cart popup --------------------------------------------->
+
+			<!-- SUBSCRIBE popup -------------------------------------------->
+			<div class="thanks__popup subscribe__popup" id="subscribe-popup">
+				<div class="thanks__popup-content subscribe__popup-content" id="subscribe-popup-content">
+					<img class="thanks__popup-cloud thanks__popup-cloud-top-left"
+						src="/img/images/thanksPopup/cloud-top-left.png" alt="">
+					<img class="thanks__popup-cloud thanks__popup-cloud-top-right"
+						src="/img/images/thanksPopup/cloud-top-right.png" alt="">
+					<img class="thanks__popup-cloud thanks__popup-cloud-bottom-left"
+						src="/img/images/thanksPopup/cloud-bottom-left.png" alt="">
+					<img class="thanks__popup-cloud thanks__popup-cloud-bottom-right"
+						src="/img/images/thanksPopup/cloud-bottom-right.png" alt="">
+
+					<h3 class="thanks__popup-title subscribe__popup-title title ">Ви вдало
+						підписались на розсилку!</h3>
+					<div id="subscribe-popup-button-close" class="thanks__popup-close-wrapper">
+						<img src="/img/icons/icon-popup-close.svg" alt="icon-popup-close">
+					</div>
+				</div>
+			</div>
+			<!-- SUBSCRIBE popup -------------------------------------------->
+
+			<!-- REVIEW popup -------------------------------------------->
+			<div class="thanks__popup review__popup" id="review-popup">
+				<div class="thanks__popup-content review__popup-content" id="review-popup-content">
+					<img class="thanks__popup-cloud thanks__popup-cloud-top-left"
+						src="/img/images/thanksPopup/cloud-top-left.png" alt="">
+					<img class="thanks__popup-cloud thanks__popup-cloud-top-right"
+						src="/img/images/thanksPopup/cloud-top-right.png" alt="">
+					<img class="thanks__popup-cloud thanks__popup-cloud-bottom-left"
+						src="/img/images/thanksPopup/cloud-bottom-left.png" alt="">
+					<img class="thanks__popup-cloud thanks__popup-cloud-bottom-right"
+						src="/img/images/thanksPopup/cloud-bottom-right.png" alt="">
+
+					<h3 class="thanks__popup-title review__popup-title title ">Дякуємо,
+						Ваш відгук успішно додано!</h3>
+					<div id="review-popup-button-close" class="thanks__popup-close-wrapper">
+						<img src="/img/icons/icon-popup-close.svg" alt="icon-popup-close">
+					</div>
+				</div>
+			</div>
+			<!-- REVIEW popup -------------------------------------------->
+
+
 		</footer>
 		<!-- /footer -->
 	</div>

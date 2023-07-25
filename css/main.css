@@ -3922,3 +3922,61 @@ swiper-container .swiper-notification {
   font-size: 16px;
   font-family: "Gotu", sans-serif;
 }
+.thanks__popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
+  overflow: auto;
+  z-index: 10;
+}
+.thanks__popup-content {
+  position: relative;
+  background-color: #fff; /* Колір вмісту попапу */
+  min-width: 200px;
+  max-width: 846px;
+  width: 100%;
+  height: auto;
+  margin: 265px auto;
+  border-radius: 15px;
+  background: #fff;
+  padding: 48px 146px;
+}
+.thanks__popup-cloud-top-left {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: -25%;
+}
+.thanks__popup-cloud-top-right {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  bottom: 10px;
+  right: -25%;
+}
+.thanks__popup-cloud-bottom-left {
+  pointer-events: none;
+  position: absolute;
+  bottom: -100px;
+  left: -30%;
+}
+.thanks__popup-cloud-bottom-right {
+  pointer-events: none;
+  position: absolute;
+  bottom: -130px;
+  right: -25%;
+}
+.thanks__popup-title {
+  text-align: center;
+}
+.thanks__popup-close-wrapper {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+}

@@ -397,6 +397,40 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	// ///////////////////////////////////////////////////
 
+	// POPUP SUBSCRIBE ///////////////////////////////////////////////////
+	document.getElementById('subscribe-popup-btn').addEventListener('click', function () {
+		let popup = document.getElementById('subscribe-popup');
+		popup.style.display = 'block';
+		fadeIn(popup, 500); // 500 - тривалість плавного відкриття в мілісекундах
+		document.body.style.overflow = 'hidden'; // disable scrolling
+	});
+
+	document.getElementById('subscribe-popup').addEventListener('click', function (event) {
+		if (event.target === this || event.target.closest('#subscribe-popup-button-close') !== null) {
+			let popup = document.getElementById('subscribe-popup');
+			fadeOut(popup, 500); // 500 - duration of the fade out animation in milliseconds
+			document.body.style.overflow = 'auto'; // enable scrolling
+		}
+	});
+	// ///////////////////////////////////////////////////
+
+	// POPUP REVIEW ///////////////////////////////////////////////////
+	document.getElementById('review-popup-btn').addEventListener('click', function () {
+		let popup = document.getElementById('review-popup');
+		popup.style.display = 'block';
+		fadeIn(popup, 500); // 500 - тривалість плавного відкриття в мілісекундах
+		document.body.style.overflow = 'hidden'; // disable scrolling
+	});
+
+	document.getElementById('review-popup').addEventListener('click', function (event) {
+		if (event.target === this || event.target.closest('#review-popup-button-close') !== null) {
+			let popup = document.getElementById('review-popup');
+			fadeOut(popup, 500); // 500 - duration of the fade out animation in milliseconds
+			document.body.style.overflow = 'auto'; // enable scrolling
+		}
+	});
+	// ///////////////////////////////////////////////////
+
 	// FUNCTIONS FOR POPUP SMOOTH
 	function fadeOut(element, duration) {
 		let startTime = performance.now();
