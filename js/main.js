@@ -328,6 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// accordion///////////////////////////////////////////////////
 
+	// Function to handle accordion behavior
 	function accordion(accordionBtn, accordionPanel) {
 		const accordions = document.querySelectorAll(accordionBtn);
 
@@ -356,14 +357,47 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	//accordionorder
+	// Initialize accordions
 	accordion('#accordionorder1', '#accordionorder1Body');
 	accordion('#accordionorder2', '#accordionorder2Body');
 	accordion('#accordionorder3', '#accordionorder3Body');
 	accordion('#accordionorder4', '#accordionorder4Body');
-	// accordionOrderPage1
 	accordion('#accordionOrderPage1', '#accordionOrderPage1Body');
 	accordion('#accordionOrderPage2', '#accordionOrderPage2Body');
+
+	// FUNCTIONS FOR POPUP SMOOTH
+	function fadeOut(element, duration) {
+		let startTime = performance.now();
+		let startOpacity = parseFloat(element.style.opacity);
+
+		requestAnimationFrame(function animate(currentTime) {
+			let elapsedTime = currentTime - startTime;
+			let progress = elapsedTime / duration;
+
+			element.style.opacity = Math.max(startOpacity - progress, 0);
+
+			if (progress < 1) {
+				requestAnimationFrame(animate);
+			} else {
+				element.style.display = 'none';
+			}
+		});
+	}
+	function fadeIn(element, duration) {
+		element.style.opacity = 0;
+		var startTime = performance.now();
+
+		requestAnimationFrame(function animate(currentTime) {
+			var elapsedTime = currentTime - startTime;
+			var progress = elapsedTime / duration;
+
+			element.style.opacity = Math.min(progress, 1);
+
+			if (progress < 1) {
+				requestAnimationFrame(animate);
+			}
+		});
+	}
 
 	// popup my-account///////////////////////////////////////////////////
 	document.getElementById('my-account-button').addEventListener('click', function () {
@@ -431,39 +465,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 	// ///////////////////////////////////////////////////
 
-	// FUNCTIONS FOR POPUP SMOOTH
-	function fadeOut(element, duration) {
-		let startTime = performance.now();
-		let startOpacity = parseFloat(element.style.opacity);
+	// POPUP ORDER THANKS ///////////////////////////////////////////////////
+	document.querySelector('#order-thanks-popup-btn').addEventListener('click', function () {
+		let popup = document.getElementById('orderthanks-popup');
+		popup.style.display = 'block';
+		fadeIn(popup, 500); // 500 - duration of the fade-in animation in milliseconds
+		document.body.style.overflow = 'hidden'; // disable scrolling
+	});
 
-		requestAnimationFrame(function animate(currentTime) {
-			let elapsedTime = currentTime - startTime;
-			let progress = elapsedTime / duration;
-
-			element.style.opacity = Math.max(startOpacity - progress, 0);
-
-			if (progress < 1) {
-				requestAnimationFrame(animate);
-			} else {
-				element.style.display = 'none';
-			}
-		});
-	}
-	function fadeIn(element, duration) {
-		element.style.opacity = 0;
-		var startTime = performance.now();
-
-		requestAnimationFrame(function animate(currentTime) {
-			var elapsedTime = currentTime - startTime;
-			var progress = elapsedTime / duration;
-
-			element.style.opacity = Math.min(progress, 1);
-
-			if (progress < 1) {
-				requestAnimationFrame(animate);
-			}
-		});
-	}
+	document.getElementById('orderthanks-popup').addEventListener('click', function (event) {
+		if (event.target === this || event.target.closest('#orderthanks-popup-button-close') !== null) {
+			let popup = document.getElementById('orderthanks-popup');
+			fadeOut(popup, 500); // 500 - duration of the fade-out animation in milliseconds
+			document.body.style.overflow = 'auto'; // enable scrolling
+		}
+	});
+	// ///////////////////////////////////////////////////
 
 	// Search///////////////////////////////////////////////////
 	// const body = document.getElementsByTagName('body')[0];
@@ -478,10 +495,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		// body.classList.remove('search-open');
 	});
 
-	// select///////////////////////////////////////////////////
-	$(document).ready(function () {
-		$('#mySelect').select2();
-	});
 	// burger ///////////////////////////////////////////////////
 	$(document).ready(function () {
 		$('.burger-menu-icon').click(function (event) {
@@ -494,6 +507,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	myTabs.show();
 	const cartTabs2 = new bootstrap.Tab(document.getElementById('descriptionTabs'));
 	myTabs.show();
-
-	//header scrol change height ///////////////////////////////////////////////////
 });

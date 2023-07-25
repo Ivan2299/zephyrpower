@@ -32,13 +32,13 @@
 						<nav class="header__menu">
 							<ul class="header__menu-list">
 								<li class="header__menu-item">
-									<a href="/" class="header__menu-link">Каталог</a>
+									<a href="catalog.html" class="header__menu-link">Каталог</a>
 								</li>
 								<li class="header__menu-item">
 									<div href="№" class="header__menu-link-inner">
 										<a href="/" class="header__menu-link">Макіяж</a>
-										<svg class="header__menu-icon-arrow" width="27" height="25" viewBox="0 0 27 25"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg class="header__menu-icon-arrow" width="27" height="25" viewBox="0 0 27 25" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M18.5966 10.385C18.2671 10.0799 17.7329 10.0799 17.4034 10.385L13.5 13.9993L9.59662 10.385C9.26712 10.0799 8.73288 10.0799 8.40338 10.385C8.07387 10.6901 8.07387 11.1848 8.40338 11.4899L12.9034 15.6566C13.2329 15.9617 13.7671 15.9617 14.0966 15.6566L18.5966 11.4899C18.9261 11.1848 18.9261 10.6901 18.5966 10.385Z"
 												fill="black" />
@@ -49,10 +49,10 @@
 										<div class="header__submenu-block-inner">
 											<ul class="header__submenu-lists">
 												<li class="header__submenu-item">
-													<a href="#" class="header__submenu-title">Губи</a>
+													<a href="/cartItem.html" class="header__submenu-title">Губи</a>
 													<ul>
-														<li><a href="#">Помади</a></li>
-														<li><a href="#">Бальзами</a></li>
+														<li><a href="/cartItem.html">Помади</a></li>
+														<li><a href="/cartItem.html">Бальзами</a></li>
 													</ul>
 												</li>
 												<li class="header__submenu-item">
@@ -91,8 +91,8 @@
 								<li class="header__menu-item">
 									<div href="№" class="header__menu-link-inner">
 										<a href="/" class="header__menu-link">Догляд</a>
-										<svg class="header__menu-icon-arrow" width="27" height="25" viewBox="0 0 27 25"
-											fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg class="header__menu-icon-arrow" width="27" height="25" viewBox="0 0 27 25" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd"
 												d="M18.5966 10.385C18.2671 10.0799 17.7329 10.0799 17.4034 10.385L13.5 13.9993L9.59662 10.385C9.26712 10.0799 8.73288 10.0799 8.40338 10.385C8.07387 10.6901 8.07387 11.1848 8.40338 11.4899L12.9034 15.6566C13.2329 15.9617 13.7671 15.9617 14.0966 15.6566L18.5966 11.4899C18.9261 11.1848 18.9261 10.6901 18.5966 10.385Z"
 												fill="black" />
@@ -134,30 +134,55 @@
 									</div>
 								</li>
 								<li class="header__menu-item">
-									<a href="/" class="header__menu-link">Парфуми</a>
+									<a href="/catalog.html" class="header__menu-link">Парфуми</a>
 								</li>
 								<li class="header__menu-item">
-									<a href="/" class="header__menu-link active">Акції</a>
+									<a href="/" class="header__menu-link header__menu-link-red active">Акції</a>
 								</li>
 							</ul>
 						</nav>
-						<form class="header__search">
-							<button type="submit" class="header__search-button">
-								<img src="/img/icons/search-icon.svg" alt="search" />
-							</button>
-							<input type="search" class="header__search-input" />
-						</form>
+						<div class="header__search-wrapper">
+							<form class="header__search">
+								<button type="submit" class="header__search-button">
+									<img src="/img/icons/search-icon.svg" alt="search" />
+								</button>
+								<input type="search" class="header__search-input" />
+							</form>
+							<div class="header__search-body">
+								<h1>body</h1>
+							</div>
+						</div>
 					</div>
 
 					<div class="header__actions-inner">
 						<div class="header__actions">
 							<a href="#" id="my-account-button" class="header__actions-user"><img src="img/icons/user-icon.svg"
 									alt="user" /></a>
-							<a href="#" class="header__actions-favorite"><img src="img/icons/favorite-icon.svg"
-									alt="favorite" /></a>
-							<a href="#" class="header__actions-cart"><img src="img/icons/cart-icon.svg" alt="cart" /></a>
+							<a href="#" class="header__actions-favorite"><img src="img/icons/favorite-icon.svg" alt="favorite" /></a>
+							<a href="cartPage.html" class="header__actions-cart"><img src="img/icons/cart-icon.svg" alt="cart" /></a>
 						</div>
 					</div>
+
+
+					<!-- burger  -->
+					<!-- Бургер-меню іконка -->
+					<div class="burger-menu">
+						<div class="burger-menu-icon" onclick="toggleMenu()">
+							<span></span>
+						</div>
+						<!-- Пункти бургер-меню -->
+						<div class="burger-menu-body">
+							<ul class="burger-menu-lists">
+								<li><a href="cartItem.html">Макіяж</a></li>
+								<li><a href="about.html">Про нас</a></li>
+								<li><a href="cartItem.html">Послуги</a></li>
+								<li><a href="cartItem.html">Контакти</a></li>
+							</ul>
+						</div>
+					</div>
+
+
+					<!-- /burger -->
 				</div>
 			</div>
 		</header>
@@ -362,7 +387,7 @@
 													id="chekboxrecall" value="chekboxrecall">
 											</div>
 											<div class="form-order__item-actions">
-												<button type="submit"
+												<button id="order-thanks-popup-btn" type="submit"
 													class="form-order__item-button-order button button-accent">Замовити</button>
 												<a href="specialOrder.html" class="form-order__item-individual-link">Індивідуальне
 													замовлення</a>
@@ -525,186 +550,7 @@
 			</div>
 			<!-- /my-account popup -->
 
-			<!-- empty cart popup -------------------------------------------->
-			<div class="emptycart__popup" id="emptycart-Popup">
-				<div class="emptycart__popup-content" id="emptycart-Popup-content">
-					<img class="emptycart__popup-cloud emptycart__popup-cloud-left"
-						src="/img/images/cartPopup/cloud-left.png" alt="">
-					<img class="emptycart__popup-cloud emptycart__popup-cloud-right"
-						src="/img/images/cartPopup/cloud-right.png" alt="">
-					<div class="emptycart__popup-top">
-						<h3 class="emptycart__popup-title title title-cart">Товар доданий у кошик</h4>
-							<div id="emptycart-Popup-button-close" class="emptycart__popup-close-wrapper">
-								<img src="/img/icons/icon-popup-close.svg" alt="icon-popup-close">
-							</div>
-					</div>
-
-					<div class="emptycart__popup-body">
-						<!-- item 1 -->
-						<div class="cartpage__item">
-							<div class="cartpage__item-left">
-								<a href="cartItem.html" class="cartpage__image">
-									<img src="/img/images/cartPage/01.jpg" alt="image01">
-								</a>
-								<div class="cartpage__item-info">
-									<a href="cartItem.html" class="cartpage__item-title">G Suit</a>
-									<div class="cartpage__item-sup">Блиск для губ</div>
-									<div class="cartpage__item-text">Колір: персик</br>
-										Розмір: один розмір</div>
-								</div>
-							</div>
-							<div class="cartpage__item-actions">
-								<span class="cartpage__item-minus">
-									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="3" viewBox="0 0 12 3" fill="none">
-										<path d="M1 1.5L11 1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg>
-								</span>
-								<span class="cartpage__item-count">1</span>
-								<span class="cartpage__item-plus"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13"
-										viewBox="0 0 12 13" fill="none">
-										<path d="M6 11.5V1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M1 6.5L11 6.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg></span>
-							</div>
-							<div class="cartpage__item-price">1000₴</div>
-							<div class="cartpage__item-delete">
-								<img src="/img/icons/carticonDelete.svg" alt="carticonDelete">
-							</div>
-						</div>
-						<div class="cartpage__item">
-							<div class="cartpage__item-left">
-								<a href="cartItem.html" class="cartpage__image">
-									<img src="/img/images/cartPage/02.jpg" alt="image01">
-								</a>
-								<div class="cartpage__item-info">
-									<a href="cartItem.html" class="cartpage__item-title">G Suit</a>
-									<div class="cartpage__item-sup">Блиск для губ</div>
-									<div class="cartpage__item-text">Колір: персик</br>
-										Розмір: один розмір</div>
-								</div>
-							</div>
-							<div class="cartpage__item-actions">
-								<span class="cartpage__item-minus">
-									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="3" viewBox="0 0 12 3" fill="none">
-										<path d="M1 1.5L11 1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg>
-								</span>
-								<span class="cartpage__item-count">1</span>
-								<span class="cartpage__item-plus"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13"
-										viewBox="0 0 12 13" fill="none">
-										<path d="M6 11.5V1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M1 6.5L11 6.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg></span>
-							</div>
-							<div class="cartpage__item-price">1000₴</div>
-							<div class="cartpage__item-delete">
-								<img src="/img/icons/carticonDelete.svg" alt="carticonDelete">
-							</div>
-						</div>
-						<div class="cartpage__item">
-							<div class="cartpage__item-left">
-								<a href="cartItem.html" class="cartpage__image">
-									<img src="/img/images/cartPage/03.jpg" alt="image01">
-								</a>
-								<div class="cartpage__item-info">
-									<a href="cartItem.html" class="cartpage__item-title">G Suit</a>
-									<div class="cartpage__item-sup">Блиск для губ</div>
-									<div class="cartpage__item-text">Колір: персик</br>
-										Розмір: один розмір</div>
-								</div>
-							</div>
-							<div class="cartpage__item-actions">
-								<span class="cartpage__item-minus">
-									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="3" viewBox="0 0 12 3" fill="none">
-										<path d="M1 1.5L11 1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg>
-								</span>
-								<span class="cartpage__item-count">1</span>
-								<span class="cartpage__item-plus"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13"
-										viewBox="0 0 12 13" fill="none">
-										<path d="M6 11.5V1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M1 6.5L11 6.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg></span>
-							</div>
-							<div class="cartpage__item-price">1000₴</div>
-							<div class="cartpage__item-delete">
-								<img src="/img/icons/carticonDelete.svg" alt="carticonDelete">
-							</div>
-						</div>
-						<div class="cartpage__item">
-							<div class="cartpage__item-left">
-								<a href="cartItem.html" class="cartpage__image">
-									<img src="/img/images/cartPage/02.jpg" alt="image01">
-								</a>
-								<div class="cartpage__item-info">
-									<a href="cartItem.html" class="cartpage__item-title">G Suit</a>
-									<div class="cartpage__item-sup">Блиск для губ</div>
-									<div class="cartpage__item-text">Колір: персик</br>
-										Розмір: один розмір</div>
-								</div>
-							</div>
-							<div class="cartpage__item-actions">
-								<span class="cartpage__item-minus">
-									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="3" viewBox="0 0 12 3" fill="none">
-										<path d="M1 1.5L11 1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg>
-								</span>
-								<span class="cartpage__item-count">1</span>
-								<span class="cartpage__item-plus"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13"
-										viewBox="0 0 12 13" fill="none">
-										<path d="M6 11.5V1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M1 6.5L11 6.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg></span>
-							</div>
-							<div class="cartpage__item-price">1000₴</div>
-							<div class="cartpage__item-delete">
-								<img src="/img/icons/carticonDelete.svg" alt="carticonDelete">
-							</div>
-						</div>
-						<div class="cartpage__item">
-							<div class="cartpage__item-left">
-								<a href="cartItem.html" class="cartpage__image">
-									<img src="/img/images/cartPage/03.jpg" alt="image01">
-								</a>
-								<div class="cartpage__item-info">
-									<a href="cartItem.html" class="cartpage__item-title">G Suit</a>
-									<div class="cartpage__item-sup">Блиск для губ</div>
-									<div class="cartpage__item-text">Колір: персик</br>
-										Розмір: один розмір</div>
-								</div>
-							</div>
-							<div class="cartpage__item-actions">
-								<span class="cartpage__item-minus">
-									<svg xmlns="http://www.w3.org/2000/svg" width="12" height="3" viewBox="0 0 12 3" fill="none">
-										<path d="M1 1.5L11 1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg>
-								</span>
-								<span class="cartpage__item-count">1</span>
-								<span class="cartpage__item-plus"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="13"
-										viewBox="0 0 12 13" fill="none">
-										<path d="M6 11.5V1.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-										<path d="M1 6.5L11 6.5" stroke="black" stroke-width="1.5" stroke-linecap="round" />
-									</svg></span>
-							</div>
-							<div class="cartpage__item-price">1000₴</div>
-							<div class="cartpage__item-delete">
-								<img src="/img/icons/carticonDelete.svg" alt="carticonDelete">
-							</div>
-						</div>
-					</div>
-
-					<div class="emptycart__popup-summary cartpage__summary">
-						<span>Загальна сума</span>
-						<div class="cartpage__summary-price">2000₴</div>
-					</div>
-					<div class="emptycart__popup-button cartpage__button-wrapper">
-						<a href="orderPage.html" id="emptycart-button"
-							class="cartpage__button button button-secondary">Оформити
-							замовлення</a>
-					</div>
-				</div>
-			</div>
-			<!-- /empty cart popup --------------------------------------------->
+			
 
 			<!-- SUBSCRIBE popup -------------------------------------------->
 			<div class="thanks__popup subscribe__popup" id="subscribe-popup">
@@ -726,6 +572,17 @@
 				</div>
 			</div>
 			<!-- SUBSCRIBE popup -------------------------------------------->
+			<!-- ORDERTHANKS popup -------------------------------------------->
+			<div class="thanks__popup orderthanks__popup" id="orderthanks-popup">
+				<div class="thanks__popup-content orderthanks__popup-content" id="orderthanks-popup-content">
+
+					<h3 class="thanks__popup-title orderthanks__popup-title title">Thank You for Your Order!</h3>
+					<div id="orderthanks-popup-button-close" class="thanks__popup-close-wrapper">
+						<img src="/img/icons/icon-popup-close.svg" alt="icon-popup-close">
+					</div>
+				</div>
+			</div>
+			<!-- ORDERTHANKS popup -------------------------------------------->
 		</footer>
 		<!-- /footer -->
 	</div>
