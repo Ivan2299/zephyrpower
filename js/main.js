@@ -326,7 +326,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// accordion///////////////////////////////////////////////////
 
-	// Function to handle accordion behavior
+	// Function   accordion
+	let activeAccordion = null;
+
+	function closeAccordion() {
+		if (activeAccordion) {
+			activeAccordion.classList.remove('active');
+			const panel = activeAccordion.nextElementSibling;
+			panel.style.maxHeight = null;
+			const checkbox = activeAccordion.querySelector('input[type="radio"]');
+			if (checkbox) {
+				checkbox.checked = false; // Deactivate the checkbox
+			}
+			activeAccordion = null;
+		}
+	}
+	// ACCORDIONS FUNCTIONS
 	function accordion(accordionBtn, accordionPanel) {
 		const accordions = document.querySelectorAll(accordionBtn);
 
@@ -334,22 +349,19 @@ document.addEventListener('DOMContentLoaded', function () {
 			accordion.addEventListener('click', function (e) {
 				e.preventDefault();
 				const panel = this.nextElementSibling; // Get the sibling (accordion content) element
+				const isActive = this.classList.contains('active');
 
-				this.classList.toggle('active');
-				panel.classList.toggle('active');
+				closeAccordion(); // Close the currently active accordion (if any)
 
-				if (panel.classList.contains('active')) {
+				if (!isActive) {
+					this.classList.add('active');
+					panel.classList.add('active');
 					panel.style.maxHeight = panel.scrollHeight + 'px';
 					const checkbox = this.querySelector('input[type="radio"]');
 					if (checkbox) {
-						checkbox.checked = true; // Activate the checkbox when the accordion is active
+						checkbox.checked = true; // Activate the checkbox
 					}
-				} else {
-					panel.style.maxHeight = null;
-					const checkbox = this.querySelector('input[type="radio"]');
-					if (checkbox) {
-						checkbox.checked = false; // Deactivate the checkbox when the accordion is inactive
-					}
+					activeAccordion = this; // Set the current accordion as the active one
 				}
 			});
 		});
