@@ -55,10 +55,25 @@
 		text-align: center;
 	}
 
+	&-sup {
+		position: relative;
+		font-size: 20px;
+		color: $black;
+		font-weight: 400;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+
 	&-close-wrapper {
 		position: absolute;
 		cursor: pointer;
 		top: 20px;
 		right: 20px;
 	}
+}
+
+.orderthanks__popup-content {
+	padding: 48px 88px;
+	z-index: 1;
 }

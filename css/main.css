@@ -3974,9 +3974,23 @@ swiper-container .swiper-notification {
 .thanks__popup-title {
   text-align: center;
 }
+.thanks__popup-sup {
+  position: relative;
+  font-size: 20px;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+}
 .thanks__popup-close-wrapper {
   position: absolute;
   cursor: pointer;
   top: 20px;
   right: 20px;
+}
+
+.orderthanks__popup-content {
+  padding: 48px 88px;
+  z-index: 1;
 }

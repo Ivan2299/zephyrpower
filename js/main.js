@@ -1,5 +1,3 @@
-'use strict';
-
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Loaded');
 
@@ -515,17 +513,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
-
 	initializeOrderthanksPopup('#order-thanks-popup-btn');
 	// ///////////////////////////////////////////////////
-
-	// Search///////////////////////////////////////////////////
-	// const body = document.getElementsByTagName('body')[0];
-	// const searchInput = document.querySelector('.header__search-input');
-	// searchInput.addEventListener('focus', event => {
-	// 	// event.target.parentElement.classList.add('active');
-	// 	body.classList.add('search-open');
-	// });
 
 	searchInput.addEventListener('blur', event => {
 		// event.target.parentElement.classList.remove('active');
