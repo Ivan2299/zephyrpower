@@ -3658,11 +3658,16 @@ swiper-container .swiper-notification {
   position: relative;
   counter-increment: custom-counter;
   padding: 0 0 42px 61px;
-  border-left: 1px solid #ffd3de;
-  transition: all 0.3s ease;
+  border-left: 5px solid transparent;
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+.form-order__list li.preActive {
+  border-left: 5px solid #fbf9f9;
 }
 .form-order__list li.active {
   border-left: 5px solid #ffd3de;
+  pointer-events: all;
 }
 .form-order__list li.active::before {
   background-color: #ffd3de;
@@ -3687,6 +3692,7 @@ swiper-container .swiper-notification {
   color: #fff;
   text-shadow: 0px 2px 3px rgb(255, 63, 111); /* Apply the text shadow with RGBA color */
   transform: translate(-53%, -50%);
+  transition: all 0.6s ease;
 }
 .form-order__inner {
   display: flex;
@@ -3699,7 +3705,7 @@ swiper-container .swiper-notification {
   display: flex;
   flex-direction: column;
   margin-top: 35px;
-  max-width: 500px;
+  flex-basis: 414px;
   padding-left: 32px;
 }
 .form-order__title {

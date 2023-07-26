@@ -528,17 +528,50 @@ document.addEventListener('DOMContentLoaded', function () {
 	initializeOrderthanksPopup('#order-thanks-popup-btn');
 	// ///////////////////////////////////////////////////
 
-	searchInput.addEventListener('blur', event => {
-		// event.target.parentElement.classList.remove('active');
-		// body.classList.remove('search-open');
-	});
-
 	// burger ///////////////////////////////////////////////////
 	$(document).ready(function () {
 		$('.burger-menu-icon').click(function (event) {
 			$('.burger-menu-icon, .burger-menu-body').toggleClass('active');
 		});
 	});
+	// ////	ORDER PAGE ANIMATION VERTICAL TIMELINE ///////////////////////////////////////////////
+	const contactInputs = document.querySelectorAll('.form-order__contacts-input');
+	const paymentInputs = document.querySelectorAll('.form-order__payment__input');
+	const contactsBlock = document.querySelector('.form-order__contacts');
+	const paymentBlock = document.querySelector('.form-order__payment');
+	const deliveryBlock = document.querySelector('.form-order__delivery');
+
+	contactInputs.forEach(input => {
+		input.addEventListener('input', checkContactInputs);
+	});
+
+	function checkContactInputs() {
+		const isAllContactInputsFilled = Array.from(contactInputs).every(
+			input => input.value.trim() !== '',
+		);
+
+		if (isAllContactInputsFilled) {
+			paymentBlock.classList.add('active');
+			deliveryBlock.classList.add('preActive');
+		}
+	}
+
+	paymentInputs.forEach(input => {
+		input.addEventListener('input', checkPaymentInputs);
+	});
+
+	function checkPaymentInputs() {
+		const isAllPaymentInputsFilled = Array.from(paymentInputs).some(input => input.checked);
+
+		if (isAllPaymentInputsFilled) {
+			deliveryBlock.classList.add('active');
+		}
+	}
+
+	checkContactInputs();
+	checkPaymentInputs();
+
+	// ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////
 	const cartTabs = new bootstrap.Tab(document.getElementById('imagesTabs'));

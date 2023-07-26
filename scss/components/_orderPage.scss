@@ -50,15 +50,21 @@
 			position: relative;
 			counter-increment: custom-counter;
 			padding: 0 0 42px 61px;
-			border-left: 1px solid $mainLightPink;
-			transition: $transition;
+			border-left: 5px solid transparent;
+			transition: $transition_2;
+			pointer-events: none;
+			&.preActive {
+				border-left: 5px solid #fbf9f9;
+			}
 			&.active {
 				border-left: 5px solid $mainLightPink;
+				pointer-events: all;
 				&::before {
 					background-color: $mainLightPink;
 					filter: drop-shadow(0px 8px 7px #ff3f6f);
 				}
 			}
+
 			&::before {
 				content: counter(custom-counter);
 				display: flex;
@@ -78,6 +84,7 @@
 				color: $white;
 				text-shadow: 0px 2px 3px rgba(255, 63, 111, 1); /* Apply the text shadow with RGBA color */
 				transform: translate(-53%, -50%);
+				transition: $transition_2;
 			}
 		}
 	}
@@ -95,7 +102,8 @@
 		display: flex;
 		flex-direction: column;
 		margin-top: 35px;
-		max-width: 500px;
+		// max-width: 500px;
+		flex-basis: 414px;
 		padding-left: 32px;
 	}
 
