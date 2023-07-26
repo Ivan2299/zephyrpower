@@ -3658,8 +3658,15 @@ swiper-container .swiper-notification {
   position: relative;
   counter-increment: custom-counter;
   padding: 0 0 42px 61px;
-  border-left: 5px solid #ffd3de;
+  border-left: 1px solid #ffd3de;
   transition: all 0.3s ease;
+}
+.form-order__list li.active {
+  border-left: 5px solid #ffd3de;
+}
+.form-order__list li.active::before {
+  background-color: #ffd3de;
+  filter: drop-shadow(0px 8px 7px #ff3f6f);
 }
 .form-order__list li::before {
   content: counter(custom-counter);
@@ -3674,8 +3681,9 @@ swiper-container .swiper-notification {
   top: 0;
   width: 60px;
   height: 60px;
-  background-color: #ffd3de;
+  background-color: #fff;
   border-radius: 50%;
+  border: 1px solid #ffd3de;
   color: #fff;
   text-shadow: 0px 2px 3px rgb(255, 63, 111); /* Apply the text shadow with RGBA color */
   transform: translate(-53%, -50%);

@@ -324,9 +324,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	slider2.controller.control = slider1;
 	slider1.controller.control = slider2;
 
-	// accordion///////////////////////////////////////////////////
+	// Function   ACCORDIONS///////////////////////////////////////////////////
 
-	// Function   accordion
 	let activeAccordion = null;
 
 	function closeAccordion() {
@@ -341,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			activeAccordion = null;
 		}
 	}
-	// ACCORDIONS FUNCTIONS
+
 	function accordion(accordionBtn, accordionPanel) {
 		const accordions = document.querySelectorAll(accordionBtn);
 
@@ -374,6 +373,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	accordion('#accordionorder4', '#accordionorder4Body');
 	accordion('#accordionOrderPage1', '#accordionOrderPage1Body');
 	accordion('#accordionOrderPage2', '#accordionOrderPage2Body');
+	// ///////////////////////////////////////////////////
 
 	// FUNCTIONS FOR POPUP SMOOTH
 	function fadeOut(element, duration) {

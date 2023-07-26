@@ -50,8 +50,15 @@
 			position: relative;
 			counter-increment: custom-counter;
 			padding: 0 0 42px 61px;
-			border-left: 5px solid $mainLightPink;
+			border-left: 1px solid $mainLightPink;
 			transition: $transition;
+			&.active {
+				border-left: 5px solid $mainLightPink;
+				&::before {
+					background-color: $mainLightPink;
+					filter: drop-shadow(0px 8px 7px #ff3f6f);
+				}
+			}
 			&::before {
 				content: counter(custom-counter);
 				display: flex;
@@ -65,8 +72,9 @@
 				top: 0;
 				width: 60px;
 				height: 60px;
-				background-color: $mainLightPink;
+				background-color: $white;
 				border-radius: 50%;
+				border: 1px solid $mainLightPink;
 				color: $white;
 				text-shadow: 0px 2px 3px rgba(255, 63, 111, 1); /* Apply the text shadow with RGBA color */
 				transform: translate(-53%, -50%);
