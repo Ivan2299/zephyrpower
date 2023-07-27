@@ -93,11 +93,12 @@
 			position: relative;
 			display: grid;
 			row-gap: 100px;
-			width: 30%;
+			width: 40%;
 			height: 100%;
 			background-color: $white;
 			padding: 33px 45px 20px 64px;
 			overflow: auto;
+			box-shadow: 0px 16px 53px 14px rgba(0, 0, 0, 0.2);
 		}
 		&-title {
 			text-align: center;

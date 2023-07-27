@@ -591,15 +591,21 @@ document.addEventListener('DOMContentLoaded', function () {
 		filterBlock.classList.toggle('active');
 	};
 
-	filterBtn.addEventListener('click', toggleFilterBlock);
+	if (filterBtn) {
+		filterBtn.addEventListener('click', event => {
+			toggleFilterBlock();
+		});
+	}
 
 	// Немає потреби прив'язувати подію click кожен раз, коли ви викликаєте toggleFilterBlock()
 	// Зворотній виклик навішується один раз під час ініціалізації
-	filterBlock.addEventListener('click', event => {
-		if (event.target === filterBlock || event.target.closest('.catalog__filter-block-close')) {
-			filterBlock.classList.remove('active');
-		}
-	});
+	if (filterBlock) {
+		filterBlock.addEventListener('click', event => {
+			if (event.target === filterBlock || event.target.closest('.catalog__filter-block-close')) {
+				toggleFilterBlock();
+			}
+		});
+	}
 
 	// CATALOG FILTER BLOCK OPEN/CLOSE END ///////////////////////////////////////////////////
 
