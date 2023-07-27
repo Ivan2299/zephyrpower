@@ -609,6 +609,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// CATALOG FILTER BLOCK OPEN/CLOSE END ///////////////////////////////////////////////////
 
+	// GSAP ANIMATIONS  ///////////////////////////////////////////////////
+	const cloudImg = document.querySelector('.two___sections-cloud-img-left');
+
+	gsap.registerPlugin(ScrollTrigger);
+	gsap.to(cloudImg, {
+		scrollTrigger: {
+			trigger: '.home-hero-block',
+			start: 'top top',
+			end: '+=' + window.innerHeight * 2,
+			// markers : true,
+			scrub: 1,
+			normalizeScroll: true,
+		},
+		x: -100,
+	});
+	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
+
 	// tabs///////////////////////////////////////////////////
 	const cartTabs = new bootstrap.Tab(document.getElementById('imagesTabs'));
 	myTabs.show();

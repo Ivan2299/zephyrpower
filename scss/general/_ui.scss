@@ -37,17 +37,17 @@
 
 .two__sections-wrapper {
 	position: relative;
-	.two___sections-clouds > div {
+
+	.two___sections-cloud-img-right {
+		pointer-events: none;
 		position: absolute;
-	}
-	.cloud-1 {
-		position: absolute;
-		right: 0;
+		right: -100%;
 		top: 3%;
 	}
-	.cloud-2 {
+	.two___sections-cloud-img-left {
+		pointer-events: none;
 		position: absolute;
-		left: 0;
+		transform: translateX(-80%);
 		top: 22%;
 	}
 }
