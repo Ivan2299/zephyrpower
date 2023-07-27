@@ -1,4 +1,5 @@
 .title {
+	position: relative;
 	font-size: clamp(1.5rem, 1.114rem + 1.93vw, 2.5rem);
 	font-weight: 700;
 	color: $mainPink;
@@ -39,16 +40,24 @@
 	position: relative;
 
 	.two___sections-cloud-img-right {
-		pointer-events: none;
+		// pointer-events: none;
 		position: absolute;
-		right: -100%;
-		top: 3%;
+		transform: translateX(80%);
+		right: 0;
+		top: 0;
 	}
 	.two___sections-cloud-img-left {
 		pointer-events: none;
 		position: absolute;
 		transform: translateX(-80%);
 		top: 22%;
+		right: 0;
+	}
+	.two___sections-cloud-img-left-small {
+		pointer-events: none;
+		position: absolute;
+		transform: translateX(-100%);
+		top: 0;
 	}
 }
 

@@ -611,7 +611,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// GSAP ANIMATIONS  ///////////////////////////////////////////////////
 	const cloudImg = document.querySelector('.two___sections-cloud-img-left');
-
+	const cloudImg2 = document.querySelector('.two___sections-cloud-img-right');
 	gsap.registerPlugin(ScrollTrigger);
 	gsap.to(cloudImg, {
 		scrollTrigger: {
@@ -623,6 +623,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			normalizeScroll: true,
 		},
 		x: -100,
+	});
+	gsap.to(cloudImg2, {
+		scrollTrigger: {
+			trigger: '.home-hero-block',
+			start: 'top top',
+			end: '+=' + window.innerHeight * 2,
+			// markers : true,
+			scrub: 1,
+			normalizeScroll: true,
+		},
+		x: 0,
 	});
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
