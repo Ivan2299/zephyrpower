@@ -1749,6 +1749,7 @@ swiper-container .swiper-notification {
   position: relative;
   opacity: 1;
   z-index: 1;
+  transform: translateX(-10px);
 }
 .hero-section .circle-slider {
   position: relative;
