@@ -535,45 +535,73 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 	// ////	ORDER PAGE ANIMATION VERTICAL TIMELINE ///////////////////////////////////////////////
-	const contactInputs = document.querySelectorAll('.form-order__contacts-input');
-	const paymentInputs = document.querySelectorAll('.form-order__payment__input');
-	const contactsBlock = document.querySelector('.form-order__contacts');
-	const paymentBlock = document.querySelector('.form-order__payment');
-	const deliveryBlock = document.querySelector('.form-order__delivery');
-	const callbackBlock = document.querySelector('#checkboxCallbackLabel');
+	function handleFormOrder() {
+		const contactInputs = document.querySelectorAll('.form-order__contacts-input');
+		const paymentInputs = document.querySelectorAll('.form-order__payment__input');
+		const contactsBlock = document.querySelector('.form-order__contacts');
+		const paymentBlock = document.querySelector('.form-order__payment');
+		const deliveryBlock = document.querySelector('.form-order__delivery');
+		const callbackBlock = document.querySelector('#checkboxCallbackLabel');
 
-	contactInputs.forEach(input => {
-		input.addEventListener('input', checkContactInputs);
-	});
-
-	function checkContactInputs() {
-		const isAllContactInputsFilled = Array.from(contactInputs).every(
-			input => input.value.trim() !== '',
-		);
-
-		if (isAllContactInputsFilled) {
-			paymentBlock.classList.add('active');
-			deliveryBlock.classList.add('preActive');
+		if (!contactsBlock || !paymentBlock || !deliveryBlock || !callbackBlock) {
+			return; // Skip the code block if any of the required elements are missing
 		}
+
+		contactInputs.forEach(input => {
+			input.addEventListener('input', checkContactInputs);
+		});
+
+		function checkContactInputs() {
+			const isAllContactInputsFilled = Array.from(contactInputs).every(
+				input => input.value.trim() !== '',
+			);
+
+			if (isAllContactInputsFilled) {
+				paymentBlock.classList.add('active');
+				deliveryBlock.classList.add('preActive');
+			}
+		}
+
+		paymentInputs.forEach(input => {
+			input.addEventListener('input', checkPaymentInputs);
+		});
+
+		function checkPaymentInputs() {
+			const isAllPaymentInputsFilled = Array.from(paymentInputs).some(input => input.checked);
+
+			if (isAllPaymentInputsFilled) {
+				deliveryBlock.classList.add('active');
+				callbackBlock.classList.add('active');
+			}
+		}
+
+		checkContactInputs();
+		checkPaymentInputs();
 	}
 
-	paymentInputs.forEach(input => {
-		input.addEventListener('input', checkPaymentInputs);
-	});
-
-	function checkPaymentInputs() {
-		const isAllPaymentInputsFilled = Array.from(paymentInputs).some(input => input.checked);
-
-		if (isAllPaymentInputsFilled) {
-			deliveryBlock.classList.add('active');
-			callbackBlock.classList.add('active');
-		}
-	}
-
-	checkContactInputs();
-	checkPaymentInputs();
+	handleFormOrder();
 
 	// ///////////////////////////////////////////////////
+
+	// CATALOG FILTER BLOCK OPEN/CLOSE///////////////////////////////////////////////////
+	const filterBtn = document.querySelector('.catalog__content-top-left-filter');
+	const filterBlock = document.querySelector('.catalog__filter-block');
+
+	const toggleFilterBlock = () => {
+		filterBlock.classList.toggle('active');
+	};
+
+	filterBtn.addEventListener('click', toggleFilterBlock);
+
+	// Немає потреби прив'язувати подію click кожен раз, коли ви викликаєте toggleFilterBlock()
+	// Зворотній виклик навішується один раз під час ініціалізації
+	filterBlock.addEventListener('click', event => {
+		if (event.target === filterBlock || event.target.closest('.catalog__filter-block-close')) {
+			filterBlock.classList.remove('active');
+		}
+	});
+
+	// CATALOG FILTER BLOCK OPEN/CLOSE END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////
 	const cartTabs = new bootstrap.Tab(document.getElementById('imagesTabs'));
