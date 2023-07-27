@@ -369,6 +369,10 @@
 
 	&__item-callback-label {
 		column-gap: 40px;
+		pointer-events: none;
+		&.active {
+			pointer-events: all;
+		}
 	}
 
 	// .form-order__item-callback-checkbox

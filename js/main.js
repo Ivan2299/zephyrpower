@@ -540,6 +540,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const contactsBlock = document.querySelector('.form-order__contacts');
 	const paymentBlock = document.querySelector('.form-order__payment');
 	const deliveryBlock = document.querySelector('.form-order__delivery');
+	const callbackBlock = document.querySelector('#checkboxCallbackLabel');
 
 	contactInputs.forEach(input => {
 		input.addEventListener('input', checkContactInputs);
@@ -565,6 +566,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		if (isAllPaymentInputsFilled) {
 			deliveryBlock.classList.add('active');
+			callbackBlock.classList.add('active');
 		}
 	}
 
