@@ -616,13 +616,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	const cloudImgNew4 = document.querySelector('.two___sections-cloud-img-right-second');
 
 	gsap.registerPlugin(ScrollTrigger);
+
 	gsap.to(cloudImgNew, {
 		scrollTrigger: {
 			trigger: '.home-hero-block',
 			start: 'top top',
 			end: '+=' + window.innerHeight * 2,
-			// markers : true,
-			scrub: 1,
+			scrub: 2, // Increased scrub value for smoother animation
 			normalizeScroll: true,
 		},
 		x: -600,
@@ -633,8 +633,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			trigger: '.home-hero-block',
 			start: 'top top',
 			end: '+=' + window.innerHeight * 2,
-			// markers : true,
-			scrub: 1,
+			scrub: 2, // Increased scrub value for smoother animation
 			normalizeScroll: true,
 		},
 		x: 0,
@@ -642,23 +641,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Анімація хмаринки
 	gsap.to(cloudImgNew3, {
-		x: '-70%', // Рухаємо хмаринку вліво за межі екрану
-		duration: 2, // Тривалість анімації
+		x: '-70%',
+		duration: 2,
 		scrollTrigger: {
 			trigger: '.home-hero-block',
 			start: 'top top',
-			scrub: 1, // Анімація прокручування залишиться синхронізованою з прокруткою сторінки
+			scrub: 2, // Increased scrub value for smoother animation
+			ease: 'power1.inOut', // Added easing option for a smoother effect
 		},
 	});
+
 	gsap.to(cloudImgNew4, {
-		x: '70%', // Рухаємо хмаринку вліво за межі екрану
-		duration: 2, // Тривалість анімації
+		x: '70%',
+		duration: 2,
 		scrollTrigger: {
 			trigger: '.home-hero-block',
 			start: 'top top',
-			scrub: 1, // Анімація прокручування залишиться синхронізованою з прокруткою сторінки
+			scrub: 2, // Increased scrub value for smoother animation
+			ease: 'power1.inOut', // Added easing option for a smoother effect
 		},
 	});
+
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////
