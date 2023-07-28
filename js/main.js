@@ -711,7 +711,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			scrollTrigger: {
 				trigger: '.power', // Використовуємо клас "power" як тригер
 				start: 'top bottom', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
-				end: 'bottom bottom', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
+				end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
 				scrub: 2, // Збільшений scrub для плавної анімації
 				ease: 'power1.inOut', // Додано easing для більш плавного ефекту
 			},
@@ -729,11 +729,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Timeline для анімації слайдера
 	const sliderTimeline = gsap.timeline({
 		scrollTrigger: {
-			trigger: '.power',
-			start: 'top center',
-			end: 'bottom bottom',
-			scrub: 2,
-			ease: 'power1.inOut',
+			trigger: '.power', // The element that triggers the animation
+			start: 'top center', // The start position of the animation
+			end: 'top bottom', // The end position of the animation
+			scrub: 2, // The scrubbing effect duration
+			ease: 'power1.inOut', // The easing function for the animation
 		},
 	});
 
@@ -741,14 +741,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		.to(powerSliderBox, {
 			opacity: 1, // Появлення power-slider-box
 			y: '0%', // Зсув вниз для появи
-			duration: 1, // Збільшимо тривалість анімації для більшої затримки
+			duration: 2, // Збільшимо тривалість анімації для більшої затримки
 		})
 		.from('.power .swiper-slide-active', {
-			scale: 1, // Збільшимо активний слайд
 			duration: 1, // Зробимо тривалість 1 секунду, щоб мати ефект збільшення
 		})
 		.to('.power .swiper-slide-active', {
-			scale: 1, // Повернемо масштаб активного слайда до нормального
 			duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
 		})
 		.from('.power .swiper-slide:not(.power .swiper-slide-active)', {
@@ -760,14 +758,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Додамо затримку для появи слайдів після анімації power-slider-box
 	gsap.from('.power .swiper-slide', {
 		opacity: 0,
-		y: '50px',
+		y: '-100px',
+		// stagger: 0.15,
 		duration: 0.5,
-		stagger: 0.15,
 		scrollTrigger: {
 			trigger: '.power',
-			start: 'center center',
-			end: 'bottom bottom',
-			scrub: 1,
+			start: 'top center',
+			end: 'top bottom',
+			scrub: 2.5,
 			ease: 'power1.inOut',
 		},
 		onEnterBack: () => sliderTimeline.pause(), // Зупиняємо анімацію при прокрутці вгору
