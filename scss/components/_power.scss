@@ -1,6 +1,7 @@
 .power {
 	position: relative;
 	padding-bottom: clamp(3.125rem, 2.216rem + 4.55vw, 5.625rem);
+	overflow: hidden;
 	.power-clouds {
 		position: absolute;
 		top: 0;

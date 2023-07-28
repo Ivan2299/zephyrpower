@@ -662,6 +662,36 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 	});
 
+	const cloudImgs = document.querySelectorAll('.power-cloud');
+
+	// Анімація хмаринок з використанням ScrollTrigger
+	cloudImgs.forEach((cloudImg, index) => {
+		const isLeftSide = [0, 4, 2].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
+		const direction = isLeftSide ? '-=50%' : '+=50%'; // Змінюємо напрямок руху для лівих та правих хмаринок
+
+		gsap.set(cloudImg, {
+			x: isLeftSide ? '-100%' : '100%', // Початкова позиція зліва або справа від екрану
+			opacity: 0, // Початкова прозорість
+			scale: 0.8, // Початковий масштаб (зменшимо для ефекту зближення)
+		});
+
+		gsap.to(cloudImg, {
+			x: '0%', // Виїжджаємо до центру горизонтально
+			opacity: 1, // Збільшуємо прозорість
+			scale: 1, // Повертаємо масштаб до нормального
+			duration: 2, // Тривалість анімації
+			scrollTrigger: {
+				trigger: '.power', // Використовуємо клас "power" як тригер
+				start: 'top center', // Починаємо анімацію, коли верхній край тригера збігається з центром екрану
+				end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
+				scrub: 2, // Збільшений scrub для плавної анімації
+				ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+			},
+		});
+	});
+
+	// Анімація хмаринок з використанням ScrollTrigger
+
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////
