@@ -479,26 +479,37 @@ svg {
 }
 
 .two__sections-wrapper {
+  overflow: hidden;
   position: relative;
 }
 .two__sections-wrapper .two___sections-cloud-img-right {
   position: absolute;
   transform: translateX(80%);
+  top: 22%;
   right: 0;
-  top: 0;
+  z-index: 1;
 }
 .two__sections-wrapper .two___sections-cloud-img-left {
-  pointer-events: none;
   position: absolute;
   transform: translateX(-80%);
   top: 22%;
-  right: 0;
+  left: 20%;
 }
-.two__sections-wrapper .two___sections-cloud-img-left-small {
-  pointer-events: none;
+.two__sections-wrapper .two___sections-cloud-img-left-second {
   position: absolute;
-  transform: translateX(-100%);
-  top: 0;
+  z-index: 2;
+  top: -25%;
+  left: -28%;
+}
+.two__sections-wrapper .two___sections-cloud-img-right-second {
+  position: absolute;
+  z-index: 2;
+  top: -9%;
+  right: -23%;
+}
+
+.two___sections-clouds {
+  pointer-events: none;
 }
 
 .input {

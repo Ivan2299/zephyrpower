@@ -610,10 +610,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	// CATALOG FILTER BLOCK OPEN/CLOSE END ///////////////////////////////////////////////////
 
 	// GSAP ANIMATIONS  ///////////////////////////////////////////////////
-	const cloudImg = document.querySelector('.two___sections-cloud-img-left');
-	const cloudImg2 = document.querySelector('.two___sections-cloud-img-right');
+	const cloudImgNew = document.querySelector('.two___sections-cloud-img-left');
+	const cloudImgNew2 = document.querySelector('.two___sections-cloud-img-right');
+	const cloudImgNew3 = document.querySelector('.two___sections-cloud-img-left-second');
+	const cloudImgNew4 = document.querySelector('.two___sections-cloud-img-right-second');
+
 	gsap.registerPlugin(ScrollTrigger);
-	gsap.to(cloudImg, {
+	gsap.to(cloudImgNew, {
 		scrollTrigger: {
 			trigger: '.home-hero-block',
 			start: 'top top',
@@ -622,9 +625,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			scrub: 1,
 			normalizeScroll: true,
 		},
-		x: -100,
+		x: -600,
 	});
-	gsap.to(cloudImg2, {
+
+	gsap.to(cloudImgNew2, {
 		scrollTrigger: {
 			trigger: '.home-hero-block',
 			start: 'top top',
@@ -634,6 +638,26 @@ document.addEventListener('DOMContentLoaded', function () {
 			normalizeScroll: true,
 		},
 		x: 0,
+	});
+
+	// Анімація хмаринки
+	gsap.to(cloudImgNew3, {
+		x: '-70%', // Рухаємо хмаринку вліво за межі екрану
+		duration: 2, // Тривалість анімації
+		scrollTrigger: {
+			trigger: '.home-hero-block',
+			start: 'top top',
+			scrub: 1, // Анімація прокручування залишиться синхронізованою з прокруткою сторінки
+		},
+	});
+	gsap.to(cloudImgNew4, {
+		x: '70%', // Рухаємо хмаринку вліво за межі екрану
+		duration: 2, // Тривалість анімації
+		scrollTrigger: {
+			trigger: '.home-hero-block',
+			start: 'top top',
+			scrub: 1, // Анімація прокручування залишиться синхронізованою з прокруткою сторінки
+		},
 	});
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
