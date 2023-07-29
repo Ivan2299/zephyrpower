@@ -2143,6 +2143,14 @@ swiper-container .swiper-notification {
   top: 7%;
   right: -21%;
 }
+.power .power-cloud-7 {
+  top: 9%;
+  left: -12%;
+}
+.power .power-cloud-8 {
+  top: 9%;
+  right: -12%;
+}
 .power__title {
   text-align: center;
   margin-bottom: clamp(1.25rem, 0.795rem + 2.27vw, 2.5rem);
@@ -2225,7 +2233,7 @@ swiper-container .swiper-notification {
   max-height: 400px;
 }
 .power-slider .swiper-slide-active {
-  transform: scale(1.32);
+  transform: scale(1.32) !important;
 }
 .power-slider .swiper-slide-active .power-image-overlay {
   opacity: 0;

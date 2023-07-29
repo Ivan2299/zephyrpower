@@ -694,7 +694,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Анімація хмаринок з використанням ScrollTrigger
 	cloudImgsPower.forEach((cloudImg, index) => {
-		const isLeftSide = [0, 4, 2].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
+		const isLeftSide = [0, 1, 2, 6].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
 		const direction = isLeftSide ? '-=50%' : '+=50%'; // Змінюємо напрямок руху для лівих та правих хмаринок
 
 		gsap.set(cloudImg, {
@@ -707,12 +707,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			x: '0%', // Виїжджаємо до центру горизонтально
 			opacity: 1, // Збільшуємо прозорість
 			scale: 1, // Повертаємо масштаб до нормального
-			duration: 2, // Тривалість анімації
+			duration: 3, // Тривалість анімації
 			scrollTrigger: {
 				trigger: '.power', // Використовуємо клас "power" як тригер
 				start: 'top bottom', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
 				end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
-				scrub: 2, // Збільшений scrub для плавної анімації
+				scrub: 3, // Збільшений scrub для плавної анімації
 				ease: 'power1.inOut', // Додано easing для більш плавного ефекту
 			},
 		});
