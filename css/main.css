@@ -1921,6 +1921,7 @@ swiper-container .swiper-notification {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  z-index: 2;
 }
 .new .new-image img {
   max-height: 370px;

@@ -690,87 +690,151 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 	});
 	// });
 
-	const cloudImgsPower = document.querySelectorAll('.power-cloud');
+	const powerAnimation = function () {
+		const cloudImgsPower = document.querySelectorAll('.power-cloud');
 
-	// Анімація хмаринок з використанням ScrollTrigger
-	cloudImgsPower.forEach((cloudImg, index) => {
-		const isLeftSide = [0, 1, 2, 6].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
-		const direction = isLeftSide ? '-=50%' : '+=50%'; // Змінюємо напрямок руху для лівих та правих хмаринок
+		// Анімація хмаринок з використанням ScrollTrigger
+		cloudImgsPower.forEach((cloudImg, index) => {
+			const isLeftSide = [0, 1, 2, 6].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
+			const direction = isLeftSide ? '-=50%' : '+=50%'; // Змінюємо напрямок руху для лівих та правих хмаринок
 
-		gsap.set(cloudImg, {
-			x: isLeftSide ? '-100%' : '100%', // Початкова позиція зліва або справа від екрану
-			opacity: 0, // Початкова прозорість
-			scale: 0.8, // Початковий масштаб (зменшимо для ефекту зближення)
+			gsap.set(cloudImg, {
+				x: isLeftSide ? '-100%' : '100%', // Початкова позиція зліва або справа від екрану
+				opacity: 0, // Початкова прозорість
+				scale: 0.8, // Початковий масштаб (зменшимо для ефекту зближення)
+			});
+
+			gsap.to(cloudImg, {
+				x: '0%', // Виїжджаємо до центру горизонтально
+				opacity: 1, // Збільшуємо прозорість
+				scale: 1, // Повертаємо масштаб до нормального
+				duration: 3, // Тривалість анімації
+				scrollTrigger: {
+					trigger: '.power', // Використовуємо клас "power" як тригер
+					start: 'top bottom', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
+					end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
+					scrub: 3, // Збільшений scrub для плавної анімації
+					ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+				},
+			});
 		});
 
-		gsap.to(cloudImg, {
-			x: '0%', // Виїжджаємо до центру горизонтально
-			opacity: 1, // Збільшуємо прозорість
-			scale: 1, // Повертаємо масштаб до нормального
-			duration: 3, // Тривалість анімації
+		// Анімація для слайдера
+		const powerSliderBox = document.querySelector('.power-slider-box');
+
+		gsap.set(powerSliderBox, {
+			opacity: 0, // Початкова прозорість
+			y: '-200px', // Початкова позиція зверху від екрану
+		});
+
+		// Timeline для анімації слайдера
+		const sliderTimeline = gsap.timeline({
 			scrollTrigger: {
-				trigger: '.power', // Використовуємо клас "power" як тригер
-				start: 'top bottom', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
-				end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
-				scrub: 3, // Збільшений scrub для плавної анімації
-				ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+				trigger: '.power', // The element that triggers the animation
+				start: 'top center', // The start position of the animation
+				end: 'top bottom', // The end position of the animation
+				scrub: 2, // The scrubbing effect duration
+				ease: 'power1.inOut', // The easing function for the animation
 			},
 		});
-	});
 
-	// Анімація для слайдера
-	const powerSliderBox = document.querySelector('.power-slider-box');
+		sliderTimeline
+			.to(powerSliderBox, {
+				opacity: 1, // Появлення power-slider-box
+				y: '0%', // Зсув вниз для появи
+				duration: 2, // Збільшимо тривалість анімації для більшої затримки
+			})
+			.from('.power .swiper-slide-active', {
+				duration: 1, // Зробимо тривалість 1 секунду, щоб мати ефект збільшення
+			})
+			.to('.power .swiper-slide-active', {
+				duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
+			})
+			.from('.power .swiper-slide:not(.power .swiper-slide-active)', {
+				y: '-100%', // Анімація інших слайдів - зсув зверху вниз
+				stagger: 0.15, // Затримка між анімаціями слайдів
+				duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
+			});
 
-	gsap.set(powerSliderBox, {
-		opacity: 0, // Початкова прозорість
-		y: '-200px', // Початкова позиція зверху від екрану
-	});
+		// Додамо затримку для появи слайдів після анімації power-slider-box
+		gsap.from('.power .swiper-slide', {
+			opacity: 0,
+			y: '-100px',
+			// stagger: 0.15,
+			duration: 0.5,
+			scrollTrigger: {
+				trigger: '.power',
+				start: 'top center',
+				end: 'top bottom',
+				scrub: 2.5,
+				ease: 'power1.inOut',
+			},
+			onEnterBack: () => sliderTimeline.pause(), // Зупиняємо анімацію при прокрутці вгору
+			onLeaveBack: () => sliderTimeline.play(), // Відновлюємо анімацію при прокрутці вниз
+		});
+	};
+	powerAnimation();
 
-	// Timeline для анімації слайдера
-	const sliderTimeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: '.power', // The element that triggers the animation
-			start: 'top center', // The start position of the animation
-			end: 'top bottom', // The end position of the animation
-			scrub: 2, // The scrubbing effect duration
-			ease: 'power1.inOut', // The easing function for the animation
-		},
-	});
+	const newAnimation = function () {
+		const newItems = document.querySelectorAll('.new__item-info');
+		const newImages = document.querySelectorAll('.new-image');
+		const newSlides = document.querySelectorAll('.new__item:not(.new__item .swiper-slide-active)'); // Інші слайди
+		const activeSlide = document.querySelector('.new .swiper-slide-active'); // Поточний активний слайд
 
-	sliderTimeline
-		.to(powerSliderBox, {
-			opacity: 1, // Появлення power-slider-box
-			y: '0%', // Зсув вниз для появи
-			duration: 2, // Збільшимо тривалість анімації для більшої затримки
-		})
-		.from('.power .swiper-slide-active', {
-			duration: 1, // Зробимо тривалість 1 секунду, щоб мати ефект збільшення
-		})
-		.to('.power .swiper-slide-active', {
-			duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
-		})
-		.from('.power .swiper-slide:not(.power .swiper-slide-active)', {
-			y: '-100%', // Анімація інших слайдів - зсув зверху вниз
-			stagger: 0.15, // Затримка між анімаціями слайдів
-			duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
+		// Створюємо Timeline
+		const newTimeline = gsap.timeline();
+
+		// Анімація для елементів new__item-info
+		newItems.forEach(item => {
+			newTimeline.from(item, {
+				opacity: 0,
+				y: 150,
+				duration: 0.2,
+			});
 		});
 
-	// Додамо затримку для появи слайдів після анімації power-slider-box
-	gsap.from('.power .swiper-slide', {
-		opacity: 0,
-		y: '-100px',
-		// stagger: 0.15,
-		duration: 0.5,
-		scrollTrigger: {
-			trigger: '.power',
-			start: 'top center',
-			end: 'top bottom',
-			scrub: 2.5,
-			ease: 'power1.inOut',
-		},
-		onEnterBack: () => sliderTimeline.pause(), // Зупиняємо анімацію при прокрутці вгору
-		onLeaveBack: () => sliderTimeline.play(), // Відновлюємо анімацію при прокрутці вниз
-	});
+		// Анімація для елементів new-image
+		newImages.forEach(image => {
+			newTimeline.fromTo(
+				image,
+				{
+					opacity: 0,
+					scale: 0.8,
+					top: '-50%', // Initial position, off-screen at the top
+				},
+				{
+					opacity: 1,
+					scale: 1,
+					top: '-40%', // Final position, where the image should appear
+					duration: 0.8,
+					// delay: 0.2, // Add a delay to synchronize with .new__item-info appearance
+				},
+				1.5,
+			);
+		});
+
+		// Додамо затримку для появи інших слайдів після анімації new__item-info та new-image
+		newTimeline.from(
+			newSlides,
+			{
+				opacity: 0,
+				y: 50,
+			},
+			0.5,
+		); // Затримка 0.5 секунд для плавного з'явлення інших слайдів
+
+		// Анімація для активного слайда
+		newTimeline.from(
+			activeSlide,
+			{
+				scale: 0.8,
+				duration: 1,
+			},
+			0,
+		);
+	};
+
+	newAnimation();
 
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
