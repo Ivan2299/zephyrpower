@@ -610,85 +610,61 @@ document.addEventListener('DOMContentLoaded', function () {
 	// CATALOG FILTER BLOCK OPEN/CLOSE END ///////////////////////////////////////////////////
 
 	// GSAP ANIMATIONS  ///////////////////////////////////////////////////
-	const cloudImgNew = document.querySelector('.two___sections-cloud-img-left');
-	const cloudImgNew2 = document.querySelector('.two___sections-cloud-img-right');
-	const cloudImgNew3 = document.querySelector('.two___sections-cloud-img-left-second');
-	const cloudImgNew4 = document.querySelector('.two___sections-cloud-img-right-second');
+	function animateClouds() {
+		const cloudImgNew = document.querySelector('.two___sections-cloud-img-left');
+		const cloudImgNew2 = document.querySelector('.two___sections-cloud-img-right');
+		const cloudImgNew3 = document.querySelector('.two___sections-cloud-img-left-second');
+		const cloudImgNew4 = document.querySelector('.two___sections-cloud-img-right-second');
 
-	gsap.registerPlugin(ScrollTrigger);
+		gsap.registerPlugin(ScrollTrigger);
 
-	gsap.to(cloudImgNew, {
-		scrollTrigger: {
-			trigger: '.home-hero-block',
-			start: 'top top',
-			end: '+=' + window.innerHeight * 2,
-			scrub: 2, // Increased scrub value for smoother animation
-			normalizeScroll: true,
-		},
-		x: -600,
-	});
+		gsap.to(cloudImgNew, {
+			scrollTrigger: {
+				trigger: '.home-hero-block',
+				start: 'top top',
+				end: '+=' + window.innerHeight * 2,
+				scrub: 2,
+				normalizeScroll: true,
+			},
+			x: -600,
+		});
 
-	gsap.to(cloudImgNew2, {
-		scrollTrigger: {
-			trigger: '.home-hero-block',
-			start: 'top top',
-			end: '+=' + window.innerHeight * 2,
-			scrub: 2, // Increased scrub value for smoother animation
-			normalizeScroll: true,
-		},
-		x: 0,
-	});
+		gsap.to(cloudImgNew2, {
+			scrollTrigger: {
+				trigger: '.home-hero-block',
+				start: 'top top',
+				end: '+=' + window.innerHeight * 2,
+				scrub: 2,
+				normalizeScroll: true,
+			},
+			x: 0,
+		});
 
-	// Анімація хмаринки
-	gsap.to(cloudImgNew3, {
-		x: '-70%',
-		duration: 2,
-		scrollTrigger: {
-			trigger: '.home-hero-block',
-			start: 'top top',
-			scrub: 2, // Increased scrub value for smoother animation
-			ease: 'power1.inOut', // Added easing option for a smoother effect
-		},
-	});
+		gsap.to(cloudImgNew3, {
+			x: '-70%',
+			duration: 2,
+			scrollTrigger: {
+				trigger: '.home-hero-block',
+				start: 'top top',
+				scrub: 2,
+				ease: 'power1.inOut',
+			},
+		});
 
-	gsap.to(cloudImgNew4, {
-		x: '70%',
-		duration: 2,
-		scrollTrigger: {
-			trigger: '.home-hero-block',
-			start: 'top top',
-			scrub: 2, // Increased scrub value for smoother animation
-			ease: 'power1.inOut', // Added easing option for a smoother effect
-		},
-	});
+		gsap.to(cloudImgNew4, {
+			x: '70%',
+			duration: 2,
+			scrollTrigger: {
+				trigger: '.home-hero-block',
+				start: 'top top',
+				scrub: 2,
+				ease: 'power1.inOut',
+			},
+		});
+	}
 
-	// const cloudImgsPower = document.querySelectorAll('.power-cloud');
-
-	// // Анімація хмаринок з використанням ScrollTrigger
-	// cloudImgsPower.forEach((cloudImg, index) => {
-	// 	const isLeftSide = [0, 4, 2].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
-	// 	const direction = isLeftSide ? '-=50%' : '+=50%'; // Змінюємо напрямок руху для лівих та правих хмаринок
-
-	// 	gsap.set(cloudImg, {
-	// 		x: isLeftSide ? '-100%' : '100%', // Початкова позиція зліва або справа від екрану
-	// 		opacity: 0, // Початкова прозорість
-	// 		scale: 0.8, // Початковий масштаб (зменшимо для ефекту зближення)
-	// 	});
-
-	// 	gsap.to(cloudImg, {
-	// 		x: '0%', // Виїжджаємо до центру горизонтально
-	// 		opacity: 1, // Збільшуємо прозорість
-	// 		scale: 1, // Повертаємо масштаб до нормального
-	// 		duration: 2, // Тривалість анімації
-	// 		scrollTrigger: {
-	// 			trigger: '.power', // Використовуємо клас "power" як тригер
-	// 			start: 'top center', // Починаємо анімацію, коли верхній край тригера збігається з центром екрану
-	// 			end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
-	// 			scrub: 2, // Збільшений scrub для плавної анімації
-	// 			ease: 'power1.inOut', // Додано easing для більш плавного ефекту
-	// 		},
-	// 	});
-	// });
+	// Call the animation function
+	animateClouds();
 
 	const powerAnimation = function () {
 		const cloudImgsPower = document.querySelectorAll('.power-cloud');
@@ -853,6 +829,78 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	};
 	bestsellersAnimation();
+
+	const bannerAnimation = function () {
+		// Timeline for the animation
+		const tl = gsap.timeline({
+			onStart: disableSliderInteractions, // Disable interactions at the start of the animation
+			onComplete: enableSliderInteractions, // Enable interactions after the animation
+		});
+
+		// Select the elements
+		const cloudContainer = document.querySelector('.circle-slider-clouds');
+		const slideFigureAfter = document.querySelector('.circle-slide-figure::after');
+		const slideFigure = document.querySelector('.circle-slide-figure');
+		const slides = document.querySelectorAll('.circle-slider .swiper-slide');
+
+		// Set initial styles to prevent flickering
+		tl.set([cloudContainer, slideFigureAfter, slideFigure, slides], {
+			opacity: 0,
+			transformOrigin: 'center',
+		});
+
+		// Animation for cloudContainer
+		tl.fromTo(
+			cloudContainer,
+			{
+				opacity: 0,
+				x: '100%',
+			},
+			{
+				delay: 1,
+				x: '0%',
+				opacity: 1,
+				duration: 1,
+			},
+		);
+
+		// Animation for slideFigureAfter
+		tl.to(slideFigureAfter, {
+			opacity: 1,
+			duration: 1,
+		});
+
+		// Animation for slideFigure
+		tl.to(slideFigure, {
+			opacity: 1,
+			duration: 1,
+		});
+
+		// Animation for the slides
+		tl.to(
+			slides,
+			{
+				opacity: 1,
+				duration: 1,
+				stagger: 0.35,
+			},
+			'-=0.5', // Start half a second before the previous animation ends
+		);
+
+		// Function to disable user interactions with the sliders during the animation
+		function disableSliderInteractions() {
+			const sliders = document.querySelectorAll('.swiper-container');
+			sliders.forEach(slider => (slider.style.pointerEvents = 'none'));
+		}
+
+		// Function to enable user interactions with the sliders after the animation
+		function enableSliderInteractions() {
+			const sliders = document.querySelectorAll('.swiper-container');
+			sliders.forEach(slider => (slider.style.pointerEvents = 'auto'));
+		}
+	};
+
+	bannerAnimation();
 
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
