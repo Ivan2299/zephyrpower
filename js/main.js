@@ -800,7 +800,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				{
 					opacity: 0,
 					scale: 0.8,
-					top: '-50%', // Initial position, off-screen at the top
+					top: '-40%', // Initial position, off-screen at the top
 				},
 				{
 					opacity: 1,
@@ -833,8 +833,26 @@ document.addEventListener('DOMContentLoaded', function () {
 			0,
 		);
 	};
-
 	newAnimation();
+
+	const bestsellersAnimation = function () {
+		const bestsellersSlides = document.querySelectorAll('.bestsellers .swiper-slide');
+		bestsellersSlides.forEach(slide => {
+			gsap.from(slide, {
+				opacity: 0,
+				y: 150,
+				duration: 1,
+				scrollTrigger: {
+					trigger: '.bestsellers', // Використовуємо клас "power" як тригер
+					start: 'top center', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
+					end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
+					scrub: 1, // Збільшений scrub для плавної анімації
+					ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+				},
+			});
+		});
+	};
+	bestsellersAnimation();
 
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
