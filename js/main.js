@@ -924,6 +924,72 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	bannerAnimation();
 
+	// GSAP animation using ScrollTrigger
+
+	// GSAP animation using ScrollTrigger
+	// GSAP animation using ScrollTrigger
+	// GSAP animation using ScrollTrigger
+	// GSAP animation using ScrollTrigger
+	gsap.registerPlugin(ScrollTrigger);
+
+	const animateHiSection = function () {
+		// Timeline for the animation
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.hi',
+				start: 'top 80%', // Start animation when the top of the .hi section is 80% in view
+			},
+		});
+
+		// Animation for .hi-cloud
+		tl.from('.hi-cloud', {
+			x: '100%', // Start position
+			opacity: 0,
+			duration: 2,
+			ease: 'power3.out',
+		});
+
+		// Animation for .hi__image-block::before
+		tl.fromTo(
+			'.hi__image-block::before',
+			{
+				opacity: 0,
+			},
+			{
+				opacity: 1,
+				duration: 1,
+			},
+		);
+
+		// Animation for .hi__image-ibg img
+		tl.fromTo(
+			'.hi__image-ibg img',
+			{
+				opacity: 0,
+				y: '-50%',
+			},
+			{
+				opacity: 1,
+				y: '0%',
+				duration: 1.2,
+				ease: 'bounce.out',
+			},
+		);
+
+		// Simultaneous animations for .hi__info and .hi__image-name
+		tl.from(
+			['.hi__info', '.hi__image-name'], // Select both elements
+			{
+				x: ['-100%', '100%'], // Start position from the left and right respectively
+				opacity: 0,
+				duration: 1,
+				// Additional properties can be added here
+			},
+		);
+	};
+
+	animateHiSection();
+
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////

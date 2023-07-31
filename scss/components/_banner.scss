@@ -3,6 +3,7 @@
 	justify-content: space-between;
 	// height: calc(100vh - 145px);
 	margin-top: 150px;
+	overflow: hidden;
 
 	.vertical-slider {
 		max-width: 60%;
@@ -10,6 +11,7 @@
 		max-height: 423px;
 		height: 100%;
 		overflow: hidden;
+		transform: translateX(-100%); // only for animation descrop
 
 		.vertical-slider-slide {
 			border-radius: 0px 174.5px 174.5px 0px;

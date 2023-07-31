@@ -1736,6 +1736,7 @@ swiper-container .swiper-notification {
   display: flex;
   justify-content: space-between;
   margin-top: 150px;
+  overflow: hidden;
 }
 .hero-section .vertical-slider {
   max-width: 60%;
@@ -1743,6 +1744,7 @@ swiper-container .swiper-notification {
   max-height: 423px;
   height: 100%;
   overflow: hidden;
+  transform: translateX(-100%);
 }
 .hero-section .vertical-slider .vertical-slider-slide {
   border-radius: 0px 174.5px 174.5px 0px;
@@ -2250,6 +2252,7 @@ swiper-container .swiper-notification {
   position: relative;
   padding-bottom: 220px;
   margin-bottom: clamp(1.25rem, 0.842rem + 2.04vw, 2.5rem);
+  overflow: hidden;
 }
 .hi .hi-cloud {
   position: absolute;

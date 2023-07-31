@@ -2,6 +2,7 @@
 	position: relative;
 	padding-bottom: 220px;
 	margin-bottom: clamp(1.25rem, 0.842rem + 2.04vw, 2.5rem);
+	overflow: hidden;
 
 	.hi-cloud {
 		position: absolute;
