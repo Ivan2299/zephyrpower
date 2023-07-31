@@ -1000,6 +1000,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	animateHiSection();
 
+	// JavaScript with GSAP and ScrollTrigger
+	gsap.registerPlugin(ScrollTrigger);
+
+	const animateForm = function () {
+		// Timeline for the animation
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.form-wrapper',
+				start: 'top 80%', // Start animation when the top of the .form-wrapper section is 80% in view
+			},
+		});
+
+		// Animation for .form-cloud img
+		tl.fromTo(
+			'.form-cloud-1',
+			{
+				y: '-300px',
+				x: '-100%', // Start position (image off-screen to the left)
+			},
+			{
+				y: '0px',
+				x: '0', // Move image to the center of the screen
+				duration: 3, // Animation duration
+				ease: 'power3.out', // Easing function (you can change this to your preference)
+			},
+		);
+
+		tl.fromTo(
+			'.form-cloud-2',
+			{
+				y: '-300px',
+				x: '100%', // Start position (image off-screen to the left)
+			},
+			{
+				y: '0px',
+				x: '0', // Move image to the center of the screen
+				duration: 3, // Animation duration
+				ease: 'power3.out', // Easing function (you can change this to your preference)
+			},
+		);
+	};
+
+	animateForm();
+
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////
