@@ -399,15 +399,19 @@
 
 			<!-- similar && special -->
 			<div class="two__sections-wrapper ">
-				<div class="two___sections-clouds">
-					<!-- <div class="two___sections-cloud cloud-1"><img src="./img/images/new/cloud-2-section-wrapper.png"
-							alt="cloud">
-					</div> -->
+				<!-- <div class="two___sections-clouds">
+
 					<div class="two___sections-cloud cloud-2"><img src="./img/images/new/cloud-sec-2-section-wrapper.png"
 							alt="cloud">
 					</div>
-				</div>
+				</div> -->
+				<div class="two___sections-clouds">
+					<img class="two___sections-cloud-img-right" src="./img/images/new/cloud2.png" alt="cloud">
 
+					<img class="two___sections-cloud-img-left" src="./img/images/new/cloud1.png" alt="cloud">
+					<img class="two___sections-cloud-img-left-second" src="./img/images/new/cloud3.png" alt="cloud">
+					<img class="two___sections-cloud-img-right-second" src="./img/images/new/cloud3.png" alt="cloud">
+				</div>
 				<section class="bestsellers similar ">
 					<div class="container">
 						<h2 class="bestsellers__title title">Схожі товари</h2>
@@ -1287,8 +1291,8 @@
 						</ul>
 
 						<div class="myaccount__popup-body  tab-content" id="myaccountTabsContent">
-							<div class="myaccount__popup-body-item tab-pane fade show active" id="myaccountTabs1"
-								role="tabpanel" aria-labelledby="myaccountTabs1-tab">
+							<div class="myaccount__popup-body-item tab-pane fade show active" id="myaccountTabs1" role="tabpanel"
+								aria-labelledby="myaccountTabs1-tab">
 								<form action="#" class="myaccount__popup-form">
 									<input type="email" class="myaccount__popup-form-input" placeholder="Електронна пошта">
 									<input type="password" class="myaccount__popup-form-input" placeholder="Пароль">
@@ -1322,10 +1326,10 @@
 			<!-- empty cart popup -------------------------------------------->
 			<div class="emptycart__popup" id="emptycart-Popup">
 				<div class="emptycart__popup-content" id="emptycart-Popup-content">
-					<img class="emptycart__popup-cloud emptycart__popup-cloud-left"
-						src="/img/images/cartPopup/cloud-left.png" alt="">
-					<img class="emptycart__popup-cloud emptycart__popup-cloud-right"
-						src="/img/images/cartPopup/cloud-right.png" alt="">
+					<img class="emptycart__popup-cloud emptycart__popup-cloud-left" src="/img/images/cartPopup/cloud-left.png"
+						alt="">
+					<img class="emptycart__popup-cloud emptycart__popup-cloud-right" src="/img/images/cartPopup/cloud-right.png"
+						alt="">
 					<div class="emptycart__popup-top">
 						<h3 class="emptycart__popup-title title title-cart">Товар доданий у кошик</h4>
 							<div id="emptycart-Popup-button-close" class="emptycart__popup-close-wrapper">
@@ -1492,8 +1496,7 @@
 						<div class="cartpage__summary-price">2000₴</div>
 					</div>
 					<div class="emptycart__popup-button cartpage__button-wrapper">
-						<a href="orderPage.html" id="emptycart-button"
-							class="cartpage__button button button-secondary">Оформити
+						<a href="orderPage.html" id="emptycart-button" class="cartpage__button button button-secondary">Оформити
 							замовлення</a>
 					</div>
 				</div>
@@ -1503,8 +1506,8 @@
 			<!-- SUBSCRIBE popup -------------------------------------------->
 			<div class="thanks__popup subscribe__popup" id="subscribe-popup">
 				<div class="thanks__popup-content subscribe__popup-content" id="subscribe-popup-content">
-					<img class="thanks__popup-cloud thanks__popup-cloud-top-left"
-						src="/img/images/thanksPopup/cloud-top-left.png" alt="">
+					<img class="thanks__popup-cloud thanks__popup-cloud-top-left" src="/img/images/thanksPopup/cloud-top-left.png"
+						alt="">
 					<img class="thanks__popup-cloud thanks__popup-cloud-top-right"
 						src="/img/images/thanksPopup/cloud-top-right.png" alt="">
 					<img class="thanks__popup-cloud thanks__popup-cloud-bottom-left"
@@ -1512,7 +1515,7 @@
 					<img class="thanks__popup-cloud thanks__popup-cloud-bottom-right"
 						src="/img/images/thanksPopup/cloud-bottom-right.png" alt="">
 
-					<h3 class="thanks__popup-title subscribe__popup-title title ">Ви вдало
+					<h3 class="thanks__popup-title subscribe__popup-title title ">Ви вдало </br>
 						підписались на розсилку!</h3>
 					<div id="subscribe-popup-button-close" class="thanks__popup-close-wrapper">
 						<img src="/img/icons/icon-popup-close.svg" alt="icon-popup-close">
@@ -1520,12 +1523,11 @@
 				</div>
 			</div>
 			<!-- SUBSCRIBE popup -------------------------------------------->
-
 			<!-- REVIEW popup -------------------------------------------->
 			<div class="thanks__popup review__popup" id="review-popup">
 				<div class="thanks__popup-content review__popup-content" id="review-popup-content">
-					<img class="thanks__popup-cloud thanks__popup-cloud-top-left"
-						src="/img/images/thanksPopup/cloud-top-left.png" alt="">
+					<img class="thanks__popup-cloud thanks__popup-cloud-top-left" src="/img/images/thanksPopup/cloud-top-left.png"
+						alt="">
 					<img class="thanks__popup-cloud thanks__popup-cloud-top-right"
 						src="/img/images/thanksPopup/cloud-top-right.png" alt="">
 					<img class="thanks__popup-cloud thanks__popup-cloud-bottom-left"
@@ -1541,13 +1543,27 @@
 				</div>
 			</div>
 			<!-- REVIEW popup -------------------------------------------->
+			<!-- ORDERTHANKS popup -------------------------------------------->
+			<div class="thanks__popup orderthanks__popup" id="orderthanks-popup">
+				<div class="thanks__popup-content orderthanks__popup-content" id="orderthanks-popup-content">
 
-
+					<h3 class="thanks__popup-title orderthanks__popup-title title">Thank You for Your Order!</h3>
+					<div id="orderthanks-popup-button-close" class="thanks__popup-close-wrapper">
+						<img src="/img/icons/icon-popup-close.svg" alt="icon-popup-close">
+					</div>
+				</div>
+			</div>
+			<!-- ORDERTHANKS popup -------------------------------------------->
 		</footer>
 		<!-- /footer -->
 	</div>
 
 	<!-- /footer -->
+
+	<!-- Підключення Gsap та ScrollTrigger CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
 
 	<!-- swiper -->
 	<script src="js/libs/swiper.js"></script>

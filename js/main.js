@@ -610,13 +610,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	// CATALOG FILTER BLOCK OPEN/CLOSE END ///////////////////////////////////////////////////
 
 	// GSAP ANIMATIONS  ///////////////////////////////////////////////////
+	gsap.registerPlugin(ScrollTrigger);
 	function animateClouds() {
 		const cloudImgNew = document.querySelector('.two___sections-cloud-img-left');
 		const cloudImgNew2 = document.querySelector('.two___sections-cloud-img-right');
 		const cloudImgNew3 = document.querySelector('.two___sections-cloud-img-left-second');
 		const cloudImgNew4 = document.querySelector('.two___sections-cloud-img-right-second');
-
-		gsap.registerPlugin(ScrollTrigger);
 
 		gsap.to(cloudImgNew, {
 			scrollTrigger: {
@@ -1041,8 +1040,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 		);
 	};
-
 	animateForm();
+
+	// CARTPAGE ANIMATION
 
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
