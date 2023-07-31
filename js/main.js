@@ -837,14 +837,18 @@ document.addEventListener('DOMContentLoaded', function () {
 			onComplete: enableSliderInteractions, // Enable interactions after the animation
 		});
 
-		// Select the elements
+		// Select the elements for the circle slider
 		const cloudContainer = document.querySelector('.circle-slider-clouds');
 		const slideFigureAfter = document.querySelector('.circle-slide-figure::after');
 		const slideFigure = document.querySelector('.circle-slide-figure');
 		const slides = document.querySelectorAll('.circle-slider .swiper-slide');
 
+		// Select the elements for the vertical slider
+		const verticalSlider = document.querySelector('.vertical-slider');
+		const verticalSlides = document.querySelectorAll('.vertical-slider .swiper-slide');
+
 		// Set initial styles to prevent flickering
-		tl.set([cloudContainer, slideFigureAfter, slideFigure, slides], {
+		tl.set([cloudContainer, slideFigureAfter, slideFigure, slides, verticalSlider], {
 			opacity: 0,
 			transformOrigin: 'center',
 			pointerEvents: 'none', // Initially disable interactions for all slides
@@ -854,8 +858,22 @@ document.addEventListener('DOMContentLoaded', function () {
 		tl.to(cloudContainer, {
 			x: '0%',
 			opacity: 1,
-			duration: 2,
+			duration: 1,
 		});
+
+		tl.fromTo(
+			verticalSlider,
+			{
+				opacity: 0,
+				x: '-100%',
+			},
+			{
+				opacity: 1,
+				x: '0%',
+				duration: 3,
+				ease: 'power3.out',
+			},
+		);
 
 		// Animation for slideFigureAfter
 		tl.to(
@@ -868,12 +886,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		);
 
 		// Animation for slideFigure
-		tl.to(slideFigure, {
-			y: '50%',
-			opacity: 1,
-			duration: 2,
-			ease: 'power2.inOut',
-		});
+		tl.to(
+			slideFigure,
+			{
+				y: '50%',
+				opacity: 1,
+				duration: 1,
+				ease: 'power2.inOut',
+			},
+			'-=1.5', // Start 1.5 seconds before the previous animation ends
+		);
 
 		// Animation for the slides
 		tl.to(
@@ -882,8 +904,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				opacity: 1,
 				stagger: 0.35,
 			},
-			'-=0.5', // Start half a second before the previous animation ends
+			'-=1', // Start 1 second before the previous animation ends
 		);
+
+		// Animation for the vertical slider
 
 		// Function to disable user interactions with the sliders during the animation
 		function disableSliderInteractions() {
