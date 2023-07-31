@@ -847,33 +847,32 @@ document.addEventListener('DOMContentLoaded', function () {
 		tl.set([cloudContainer, slideFigureAfter, slideFigure, slides], {
 			opacity: 0,
 			transformOrigin: 'center',
+			pointerEvents: 'none', // Initially disable interactions for all slides
 		});
 
 		// Animation for cloudContainer
-		tl.fromTo(
-			cloudContainer,
-			{
-				opacity: 0,
-				x: '100%',
-			},
-			{
-				delay: 1,
-				x: '0%',
-				opacity: 1,
-				duration: 1,
-			},
-		);
+		tl.to(cloudContainer, {
+			x: '0%',
+			opacity: 1,
+			duration: 2,
+		});
 
 		// Animation for slideFigureAfter
-		tl.to(slideFigureAfter, {
-			opacity: 1,
-			duration: 1,
-		});
+		tl.to(
+			slideFigureAfter,
+			{
+				opacity: 1,
+				x: '50%',
+			},
+			'-=1', // Start one second before the previous animation ends
+		);
 
 		// Animation for slideFigure
 		tl.to(slideFigure, {
+			y: '50%',
 			opacity: 1,
-			duration: 1,
+			duration: 2,
+			ease: 'power2.inOut',
 		});
 
 		// Animation for the slides
@@ -881,7 +880,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			slides,
 			{
 				opacity: 1,
-				duration: 1,
 				stagger: 0.35,
 			},
 			'-=0.5', // Start half a second before the previous animation ends
@@ -896,7 +894,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Function to enable user interactions with the sliders after the animation
 		function enableSliderInteractions() {
 			const sliders = document.querySelectorAll('.swiper-container');
-			sliders.forEach(slider => (slider.style.pointerEvents = 'auto'));
+			sliders.forEach(slider => (slider.style.pointerEvents = 'all'));
 		}
 	};
 
