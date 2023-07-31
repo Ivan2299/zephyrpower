@@ -1044,6 +1044,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// CARTPAGE ANIMATION
 
+	function animateCloudsAroundFigure() {
+		// Select the elements
+		const cloudsWrapper = document.querySelector('.carttabs__tabs-clouds');
+		const figureElement = document.querySelector('.carttabs__tabs-figure');
+
+		// Create the GSAP timeline
+		const tl = gsap.timeline();
+
+		// Define the animations for the clouds and figure element
+		tl.to(cloudsWrapper, {
+			x: '100%',
+			ease: 'power1.inOut',
+		}).to(
+			figureElement,
+			{
+				y: '-20%',
+				ease: 'power1.inOut',
+			},
+			'-=1', // Add a slight delay between animations if needed
+		);
+	}
+
+	// Call the animateCloudsAroundFigure function to start the animation
+	animateCloudsAroundFigure();
+
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////
