@@ -886,13 +886,17 @@ document.addEventListener('DOMContentLoaded', function () {
 		);
 
 		// Animation for slideFigure
-		tl.to(
+		tl.fromTo(
 			slideFigure,
 			{
-				y: '50%',
-				opacity: 1,
-				duration: 1,
+				y: '-50%',
+				opacity: 0,
+				duration: 2,
 				ease: 'power2.inOut',
+			},
+			{
+				y: '0%',
+				opacity: 1,
 			},
 			'-=1.5', // Start 1.5 seconds before the previous animation ends
 		);
