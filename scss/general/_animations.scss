@@ -1,10 +1,24 @@
-@keyframes activateSlide {
+@keyframes cloudRotate360left {
 	0% {
-		opacity: 0;
-		transform: translateX(-100%);
+		transform: rotate(0deg) translateY(250px) rotate(0deg) scale(1);
+	}
+	50% {
+		transform: rotate(180deg) translateY(150px) rotate(-180deg) scale(0.5);
 	}
 	100% {
-		opacity: 1;
-		transform: translateX(0);
+		transform: rotate(360deg) translateY(250px) rotate(-360deg) scale(1);
+	}
+}
+
+@keyframes cloudRotate360right {
+	0% {
+		transform: rotate(0deg) translateY(0px) rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(0deg) translateY(0px) rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg) translateY(0) rotate(0deg);
 	}
 }

@@ -99,17 +99,13 @@
 		}
 	}
 
-	// .carttabs__tabs-clouds
-
-	&__tabs-clouds {
+	&__tabs-animation {
 		position: absolute;
 		top: 0;
-		bottom: 0;
 		left: 0;
 		right: 0;
+		bottom: 0;
 	}
-
-	// .carttabs__tabs-cloud
 
 	&__tabs-cloud {
 	}
@@ -118,8 +114,11 @@
 
 	&__tabs-cloud-1 {
 		position: absolute;
-		bottom: 0;
-		left: -20%;
+		// width: 340px;
+		z-index: 1;
+		bottom: 41%;
+		left: 20%;
+		animation: cloudRotate360left 8s linear infinite;
 	}
 
 	// .carttabs__tabs-cloud-2
@@ -128,6 +127,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+		animation: cloudRotate360right 10s ease-in-out infinite;
 	}
 
 	// .carttabs__tabs-figure
@@ -313,6 +313,8 @@
 		padding: 0;
 		background-color: transparent;
 		border: none;
+		position: relative;
+		z-index: 3;
 	}
 }
 
