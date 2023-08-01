@@ -10,15 +10,26 @@
 	}
 }
 
+// @keyframes cloudRotate360right {
+// 	0% {
+// 		transform: rotate(90deg) translateY(250px) rotate(-90deg);
+// 	}
+// 	50% {
+// 		transform: rotate(270deg) translateY(150px) rotate(-270deg);
+// 	}
+// 	100% {
+// 		transform: rotate(450deg) translateY(250px) rotate(-450deg);
+// 	}
+// }
+
 @keyframes cloudRotate360right {
 	0% {
-		transform: rotate(0deg) translateY(0px) rotate(0deg);
+		transform: translateY(0);
 	}
-
 	50% {
-		transform: rotate(0deg) translateY(0px) rotate(0deg);
+		transform: translateY(50px);
 	}
 	100% {
-		transform: rotate(0deg) translateY(0) rotate(0deg);
+		transform: translateY(0px);
 	}
 }

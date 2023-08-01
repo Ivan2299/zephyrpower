@@ -563,13 +563,13 @@ svg {
 }
 @keyframes cloudRotate360right {
   0% {
-    transform: rotate(0deg) translateY(0px) rotate(0deg);
+    transform: translateY(0);
   }
   50% {
-    transform: rotate(0deg) translateY(0px) rotate(0deg);
+    transform: translateY(50px);
   }
   100% {
-    transform: rotate(0deg) translateY(0) rotate(0deg);
+    transform: translateY(0px);
   }
 }
 /**
@@ -2856,9 +2856,10 @@ swiper-container .swiper-notification {
   z-index: 1;
   bottom: 41%;
   left: 20%;
-  animation: cloudRotate360left 8s linear infinite;
+  animation: cloudRotate360left 10s linear infinite;
 }
 .carttabs__tabs-cloud-2 {
+  z-index: 1;
   position: absolute;
   top: 0;
   right: 0;
