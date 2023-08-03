@@ -1,4 +1,5 @@
 .myaccountpage {
+	position: relative;
 	margin-bottom: 91px;
 	margin-top: 150px;
 
@@ -6,8 +7,9 @@
 	&-cloud-left {
 		position: absolute;
 		pointer-events: none;
-		top: 47%;
+		top: 30%;
 		left: 0;
+		animation: smallTranslateCloud 7s ease-in-out infinite;
 	}
 
 	&-cloud-right {
@@ -15,6 +17,7 @@
 		pointer-events: none;
 		top: 24%;
 		right: 0;
+		animation: smallTranslateCloudReverse 7s ease-in-out infinite;
 	}
 
 	&__breadcrumps {

@@ -3160,6 +3160,7 @@ swiper-container .swiper-notification {
 }
 
 .catalog {
+  position: relative;
   margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
   margin-top: 150px;
 }
@@ -3479,20 +3480,23 @@ swiper-container .swiper-notification {
 }
 
 .myaccountpage {
+  position: relative;
   margin-bottom: 91px;
   margin-top: 150px;
 }
 .myaccountpage-cloud-left {
   position: absolute;
   pointer-events: none;
-  top: 47%;
+  top: 30%;
   left: 0;
+  animation: smallTranslateCloud 7s ease-in-out infinite;
 }
 .myaccountpage-cloud-right {
   position: absolute;
   pointer-events: none;
   top: 24%;
   right: 0;
+  animation: smallTranslateCloudReverse 7s ease-in-out infinite;
 }
 .myaccountpage__title {
   text-align: center;
@@ -3747,11 +3751,11 @@ swiper-container .swiper-notification {
   margin-top: 150px;
 }
 .cartpage .myaccountpage-cloud-right {
-  top: 10%;
+  top: -15%;
   right: 0;
 }
 .cartpage .myaccountpage-cloud-left {
-  top: 10%;
+  top: -10%;
   left: 0;
 }
 .cartpage__inner {
