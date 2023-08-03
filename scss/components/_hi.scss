@@ -7,6 +7,9 @@
 	.hi-cloud {
 		position: absolute;
 		z-index: -1;
+		&.animated {
+			animation: smallTranslateCloudReverse 6s ease-in-out infinite;
+		}
 	}
 	.hi-cloud-1 {
 		bottom: 0;

@@ -119,6 +119,8 @@
 		bottom: 41%;
 		left: 20%;
 		animation: cloudRotate360left 10s linear infinite;
+		animation-fill-mode: forwards;
+		animation-play-state: running;
 	}
 
 	// .carttabs__tabs-cloud-2
@@ -129,6 +131,8 @@
 		top: 0;
 		right: 0;
 		animation: cloudRotate360right 10s ease-in-out infinite;
+		animation-fill-mode: forwards;
+		animation-play-state: running;
 	}
 
 	// .carttabs__tabs-figure
@@ -328,11 +332,17 @@
 		position: absolute;
 		left: 0;
 		top: -30%;
+		&.animated {
+			animation: smallTranslateCloud 6s ease-in-out infinite;
+		}
 	}
 	&__bg-right {
 		position: absolute;
 		right: 0;
 		top: -200%;
+		&.animated {
+			animation: smallTranslateCloudReverse 6s ease-in-out infinite;
+		}
 	}
 
 	&__wrapper {

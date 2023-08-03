@@ -62,6 +62,14 @@
 			z-index: 2;
 			pointer-events: none;
 			transform: translateX(100%); // for animation banner cloud
+			&.animated {
+				.circle-slider-cloud-1 {
+					animation: smallestTranslateCloud 6s ease-in-out infinite;
+				}
+				.circle-slider-cloud-2 {
+					animation: smallestTranslateCloudReverse 6s ease-in-out infinite;
+				}
+			}
 		}
 		.circle-slider-cloud-1 {
 			position: absolute;

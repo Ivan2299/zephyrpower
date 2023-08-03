@@ -617,6 +617,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		const cloudImgNew3 = document.querySelector('.two___sections-cloud-img-left-second');
 		const cloudImgNew4 = document.querySelector('.two___sections-cloud-img-right-second');
 
+		if (!cloudImgNew || !cloudImgNew2 || !cloudImgNew3 || !cloudImgNew4) {
+			return; // Skip the code block if any of the required elements are missing
+		}
+
 		gsap.to(cloudImgNew, {
 			scrollTrigger: {
 				trigger: '.home-hero-block',
@@ -667,6 +671,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const powerAnimation = function () {
 		const cloudImgsPower = document.querySelectorAll('.power-cloud');
+		if (!cloudImgsPower) {
+			return;
+		}
 
 		// Анімація хмаринок з використанням ScrollTrigger
 		cloudImgsPower.forEach((cloudImg, index) => {
@@ -696,6 +703,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// Анімація для слайдера
 		const powerSliderBox = document.querySelector('.power-slider-box');
+		if (!powerSliderBox) {
+			return;
+		}
 
 		gsap.set(powerSliderBox, {
 			opacity: 0, // Початкова прозорість
@@ -756,6 +766,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		const newSlides = document.querySelectorAll('.new__item:not(.new__item .swiper-slide-active)'); // Інші слайди
 		const activeSlide = document.querySelector('.new .swiper-slide-active'); // Поточний активний слайд
 
+		if (!newItems || !newImages || !newSlides) {
+			return;
+		}
+
 		// Створюємо Timeline
 		const newTimeline = gsap.timeline();
 
@@ -812,6 +826,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const bestsellersAnimation = function () {
 		const bestsellersSlides = document.querySelectorAll('.bestsellers .swiper-slide');
+
+		if (!bestsellersSlides) {
+			return;
+		}
+
 		bestsellersSlides.forEach(slide => {
 			gsap.from(slide, {
 				opacity: 0,
@@ -829,115 +848,21 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 	bestsellersAnimation();
 
-	const bannerAnimation = function () {
-		// Timeline for the animation
-		const tl = gsap.timeline({
-			onStart: disableSliderInteractions, // Disable interactions at the start of the animation
-			onComplete: enableSliderInteractions, // Enable interactions after the animation
-		});
-
-		// Select the elements for the circle slider
-		const cloudContainer = document.querySelector('.circle-slider-clouds');
-		const slideFigureAfter = document.querySelector('.circle-slide-figure::after');
-		const slideFigure = document.querySelector('.circle-slide-figure');
-		const slides = document.querySelectorAll('.circle-slider .swiper-slide');
-
-		// Select the elements for the vertical slider
-		const verticalSlider = document.querySelector('.vertical-slider');
-		const verticalSlides = document.querySelectorAll('.vertical-slider .swiper-slide');
-
-		// Set initial styles to prevent flickering
-		tl.set([cloudContainer, slideFigureAfter, slideFigure, slides, verticalSlider], {
-			opacity: 0,
-			transformOrigin: 'center',
-			pointerEvents: 'none', // Initially disable interactions for all slides
-		});
-
-		// Animation for cloudContainer
-		tl.to(cloudContainer, {
-			x: '0%',
-			opacity: 1,
-			duration: 1,
-		});
-
-		tl.fromTo(
-			verticalSlider,
-			{
-				opacity: 0,
-				x: '-100%',
-			},
-			{
-				opacity: 1,
-				x: '0%',
-				duration: 3,
-				ease: 'power3.out',
-			},
-		);
-
-		// Animation for slideFigureAfter
-		tl.to(
-			slideFigureAfter,
-			{
-				opacity: 1,
-				x: '50%',
-			},
-			'-=1', // Start one second before the previous animation ends
-		);
-
-		// Animation for slideFigure
-		tl.fromTo(
-			slideFigure,
-			{
-				y: '-50%',
-				opacity: 0,
-				duration: 2,
-				ease: 'power2.inOut',
-			},
-			{
-				y: '0%',
-				opacity: 1,
-			},
-			'-=1.5', // Start 1.5 seconds before the previous animation ends
-		);
-
-		// Animation for the slides
-		tl.to(
-			slides,
-			{
-				opacity: 1,
-				stagger: 0.35,
-			},
-			'-=1', // Start 1 second before the previous animation ends
-		);
-
-		// Animation for the vertical slider
-
-		// Function to disable user interactions with the sliders during the animation
-		function disableSliderInteractions() {
-			const sliders = document.querySelectorAll('.swiper-container');
-			sliders.forEach(slider => (slider.style.pointerEvents = 'none'));
-		}
-
-		// Function to enable user interactions with the sliders after the animation
-		function enableSliderInteractions() {
-			const sliders = document.querySelectorAll('.swiper-container');
-			sliders.forEach(slider => (slider.style.pointerEvents = 'all'));
-		}
-	};
-
-	bannerAnimation();
-
 	const animateHiSection = function () {
+		const hiCloud = document.querySelector('.hi-cloud');
 		// Timeline for the animation
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.hi',
 				start: 'top 80%',
 			},
+			onComplete: () => {
+				hiCloud.classList.add('animated');
+			},
 		});
 
 		// Animation for .hi-cloud
-		tl.from('.hi-cloud', {
+		tl.from(hiCloud, {
 			x: '100%', // Start position
 			opacity: 0,
 			duration: 1,
@@ -999,15 +924,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	animateHiSection();
 
-	// JavaScript with GSAP and ScrollTrigger
-	gsap.registerPlugin(ScrollTrigger);
-
 	const animateForm = function () {
+		const formCloud1 = document.querySelector('.form-cloud-1');
+		const formCloud2 = document.querySelector('.form-cloud-2');
 		// Timeline for the animation
+
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.form-wrapper',
 				start: 'top 80%', // Start animation when the top of the .form-wrapper section is 80% in view
+			},
+			onComplete: () => {
+				formCloud1.classList.add('animated');
+				formCloud2.classList.add('animated');
 			},
 		});
 
@@ -1021,9 +950,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			{
 				y: '0px',
 				x: '0', // Move image to the center of the screen
-				duration: 3, // Animation duration
-				ease: 'power3.out', // Easing function (you can change this to your preference)
+				duration: 2, // Animation duration
 			},
+			1,
 		);
 
 		tl.fromTo(
@@ -1035,20 +964,157 @@ document.addEventListener('DOMContentLoaded', function () {
 			{
 				y: '0px',
 				x: '0', // Move image to the center of the screen
-				duration: 3, // Animation duration
-				ease: 'power3.out', // Easing function (you can change this to your preference)
+				duration: 2, // Animation duration
 			},
+			'<',
 		);
 	};
 	animateForm();
 
-	// CARTPAGE ANIMATION
+	// GSAP ANIMATION FOR carttabs2__bg-left AND carttabs2__bg-right IMAGES
+	const carttabsCloudsAnimation = function () {
+		// Get the elements for the images
+		const carttabs2BgLeft = document.querySelector('.carttabs2__bg-left');
+		const carttabs2BgRight = document.querySelector('.carttabs2__bg-right');
 
+		// Animate the images
+		if (!carttabs2BgLeft || !carttabs2BgRight) {
+			return;
+		}
+		gsap.fromTo(
+			carttabs2BgLeft,
+			{
+				x: '-100%',
+				delay: 2,
+			},
+			{
+				delay: 2,
+				x: '0%',
+				duration: 1,
+
+				onComplete: function () {
+					carttabs2BgLeft.classList.add('animated');
+				},
+			},
+		);
+		gsap.fromTo(
+			carttabs2BgRight,
+			{
+				x: '100%',
+				delay: 2,
+			},
+			{
+				x: '0%',
+				duration: 1,
+				delay: 2,
+
+				onComplete: function () {
+					carttabs2BgRight.classList.add('animated');
+				},
+			},
+		);
+	};
+
+	carttabsCloudsAnimation();
+
+	const bannerAnimation = function () {
+		// Timeline for the animation
+		const tl = gsap.timeline({});
+
+		// Select the elements for the circle slider
+		const cloudContainer = document.querySelector('.circle-slider-clouds');
+		const slideFigureAfter = document.querySelector('.circle-slide-figure::after');
+		const slideFigure = document.querySelector('.circle-slide-figure');
+		const slides = document.querySelectorAll('.circle-slider .swiper-slide');
+
+		const verticalSlider = document.querySelector('.vertical-slider');
+		const verticalSlides = document.querySelectorAll('.vertical-slider .swiper-slide');
+
+		// Set initial styles to prevent flickering
+		tl.set([cloudContainer, slideFigureAfter, slideFigure, slides, verticalSlider], {
+			opacity: 0,
+			transformOrigin: 'center',
+			pointerEvents: 'none', // Initially disable interactions for all slides
+		});
+
+		// Animation for cloudContainer
+		tl.to(cloudContainer, {
+			x: '0%',
+			opacity: 1,
+			duration: 1,
+			onComplete: function () {
+				cloudContainer.classList.add('animated');
+			},
+		});
+
+		tl.fromTo(
+			verticalSlider,
+			{
+				opacity: 0,
+				x: '-100%',
+			},
+			{
+				opacity: 1,
+				x: '0%',
+				duration: 3,
+				ease: 'power3.out',
+			},
+		);
+
+		// Animation for slideFigureAfter
+		tl.to(
+			slideFigureAfter,
+			{
+				opacity: 1,
+				x: '50%',
+			},
+			'-=1', // Start one second before the previous animation ends
+		);
+
+		// Animation for slideFigure
+		tl.fromTo(
+			slideFigure,
+			{
+				y: '-50%',
+				opacity: 0,
+				duration: 2,
+				ease: 'power2.inOut',
+			},
+			{
+				y: '0%',
+				opacity: 1,
+			},
+			'-=1.5', // Start 1.5 seconds before the previous animation ends
+		);
+
+		// Animation for the slides
+		tl.to(
+			slides,
+			{
+				opacity: 1,
+				stagger: 0.35,
+			},
+			'-=1', // Start 1 second before the previous animation ends
+		);
+	};
+
+	bannerAnimation();
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////
-	const cartTabs = new bootstrap.Tab(document.getElementById('imagesTabs'));
-	myTabs.show();
-	const cartTabs2 = new bootstrap.Tab(document.getElementById('descriptionTabs'));
-	myTabs.show();
+	const imagesTabsFunciton = function () {
+		const imagesTabsElement = document.getElementById('imagesTabs');
+		if (imagesTabsElement) {
+			const cartTabs = new bootstrap.Tab(imagesTabsElement);
+			cartTabs.show();
+		}
+
+		// Check if the 'descriptionTabs' element exists before creating the tab
+		const descriptionTabsElement = document.getElementById('descriptionTabs');
+		if (descriptionTabsElement) {
+			const cartTabs2 = new bootstrap.Tab(descriptionTabsElement);
+			cartTabs2.show();
+		}
+	};
+	imagesTabsFunciton();
 });
