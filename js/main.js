@@ -938,8 +938,12 @@ document.addEventListener('DOMContentLoaded', function () {
 				start: 'top 80%', // Start animation when the top of the .form-wrapper section is 80% in view
 			},
 			onComplete: () => {
-				formCloud1.classList.add('animated');
-				formCloud2.classList.add('animated');
+				if (formCloud1) {
+					formCloud1.classList.add('animated');
+				}
+				if (formCloud2) {
+					formCloud2.classList.add('animated');
+				}
 			},
 		});
 
@@ -1022,11 +1026,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const reviewsAnimation = () => {
 		const reviewBlock = document.querySelector('.reviews__form-wrapper');
+		const reviewContent = document.querySelector('.reviews__content');
+
+		if (!reviewBlock || !reviewContent) {
+			return;
+		}
 
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.reviews',
-				start: 'top 80%',
+				start: 'top 120%',
 				end: 'center center',
 				scrub: false,
 				ease: 'power3.inOut',
@@ -1049,10 +1058,52 @@ document.addEventListener('DOMContentLoaded', function () {
 				x: '0px',
 				duration: 1,
 			},
+			1,
+		);
+		tl.fromTo(
+			reviewContent,
+			{
+				opacity: 0,
+				x: '-50px',
+				duration: 1,
+			},
+			{
+				opacity: 1,
+				x: '0px',
+				duration: 1,
+			},
+			'<',
 		);
 	};
 
 	reviewsAnimation();
+
+	const thanksPopupAnimation = () => {
+		const thanksPopup = document.querySelector('.thanks-popup');
+
+		const cloudTopLeft = document.querySelector('.thanks__popup-cloud-top-left');
+		const cloudTopRight = document.querySelector('.thanks__popup-cloud-top-right');
+		const cloudBottomLeft = document.querySelector('.thanks__popup-cloud-bottom-left');
+		const cloudBottomRight = document.querySelector('.thanks__popup-cloud-bottom-right');
+
+		const tl = gsap.timeline({});
+
+		tl.fromTo(
+			cloudTopLeft,
+			cloudBottomLeft,
+			{
+				opacity: 0,
+				x: '-50px',
+				stagger: 0.1,
+			},
+			{
+				opacity: 1,
+				x: '0%',
+			},
+		);
+	};
+
+	// thanksPopupAnimation();
 
 	const bannerAnimation = function () {
 		// Timeline for the animation
