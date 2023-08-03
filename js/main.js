@@ -417,6 +417,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		buttons.forEach(button => {
 			button.addEventListener('click', () => {
 				popup.style.display = 'block';
+				myaccaountPopupAnimation();
 				fadeIn(popup, 500);
 				document.body.style.overflow = 'hidden';
 			});
@@ -424,6 +425,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		popup.addEventListener('click', event => {
 			if (event.target === popup) {
+				myaccaountPopupAnimationOut();
 				fadeOut(popup, 500);
 				document.body.style.overflow = 'auto';
 			}
@@ -1086,6 +1088,114 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	reviewsAnimation();
 
+	const myaccaountPopupAnimation = () => {
+		const cloudTopLeft = document.querySelectorAll('.myaccount__popup-cloud-top-left');
+		const cloudTopRight = document.querySelectorAll('.myaccount__popup-cloud-top-right');
+		const cloudBottomLeft = document.querySelectorAll('.myaccount__popup-cloud-bottom-left');
+		const cloudBottomRight = document.querySelectorAll('.myaccount__popup-cloud-bottom-right');
+
+		if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
+			console.log('Some of the cloud elements are missing, animation cannot be performed.');
+			return;
+		}
+
+		const tl = gsap.timeline({
+			onComplete: () => {
+				cloudTopLeft.forEach(el => {
+					el.classList.add('animated');
+				});
+				cloudTopRight.forEach(el => {
+					el.classList.add('animated');
+				});
+				cloudBottomLeft.forEach(el => {
+					el.classList.add('animated');
+				});
+				cloudBottomRight.forEach(el => {
+					el.classList.add('animated');
+				});
+			},
+		});
+
+		tl.fromTo(
+			[cloudTopLeft, cloudBottomLeft],
+			{
+				opacity: 0,
+				x: '-100px',
+				stagger: 0.2,
+			},
+			{
+				opacity: 1,
+				x: '0',
+				duration: 1,
+				ease: 'power2.out',
+			},
+			'<',
+		);
+
+		tl.fromTo(
+			[cloudTopRight, cloudBottomRight],
+			{
+				opacity: 0,
+				x: '100px',
+				stagger: 0.2,
+			},
+			{
+				opacity: 1,
+				x: '0',
+				duration: 1,
+				ease: 'power2.out',
+			},
+			'<', // Delay the second animation by 0.5 seconds to create a staggered effect
+		);
+	};
+	const myaccaountPopupAnimationOut = () => {
+		const cloudTopLeft = document.querySelectorAll('.myaccount__popup-cloud-top-left');
+		const cloudTopRight = document.querySelectorAll('.myaccount__popup-cloud-top-right');
+		const cloudBottomLeft = document.querySelectorAll('.myaccount__popup-cloud-bottom-left');
+		const cloudBottomRight = document.querySelectorAll('.myaccount__popup-cloud-bottom-right');
+
+		if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
+			console.log('Some of the cloud elements are missing, animation cannot be performed.');
+			return;
+		}
+
+		const tl = gsap.timeline({
+			onComplete: () => {
+				cloudTopLeft.forEach(el => {
+					el.classList.remove('animated');
+				});
+				cloudTopRight.forEach(el => {
+					el.classList.remove('animated');
+				});
+				cloudBottomLeft.forEach(el => {
+					el.classList.remove('animated');
+				});
+				cloudBottomRight.forEach(el => {
+					el.classList.remove('animated');
+				});
+			},
+		});
+
+		tl.to(
+			[cloudTopLeft, cloudBottomLeft],
+			{
+				opacity: 0,
+				stagger: 0.2,
+			},
+
+			'<',
+		);
+
+		tl.to(
+			[cloudTopRight, cloudBottomRight],
+			{
+				opacity: 0,
+				stagger: 0.2,
+			},
+
+			'<', // Delay the second animation by 0.5 seconds to create a staggered effect
+		);
+	};
 	const thanksPopupAnimation = () => {
 		const cloudTopLeft = document.querySelectorAll('.thanks__popup-cloud-top-left');
 		const cloudTopRight = document.querySelectorAll('.thanks__popup-cloud-top-right');
