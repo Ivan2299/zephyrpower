@@ -851,6 +851,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	const animateHiSection = function () {
 		const hiCloud = document.querySelector('.hi-cloud');
 		// Timeline for the animation
+		if (!hiCloud) {
+			return;
+		}
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.hi',
@@ -942,7 +945,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// Animation for .form-cloud img
 		tl.fromTo(
-			'.form-cloud-1',
+			formCloud1,
 			{
 				y: '-300px',
 				x: '-100%', // Start position (image off-screen to the left)
@@ -956,7 +959,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		);
 
 		tl.fromTo(
-			'.form-cloud-2',
+			formCloud2,
 			{
 				y: '-300px',
 				x: '100%', // Start position (image off-screen to the left)
@@ -1016,6 +1019,40 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 
 	carttabsCloudsAnimation();
+
+	const reviewsAnimation = () => {
+		const reviewBlock = document.querySelector('.reviews__form-wrapper');
+
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.reviews',
+				start: 'top 80%',
+				end: 'center center',
+				scrub: false,
+				ease: 'power3.inOut',
+				// markers: true,
+				onComplete: () => {
+					reviewBlock.classList.add('animated');
+				},
+			},
+		});
+
+		tl.fromTo(
+			reviewBlock,
+			{
+				opacity: 0,
+				x: '50px',
+				duration: 1,
+			},
+			{
+				opacity: 1,
+				x: '0px',
+				duration: 1,
+			},
+		);
+	};
+
+	reviewsAnimation();
 
 	const bannerAnimation = function () {
 		// Timeline for the animation
