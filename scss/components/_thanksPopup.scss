@@ -28,6 +28,9 @@
 		z-index: -1;
 		bottom: 0;
 		left: -25%;
+		&.animated {
+			animation: smallestTranslateCloudReverse 6s ease-in-out infinite;
+		}
 	}
 
 	&-cloud-top-right {
@@ -36,6 +39,9 @@
 		z-index: -1;
 		bottom: 10px;
 		right: -25%;
+		&.animated {
+			animation: smallestTranslateCloudReverse 6s ease-in-out infinite;
+		}
 	}
 
 	&-cloud-bottom-left {
@@ -43,12 +49,18 @@
 		position: absolute;
 		bottom: -100px;
 		left: -30%;
+		&.animated {
+			animation: smallestTranslateCloud 6s ease-in-out infinite;
+		}
 	}
 	&-cloud-bottom-right {
 		pointer-events: none;
 		position: absolute;
 		bottom: -130px;
 		right: -25%;
+		&.animated {
+			animation: smallestTranslateCloud 6s ease-in-out infinite;
+		}
 	}
 
 	&-title {

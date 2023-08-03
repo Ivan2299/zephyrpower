@@ -473,6 +473,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		popup.addEventListener('click', event => {
 			if (event.target === popup || event.target.closest('#subscribe-popup-button-close')) {
+				thanksPopupAnimatinOut();
 				fadeOut(popup, 500);
 				document.body.style.overflow = 'auto';
 			}
@@ -500,6 +501,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		popup.addEventListener('click', event => {
 			if (event.target === popup || event.target.closest('#review-popup-button-close')) {
+				thanksPopupAnimatinOut();
 				fadeOut(popup, 500);
 				document.body.style.overflow = 'auto';
 			}
@@ -526,6 +528,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		popup.addEventListener('click', event => {
 			if (event.target === popup || event.target.closest('#orderthanks-popup-button-close')) {
 				fadeOut(popup, 500);
+				thanksPopupAnimatinOut();
 				document.body.style.overflow = 'auto';
 			}
 		});
@@ -1094,37 +1097,99 @@ document.addEventListener('DOMContentLoaded', function () {
 			return;
 		}
 
-		const tl = gsap.timeline({});
+		const tl = gsap.timeline({
+			onComplete: () => {
+				cloudTopLeft.forEach(el => {
+					el.classList.add('animated');
+				});
+				cloudTopRight.forEach(el => {
+					el.classList.add('animated');
+				});
+				cloudBottomLeft.forEach(el => {
+					el.classList.add('animated');
+				});
+				cloudBottomRight.forEach(el => {
+					el.classList.add('animated');
+				});
+			},
+		});
 
 		tl.fromTo(
 			[cloudTopLeft, cloudBottomLeft],
 			{
 				opacity: 0,
-				x: '-50px',
-				stagger: 0.1,
+				x: '-100px',
+				stagger: 0.2,
 			},
 			{
 				opacity: 1,
-				x: '0%',
+				x: '0',
 				duration: 1,
 				ease: 'power2.out',
 			},
+			'<',
 		);
 
 		tl.fromTo(
 			[cloudTopRight, cloudBottomRight],
 			{
 				opacity: 0,
-				x: '50px',
-				stagger: 0.1,
+				x: '100px',
+				stagger: 0.2,
 			},
 			{
 				opacity: 1,
-				x: '0%',
+				x: '0',
 				duration: 1,
 				ease: 'power2.out',
 			},
-			'-=0.5', // Delay the second animation by 0.5 seconds to create a staggered effect
+			'<', // Delay the second animation by 0.5 seconds to create a staggered effect
+		);
+	};
+	const thanksPopupAnimatinOut = () => {
+		const cloudTopLeft = document.querySelectorAll('.thanks__popup-cloud-top-left');
+		const cloudTopRight = document.querySelectorAll('.thanks__popup-cloud-top-right');
+		const cloudBottomLeft = document.querySelectorAll('.thanks__popup-cloud-bottom-left');
+		const cloudBottomRight = document.querySelectorAll('.thanks__popup-cloud-bottom-right');
+
+		if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
+			console.log('Some of the cloud elements are missing, animation cannot be performed.');
+			return;
+		}
+
+		const tl = gsap.timeline({
+			onComplete: () => {
+				cloudTopLeft.forEach(el => {
+					el.classList.remove('animated');
+				});
+				cloudTopRight.forEach(el => {
+					el.classList.remove('animated');
+				});
+				cloudBottomLeft.forEach(el => {
+					el.classList.remove('animated');
+				});
+				cloudBottomRight.forEach(el => {
+					el.classList.remove('animated');
+				});
+			},
+		});
+
+		tl.to(
+			[cloudTopLeft, cloudBottomLeft],
+			{
+				opacity: 0,
+				duration: 1,
+			},
+			'<',
+		);
+
+		tl.to(
+			[cloudTopRight, cloudBottomRight],
+			{
+				opacity: 0,
+				duration: 1,
+			},
+			'<', // Delay the second animation by 0.5 seconds to create a staggered effect
 		);
 	};
 

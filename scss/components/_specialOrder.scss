@@ -1,4 +1,5 @@
 .specialorder {
+	position: relative;
 	padding-top: 150px;
 	padding-bottom: 122px;
 
@@ -7,12 +8,14 @@
 		right: 0;
 		top: 15%;
 		z-index: -1;
+		animation: smallTranslateCloud 9s ease-in-out infinite;
 	}
 	&-cloud-bottom-left {
 		position: absolute;
 		left: 30%;
 		bottom: 0;
 		z-index: -1;
+		animation: smallTranslateCloudReverse 9s ease-in-out infinite;
 	}
 	// .specialorder__title
 

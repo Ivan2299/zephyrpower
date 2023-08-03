@@ -11,14 +11,17 @@
 	.order-cloud-1 {
 		top: 10%;
 		right: 0;
+		animation: smallTranslateCloud 9s ease-in-out infinite;
 	}
 	.order-cloud-2 {
 		bottom: 0;
 		left: 20%;
+		animation: smallTranslateCloud 9s ease-in-out infinite;
 	}
 	.order-cloud-3 {
 		bottom: 0;
 		right: 0;
+		animation: smallTranslateCloudReverse 9s ease-in-out infinite;
 	}
 
 	&__breadcrumps {
