@@ -373,6 +373,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	accordion('#accordionorder4', '#accordionorder4Body');
 	accordion('#accordionOrderPage1', '#accordionOrderPage1Body');
 	accordion('#accordionOrderPage2', '#accordionOrderPage2Body');
+	accordion('#burgermenuAccordion1btn', '#burgermenuAccordion1Body');
+	accordion('#burgermenuAccordion2btn', '#burgermenuAccordion2Body');
 	// ///////////////////////////////////////////////////
 
 	// FUNCTIONS FOR POPUP SMOOTH

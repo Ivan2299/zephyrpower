@@ -1677,9 +1677,6 @@ swiper-container .swiper-notification {
 }
 
 @media (max-width: 960px) {
-  .header__logo {
-    height: 70px;
-  }
   .burger-menu {
     display: block;
     margin-left: 40px;
@@ -1730,7 +1727,7 @@ swiper-container .swiper-notification {
     right: -100%;
     width: 100%;
     height: 100%;
-    padding: 100px;
+    padding: 120px 100px;
     overflow: auto;
     z-index: -1;
     transition: all 0.3s ease;
@@ -1739,20 +1736,150 @@ swiper-container .swiper-notification {
     right: 0;
   }
   .burger-menu-lists {
-    padding: 20px 77px;
+    padding: 20px 52px;
     background-color: #fff;
     color: #000;
     box-shadow: 0px 5px 25px 7px rgba(0, 0, 0, 0.25);
+  }
+  .burger-menu-list-item-wrapper {
+    border-bottom: 2px solid #3f8f8d;
+    padding: 15px 20px;
   }
   .burger-menu-list-item-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .burger-menu-list-item {
     font-size: 18px;
     color: #000;
     font-weight: 500;
+  }
+  .burger-menu-list-item-inner.active .burger-menu-list-item-arrow {
+    transform: rotate(180deg);
+  }
+  .burger-menu-list-item-arrow {
+    transition: all 0.4s ease 0s;
+  }
+  .burger-menu-sublist-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .burger-menu-sublist li {
+    margin-bottom: 10px;
+  }
+  .burger-menu-sublist li:last-child {
+    margin-bottom: 0px;
+  }
+  .burger-menu-sublist-title {
+    padding-top: 20px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+  }
+  .burger-menu-sublist-item {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .burger-menu-actions {
+    padding: 15px 20px 0 20px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    justify-items: center;
+  }
+  .burger-menu-button-wrapper {
+    grid-column: 1;
+    text-align: center;
+    margin-left: clamp(1.25rem, -0.568rem + 9.09vw, 6.25rem);
+  }
+  .burger-menu-actions-user-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+  }
+  .burger-menu-actions-favorite-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 760px) {
+  .burger-menu-lists {
+    padding: 20px;
+  }
+  .burger-menu-body {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 600px) {
+  .header__logo img {
+    height: 70px;
+    width: 64px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .burger-menu-lists {
+    box-shadow: unset;
+    padding: 0px 20px;
+  }
+}
+@media (max-width: 500px) {
+  .header__search-input {
+    display: none;
+  }
+  .header .header__wrap {
+    justify-content: unset;
+    width: unset;
+  }
+  .burger-menu-body {
+    padding: 76px 0 30px 0;
+  }
+  .burger-menu-list-item-inner {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .burger-menu-list-item-inner .burger-menu-list-item-arrow {
+    width: 26px;
+    height: 25px;
+  }
+  .burger-menu-list-item-inner .burger-menu-list-item-arrow-right {
+    width: 22px;
+    height: 22px;
+  }
+  .burger-menu-lists {
+    padding: 0px;
+    border-top: 1px solid #3f8f8d;
+  }
+  .header {
+    height: 70px;
+  }
+  .burger-menu-list-item-wrapper {
+    border-bottom: 1px solid #3f8f8d;
+    padding: 13px 30px 23px;
+  }
+  .burger-menu-sublist-wrapper {
+    display: block;
+  }
+  .burger-menu-sublist {
+    padding-left: 20px;
+  }
+  .burger-menu-sublist-title {
+    padding-top: 12px;
+  }
+  .burger-menu-sublist-item {
+    padding-left: 20px;
+  }
+  .burger-menu-actions {
+    margin-top: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .burger-menu-button-wrapper {
+    margin-left: unset;
+  }
+  .burger-menu-actions-user-wrapper {
+    margin-right: unset;
   }
 }
 .button {
@@ -1761,6 +1888,12 @@ swiper-container .swiper-notification {
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
+  white-space: nowrap;
+}
+@media (max-width: 960px) {
+  .button {
+    font-size: 16px;
+  }
 }
 .button-accent {
   background-color: #ffd3de;
@@ -1775,6 +1908,13 @@ swiper-container .swiper-notification {
 @media (any-hover: hover) {
   .button-accent:hover {
     background: rgba(255, 211, 222, 0.6);
+  }
+}
+@media (max-width: 960px) {
+  .button-accent {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 .button-transparent {
@@ -1792,6 +1932,17 @@ swiper-container .swiper-notification {
   border-radius: 10px;
   background: rgba(63, 143, 141, 0.25);
   box-shadow: 0px 2px 4px 0px #3f8f8d;
+}
+@media (max-width: 960px) {
+  .button-secondary {
+    font-weight: 600;
+  }
+}
+@media (max-width: 600px) {
+  .button-secondary {
+    padding: 17px 35px;
+    font-size: 13px;
+  }
 }
 @media (any-hover: hover) {
   .button-secondary:hover {
