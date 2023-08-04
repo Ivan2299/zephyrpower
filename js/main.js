@@ -628,6 +628,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// CATALOG FILTER BLOCK OPEN/CLOSE END ///////////////////////////////////////////////////
 
 	// GSAP ANIMATIONS  ///////////////////////////////////////////////////
+
 	gsap.registerPlugin(ScrollTrigger);
 	function animateClouds() {
 		const cloudImgNew = document.querySelector('.two___sections-cloud-img-left');
@@ -1332,14 +1333,21 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 
 		// Animation for cloudContainer
-		tl.to(cloudContainer, {
-			x: '0%',
-			opacity: 1,
-			duration: 1,
-			onComplete: function () {
-				cloudContainer.classList.add('animated');
+		tl.fromTo(
+			cloudContainer,
+			{
+				x: '100%',
+				opacity: 0,
 			},
-		});
+			{
+				x: '0%',
+				opacity: 1,
+				duration: 1,
+				onComplete: function () {
+					cloudContainer.classList.add('animated');
+				},
+			},
+		);
 
 		tl.fromTo(
 			verticalSlider,
@@ -1356,14 +1364,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		);
 
 		// Animation for slideFigureAfter
-		tl.to(
-			slideFigureAfter,
-			{
-				opacity: 1,
-				x: '50%',
-			},
-			'-=1', // Start one second before the previous animation ends
-		);
+		// tl.to(
+		// 	slideFigureAfter,
+		// 	{
+		// 		opacity: 1,
+		// 		x: '50%',
+		// 	},
+		// 	'-=1', // Start one second before the previous animation ends
+		// );
 
 		// Animation for slideFigure
 		tl.fromTo(
@@ -1382,8 +1390,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		);
 
 		// Animation for the slides
-		tl.to(
+		tl.fromTo(
 			slides,
+			{
+				opacity: 0,
+				stagger: 0.35,
+			},
 			{
 				opacity: 1,
 				stagger: 0.35,
@@ -1393,6 +1405,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 
 	bannerAnimation();
+
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////

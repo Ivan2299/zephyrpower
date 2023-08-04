@@ -61,7 +61,6 @@
 			right: 0;
 			z-index: 2;
 			pointer-events: none;
-			transform: translateX(100%); // for animation banner cloud
 			&.animated {
 				.circle-slider-cloud-1 {
 					animation: smallestTranslateCloud 6s ease-in-out infinite;
@@ -139,6 +138,22 @@
 			filter: blur(0px);
 			img {
 				transform: scale(1.8);
+			}
+		}
+	}
+}
+
+// media
+
+@media (max-width: (1200px)) {
+	.hero-section {
+		flex-direction: column;
+		.vertical-slider {
+			max-width: 100%;
+			width: 100%;
+			justify-items: center;
+			.vertical-slider-slide {
+				max-width: 100%;
 			}
 		}
 	}
