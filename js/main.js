@@ -544,8 +544,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	$(document).ready(function () {
 		$('.burger-menu-icon').click(function (event) {
 			$('.burger-menu-icon, .burger-menu-body').toggleClass('active');
+			event.stopPropagation();
 		});
 	});
+
 	// ////	ORDER PAGE ANIMATION VERTICAL TIMELINE ///////////////////////////////////////////////
 	function handleFormOrder() {
 		const contactInputs = document.querySelectorAll('.form-order__contacts-input');
