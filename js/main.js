@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		maxBackfaceHiddenSlides: 1,
 		slidesPerView: 3,
 		loop: true,
-		height: 430,
 		// spaceBetween: 10,
 		grabCursor: true,
 		// slideToClickedSlice: true,

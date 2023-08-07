@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	// height: calc(100vh - 145px);
-	margin-top: 150px;
+	margin-top: clamp(6.25rem, 5.24rem + 5.05vw, 9.375rem); //150 = 100 px
 	overflow: hidden;
 
 	.vertical-slider {
@@ -15,18 +15,18 @@
 		.vertical-slider-slide {
 			border-radius: 0px 174.5px 174.5px 0px;
 			max-width: 700px;
-			max-height: 220px;
+			height: 220px;
 			filter: blur(7.5px);
 			opacity: 0.2;
 			pointer-events: none;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			transition: $transition_2;
+			transition: $transition;
 
 			img {
 				object-fit: cover;
-				max-height: 220px;
+				height: 220px;
 				width: 100%;
 				border-radius: 0px 174.5px 174.5px 0px;
 			}
@@ -38,16 +38,16 @@
 
 		.swiper-slide-active {
 			filter: none;
-			max-width: 843px;
+			max-width: 840px;
+			width: 840px;
 			height: 280px;
 			pointer-events: all;
 			position: relative;
 			opacity: 1;
 			z-index: 1;
-			transform: scale(1.2, 1.4);
+			// transform: scale(1.2, 1.4);
 			img {
-				// border-radius: 0px 174.5px 174.5px 0px;
-				// height: 280px;
+				height: 280px;
 			}
 		}
 	}
@@ -151,6 +151,14 @@
 
 // media
 
+@media (max-width: (1390px)) {
+	.hero-section {
+		.vertical-slider .swiper-slide-active {
+			width: 100%;
+		}
+	}
+}
+
 @media (max-width: (1200px)) {
 	.hero-section {
 		flex-direction: column;
@@ -160,6 +168,55 @@
 			justify-items: center;
 			.vertical-slider-slide {
 				max-width: 100%;
+				border-radius: 60px;
+				img {
+					border-radius: 60px;
+				}
+			}
+			.swiper-slide-active {
+				img {
+					height: 305px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: (960px)) {
+	.hero-section {
+		.vertical-slider {
+			.swiper-slide {
+				max-width: 95%;
+				margin: 0 auto;
+			}
+			.swiper-slide-active {
+				max-width: 100%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+@media (max-width: (768px)) {
+	.hero-section {
+		.vertical-slider {
+			height: 320px;
+			.swiper-slide > img {
+				border-radius: 0;
+			}
+			.swiper-slide-active img {
+				border-radius: 30px;
+				height: 200px;
+			}
+		}
+	}
+}
+@media (max-width: (576px)) {
+	.hero-section {
+		.vertical-slider {
+			height: 280px;
+			.swiper-slide {
+			}
+			.swiper-slide-active {
 			}
 		}
 	}
