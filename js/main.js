@@ -1403,8 +1403,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			'-=1', // Start 1 second before the previous animation ends
 		);
 	};
+	if (window.innerWidth > 1200) {
+		bannerAnimation();
+	}
 
-	bannerAnimation();
+	// bannerAnimation();
 
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
