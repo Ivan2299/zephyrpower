@@ -627,783 +627,786 @@ document.addEventListener('DOMContentLoaded', function () {
 	// CATALOG FILTER BLOCK OPEN/CLOSE END ///////////////////////////////////////////////////
 
 	// GSAP ANIMATIONS  ///////////////////////////////////////////////////
+	if (innerWidth > 1200) {
+		gsap.registerPlugin(ScrollTrigger);
+		function animateClouds() {
+			const cloudImgNew = document.querySelector('.two___sections-cloud-img-left');
+			const cloudImgNew2 = document.querySelector('.two___sections-cloud-img-right');
+			const cloudImgNew3 = document.querySelector('.two___sections-cloud-img-left-second');
+			const cloudImgNew4 = document.querySelector('.two___sections-cloud-img-right-second');
 
-	gsap.registerPlugin(ScrollTrigger);
-	function animateClouds() {
-		const cloudImgNew = document.querySelector('.two___sections-cloud-img-left');
-		const cloudImgNew2 = document.querySelector('.two___sections-cloud-img-right');
-		const cloudImgNew3 = document.querySelector('.two___sections-cloud-img-left-second');
-		const cloudImgNew4 = document.querySelector('.two___sections-cloud-img-right-second');
+			if (!cloudImgNew || !cloudImgNew2 || !cloudImgNew3 || !cloudImgNew4) {
+				return; // Skip the code block if any of the required elements are missing
+			}
 
-		if (!cloudImgNew || !cloudImgNew2 || !cloudImgNew3 || !cloudImgNew4) {
-			return; // Skip the code block if any of the required elements are missing
-		}
-
-		gsap.to(cloudImgNew, {
-			scrollTrigger: {
-				trigger: '.home-hero-block',
-				start: 'top top',
-				end: '+=' + window.innerHeight * 2,
-				scrub: 2,
-				normalizeScroll: true,
-			},
-			x: -600,
-		});
-
-		gsap.to(cloudImgNew2, {
-			scrollTrigger: {
-				trigger: '.home-hero-block',
-				start: 'top top',
-				end: '+=' + window.innerHeight * 2,
-				scrub: 2,
-				normalizeScroll: true,
-			},
-			x: 0,
-		});
-
-		gsap.to(cloudImgNew3, {
-			x: '-70%',
-			duration: 2,
-			scrollTrigger: {
-				trigger: '.home-hero-block',
-				start: 'top top',
-				scrub: 2,
-				ease: 'power1.inOut',
-			},
-		});
-
-		gsap.to(cloudImgNew4, {
-			x: '70%',
-			duration: 2,
-			scrollTrigger: {
-				trigger: '.home-hero-block',
-				start: 'top top',
-				scrub: 2,
-				ease: 'power1.inOut',
-			},
-		});
-	}
-
-	// Call the animation function
-	animateClouds();
-
-	const powerAnimation = function () {
-		const cloudImgsPower = document.querySelectorAll('.power-cloud');
-		if (!cloudImgsPower) {
-			return;
-		}
-
-		// Анімація хмаринок з використанням ScrollTrigger
-		cloudImgsPower.forEach((cloudImg, index) => {
-			const isLeftSide = [0, 1, 2, 6].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
-			const direction = isLeftSide ? '-=50%' : '+=50%'; // Змінюємо напрямок руху для лівих та правих хмаринок
-
-			gsap.set(cloudImg, {
-				x: isLeftSide ? '-100%' : '100%', // Початкова позиція зліва або справа від екрану
-				opacity: 0, // Початкова прозорість
-				scale: 0.8, // Початковий масштаб (зменшимо для ефекту зближення)
+			gsap.to(cloudImgNew, {
+				scrollTrigger: {
+					trigger: '.home-hero-block',
+					start: 'top top',
+					end: '+=' + window.innerHeight * 2,
+					scrub: 2,
+					normalizeScroll: true,
+				},
+				x: -600,
 			});
 
-			gsap.to(cloudImg, {
-				x: '0%', // Виїжджаємо до центру горизонтально
-				opacity: 1, // Збільшуємо прозорість
-				scale: 1, // Повертаємо масштаб до нормального
-				duration: 3, // Тривалість анімації
+			gsap.to(cloudImgNew2, {
 				scrollTrigger: {
-					trigger: '.power', // Використовуємо клас "power" як тригер
-					start: 'top bottom', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
-					end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
-					scrub: 3, // Збільшений scrub для плавної анімації
-					ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+					trigger: '.home-hero-block',
+					start: 'top top',
+					end: '+=' + window.innerHeight * 2,
+					scrub: 2,
+					normalizeScroll: true,
+				},
+				x: 0,
+			});
+
+			gsap.to(cloudImgNew3, {
+				x: '-70%',
+				duration: 2,
+				scrollTrigger: {
+					trigger: '.home-hero-block',
+					start: 'top top',
+					scrub: 2,
+					ease: 'power1.inOut',
 				},
 			});
-		});
 
-		// Анімація для слайдера
-		const powerSliderBox = document.querySelector('.power-slider-box');
-		if (!powerSliderBox) {
-			return;
+			gsap.to(cloudImgNew4, {
+				x: '70%',
+				duration: 2,
+				scrollTrigger: {
+					trigger: '.home-hero-block',
+					start: 'top top',
+					scrub: 2,
+					ease: 'power1.inOut',
+				},
+			});
 		}
 
-		gsap.set(powerSliderBox, {
-			opacity: 0, // Початкова прозорість
-			y: '-200px', // Початкова позиція зверху від екрану
-		});
+		// Call the animation function
+		animateClouds();
 
-		// Timeline для анімації слайдера
-		const sliderTimeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: '.power', // The element that triggers the animation
-				start: 'top center', // The start position of the animation
-				end: 'top bottom', // The end position of the animation
-				scrub: 2, // The scrubbing effect duration
-				ease: 'power1.inOut', // The easing function for the animation
-			},
-		});
+		const powerAnimation = function () {
+			const cloudImgsPower = document.querySelectorAll('.power-cloud');
+			if (!cloudImgsPower) {
+				return;
+			}
 
-		sliderTimeline
-			.to(powerSliderBox, {
-				opacity: 1, // Появлення power-slider-box
-				y: '0%', // Зсув вниз для появи
-				duration: 2, // Збільшимо тривалість анімації для більшої затримки
-			})
-			.from('.power .swiper-slide-active', {
-				duration: 1, // Зробимо тривалість 1 секунду, щоб мати ефект збільшення
-			})
-			.to('.power .swiper-slide-active', {
-				duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
-			})
-			.from('.power .swiper-slide:not(.power .swiper-slide-active)', {
-				y: '-100%', // Анімація інших слайдів - зсув зверху вниз
-				stagger: 0.15, // Затримка між анімаціями слайдів
-				duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
+			// Анімація хмаринок з використанням ScrollTrigger
+			cloudImgsPower.forEach((cloudImg, index) => {
+				const isLeftSide = [0, 1, 2, 6].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
+				const direction = isLeftSide ? '-=50%' : '+=50%'; // Змінюємо напрямок руху для лівих та правих хмаринок
+
+				gsap.set(cloudImg, {
+					x: isLeftSide ? '-100%' : '100%', // Початкова позиція зліва або справа від екрану
+					opacity: 0, // Початкова прозорість
+					scale: 0.8, // Початковий масштаб (зменшимо для ефекту зближення)
+				});
+
+				gsap.to(cloudImg, {
+					x: '0%', // Виїжджаємо до центру горизонтально
+					opacity: 1, // Збільшуємо прозорість
+					scale: 1, // Повертаємо масштаб до нормального
+					duration: 3, // Тривалість анімації
+					scrollTrigger: {
+						trigger: '.power', // Використовуємо клас "power" як тригер
+						start: 'top bottom', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
+						end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
+						scrub: 3, // Збільшений scrub для плавної анімації
+						ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+					},
+				});
 			});
 
-		// Додамо затримку для появи слайдів після анімації power-slider-box
-		gsap.from('.power .swiper-slide', {
-			opacity: 0,
-			y: '-100px',
-			// stagger: 0.15,
-			duration: 0.5,
-			scrollTrigger: {
-				trigger: '.power',
-				start: 'top center',
-				end: 'top bottom',
-				scrub: 2.5,
-				ease: 'power1.inOut',
-			},
-			onEnterBack: () => sliderTimeline.pause(), // Зупиняємо анімацію при прокрутці вгору
-			onLeaveBack: () => sliderTimeline.play(), // Відновлюємо анімацію при прокрутці вниз
-		});
-	};
-	powerAnimation();
+			// Анімація для слайдера
+			const powerSliderBox = document.querySelector('.power-slider-box');
+			if (!powerSliderBox) {
+				return;
+			}
 
-	const newAnimation = function () {
-		const newItems = document.querySelectorAll('.new__item-info');
-		const newImages = document.querySelectorAll('.new-image');
-		const newSlides = document.querySelectorAll('.new__item:not(.new__item .swiper-slide-active)'); // Інші слайди
-		const activeSlide = document.querySelector('.new .swiper-slide-active'); // Поточний активний слайд
+			gsap.set(powerSliderBox, {
+				opacity: 0, // Початкова прозорість
+				y: '-200px', // Початкова позиція зверху від екрану
+			});
 
-		if (!newItems || !newImages || !newSlides) {
-			return;
-		}
+			// Timeline для анімації слайдера
+			const sliderTimeline = gsap.timeline({
+				scrollTrigger: {
+					trigger: '.power', // The element that triggers the animation
+					start: 'top center', // The start position of the animation
+					end: 'top bottom', // The end position of the animation
+					scrub: 2, // The scrubbing effect duration
+					ease: 'power1.inOut', // The easing function for the animation
+				},
+			});
 
-		// Створюємо Timeline
-		const newTimeline = gsap.timeline();
+			sliderTimeline
+				.to(powerSliderBox, {
+					opacity: 1, // Появлення power-slider-box
+					y: '0%', // Зсув вниз для появи
+					duration: 2, // Збільшимо тривалість анімації для більшої затримки
+				})
+				.from('.power .swiper-slide-active', {
+					duration: 1, // Зробимо тривалість 1 секунду, щоб мати ефект збільшення
+				})
+				.to('.power .swiper-slide-active', {
+					duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
+				})
+				.from('.power .swiper-slide:not(.power .swiper-slide-active)', {
+					y: '-100%', // Анімація інших слайдів - зсув зверху вниз
+					stagger: 0.15, // Затримка між анімаціями слайдів
+					duration: 0, // Зробимо тривалість 0, щоб слайдер не анімувався
+				});
 
-		// Анімація для елементів new__item-info
-		newItems.forEach(item => {
-			newTimeline.from(item, {
+			// Додамо затримку для появи слайдів після анімації power-slider-box
+			gsap.from('.power .swiper-slide', {
 				opacity: 0,
-				y: 150,
-				duration: 0.2,
+				y: '-100px',
+				// stagger: 0.15,
+				duration: 0.5,
+				scrollTrigger: {
+					trigger: '.power',
+					start: 'top center',
+					end: 'top bottom',
+					scrub: 2.5,
+					ease: 'power1.inOut',
+				},
+				onEnterBack: () => sliderTimeline.pause(), // Зупиняємо анімацію при прокрутці вгору
+				onLeaveBack: () => sliderTimeline.play(), // Відновлюємо анімацію при прокрутці вниз
 			});
-		});
+		};
+		powerAnimation();
 
-		// Анімація для елементів new-image
-		newImages.forEach(image => {
-			newTimeline.fromTo(
-				image,
+		const newAnimation = function () {
+			const newItems = document.querySelectorAll('.new__item-info');
+			const newImages = document.querySelectorAll('.new-image');
+			const newSlides = document.querySelectorAll(
+				'.new__item:not(.new__item .swiper-slide-active)',
+			); // Інші слайди
+			const activeSlide = document.querySelector('.new .swiper-slide-active'); // Поточний активний слайд
+
+			if (!newItems || !newImages || !newSlides) {
+				return;
+			}
+
+			// Створюємо Timeline
+			const newTimeline = gsap.timeline();
+
+			// Анімація для елементів new__item-info
+			newItems.forEach(item => {
+				newTimeline.from(item, {
+					opacity: 0,
+					y: 150,
+					duration: 0.2,
+				});
+			});
+
+			// Анімація для елементів new-image
+			newImages.forEach(image => {
+				newTimeline.fromTo(
+					image,
+					{
+						opacity: 0,
+						scale: 0.8,
+						top: '-40%', // Initial position, off-screen at the top
+					},
+					{
+						opacity: 1,
+						scale: 1,
+						top: '-40%', // Final position, where the image should appear
+						duration: 0.8,
+						// delay: 0.2, // Add a delay to synchronize with .new__item-info appearance
+					},
+					1.5,
+				);
+			});
+
+			// Додамо затримку для появи інших слайдів після анімації new__item-info та new-image
+			newTimeline.from(
+				newSlides,
 				{
 					opacity: 0,
+					y: 50,
+				},
+				0.5,
+			); // Затримка 0.5 секунд для плавного з'явлення інших слайдів
+
+			// Анімація для активного слайда
+			newTimeline.from(
+				activeSlide,
+				{
 					scale: 0.8,
-					top: '-40%', // Initial position, off-screen at the top
+					duration: 1,
+				},
+				0,
+			);
+		};
+		newAnimation();
+
+		const bestsellersAnimation = function () {
+			const bestsellersSlides = document.querySelectorAll('.bestsellers .swiper-slide');
+
+			if (!bestsellersSlides) {
+				return;
+			}
+
+			bestsellersSlides.forEach(slide => {
+				gsap.from(slide, {
+					opacity: 0,
+					y: 150,
+					duration: 1,
+					scrollTrigger: {
+						trigger: '.bestsellers', // Використовуємо клас "power" як тригер
+						start: 'top center', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
+						end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
+						scrub: 1, // Збільшений scrub для плавної анімації
+						ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+					},
+				});
+			});
+		};
+		bestsellersAnimation();
+
+		const animateHiSection = function () {
+			const hiCloud = document.querySelector('.hi-cloud');
+			// Timeline for the animation
+			if (!hiCloud) {
+				return;
+			}
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: '.hi',
+					start: 'top 80%',
+				},
+				onComplete: () => {
+					hiCloud.classList.add('animated');
+				},
+			});
+
+			// Animation for .hi-cloud
+			tl.from(hiCloud, {
+				x: '100%', // Start position
+				opacity: 0,
+				duration: 1,
+				ease: 'power3.out',
+			});
+
+			// Animation for .hi__image-block::before
+			tl.fromTo(
+				'.hi__image-block::before',
+				{
+					opacity: 0,
 				},
 				{
 					opacity: 1,
-					scale: 1,
-					top: '-40%', // Final position, where the image should appear
-					duration: 0.8,
-					// delay: 0.2, // Add a delay to synchronize with .new__item-info appearance
+					duration: 0.5,
 				},
-				1.5,
 			);
-		});
 
-		// Додамо затримку для появи інших слайдів після анімації new__item-info та new-image
-		newTimeline.from(
-			newSlides,
-			{
-				opacity: 0,
-				y: 50,
-			},
-			0.5,
-		); // Затримка 0.5 секунд для плавного з'явлення інших слайдів
+			// Animation for .hi__image-ibg img
+			tl.fromTo(
+				'.hi__image-ibg img',
+				{
+					opacity: 0,
+					y: '-30%',
+				},
+				{
+					opacity: 1,
+					y: '0%',
+					duration: 0.5,
+					ease: 'power1.out',
+				},
+			);
 
-		// Анімація для активного слайда
-		newTimeline.from(
-			activeSlide,
-			{
-				scale: 0.8,
-				duration: 1,
-			},
-			0,
-		);
-	};
-	newAnimation();
+			// Simultaneous animations for .hi__info and .hi__image-name
+			tl.from(
+				'.hi__info',
+				{
+					x: '-100%',
+					// Start position from the left and right respectively
+					opacity: 0,
+					duration: 1,
+					// Additional properties can be added here
+				},
+				2,
+			);
 
-	const bestsellersAnimation = function () {
-		const bestsellersSlides = document.querySelectorAll('.bestsellers .swiper-slide');
+			tl.from(
+				'.hi__image-name',
+				{
+					x: '100%',
+					// Start position from the left and right respectively
+					opacity: 0,
+					duration: 1,
+					// Additional properties can be added here
+				},
+				2, // одночасність анімації з попередньою анімацією
+			);
+		};
 
-		if (!bestsellersSlides) {
-			return;
-		}
+		animateHiSection();
 
-		bestsellersSlides.forEach(slide => {
-			gsap.from(slide, {
-				opacity: 0,
-				y: 150,
-				duration: 1,
+		const animateForm = function () {
+			const formCloud1 = document.querySelector('.form-cloud-1');
+			const formCloud2 = document.querySelector('.form-cloud-2');
+			// Timeline for the animation
+
+			const tl = gsap.timeline({
 				scrollTrigger: {
-					trigger: '.bestsellers', // Використовуємо клас "power" як тригер
-					start: 'top center', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
-					end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
-					scrub: 1, // Збільшений scrub для плавної анімації
-					ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+					trigger: '.form-wrapper',
+					start: 'top 80%', // Start animation when the top of the .form-wrapper section is 80% in view
+				},
+				onComplete: () => {
+					if (formCloud1) {
+						formCloud1.classList.add('animated');
+					}
+					if (formCloud2) {
+						formCloud2.classList.add('animated');
+					}
 				},
 			});
-		});
-	};
-	bestsellersAnimation();
 
-	const animateHiSection = function () {
-		const hiCloud = document.querySelector('.hi-cloud');
-		// Timeline for the animation
-		if (!hiCloud) {
-			return;
-		}
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '.hi',
-				start: 'top 80%',
-			},
-			onComplete: () => {
-				hiCloud.classList.add('animated');
-			},
-		});
-
-		// Animation for .hi-cloud
-		tl.from(hiCloud, {
-			x: '100%', // Start position
-			opacity: 0,
-			duration: 1,
-			ease: 'power3.out',
-		});
-
-		// Animation for .hi__image-block::before
-		tl.fromTo(
-			'.hi__image-block::before',
-			{
-				opacity: 0,
-			},
-			{
-				opacity: 1,
-				duration: 0.5,
-			},
-		);
-
-		// Animation for .hi__image-ibg img
-		tl.fromTo(
-			'.hi__image-ibg img',
-			{
-				opacity: 0,
-				y: '-30%',
-			},
-			{
-				opacity: 1,
-				y: '0%',
-				duration: 0.5,
-				ease: 'power1.out',
-			},
-		);
-
-		// Simultaneous animations for .hi__info and .hi__image-name
-		tl.from(
-			'.hi__info',
-			{
-				x: '-100%',
-				// Start position from the left and right respectively
-				opacity: 0,
-				duration: 1,
-				// Additional properties can be added here
-			},
-			2,
-		);
-
-		tl.from(
-			'.hi__image-name',
-			{
-				x: '100%',
-				// Start position from the left and right respectively
-				opacity: 0,
-				duration: 1,
-				// Additional properties can be added here
-			},
-			2, // одночасність анімації з попередньою анімацією
-		);
-	};
-
-	animateHiSection();
-
-	const animateForm = function () {
-		const formCloud1 = document.querySelector('.form-cloud-1');
-		const formCloud2 = document.querySelector('.form-cloud-2');
-		// Timeline for the animation
-
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '.form-wrapper',
-				start: 'top 80%', // Start animation when the top of the .form-wrapper section is 80% in view
-			},
-			onComplete: () => {
-				if (formCloud1) {
-					formCloud1.classList.add('animated');
-				}
-				if (formCloud2) {
-					formCloud2.classList.add('animated');
-				}
-			},
-		});
-
-		// Animation for .form-cloud img
-		tl.fromTo(
-			formCloud1,
-			{
-				y: '-300px',
-				x: '-100%', // Start position (image off-screen to the left)
-			},
-			{
-				y: '0px',
-				x: '0', // Move image to the center of the screen
-				duration: 2, // Animation duration
-			},
-			1,
-		);
-
-		tl.fromTo(
-			formCloud2,
-			{
-				y: '-300px',
-				x: '100%', // Start position (image off-screen to the left)
-			},
-			{
-				y: '0px',
-				x: '0', // Move image to the center of the screen
-				duration: 2, // Animation duration
-			},
-			'<',
-		);
-	};
-	animateForm();
-
-	// GSAP ANIMATION FOR carttabs2__bg-left AND carttabs2__bg-right IMAGES
-	const carttabsCloudsAnimation = function () {
-		// Get the elements for the images
-		const carttabs2BgLeft = document.querySelector('.carttabs2__bg-left');
-		const carttabs2BgRight = document.querySelector('.carttabs2__bg-right');
-
-		// Animate the images
-		if (!carttabs2BgLeft || !carttabs2BgRight) {
-			return;
-		}
-		gsap.fromTo(
-			carttabs2BgLeft,
-			{
-				x: '-100%',
-				delay: 2,
-			},
-			{
-				delay: 2,
-				x: '0%',
-				duration: 1,
-
-				onComplete: function () {
-					carttabs2BgLeft.classList.add('animated');
+			// Animation for .form-cloud img
+			tl.fromTo(
+				formCloud1,
+				{
+					y: '-300px',
+					x: '-100%', // Start position (image off-screen to the left)
 				},
-			},
-		);
-		gsap.fromTo(
-			carttabs2BgRight,
-			{
-				x: '100%',
-				delay: 2,
-			},
-			{
-				x: '0%',
-				duration: 1,
-				delay: 2,
-
-				onComplete: function () {
-					carttabs2BgRight.classList.add('animated');
+				{
+					y: '0px',
+					x: '0', // Move image to the center of the screen
+					duration: 2, // Animation duration
 				},
-			},
-		);
-	};
+				1,
+			);
 
-	carttabsCloudsAnimation();
+			tl.fromTo(
+				formCloud2,
+				{
+					y: '-300px',
+					x: '100%', // Start position (image off-screen to the left)
+				},
+				{
+					y: '0px',
+					x: '0', // Move image to the center of the screen
+					duration: 2, // Animation duration
+				},
+				'<',
+			);
+		};
+		animateForm();
 
-	const reviewsAnimation = () => {
-		const reviewBlock = document.querySelector('.reviews__form-wrapper');
-		const reviewContent = document.querySelector('.reviews__content');
+		// GSAP ANIMATION FOR carttabs2__bg-left AND carttabs2__bg-right IMAGES
+		const carttabsCloudsAnimation = function () {
+			// Get the elements for the images
+			const carttabs2BgLeft = document.querySelector('.carttabs2__bg-left');
+			const carttabs2BgRight = document.querySelector('.carttabs2__bg-right');
 
-		if (!reviewBlock || !reviewContent) {
-			return;
-		}
+			// Animate the images
+			if (!carttabs2BgLeft || !carttabs2BgRight) {
+				return;
+			}
+			gsap.fromTo(
+				carttabs2BgLeft,
+				{
+					x: '-100%',
+					delay: 2,
+				},
+				{
+					delay: 2,
+					x: '0%',
+					duration: 1,
 
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '.reviews',
-				start: 'top 120%',
-				end: 'center center',
-				scrub: false,
-				ease: 'power3.inOut',
-				// markers: true,
+					onComplete: function () {
+						carttabs2BgLeft.classList.add('animated');
+					},
+				},
+			);
+			gsap.fromTo(
+				carttabs2BgRight,
+				{
+					x: '100%',
+					delay: 2,
+				},
+				{
+					x: '0%',
+					duration: 1,
+					delay: 2,
+
+					onComplete: function () {
+						carttabs2BgRight.classList.add('animated');
+					},
+				},
+			);
+		};
+
+		carttabsCloudsAnimation();
+
+		const reviewsAnimation = () => {
+			const reviewBlock = document.querySelector('.reviews__form-wrapper');
+			const reviewContent = document.querySelector('.reviews__content');
+
+			if (!reviewBlock || !reviewContent) {
+				return;
+			}
+
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: '.reviews',
+					start: 'top 120%',
+					end: 'center center',
+					scrub: false,
+					ease: 'power3.inOut',
+					// markers: true,
+					onComplete: () => {
+						reviewBlock.classList.add('animated');
+					},
+				},
+			});
+
+			tl.fromTo(
+				reviewBlock,
+				{
+					opacity: 0,
+					x: '50px',
+					duration: 1,
+				},
+				{
+					opacity: 1,
+					x: '0px',
+					duration: 1,
+				},
+				1,
+			);
+			tl.fromTo(
+				reviewContent,
+				{
+					opacity: 0,
+					x: '-50px',
+					duration: 1,
+				},
+				{
+					opacity: 1,
+					x: '0px',
+					duration: 1,
+				},
+				'<',
+			);
+		};
+
+		reviewsAnimation();
+
+		const myaccaountPopupAnimation = () => {
+			const cloudTopLeft = document.querySelectorAll('.myaccount__popup-cloud-top-left');
+			const cloudTopRight = document.querySelectorAll('.myaccount__popup-cloud-top-right');
+			const cloudBottomLeft = document.querySelectorAll('.myaccount__popup-cloud-bottom-left');
+			const cloudBottomRight = document.querySelectorAll('.myaccount__popup-cloud-bottom-right');
+
+			if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
+				console.log('Some of the cloud elements are missing, animation cannot be performed.');
+				return;
+			}
+
+			const tl = gsap.timeline({
 				onComplete: () => {
-					reviewBlock.classList.add('animated');
+					cloudTopLeft.forEach(el => {
+						el.classList.add('animated');
+					});
+					cloudTopRight.forEach(el => {
+						el.classList.add('animated');
+					});
+					cloudBottomLeft.forEach(el => {
+						el.classList.add('animated');
+					});
+					cloudBottomRight.forEach(el => {
+						el.classList.add('animated');
+					});
 				},
-			},
-		});
+			});
 
-		tl.fromTo(
-			reviewBlock,
-			{
-				opacity: 0,
-				x: '50px',
-				duration: 1,
-			},
-			{
-				opacity: 1,
-				x: '0px',
-				duration: 1,
-			},
-			1,
-		);
-		tl.fromTo(
-			reviewContent,
-			{
-				opacity: 0,
-				x: '-50px',
-				duration: 1,
-			},
-			{
-				opacity: 1,
-				x: '0px',
-				duration: 1,
-			},
-			'<',
-		);
-	};
-
-	reviewsAnimation();
-
-	const myaccaountPopupAnimation = () => {
-		const cloudTopLeft = document.querySelectorAll('.myaccount__popup-cloud-top-left');
-		const cloudTopRight = document.querySelectorAll('.myaccount__popup-cloud-top-right');
-		const cloudBottomLeft = document.querySelectorAll('.myaccount__popup-cloud-bottom-left');
-		const cloudBottomRight = document.querySelectorAll('.myaccount__popup-cloud-bottom-right');
-
-		if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
-			console.log('Some of the cloud elements are missing, animation cannot be performed.');
-			return;
-		}
-
-		const tl = gsap.timeline({
-			onComplete: () => {
-				cloudTopLeft.forEach(el => {
-					el.classList.add('animated');
-				});
-				cloudTopRight.forEach(el => {
-					el.classList.add('animated');
-				});
-				cloudBottomLeft.forEach(el => {
-					el.classList.add('animated');
-				});
-				cloudBottomRight.forEach(el => {
-					el.classList.add('animated');
-				});
-			},
-		});
-
-		tl.fromTo(
-			[cloudTopLeft, cloudBottomLeft],
-			{
-				opacity: 0,
-				x: '-100px',
-				stagger: 0.2,
-			},
-			{
-				opacity: 1,
-				x: '0',
-				duration: 1,
-				ease: 'power2.out',
-			},
-			'<',
-		);
-
-		tl.fromTo(
-			[cloudTopRight, cloudBottomRight],
-			{
-				opacity: 0,
-				x: '100px',
-				stagger: 0.2,
-			},
-			{
-				opacity: 1,
-				x: '0',
-				duration: 1,
-				ease: 'power2.out',
-			},
-			'<', // Delay the second animation by 0.5 seconds to create a staggered effect
-		);
-	};
-	const myaccaountPopupAnimationOut = () => {
-		const cloudTopLeft = document.querySelectorAll('.myaccount__popup-cloud-top-left');
-		const cloudTopRight = document.querySelectorAll('.myaccount__popup-cloud-top-right');
-		const cloudBottomLeft = document.querySelectorAll('.myaccount__popup-cloud-bottom-left');
-		const cloudBottomRight = document.querySelectorAll('.myaccount__popup-cloud-bottom-right');
-
-		if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
-			console.log('Some of the cloud elements are missing, animation cannot be performed.');
-			return;
-		}
-
-		const tl = gsap.timeline({
-			onComplete: () => {
-				cloudTopLeft.forEach(el => {
-					el.classList.remove('animated');
-				});
-				cloudTopRight.forEach(el => {
-					el.classList.remove('animated');
-				});
-				cloudBottomLeft.forEach(el => {
-					el.classList.remove('animated');
-				});
-				cloudBottomRight.forEach(el => {
-					el.classList.remove('animated');
-				});
-			},
-		});
-
-		tl.to(
-			[cloudTopLeft, cloudBottomLeft],
-			{
-				opacity: 0,
-				stagger: 0.2,
-			},
-
-			'<',
-		);
-
-		tl.to(
-			[cloudTopRight, cloudBottomRight],
-			{
-				opacity: 0,
-				stagger: 0.2,
-			},
-
-			'<', // Delay the second animation by 0.5 seconds to create a staggered effect
-		);
-	};
-	const thanksPopupAnimation = () => {
-		const cloudTopLeft = document.querySelectorAll('.thanks__popup-cloud-top-left');
-		const cloudTopRight = document.querySelectorAll('.thanks__popup-cloud-top-right');
-		const cloudBottomLeft = document.querySelectorAll('.thanks__popup-cloud-bottom-left');
-		const cloudBottomRight = document.querySelectorAll('.thanks__popup-cloud-bottom-right');
-
-		if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
-			console.log('Some of the cloud elements are missing, animation cannot be performed.');
-			return;
-		}
-
-		const tl = gsap.timeline({
-			onComplete: () => {
-				cloudTopLeft.forEach(el => {
-					el.classList.add('animated');
-				});
-				cloudTopRight.forEach(el => {
-					el.classList.add('animated');
-				});
-				cloudBottomLeft.forEach(el => {
-					el.classList.add('animated');
-				});
-				cloudBottomRight.forEach(el => {
-					el.classList.add('animated');
-				});
-			},
-		});
-
-		tl.fromTo(
-			[cloudTopLeft, cloudBottomLeft],
-			{
-				opacity: 0,
-				x: '-100px',
-				stagger: 0.2,
-			},
-			{
-				opacity: 1,
-				x: '0',
-				duration: 1,
-				ease: 'power2.out',
-			},
-			'<',
-		);
-
-		tl.fromTo(
-			[cloudTopRight, cloudBottomRight],
-			{
-				opacity: 0,
-				x: '100px',
-				stagger: 0.2,
-			},
-			{
-				opacity: 1,
-				x: '0',
-				duration: 1,
-				ease: 'power2.out',
-			},
-			'<', // Delay the second animation by 0.5 seconds to create a staggered effect
-		);
-	};
-	const thanksPopupAnimatinOut = () => {
-		const cloudTopLeft = document.querySelectorAll('.thanks__popup-cloud-top-left');
-		const cloudTopRight = document.querySelectorAll('.thanks__popup-cloud-top-right');
-		const cloudBottomLeft = document.querySelectorAll('.thanks__popup-cloud-bottom-left');
-		const cloudBottomRight = document.querySelectorAll('.thanks__popup-cloud-bottom-right');
-
-		if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
-			console.log('Some of the cloud elements are missing, animation cannot be performed.');
-			return;
-		}
-
-		const tl = gsap.timeline({
-			onComplete: () => {
-				cloudTopLeft.forEach(el => {
-					el.classList.remove('animated');
-				});
-				cloudTopRight.forEach(el => {
-					el.classList.remove('animated');
-				});
-				cloudBottomLeft.forEach(el => {
-					el.classList.remove('animated');
-				});
-				cloudBottomRight.forEach(el => {
-					el.classList.remove('animated');
-				});
-			},
-		});
-
-		tl.to(
-			[cloudTopLeft, cloudBottomLeft],
-			{
-				opacity: 0,
-				duration: 1,
-			},
-			'<',
-		);
-
-		tl.to(
-			[cloudTopRight, cloudBottomRight],
-			{
-				opacity: 0,
-				duration: 1,
-			},
-			'<', // Delay the second animation by 0.5 seconds to create a staggered effect
-		);
-	};
-
-	const bannerAnimation = function () {
-		// Timeline for the animation
-		const tl = gsap.timeline({});
-
-		// Select the elements for the circle slider
-		const cloudContainer = document.querySelector('.circle-slider-clouds');
-		const slideFigureAfter = document.querySelector('.circle-slide-figure::after');
-		const slideFigure = document.querySelector('.circle-slide-figure');
-		const slides = document.querySelectorAll('.circle-slider .swiper-slide');
-
-		const verticalSlider = document.querySelector('.vertical-slider');
-		const verticalSlides = document.querySelectorAll('.vertical-slider .swiper-slide');
-
-		// Set initial styles to prevent flickering
-		tl.set([cloudContainer, slideFigureAfter, slideFigure, slides, verticalSlider], {
-			opacity: 0,
-			transformOrigin: 'center',
-			pointerEvents: 'none', // Initially disable interactions for all slides
-		});
-
-		// Animation for cloudContainer
-		tl.fromTo(
-			cloudContainer,
-			{
-				x: '100%',
-				opacity: 0,
-			},
-			{
-				x: '0%',
-				opacity: 1,
-				duration: 1,
-				onComplete: function () {
-					cloudContainer.classList.add('animated');
+			tl.fromTo(
+				[cloudTopLeft, cloudBottomLeft],
+				{
+					opacity: 0,
+					x: '-100px',
+					stagger: 0.2,
 				},
-			},
-		);
+				{
+					opacity: 1,
+					x: '0',
+					duration: 1,
+					ease: 'power2.out',
+				},
+				'<',
+			);
 
-		tl.fromTo(
-			verticalSlider,
-			{
+			tl.fromTo(
+				[cloudTopRight, cloudBottomRight],
+				{
+					opacity: 0,
+					x: '100px',
+					stagger: 0.2,
+				},
+				{
+					opacity: 1,
+					x: '0',
+					duration: 1,
+					ease: 'power2.out',
+				},
+				'<', // Delay the second animation by 0.5 seconds to create a staggered effect
+			);
+		};
+		const myaccaountPopupAnimationOut = () => {
+			const cloudTopLeft = document.querySelectorAll('.myaccount__popup-cloud-top-left');
+			const cloudTopRight = document.querySelectorAll('.myaccount__popup-cloud-top-right');
+			const cloudBottomLeft = document.querySelectorAll('.myaccount__popup-cloud-bottom-left');
+			const cloudBottomRight = document.querySelectorAll('.myaccount__popup-cloud-bottom-right');
+
+			if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
+				console.log('Some of the cloud elements are missing, animation cannot be performed.');
+				return;
+			}
+
+			const tl = gsap.timeline({
+				onComplete: () => {
+					cloudTopLeft.forEach(el => {
+						el.classList.remove('animated');
+					});
+					cloudTopRight.forEach(el => {
+						el.classList.remove('animated');
+					});
+					cloudBottomLeft.forEach(el => {
+						el.classList.remove('animated');
+					});
+					cloudBottomRight.forEach(el => {
+						el.classList.remove('animated');
+					});
+				},
+			});
+
+			tl.to(
+				[cloudTopLeft, cloudBottomLeft],
+				{
+					opacity: 0,
+					stagger: 0.2,
+				},
+
+				'<',
+			);
+
+			tl.to(
+				[cloudTopRight, cloudBottomRight],
+				{
+					opacity: 0,
+					stagger: 0.2,
+				},
+
+				'<', // Delay the second animation by 0.5 seconds to create a staggered effect
+			);
+		};
+		const thanksPopupAnimation = () => {
+			const cloudTopLeft = document.querySelectorAll('.thanks__popup-cloud-top-left');
+			const cloudTopRight = document.querySelectorAll('.thanks__popup-cloud-top-right');
+			const cloudBottomLeft = document.querySelectorAll('.thanks__popup-cloud-bottom-left');
+			const cloudBottomRight = document.querySelectorAll('.thanks__popup-cloud-bottom-right');
+
+			if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
+				console.log('Some of the cloud elements are missing, animation cannot be performed.');
+				return;
+			}
+
+			const tl = gsap.timeline({
+				onComplete: () => {
+					cloudTopLeft.forEach(el => {
+						el.classList.add('animated');
+					});
+					cloudTopRight.forEach(el => {
+						el.classList.add('animated');
+					});
+					cloudBottomLeft.forEach(el => {
+						el.classList.add('animated');
+					});
+					cloudBottomRight.forEach(el => {
+						el.classList.add('animated');
+					});
+				},
+			});
+
+			tl.fromTo(
+				[cloudTopLeft, cloudBottomLeft],
+				{
+					opacity: 0,
+					x: '-100px',
+					stagger: 0.2,
+				},
+				{
+					opacity: 1,
+					x: '0',
+					duration: 1,
+					ease: 'power2.out',
+				},
+				'<',
+			);
+
+			tl.fromTo(
+				[cloudTopRight, cloudBottomRight],
+				{
+					opacity: 0,
+					x: '100px',
+					stagger: 0.2,
+				},
+				{
+					opacity: 1,
+					x: '0',
+					duration: 1,
+					ease: 'power2.out',
+				},
+				'<', // Delay the second animation by 0.5 seconds to create a staggered effect
+			);
+		};
+		const thanksPopupAnimatinOut = () => {
+			const cloudTopLeft = document.querySelectorAll('.thanks__popup-cloud-top-left');
+			const cloudTopRight = document.querySelectorAll('.thanks__popup-cloud-top-right');
+			const cloudBottomLeft = document.querySelectorAll('.thanks__popup-cloud-bottom-left');
+			const cloudBottomRight = document.querySelectorAll('.thanks__popup-cloud-bottom-right');
+
+			if (!cloudTopLeft || !cloudTopRight || !cloudBottomLeft || !cloudBottomRight) {
+				console.log('Some of the cloud elements are missing, animation cannot be performed.');
+				return;
+			}
+
+			const tl = gsap.timeline({
+				onComplete: () => {
+					cloudTopLeft.forEach(el => {
+						el.classList.remove('animated');
+					});
+					cloudTopRight.forEach(el => {
+						el.classList.remove('animated');
+					});
+					cloudBottomLeft.forEach(el => {
+						el.classList.remove('animated');
+					});
+					cloudBottomRight.forEach(el => {
+						el.classList.remove('animated');
+					});
+				},
+			});
+
+			tl.to(
+				[cloudTopLeft, cloudBottomLeft],
+				{
+					opacity: 0,
+					duration: 1,
+				},
+				'<',
+			);
+
+			tl.to(
+				[cloudTopRight, cloudBottomRight],
+				{
+					opacity: 0,
+					duration: 1,
+				},
+				'<', // Delay the second animation by 0.5 seconds to create a staggered effect
+			);
+		};
+
+		const bannerAnimation = function () {
+			// Timeline for the animation
+			const tl = gsap.timeline({});
+
+			// Select the elements for the circle slider
+			const cloudContainer = document.querySelector('.circle-slider-clouds');
+			const slideFigureAfter = document.querySelector('.circle-slide-figure::after');
+			const slideFigure = document.querySelector('.circle-slide-figure');
+			const slides = document.querySelectorAll('.circle-slider .swiper-slide');
+
+			const verticalSlider = document.querySelector('.vertical-slider');
+			const verticalSlides = document.querySelectorAll('.vertical-slider .swiper-slide');
+
+			// Set initial styles to prevent flickering
+			tl.set([cloudContainer, slideFigureAfter, slideFigure, slides, verticalSlider], {
 				opacity: 0,
-				x: '-100%',
-			},
-			{
-				opacity: 1,
-				x: '0%',
-				duration: 3,
-				ease: 'power3.out',
-			},
-		);
+				transformOrigin: 'center',
+				pointerEvents: 'none', // Initially disable interactions for all slides
+			});
 
-		// Animation for slideFigureAfter
-		// tl.to(
-		// 	slideFigureAfter,
-		// 	{
-		// 		opacity: 1,
-		// 		x: '50%',
-		// 	},
-		// 	'-=1', // Start one second before the previous animation ends
-		// );
+			// Animation for cloudContainer
+			tl.fromTo(
+				cloudContainer,
+				{
+					x: '100%',
+					opacity: 0,
+				},
+				{
+					x: '0%',
+					opacity: 1,
+					duration: 1,
+					onComplete: function () {
+						cloudContainer.classList.add('animated');
+					},
+				},
+			);
 
-		// Animation for slideFigure
-		tl.fromTo(
-			slideFigure,
-			{
-				y: '-50%',
-				opacity: 0,
-				duration: 2,
-				ease: 'power2.inOut',
-			},
-			{
-				y: '0%',
-				opacity: 1,
-			},
-			'-=1.5', // Start 1.5 seconds before the previous animation ends
-		);
+			tl.fromTo(
+				verticalSlider,
+				{
+					opacity: 0,
+					x: '-100%',
+				},
+				{
+					opacity: 1,
+					x: '0%',
+					duration: 3,
+					ease: 'power3.out',
+				},
+			);
 
-		// Animation for the slides
-		tl.fromTo(
-			slides,
-			{
-				opacity: 0,
-				stagger: 0.35,
-			},
-			{
-				opacity: 1,
-				stagger: 0.35,
-			},
-			'-=1', // Start 1 second before the previous animation ends
-		);
-	};
-	if (window.innerWidth > 1200) {
-		bannerAnimation();
+			// Animation for slideFigureAfter
+			// tl.to(
+			// 	slideFigureAfter,
+			// 	{
+			// 		opacity: 1,
+			// 		x: '50%',
+			// 	},
+			// 	'-=1', // Start one second before the previous animation ends
+			// );
+
+			// Animation for slideFigure
+			tl.fromTo(
+				slideFigure,
+				{
+					y: '-50%',
+					opacity: 0,
+					duration: 2,
+					ease: 'power2.inOut',
+				},
+				{
+					y: '0%',
+					opacity: 1,
+				},
+				'-=1.5', // Start 1.5 seconds before the previous animation ends
+			);
+
+			// Animation for the slides
+			tl.fromTo(
+				slides,
+				{
+					opacity: 0,
+					stagger: 0.35,
+				},
+				{
+					opacity: 1,
+					stagger: 0.35,
+				},
+				'-=1', // Start 1 second before the previous animation ends
+			);
+		};
+		if (window.innerWidth > 1200) {
+			bannerAnimation();
+		}
 	}
 
 	// bannerAnimation();
