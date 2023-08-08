@@ -43,31 +43,45 @@
 	.two___sections-cloud-img-right {
 		// pointer-events: none;
 		position: absolute;
-		transform: translateX(80%);
-		top: 22%;
-		right: 0;
-		z-index: 1;
+		// transform: translateX(80%);
+		top: 0;
+		right: -30%;
+		z-index: -1;
+		&.animated {
+			animation: smallTranslateCloud 10s ease-in-out 0s infinite;
+		}
 	}
 	.two___sections-cloud-img-left {
 		// pointer-events: none;
 		position: absolute;
-		transform: translateX(-80%);
 		top: 22%;
-		left: 20%;
+		left: -30%;
+		z-index: -1;
+		&.animated {
+			animation: smallTranslateCloudReverse 10s ease-in-out 0s infinite;
+		}
 	}
 	.two___sections-cloud-img-left-second {
 		// pointer-events: none;
 		position: absolute;
-		z-index: 2;
+		z-index: -1;
 		top: -25%;
-		left: -28%;
+		// left: -28%;
+		left: 0;
+		&.animated {
+			// animation: TranslateCloudX 10s ease-in-out 0s infinite;
+		}
 	}
 
 	.two___sections-cloud-img-right-second {
 		position: absolute;
-		z-index: 2;
-		top: -9%;
-		right: -23%;
+		z-index: -1;
+		top: 0;
+		// right: -23%;
+		right: 0;
+		&.animated {
+			// animation: TranslateCloudXReverse 10s ease-in-out 0s infinite;
+		}
 	}
 }
 .two___sections-clouds {

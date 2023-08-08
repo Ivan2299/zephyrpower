@@ -638,50 +638,84 @@ document.addEventListener('DOMContentLoaded', function () {
 		if (!cloudImgNew || !cloudImgNew2 || !cloudImgNew3 || !cloudImgNew4) {
 			return; // Skip the code block if any of the required elements are missing
 		}
-
-		gsap.to(cloudImgNew, {
-			scrollTrigger: {
-				trigger: '.home-hero-block',
-				start: 'top top',
-				end: '+=' + window.innerHeight * 2,
-				scrub: 2,
-				normalizeScroll: true,
+		gsap.fromTo(
+			cloudImgNew,
+			{
+				x: '-100%',
+				opacity: 0,
 			},
-			x: -600,
-		});
-
-		gsap.to(cloudImgNew2, {
-			scrollTrigger: {
-				trigger: '.home-hero-block',
-				start: 'top top',
-				end: '+=' + window.innerHeight * 2,
-				scrub: 2,
-				normalizeScroll: true,
+			{
+				x: '0%',
+				opacity: 1,
+				duration: 5,
+				delay: 0.5,
+				scrub: 5,
+				onComplete: () => {
+					if (cloudImgNew) {
+						cloudImgNew.classList.add('animated');
+					}
+				},
 			},
-			x: 0,
-		});
-
-		gsap.to(cloudImgNew3, {
-			x: '-70%',
-			duration: 2,
-			scrollTrigger: {
-				trigger: '.home-hero-block',
-				start: 'top top',
-				scrub: 2,
-				ease: 'power1.inOut',
+			1,
+		);
+		gsap.fromTo(
+			cloudImgNew2,
+			{
+				x: '100%',
+				opacity: 0,
 			},
-		});
-
-		gsap.to(cloudImgNew4, {
-			x: '70%',
-			duration: 2,
-			scrollTrigger: {
-				trigger: '.home-hero-block',
-				start: 'top top',
-				scrub: 2,
-				ease: 'power1.inOut',
+			{
+				x: '0%',
+				opacity: 1,
+				duration: 5,
+				delay: 0.5,
+				scrub: 5,
+				onComplete: () => {
+					if (cloudImgNew2) {
+						cloudImgNew2.classList.add('animated');
+					}
+				},
 			},
-		});
+			'<',
+		);
+		gsap.fromTo(
+			cloudImgNew3,
+			{
+				x: '-100%',
+				opacity: 0,
+			},
+			{
+				x: '-50%',
+				opacity: 1,
+				duration: 5,
+				delay: 0.5,
+				scrub: 5,
+				onComplete: () => {
+					if (cloudImgNew3) {
+						cloudImgNew3.classList.add('animated');
+					}
+				},
+			},
+		);
+		gsap.fromTo(
+			cloudImgNew4,
+			{
+				x: '100%',
+				opacity: 0,
+			},
+			{
+				x: '50%',
+				opacity: 1,
+				duration: 5,
+				delay: 0.5,
+				scrub: 5,
+				onComplete: () => {
+					if (cloudImgNew4) {
+						cloudImgNew4.classList.add('animated');
+					}
+				},
+			},
+		);
 	}
 
 	// Call the animation function
