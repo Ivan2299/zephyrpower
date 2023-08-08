@@ -2398,6 +2398,9 @@ swiper-container .swiper-notification {
   .new .new__item-price {
     font-size: 16px;
   }
+  .new .new__item-rating-wrapper {
+    gap: 15px;
+  }
 }
 .bestsellers-slider {
   max-width: 1400px;

@@ -133,25 +133,25 @@ document.addEventListener('DOMContentLoaded', function () {
 			prevEl: '.swiper-button-prev',
 		},
 
-		// breakpoints: {
-		// 	640: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 0,
-		// 		autoHeight: true,
-		// 	},
-		// 	768: {
-		// 		slidesPerView: 2,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	992: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	1268: {
-		// 		slidesPerView: 4,
-		// 		spaceBetween: 30,
-		// 	},
-		// },
+		breakpoints: {
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				autoHeight: true,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1268: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+		},
 	});
 	let slider4 = new Swiper(sliderBestsellers, {
 		direction: 'horizontal',
@@ -1330,11 +1330,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			{
 				x: '0%',
 				opacity: 1,
-				duration: 1,
+				duration: 1.5,
 				onComplete: function () {
 					cloudContainer.classList.add('animated');
 				},
 			},
+			0,
 		);
 
 		tl.fromTo(
@@ -1346,20 +1347,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			{
 				opacity: 1,
 				x: '0%',
-				duration: 3,
+				duration: 2,
 				ease: 'power3.out',
 			},
+			'<',
 		);
-
-		// Animation for slideFigureAfter
-		// tl.to(
-		// 	slideFigureAfter,
-		// 	{
-		// 		opacity: 1,
-		// 		x: '50%',
-		// 	},
-		// 	'-=1', // Start one second before the previous animation ends
-		// );
 
 		// Animation for slideFigure
 		tl.fromTo(
@@ -1367,14 +1359,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			{
 				y: '-50%',
 				opacity: 0,
-				duration: 2,
-				ease: 'power2.inOut',
 			},
 			{
 				y: '0%',
 				opacity: 1,
+				duration: 1,
+				ease: 'power2.out',
 			},
-			'-=1.5', // Start 1.5 seconds before the previous animation ends
+			'-=1', // Start 1.5 seconds before the previous animation ends
 		);
 
 		// Animation for the slides
@@ -1382,13 +1374,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			slides,
 			{
 				opacity: 0,
-				stagger: 0.35,
 			},
 			{
 				opacity: 1,
-				stagger: 0.35,
+				duration: 1,
+				ease: 'power3.out',
+				stagger: 0.15,
 			},
-			'-=1', // Start 1 second before the previous animation ends
+			'<', // Start 1 second before the previous animation ends
 		);
 	};
 
