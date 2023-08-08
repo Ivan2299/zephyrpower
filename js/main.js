@@ -876,24 +876,29 @@ document.addEventListener('DOMContentLoaded', function () {
 	const bestsellersAnimation = function () {
 		const bestsellersSlides = document.querySelectorAll('.bestsellers .swiper-slide');
 
-		if (!bestsellersSlides) {
-			return;
-		}
-
-		bestsellersSlides.forEach(slide => {
-			gsap.from(slide, {
-				opacity: 0,
-				y: 150,
-				duration: 1,
-				scrollTrigger: {
-					trigger: '.bestsellers', // Використовуємо клас "power" як тригер
-					start: 'top center', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
-					end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
-					scrub: 1, // Збільшений scrub для плавної анімації
-					ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+		if (bestsellersSlides.length > 0) {
+			gsap.fromTo(
+				bestsellersSlides,
+				{
+					opacity: 0,
+					y: 150,
 				},
-			});
-		});
+				{
+					opacity: 1,
+					y: 0,
+					duration: 1,
+					stagger: 0.2, // Затримка між кожним слайдом
+					scrollTrigger: {
+						trigger: '.bestsellers',
+						start: 'top 150%',
+						end: 'center center',
+						scrub: 1,
+						ease: 'power3.inOut',
+						// once: true,
+					},
+				},
+			);
+		}
 	};
 
 	const animateHiSection = function () {
@@ -1415,7 +1420,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				ease: 'power3.out',
 				stagger: 0.15,
 			},
-			'<', // Start 1 second before the previous animation ends
+			'=-0.5', // Start 1 second before the previous animation ends
 		);
 	};
 
