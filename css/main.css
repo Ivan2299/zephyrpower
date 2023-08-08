@@ -334,6 +334,9 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+html {
   overflow-x: hidden;
 }
 
@@ -1415,6 +1418,10 @@ swiper-container .swiper-notification {
   background-color: rgb(255, 255, 255);
   z-index: 9;
   padding: 10px 0;
+  transition: transform 0.6s ease-in-out;
+}
+.header.header-scroll {
+  transform: translateY(-100%);
 }
 .header::before {
   content: "";

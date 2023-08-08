@@ -1,6 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Loaded');
 
+	// Function to toggle header visibility based on scroll direction
+	let prevScrollPos = window.scrollY;
+	function toggleHeaderClassOnScroll() {
+		if (window.scrollY > 400) {
+			const currentScrollPos = window.scrollY;
+			const header = document.querySelector('header');
+
+			if (prevScrollPos < currentScrollPos) {
+				// Если скроллим вниз, добавляем класс
+				header.classList.add('header-scroll');
+			} else {
+				// Если скроллим вверх, удаляем класс
+				header.classList.remove('header-scroll');
+			}
+
+			prevScrollPos = currentScrollPos;
+		}
+	}
+	document.addEventListener('scroll', toggleHeaderClassOnScroll);
+
+	// ///////////////////////////////////////////////////
+
 	// sliders///////////////////////////////////////////////////
 	const verrticalSliderBanner = document.querySelector('.vertical-slider');
 	const circleSlider = document.querySelector('.circle-slider');
@@ -598,9 +620,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	handleFormOrder();
 
-	// ///////////////////////////////////////////////////
-
 	// CATALOG FILTER BLOCK OPEN/CLOSE///////////////////////////////////////////////////
+
 	const filterBtn = document.querySelector('.catalog__content-top-left-filter');
 	const filterBlock = document.querySelector('.catalog__filter-block');
 
@@ -1458,9 +1479,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		carttabsCloudsAnimation();
 		bannerAnimation();
 	}
-
-	// bannerAnimation();
-
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////
