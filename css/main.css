@@ -2716,16 +2716,23 @@ swiper-container .swiper-notification {
   position: absolute;
   z-index: -1;
 }
-.hi .hi-cloud.animated {
-  animation: smallTranslateCloudReverse 6s ease-in-out infinite;
-}
 .hi .hi-cloud-1 {
+  position: absolute;
   bottom: 0;
   right: 0;
 }
+.hi .hi-cloud-1.animated {
+  animation: smallTranslateCloudReverse 10s ease-in-out infinite;
+}
 .hi .hi-cloud-2 {
-  top: -60%;
-  right: 0;
+  position: absolute;
+  top: -63%;
+  left: -33%;
+}
+.hi .hi-cloud-3 {
+  position: absolute;
+  top: -47%;
+  right: -25%;
 }
 .hi__container {
   max-width: 1310px;
@@ -2812,7 +2819,7 @@ swiper-container .swiper-notification {
   left: 0;
 }
 .form-wrapper .form-cloud-1.animated {
-  animation: smallTranslateCloud 6s ease-in-out infinite;
+  animation: smallTranslateCloud 10s ease-in-out infinite;
 }
 .form-wrapper .form-cloud-2 {
   bottom: -135%;
@@ -2820,7 +2827,7 @@ swiper-container .swiper-notification {
   left: unset;
 }
 .form-wrapper .form-cloud-2.animated {
-  animation: smallTranslateCloudReverse 6s ease-in-out infinite;
+  animation: smallTranslateCloudReverse 10s ease-in-out infinite;
 }
 .form-wrapper .main-form {
   max-width: 670px;

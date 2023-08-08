@@ -890,7 +890,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					stagger: 0.2, // Затримка між кожним слайдом
 					scrollTrigger: {
 						trigger: '.bestsellers',
-						start: 'top 150%',
+						start: 'top 140%',
 						end: 'center center',
 						scrub: 1,
 						ease: 'power3.inOut',
@@ -902,9 +902,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 
 	const animateHiSection = function () {
-		const hiCloud = document.querySelector('.hi-cloud');
+		const hiCloud1 = document.querySelector('.hi-cloud-1');
+		const hiCloud2 = document.querySelector('.hi-cloud-2');
+		const hiCloud3 = document.querySelector('.hi-cloud-3');
+
 		// Timeline for the animation
-		if (!hiCloud) {
+		if (!hiCloud1 || !hiCloud2 || !hiCloud3) {
 			return;
 		}
 		const tl = gsap.timeline({
@@ -913,17 +916,37 @@ document.addEventListener('DOMContentLoaded', function () {
 				start: 'top 80%',
 			},
 			onComplete: () => {
-				hiCloud.classList.add('animated');
+				hiCloud1.classList.add('animated');
 			},
 		});
 
 		// Animation for .hi-cloud
-		tl.from(hiCloud, {
+		tl.from(hiCloud1, {
 			x: '100%', // Start position
 			opacity: 0,
 			duration: 1,
 			ease: 'power3.out',
 		});
+		tl.from(
+			hiCloud2,
+			{
+				x: '-100%', // Start position
+				opacity: 0,
+				duration: 1,
+				ease: 'power1.out',
+			},
+			'<',
+		);
+		tl.from(
+			hiCloud3,
+			{
+				x: '100%', // Start position
+				opacity: 0,
+				duration: 1,
+				ease: 'power1.out',
+			},
+			'<',
+		);
 
 		// Animation for .hi__image-block::before
 		tl.fromTo(

@@ -7,17 +7,24 @@
 	.hi-cloud {
 		position: absolute;
 		z-index: -1;
-		&.animated {
-			animation: smallTranslateCloudReverse 6s ease-in-out infinite;
-		}
 	}
 	.hi-cloud-1 {
+		position: absolute;
 		bottom: 0;
 		right: 0;
+		&.animated {
+			animation: smallTranslateCloudReverse 10s ease-in-out infinite;
+		}
 	}
 	.hi-cloud-2 {
-		top: -60%;
-		right: 0;
+		position: absolute;
+		top: -63%;
+		left: -33%;
+	}
+	.hi-cloud-3 {
+		position: absolute;
+		top: -47%;
+		right: -25%;
 	}
 
 	&__container {
