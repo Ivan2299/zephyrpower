@@ -349,6 +349,7 @@ svg {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .wrapper > main {
   flex: 1 1 auto;
@@ -568,17 +569,6 @@ svg {
     }
     100% {
       transform: rotate(360deg) translateY(250px) rotate(-360deg) scale(1);
-    }
-  }
-  @keyframes cloudRotate360right {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(50px);
-    }
-    100% {
-      transform: translateY(0px);
     }
   }
   @keyframes smallTranslateCloud {
@@ -3413,9 +3403,9 @@ swiper-container .swiper-notification {
 .carttabs__tabs-cloud-1 {
   position: absolute;
   z-index: 1;
-  bottom: 41%;
-  left: 20%;
-  animation: cloudRotate360left 15s linear infinite;
+  bottom: -10%;
+  left: -10%;
+  animation: smallestTranslateCloudReverse 10s ease-in-out infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
 }
@@ -3424,7 +3414,7 @@ swiper-container .swiper-notification {
   position: absolute;
   top: 0;
   right: 0;
-  animation: cloudRotate360right 10s ease-in-out infinite;
+  animation: smallestTranslateCloud 10s ease-in-out infinite;
   animation-fill-mode: forwards;
   animation-play-state: running;
 }

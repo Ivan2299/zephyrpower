@@ -49,6 +49,7 @@
 .carttabs {
 	margin-bottom: clamp(2.5rem, 1.49rem + 5.05vw, 5.625rem);
 	margin-top: 150px;
+	// overflow-x: hidden;
 
 	// .carttabs__inner
 
@@ -114,11 +115,10 @@
 
 	&__tabs-cloud-1 {
 		position: absolute;
-		// width: 340px;
 		z-index: 1;
-		bottom: 41%;
-		left: 20%;
-		animation: cloudRotate360left 15s linear infinite;
+		bottom: -10%;
+		left: -10%;
+		animation: smallestTranslateCloudReverse 10s ease-in-out infinite;
 		animation-fill-mode: forwards;
 		animation-play-state: running;
 	}
@@ -130,7 +130,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		animation: cloudRotate360right 10s ease-in-out infinite;
+		animation: smallestTranslateCloud 10s ease-in-out infinite;
 		animation-fill-mode: forwards;
 		animation-play-state: running;
 	}

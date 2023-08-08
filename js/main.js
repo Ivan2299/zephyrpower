@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Function to toggle header visibility based on scroll direction
 	let prevScrollPos = window.scrollY;
 	function toggleHeaderClassOnScroll() {
-		if (window.scrollY > 400) {
+		if (window.scrollY > 300) {
 			const currentScrollPos = window.scrollY;
 			const header = document.querySelector('header');
 
@@ -19,7 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			prevScrollPos = currentScrollPos;
 		}
 	}
+	function handleAnyPageEvent() {
+		const header = document.querySelector('header');
+		header.classList.remove('header-scroll'); // Видаляємо клас при будь-якій події на сторінці
+	}
 	document.addEventListener('scroll', toggleHeaderClassOnScroll);
+	document.addEventListener('click', handleAnyPageEvent);
 
 	// ///////////////////////////////////////////////////
 
