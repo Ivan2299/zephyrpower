@@ -5,16 +5,18 @@
 	.myaccountpage-cloud-right {
 		top: -15%;
 		right: 0;
+		z-index: -1;
 	}
 	.myaccountpage-cloud-left {
 		top: -10%;
 		left: 0;
+		z-index: -1;
 	}
 
 	// .cartpage__inner
 
 	&__inner {
-		max-height: 45vh;
+		max-height: 65vh;
 		overflow: auto;
 	}
 
@@ -38,7 +40,7 @@
 		justify-items: space-between;
 		padding-bottom: 40px;
 		padding-top: 20px;
-		border-right: 1px solid $mainLightPink;
+		border-right: 3px solid $mainLightPink;
 
 		&::after {
 			content: '';

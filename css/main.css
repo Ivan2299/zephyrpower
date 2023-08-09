@@ -363,7 +363,7 @@ svg {
 }
 
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 4px;
 }
 
 /* Track */
@@ -3657,14 +3657,22 @@ swiper-container .swiper-notification {
 .catalog__cloud-1 {
   pointer-events: none;
   position: absolute;
-  top: 10%;
+  top: 0;
   right: 0;
+  z-index: -1;
+}
+.catalog__cloud-1.animated {
+  animation: smallTranslateCloud 12s ease-in-out infinite;
 }
 .catalog__cloud-2 {
   pointer-events: none;
   position: absolute;
   top: 50%;
   left: 0;
+  z-index: -1;
+}
+.catalog__cloud-2.animated {
+  animation: smallTranslateCloudReverse 12s ease-in-out infinite;
 }
 .catalog__title {
   margin-bottom: 60px;
@@ -3674,6 +3682,9 @@ swiper-container .swiper-notification {
 .catalog__inner {
   display: flex;
   gap: 20px;
+}
+.catalog__accordion {
+  flex: 0 1 25%;
 }
 .catalog__accordion-item {
   width: 100%;
@@ -3707,10 +3718,12 @@ swiper-container .swiper-notification {
   display: flex;
   justify-content: space-between;
   margin: 0 10px;
+  align-self: flex-end;
   z-index: 1;
 }
 .catalog__filter-block {
   position: fixed;
+  display: none;
   top: 0;
   left: -100%; /* Змінено з -100% на 100% */
   width: 100%;
@@ -3718,8 +3731,13 @@ swiper-container .swiper-notification {
   z-index: 10;
   transition: all 0.3s ease;
 }
-.catalog__filter-block.active {
-  left: 0;
+@media (max-width: 960px) {
+  .catalog__filter-block {
+    display: block;
+  }
+  .catalog__filter-block.active {
+    left: 0;
+  }
 }
 .catalog__filter-block-content {
   position: relative;
@@ -3755,6 +3773,14 @@ swiper-container .swiper-notification {
   flex-direction: column;
   gap: 10px;
   z-index: 1;
+}
+.catalog__content-top-left {
+  display: none;
+}
+@media (max-width: 960px) {
+  .catalog__content-top-left {
+    display: block;
+  }
 }
 .catalog__content-top-left-filter {
   display: flex;
@@ -3809,7 +3835,7 @@ swiper-container .swiper-notification {
 }
 .catalog__content-bottom {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .catalog__content-bottom-actions {
@@ -4246,13 +4272,15 @@ swiper-container .swiper-notification {
 .cartpage .myaccountpage-cloud-right {
   top: -15%;
   right: 0;
+  z-index: -1;
 }
 .cartpage .myaccountpage-cloud-left {
   top: -10%;
   left: 0;
+  z-index: -1;
 }
 .cartpage__inner {
-  max-height: 45vh;
+  max-height: 65vh;
   overflow: auto;
 }
 .cartpage__title {
@@ -4270,7 +4298,7 @@ swiper-container .swiper-notification {
   justify-items: space-between;
   padding-bottom: 40px;
   padding-top: 20px;
-  border-right: 1px solid #ffd3de;
+  border-right: 3px solid #ffd3de;
 }
 .cartpage__item::after {
   content: "";

@@ -1476,6 +1476,52 @@ document.addEventListener('DOMContentLoaded', function () {
 			'=-0.5', // Start 1 second before the previous animation ends
 		);
 	};
+	const filterCloudsAnimate = function () {
+		const cloud1 = document.querySelector('.catalog__cloud-1');
+		const cloud2 = document.querySelector('.catalog__cloud-2');
+
+		if (!cloud1 || !cloud2) {
+			console.log('Some of the cloud elements are missing, animation cannot be performed.');
+			return;
+		}
+
+		const tl = gsap.timeline({
+			onComplete: () => {
+				cloud1.classList.add('animated');
+				cloud2.classList.add('animated');
+			},
+		});
+
+		tl.fromTo(
+			cloud1,
+			{
+				opacity: 0,
+				x: '100%',
+			},
+			{
+				opacity: 1,
+				x: '0%',
+				duration: 3,
+				scrub: 1,
+				ease: 'power3.out',
+			},
+		);
+		tl.fromTo(
+			cloud2,
+			{
+				opacity: 0,
+				x: '-100%',
+			},
+			{
+				opacity: 1,
+				x: '0%',
+				duration: 3,
+				scrub: 1,
+				ease: 'power3.out',
+			},
+			'<',
+		);
+	};
 
 	if (innerWidth > 1200) {
 		reviewsAnimation();
@@ -1486,6 +1532,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		animateHiSection();
 		bestsellersAnimation();
 		carttabsCloudsAnimation();
+		filterCloudsAnimate();
 		bannerAnimation();
 	}
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
