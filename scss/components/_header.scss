@@ -273,6 +273,31 @@
 		justify-content: center;
 		flex: 0 0 24px;
 		height: 23px;
+		display: block;
+		position: relative;
+		cursor: pointer;
+
+		&::after {
+			content: attr(data-title);
+			position: absolute;
+			bottom: -55px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: url('/img/icons/icon-action-sup.svg') 0 0 no-repeat;
+			color: $black;
+			padding: 13px 10px;
+			font-size: 12px;
+			opacity: 0;
+			pointer-events: none;
+			white-space: nowrap;
+			transition: opacity 0.2s, transform 0.2s;
+		}
+
+		&:hover::after {
+			opacity: 1;
+			transform: translateX(-50%) translateY(-5px);
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -301,6 +326,83 @@
 		align-items: center;
 		justify-content: center;
 		gap: 15px;
+		.header__actions-cart {
+			position: relative;
+			cursor: pointer;
+
+			&::after {
+				content: attr(data-title);
+				position: absolute;
+				bottom: -55px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: url('/img/icons/icon-action-sup.svg') 0 0 no-repeat;
+				color: $black;
+				padding: 13px 10px;
+				font-size: 12px;
+				opacity: 0;
+				pointer-events: none;
+				white-space: nowrap;
+				transition: opacity 0.2s, transform 0.2s;
+			}
+
+			&:hover::after {
+				opacity: 1;
+				transform: translateX(-50%) translateY(-5px);
+			}
+		}
+		.header__actions-favorite {
+			position: relative;
+			cursor: pointer;
+
+			&::after {
+				content: attr(data-title);
+				position: absolute;
+				bottom: -55px; /* відстань від підказки до іконки */
+				left: 50%;
+				transform: translateX(-50%);
+				background: url('/img/icons/icon-action-sup-fav.svg') 0 0 no-repeat;
+				color: $black;
+				padding: 13px 10px;
+				// border-radius: 5px;
+				// border: 1px solid $mainLightPink;
+				font-size: 12px;
+				opacity: 0;
+				pointer-events: none;
+				white-space: nowrap;
+				transition: opacity 0.2s, transform 0.2s;
+			}
+			&:hover::after {
+				opacity: 1;
+				transform: translateX(-50%) translateY(-5px);
+			}
+		}
+		.header__actions-user {
+			position: relative;
+			cursor: pointer;
+
+			&::after {
+				content: attr(data-title);
+				position: absolute;
+				bottom: -60px; /* відстань від підказки до іконки */
+				left: 50%;
+				transform: translateX(-50%);
+				background: url('/img/icons/icon-action-sup-big.svg') 0 0 no-repeat;
+				color: $black;
+				padding: 13px 10px;
+				// border-radius: 5px;
+				// border: 1px solid $mainLightPink;
+				font-size: 12px;
+				opacity: 0;
+				pointer-events: none;
+				white-space: nowrap;
+				transition: opacity 0.2s, transform 0.2s;
+			}
+			&:hover::after {
+				opacity: 1;
+				transform: translateX(-50%) translateY(-5px);
+			}
+		}
 	}
 
 	// .header__actions-inner

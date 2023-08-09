@@ -1616,6 +1616,28 @@ swiper-container .swiper-notification {
   justify-content: center;
   flex: 0 0 24px;
   height: 23px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.header__search-button::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("/img/icons/icon-action-sup.svg") 0 0 no-repeat;
+  color: #000;
+  padding: 13px 10px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.header__search-button:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
 }
 .header__search-button img {
   width: 100%;
@@ -1641,6 +1663,75 @@ swiper-container .swiper-notification {
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+.header__actions .header__actions-cart {
+  position: relative;
+  cursor: pointer;
+}
+.header__actions .header__actions-cart::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("/img/icons/icon-action-sup.svg") 0 0 no-repeat;
+  color: #000;
+  padding: 13px 10px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.header__actions .header__actions-cart:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+.header__actions .header__actions-favorite {
+  position: relative;
+  cursor: pointer;
+}
+.header__actions .header__actions-favorite::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -55px; /* відстань від підказки до іконки */
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("/img/icons/icon-action-sup-fav.svg") 0 0 no-repeat;
+  color: #000;
+  padding: 13px 10px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.header__actions .header__actions-favorite:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+.header__actions .header__actions-user {
+  position: relative;
+  cursor: pointer;
+}
+.header__actions .header__actions-user::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -60px; /* відстань від підказки до іконки */
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("/img/icons/icon-action-sup-big.svg") 0 0 no-repeat;
+  color: #000;
+  padding: 13px 10px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.header__actions .header__actions-user:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
 }
 .header__actions-inner {
   display: flex;
