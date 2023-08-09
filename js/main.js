@@ -844,8 +844,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Selecting elements
 		const newBg = document.querySelector('.new-slider__bg');
 		const newImages = document.querySelectorAll('.new-image');
+		const newBodis = document.querySelectorAll('.new__item-body');
 		const newNavigation = document.querySelectorAll('.new__item-navigation');
-		const newSlides = document.querySelectorAll('.new__item:not(.new__item .swiper-slide-active)');
+		const newSlides = document.querySelectorAll(
+			'.new .swiper-slide:not(.new .swiper-slide-active)',
+		);
 		const activeSlide = document.querySelector('.new .swiper-slide-active');
 
 		if (!newBg || !newImages || !newSlides || !newNavigation) {
@@ -853,24 +856,44 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		// Creating a new gsap.timeline()
-		const newTimeline = gsap.timeline();
+		const newTimeline = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.new', // The element that triggers the animation
+				start: 'top center', // The start position of the animation
+				end: 'top bottom', // The end position of the animation
+				scrub: 3, // The scrubbing effect duration
+				ease: 'power1.inOut', // The easing function for the animation
+				once: true,
+			},
+		});
 
-		// Adding animations for each element using fromTo
 		newTimeline
 			.fromTo(
 				newBg,
 				{
-					y: -300,
+					y: -100,
 					opacity: 0,
 				},
 				{
 					y: 0,
 					opacity: 1,
-					duration: 1,
+					duration: 2,
+					ease: 'power1.inOut',
 				},
 			)
 			.fromTo(
-				newImages,
+				activeSlide,
+				{
+					opacity: 0,
+				},
+				{
+					opacity: 1,
+					duration: 1,
+				},
+				'<',
+			)
+			.fromTo(
+				newSlides,
 				{
 					opacity: 0,
 					y: 50,
@@ -879,9 +902,10 @@ document.addEventListener('DOMContentLoaded', function () {
 					opacity: 1,
 					y: 0,
 					duration: 1,
-					stagger: 0.2,
 				},
+				'<',
 			)
+
 			.fromTo(
 				newNavigation,
 				{
@@ -894,26 +918,11 @@ document.addEventListener('DOMContentLoaded', function () {
 					duration: 1,
 					stagger: 0.2,
 				},
-			)
-			.fromTo(
-				newSlides,
-				{
-					opacity: 0,
-					y: 50,
-				},
-				{
-					opacity: 1,
-					y: 0,
-					duration: 1,
-					stagger: 0.2,
-				},
+				'<',
 			);
-
-		// Creating a ScrollTrigger for the smooth start animation
 	};
 
 	// Call the function to start the animation
-	newAnimation();
 
 	const bestsellersAnimation = function () {
 		const bestsellersSlides = document.querySelectorAll('.bestsellers .swiper-slide');

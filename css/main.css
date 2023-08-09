@@ -2449,7 +2449,7 @@ swiper-container .swiper-notification {
   transition: all 0.6s ease;
 }
 .new .swiper-slide-active {
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 .new .swiper-slide-active .new__item-bottom {
   opacity: 1;
