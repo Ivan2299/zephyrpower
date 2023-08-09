@@ -2364,22 +2364,47 @@ swiper-container .swiper-notification {
   margin-top: clamp(2.5rem, 1.295rem + 6.02vw, 5.625rem);
 }
 .new-slider {
-  padding: 220px 0 100px 0;
+  padding: 60px 0 200px 0;
 }
-.new__item-info {
+.new .swiper-slide {
+  transform: scale(0.7);
+  transition: all 0.6s ease;
+}
+.new .new-slider__bg {
+  position: absolute;
+  background: rgba(255, 211, 222, 0.3);
+  box-shadow: 0px 12px 53px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  width: 390px;
+  height: 495px;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.new-image {
   display: flex;
-  flex-direction: column;
-  padding: clamp(1.25rem, 0.648rem + 3.01vw, 2.813rem);
-  padding-top: 200px;
-  transition: all 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .new__title {
   text-align: center;
 }
+.new__item-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .new__wrapper {
   margin-top: 10px;
 }
+.new__item-body {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 .new__item-title {
+  display: inline-flex;
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 600;
@@ -2389,7 +2414,7 @@ swiper-container .swiper-notification {
   font-size: 16px;
   color: #555;
   font-weight: 400;
-  margin-bottom: 16px;
+  margin-bottom: 13px;
 }
 .new__item-rating-wrapper {
   display: flex;
@@ -2421,26 +2446,10 @@ swiper-container .swiper-notification {
 .new .new__item-bottom {
   opacity: 0;
   visibility: hidden;
+  transition: all 0.6s ease;
 }
-.new .new-image {
-  position: absolute;
-  top: -40%;
-  left: 8%;
-  height: 370px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  z-index: 2;
-}
-.new .new-image img {
-  max-height: 370px;
-  height: auto;
-}
-.new .swiper-slide-active .new__item-info {
-  background-color: rgba(255, 211, 222, 0.5);
-  box-shadow: 0px 12px 53px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  margin-top: auto;
+.new .swiper-slide-active {
+  transform: scale(1);
 }
 .new .swiper-slide-active .new__item-bottom {
   opacity: 1;
@@ -2454,7 +2463,7 @@ swiper-container .swiper-notification {
   transform: translate(-50%, -50%);
   pointer-events: none;
   position: absolute;
-  bottom: 150px;
+  bottom: 25%;
   left: 49%;
   display: flex;
   gap: 500px;

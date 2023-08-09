@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
 		// autoHeight: true,
-		speed: 800,
+		speed: 1000,
 		effect: {
 			slide: {
 				// Slide effect options
@@ -163,25 +163,25 @@ document.addEventListener('DOMContentLoaded', function () {
 			prevEl: '.swiper-button-prev',
 		},
 
-		breakpoints: {
-			640: {
-				slidesPerView: 2,
-				spaceBetween: 20,
-				autoHeight: true,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 20,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 20,
-			},
-			1268: {
-				slidesPerView: 3,
-				spaceBetween: 20,
-			},
-		},
+		// breakpoints: {
+		// 	640: {
+		// 		slidesPerView: 2,
+		// 		spaceBetween: 20,
+		// 		autoHeight: true,
+		// 	},
+		// 	768: {
+		// 		slidesPerView: 3,
+		// 		spaceBetween: 20,
+		// 	},
+		// 	992: {
+		// 		slidesPerView: 3,
+		// 		spaceBetween: 20,
+		// 	},
+		// 	1268: {
+		// 		slidesPerView: 3,
+		// 		spaceBetween: 20,
+		// 	},
+		// },
 	});
 	let slider4 = new Swiper(sliderBestsellers, {
 		direction: 'horizontal',
@@ -841,67 +841,79 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 
 	const newAnimation = function () {
-		const newItems = document.querySelectorAll('.new__item-info');
+		// Selecting elements
+		const newBg = document.querySelector('.new-slider__bg');
 		const newImages = document.querySelectorAll('.new-image');
-		const newSlides = document.querySelectorAll('.new__item:not(.new__item .swiper-slide-active)'); // Інші слайди
-		const activeSlide = document.querySelector('.new .swiper-slide-active'); // Поточний активний слайд
+		const newNavigation = document.querySelectorAll('.new__item-navigation');
+		const newSlides = document.querySelectorAll('.new__item:not(.new__item .swiper-slide-active)');
+		const activeSlide = document.querySelector('.new .swiper-slide-active');
 
-		if (!newItems || !newImages || !newSlides) {
+		if (!newBg || !newImages || !newSlides || !newNavigation) {
 			return;
 		}
 
-		// Створюємо Timeline
+		// Creating a new gsap.timeline()
 		const newTimeline = gsap.timeline();
 
-		// Анімація для елементів new__item-info
-		newItems.forEach(item => {
-			newTimeline.from(item, {
-				opacity: 0,
-				y: 150,
-				duration: 0.2,
-			});
-		});
-
-		// Анімація для елементів new-image
-		newImages.forEach(image => {
-			newTimeline.fromTo(
-				image,
+		// Adding animations for each element using fromTo
+		newTimeline
+			.fromTo(
+				newBg,
+				{
+					y: -300,
+					opacity: 0,
+				},
+				{
+					y: 0,
+					opacity: 1,
+					duration: 1,
+				},
+			)
+			.fromTo(
+				newImages,
 				{
 					opacity: 0,
-					scale: 0.8,
-					// Initial position, off-screen at the top
+					y: 50,
 				},
 				{
 					opacity: 1,
-					scale: 1,
-					// Final position, where the image should appear
-					duration: 0.8,
-					// delay: 0.2, // Add a delay to synchronize with .new__item-info appearance
+					y: 0,
+					duration: 1,
+					stagger: 0.2,
 				},
-				1.5,
+			)
+			.fromTo(
+				newNavigation,
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 1,
+					stagger: 0.2,
+				},
+			)
+			.fromTo(
+				newSlides,
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 1,
+					stagger: 0.2,
+				},
 			);
-		});
 
-		// Додамо затримку для появи інших слайдів після анімації new__item-info та new-image
-		newTimeline.from(
-			newSlides,
-			{
-				opacity: 0,
-				y: 50,
-			},
-			0.5,
-		); // Затримка 0.5 секунд для плавного з'явлення інших слайдів
-
-		// Анімація для активного слайда
-		newTimeline.from(
-			activeSlide,
-			{
-				scale: 0.8,
-				duration: 1,
-			},
-			0,
-		);
+		// Creating a ScrollTrigger for the smooth start animation
 	};
+
+	// Call the function to start the animation
+	newAnimation();
 
 	const bestsellersAnimation = function () {
 		const bestsellersSlides = document.querySelectorAll('.bestsellers .swiper-slide');
