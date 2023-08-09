@@ -448,8 +448,8 @@
 
 	.burger-menu-body {
 		position: fixed;
-		top: 0;
-		right: -100%;
+		top: -200%;
+		right: 0;
 		width: 100%;
 		height: 100%;
 		padding: 120px 100px;
@@ -458,7 +458,7 @@
 		transition: $transition;
 
 		&.active {
-			right: 0;
+			top: 0;
 		}
 	}
 	.burger-menu-lists {

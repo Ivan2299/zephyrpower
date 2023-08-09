@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Loaded');
 
+	const body = document.querySelector('body');
+	const header = document.querySelector('.header');
+
 	// Function to toggle header visibility based on scroll direction
 	let prevScrollPos = window.scrollY;
 	function toggleHeaderClassOnScroll() {
@@ -21,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 	function handleAnyPageEvent() {
 		const header = document.querySelector('header');
-		header.classList.remove('header-scroll'); // Видаляємо клас при будь-якій події на сторінці
+		header.classList.remove('header-scroll');
 	}
-	document.addEventListener('scroll', toggleHeaderClassOnScroll);
 	document.addEventListener('click', handleAnyPageEvent);
+	document.addEventListener('scroll', toggleHeaderClassOnScroll);
 
 	// ///////////////////////////////////////////////////
 
@@ -459,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (event.target === popup) {
 				myaccaountPopupAnimationOut();
 				fadeOut(popup, 500);
-				document.body.style.overflow = 'auto';
+				document.body.style.overflow = 'unset';
 			}
 		});
 	}
@@ -482,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		popup.addEventListener('click', event => {
 			if (event.target === popup || event.target.closest('#emptycart-Popup-button-close')) {
 				fadeOut(popup, 500);
-				document.body.style.overflow = 'auto';
+				document.body.style.overflow = 'unset';
 			}
 		});
 	}
@@ -509,7 +512,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (event.target === popup || event.target.closest('#subscribe-popup-button-close')) {
 				thanksPopupAnimatinOut();
 				fadeOut(popup, 500);
-				document.body.style.overflow = 'auto';
+				document.body.style.overflow = 'unset';
 			}
 		});
 	}
@@ -537,7 +540,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (event.target === popup || event.target.closest('#review-popup-button-close')) {
 				thanksPopupAnimatinOut();
 				fadeOut(popup, 500);
-				document.body.style.overflow = 'auto';
+				document.body.style.overflow = 'unset';
 			}
 		});
 	}
@@ -563,7 +566,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (event.target === popup || event.target.closest('#orderthanks-popup-button-close')) {
 				fadeOut(popup, 500);
 				thanksPopupAnimatinOut();
-				document.body.style.overflow = 'auto';
+				document.body.style.overflow = 'unset';
 			}
 		});
 	}
@@ -574,6 +577,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	$(document).ready(function () {
 		$('.burger-menu-icon').click(function (event) {
 			$('.burger-menu-icon, .burger-menu-body').toggleClass('active');
+			body.classList.toggle('lock');
 			event.stopPropagation();
 		});
 	});

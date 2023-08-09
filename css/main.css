@@ -335,6 +335,10 @@ body {
   margin: 0;
   padding: 0;
 }
+html.lock,
+body.lock {
+  overflow: hidden;
+}
 
 html {
   overflow-x: hidden;
@@ -1748,8 +1752,8 @@ swiper-container .swiper-notification {
   }
   .burger-menu-body {
     position: fixed;
-    top: 0;
-    right: -100%;
+    top: -200%;
+    right: 0;
     width: 100%;
     height: 100%;
     padding: 120px 100px;
@@ -1758,7 +1762,7 @@ swiper-container .swiper-notification {
     transition: all 0.3s ease;
   }
   .burger-menu-body.active {
-    right: 0;
+    top: 0;
   }
   .burger-menu-lists {
     padding: 20px 52px;
@@ -3401,6 +3405,7 @@ swiper-container .swiper-notification {
   bottom: 0;
 }
 .carttabs__tabs-cloud-1 {
+  pointer-events: none;
   position: absolute;
   z-index: 1;
   bottom: -10%;
@@ -3410,6 +3415,7 @@ swiper-container .swiper-notification {
   animation-play-state: running;
 }
 .carttabs__tabs-cloud-2 {
+  pointer-events: none;
   z-index: 1;
   position: absolute;
   top: 0;
