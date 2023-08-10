@@ -32,6 +32,9 @@
 			font-size: 16px;
 			font-weight: 600;
 		}
+		@media (max-width: (550px)) {
+			padding: 10px 20px;
+		}
 	}
 
 	&-transparent {

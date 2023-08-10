@@ -151,6 +151,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				},
 			},
 		},
+		pagination: {
+			el: '.swiper-pagination',
+			dynamicBullets: true,
+		},
 
 		// autoplay: {
 		// 	delay: 4000, // Delay between slide transitions (in milliseconds)
@@ -163,25 +167,19 @@ document.addEventListener('DOMContentLoaded', function () {
 			prevEl: '.swiper-button-prev',
 		},
 
-		// breakpoints: {
-		// 	640: {
-		// 		slidesPerView: 2,
-		// 		spaceBetween: 20,
-		// 		autoHeight: true,
-		// 	},
-		// 	768: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	992: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	1268: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 20,
-		// 	},
-		// },
+		breakpoints: {
+			325: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				autoHeight: true,
+				speed: 600,
+			},
+			550: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				autoHeight: true,
+			},
+		},
 	});
 	let slider4 = new Swiper(sliderBestsellers, {
 		direction: 'horizontal',

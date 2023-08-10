@@ -60,6 +60,9 @@
 		&.animated {
 			animation: smallTranslateCloudReverse 10s ease-in-out 0s infinite;
 		}
+		@media (max-width: (960px)) {
+			display: none;
+		}
 	}
 	.two___sections-cloud-img-left-second {
 		// pointer-events: none;
@@ -70,6 +73,9 @@
 		left: 0;
 		&.animated {
 			// animation: TranslateCloudX 10s ease-in-out 0s infinite;
+		}
+		@media (max-width: (960px)) {
+			display: none;
 		}
 	}
 
@@ -86,6 +92,9 @@
 }
 .two___sections-clouds {
 	pointer-events: none;
+	@media (max-width: (600px)) {
+		display: none;
+	}
 }
 
 // input pen
