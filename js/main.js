@@ -140,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		grabCursor: false,
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
-		// autoHeight: true,
 		speed: 1000,
 		effect: {
 			slide: {
@@ -171,22 +170,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			325: {
 				slidesPerView: 1,
 				spaceBetween: 10,
-				autoHeight: true,
 				speed: 600,
 			},
 			550: {
 				slidesPerView: 3,
 				spaceBetween: 20,
-				autoHeight: true,
 			},
 		},
 	});
 	let slider4 = new Swiper(sliderBestsellers, {
 		direction: 'horizontal',
-		// paralax: true,
-		// observer: true,
-		// observeParents: true,
-		// watchOverflow: true,
 		centeredSlides: true,
 		loop: true,
 		slidesPerView: 3,
@@ -215,26 +208,20 @@ document.addEventListener('DOMContentLoaded', function () {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		pagination: {
+			el: '.swiper-pagination',
+			dynamicBullets: true,
+		},
 
-		// breakpoints: {
-		// 	640: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 0,
-		// 		autoHeight: true,
-		// 	},
-		// 	768: {
-		// 		slidesPerView: 2,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	992: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	1268: {
-		// 		slidesPerView: 4,
-		// 		spaceBetween: 30,
-		// 	},
-		// },
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				centeredSlides: false,
+			},
+			600: {
+				slidesPerView: 3,
+			},
+		},
 	});
 	let slider5 = new Swiper(sliderPower, {
 		direction: 'horizontal',
