@@ -40,6 +40,16 @@
 		justify-content: center;
 		align-items: flex-end;
 		margin-bottom: 20px;
+		@media (min-width: (960px)) {
+			img {
+				height: 270px;
+			}
+		}
+		@media (min-width: (1100px)) {
+			img {
+				height: 370px;
+			}
+		}
 	}
 
 	&__title {

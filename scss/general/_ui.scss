@@ -50,6 +50,13 @@
 		&.animated {
 			animation: smallTranslateCloud 10s ease-in-out 0s infinite;
 		}
+		@media (max-width: (960px)) {
+			top: 27%;
+			right: -67%;
+		}
+		@media (max-width: (600px)) {
+			display: none;
+		}
 	}
 	.two___sections-cloud-img-left {
 		// pointer-events: none;
@@ -87,6 +94,9 @@
 		right: 0;
 		&.animated {
 			// animation: TranslateCloudXReverse 10s ease-in-out 0s infinite;
+		}
+		@media (max-width: (960px)) {
+			display: none;
 		}
 	}
 }
