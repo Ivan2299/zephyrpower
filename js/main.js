@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 
 		breakpoints: {
-			325: {
+			320: {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				speed: 600,
@@ -988,7 +988,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// Animation for .hi__image-ibg img
 		tl.fromTo(
-			'.hi__image-ibg img',
+			'.hi__image img',
 			{
 				opacity: 0,
 				y: '-30%',
