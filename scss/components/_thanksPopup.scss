@@ -83,9 +83,70 @@
 		top: 20px;
 		right: 20px;
 	}
+	.orderthanks__popup-content {
+		padding: 48px 88px;
+		z-index: 1;
+	}
 }
 
-.orderthanks__popup-content {
-	padding: 48px 88px;
-	z-index: 1;
+@media (max-width: (960px)) {
+	.thanks__popup {
+		&-content {
+			max-width: 90%;
+			padding: 48px 166px;
+		}
+		&-cloud-top-left {
+			left: -16%;
+			bottom: 50px;
+		}
+		&-cloud-top-right {
+			bottom: 50px;
+			right: -16%;
+		}
+	}
+}
+@media (max-width: (768px)) {
+	.thanks__popup {
+		&-content {
+			max-width: 90%;
+			padding: 40px 100px;
+		}
+		&-cloud-top-left {
+			display: none;
+		}
+		&-cloud-top-right {
+			display: none;
+		}
+		&-cloud-bottom-left {
+			bottom: -105px;
+			left: -45%;
+		}
+		&-cloud-bottom-right {
+			bottom: -132px;
+			right: -39%;
+		}
+	}
+}
+@media (max-width: (500px)) {
+	.thanks__popup {
+		&-content {
+			max-width: 90%;
+			padding: 40px 50px;
+		}
+		&-cloud-bottom-left {
+			bottom: -75px;
+			left: -41%;
+		}
+		&-cloud-bottom-right {
+			bottom: -75px;
+			right: -53%;
+		}
+
+		&-cloud-top-left {
+			display: block;
+			left: -68%;
+			bottom: -78px;
+			z-index: 1;
+		}
+	}
 }
