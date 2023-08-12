@@ -187,6 +187,14 @@
 	}
 }
 @media (max-width: (960px)) {
+	cartpage .myaccountpage-cloud-right {
+		top: -12%;
+		right: -27%;
+	}
+	.cartpage .myaccountpage-cloud-left {
+		top: 15%;
+		left: -31%;
+	}
 	.breadcrumps__list {
 		gap: 10px;
 	}
@@ -200,6 +208,10 @@
 	}
 }
 @media (max-width: (600px)) {
+	.cartpage .myaccountpage-cloud-left,
+	.cartpage .myaccountpage-cloud-right {
+		display: none;
+	}
 	.cartpage__button {
 		width: 90%;
 	}
@@ -229,5 +241,9 @@
 	.cartpage__item {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
+	}
+	.cartpage__inner {
+		max-height: 59vh;
+		margin-right: -10px;
 	}
 }
