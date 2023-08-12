@@ -80,6 +80,9 @@
 		white-space: nowrap;
 		margin-bottom: 20px;
 		text-align: center;
+		svg {
+			display: none;
+		}
 	}
 
 	// .myaccount__popup-tabs-wrapper
@@ -184,5 +187,61 @@
 		font-style: italic;
 		margin-top: 20px;
 		font-weight: 500;
+	}
+}
+
+@media (max-width: (960px)) {
+	.myaccount__popup {
+		&-content {
+			max-width: 595px;
+			padding: 40px 144px;
+		}
+		&-titles {
+			max-width: 100%;
+		}
+		&-link-padding {
+			padding: 6px 23px;
+		}
+		.carttabs2-item {
+			flex: 0 1 50%;
+		}
+		&-link {
+			width: 100%;
+			text-align: center;
+		}
+		.carttabs2-link {
+			font-size: 16px;
+		}
+		&-form-button {
+			font-size: 20px;
+		}
+	}
+}
+@media (max-width: (499px)) {
+	.myaccount__popup {
+		z-index: 8;
+		&-content {
+			border-top: 1px solid $mainLightBlue;
+			padding: 30px;
+			margin-top: 70px;
+			border-radius: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.myaccount__popup-cloud-top-left {
+		display: none;
+	}
+	.myaccount__popup-cloud-top-right {
+		display: none;
+	}
+	.myaccount__popup-title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 33px;
+		svg {
+			display: block;
+		}
 	}
 }

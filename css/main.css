@@ -1968,7 +1968,6 @@ swiper-container .swiper-notification {
     background-color: white;
   }
   .header__logo img {
-    height: 70px;
     width: 64px;
     -o-object-fit: contain;
        object-fit: contain;
@@ -4520,6 +4519,9 @@ swiper-container .swiper-notification {
   margin-bottom: 20px;
   text-align: center;
 }
+.myaccount__popup-title svg {
+  display: none;
+}
 .myaccount__popup-titles {
   max-width: 270px;
   width: 100%;
@@ -4589,6 +4591,59 @@ swiper-container .swiper-notification {
   font-weight: 500;
 }
 
+@media (max-width: 960px) {
+  .myaccount__popup-content {
+    max-width: 595px;
+    padding: 40px 144px;
+  }
+  .myaccount__popup-titles {
+    max-width: 100%;
+  }
+  .myaccount__popup-link-padding {
+    padding: 6px 23px;
+  }
+  .myaccount__popup .carttabs2-item {
+    flex: 0 1 50%;
+  }
+  .myaccount__popup-link {
+    width: 100%;
+    text-align: center;
+  }
+  .myaccount__popup .carttabs2-link {
+    font-size: 16px;
+  }
+  .myaccount__popup-form-button {
+    font-size: 20px;
+  }
+}
+@media (max-width: 499px) {
+  .myaccount__popup {
+    z-index: 8;
+  }
+  .myaccount__popup-content {
+    border-top: 1px solid #3f8f8d;
+    padding: 30px;
+    margin-top: 70px;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .myaccount__popup-cloud-top-left {
+    display: none;
+  }
+  .myaccount__popup-cloud-top-right {
+    display: none;
+  }
+  .myaccount__popup-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 33px;
+  }
+  .myaccount__popup-title svg {
+    display: block;
+  }
+}
 .myaccountpage {
   position: relative;
   margin-bottom: 91px;
@@ -5470,6 +5525,9 @@ swiper-container .swiper-notification {
   }
 }
 @media (max-width: 500px) {
+  .thanks__popup {
+    z-index: 8;
+  }
   .thanks__popup-content {
     max-width: 90%;
     padding: 40px 50px;

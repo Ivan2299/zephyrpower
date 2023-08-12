@@ -129,6 +129,7 @@
 }
 @media (max-width: (500px)) {
 	.thanks__popup {
+		z-index: 8;
 		&-content {
 			max-width: 90%;
 			padding: 40px 50px;

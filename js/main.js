@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 
 		popup.addEventListener('click', event => {
-			if (event.target === popup) {
+			if (event.target === popup || event.target.closest('#myaccountPopupCloseBtn')) {
 				myaccaountPopupAnimationOut();
 				fadeOut(popup, 500);
 				document.body.style.overflow = 'unset';
