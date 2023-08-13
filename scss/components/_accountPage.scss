@@ -1,4 +1,7 @@
 .myaccountpage {
+	.tabs-content-item {
+		animation: fadeEffect 1s; /* Fading effect takes 1 second */
+	}
 	.breadcrumps__item-arrow-back {
 		display: none;
 		&::after {
@@ -512,6 +515,7 @@
 		&__tabs-wrapper {
 			width: 100%;
 			flex-basis: unset;
+			overflow: auto;
 		}
 		&__tabs-link {
 			border-radius: 0;
@@ -531,7 +535,6 @@
 			flex-direction: row;
 			flex-wrap: nowrap;
 			gap: 20px;
-			overflow: auto;
 		}
 		.tabs-content-item {
 			margin-bottom: 0;
@@ -553,6 +556,7 @@
 
 		.tabs-content-title {
 			border-bottom: 1px solid $mainGrey;
+			font-size: 18px;
 		}
 		.tabs-content-order {
 			border-bottom: 1px solid $mainGrey;
@@ -564,6 +568,9 @@
 		}
 		.tabs-content-order-top-arrow {
 			align-self: flex-start;
+		}
+		.tabs-content-order-top {
+			padding: 10px 0;
 		}
 		.tabs-content-orders div h4 {
 			font-size: 14px;

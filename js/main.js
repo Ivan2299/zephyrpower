@@ -324,6 +324,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		// 	},
 		// },
 	});
+
 	// slider1.controller.control = slider2;
 	slider2.controller.control = slider1;
 	slider1.controller.control = slider2;

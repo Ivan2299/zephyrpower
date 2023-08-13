@@ -607,6 +607,14 @@ svg {
   font-weight: 400;
 }
 
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media (min-width: 1199px) {
   @keyframes cloudRotate360left {
     0% {
@@ -3964,6 +3972,9 @@ swiper-container .swiper-notification {
   margin-top: 150px;
   /* Reset Bootstrap tabs styles */
 }
+.carttabs .tab-pane {
+  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+}
 .carttabs__inner {
   flex: 1 1 auto;
 }
@@ -4659,6 +4670,9 @@ swiper-container .swiper-notification {
   margin-bottom: 91px;
   margin-top: 150px;
 }
+.myaccountpage .tabs-content-item {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
 .myaccountpage .breadcrumps__item-arrow-back {
   display: none;
 }
@@ -5034,6 +5048,7 @@ swiper-container .swiper-notification {
   .myaccountpage__tabs-wrapper {
     width: 100%;
     flex-basis: unset;
+    overflow: auto;
   }
   .myaccountpage__tabs-link {
     border-radius: 0;
@@ -5053,7 +5068,6 @@ swiper-container .swiper-notification {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 20px;
-    overflow: auto;
   }
   .myaccountpage .tabs-content-item {
     margin-bottom: 0;
@@ -5072,6 +5086,7 @@ swiper-container .swiper-notification {
   }
   .myaccountpage .tabs-content-title {
     border-bottom: 1px solid #555555;
+    font-size: 18px;
   }
   .myaccountpage .tabs-content-order {
     border-bottom: 1px solid #555555;
@@ -5083,6 +5098,9 @@ swiper-container .swiper-notification {
   }
   .myaccountpage .tabs-content-order-top-arrow {
     align-self: flex-start;
+  }
+  .myaccountpage .tabs-content-order-top {
+    padding: 10px 0;
   }
   .myaccountpage .tabs-content-orders div h4 {
     font-size: 14px;

@@ -53,6 +53,10 @@
 
 	// .carttabs__inner
 
+	.tab-pane {
+		animation: fadeEffect 2s; /* Fading effect takes 1 second */
+	}
+
 	&__inner {
 		flex: 1 1 auto;
 	}
