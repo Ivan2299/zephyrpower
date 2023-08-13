@@ -593,6 +593,12 @@ svg {
 .input-pen:focus {
   border-bottom: 1px solid #7f1f61;
 }
+@media (max-width: 768px) {
+  .input-pen {
+    font-size: 16px;
+    padding: 10px 30px 10px 0;
+  }
+}
 
 .price-item {
   font-family: "Gotu", sans-serif;
@@ -2075,11 +2081,6 @@ swiper-container .swiper-notification {
     padding: 15px 40px;
     font-size: 16px;
     font-weight: 600;
-  }
-}
-@media (max-width: 550px) {
-  .button-accent {
-    padding: 10px 20px;
   }
 }
 .button-transparent {
@@ -3619,6 +3620,9 @@ swiper-container .swiper-notification {
   }
 }
 @media (max-width: 576px) {
+  .footer__logo {
+    align-self: center;
+  }
   .footer__inner {
     display: flex;
     flex-direction: column;
@@ -4655,12 +4659,25 @@ swiper-container .swiper-notification {
   margin-bottom: 91px;
   margin-top: 150px;
 }
+.myaccountpage .breadcrumps__item-arrow-back {
+  display: none;
+}
+.myaccountpage .breadcrumps__item-arrow-back::after {
+  content: "";
+  display: none;
+}
+@media (max-width: 960px) {
+  .myaccountpage .breadcrumps__item-arrow-back {
+    display: flex;
+  }
+}
 .myaccountpage-cloud-left {
   position: absolute;
   pointer-events: none;
   top: 30%;
   left: 0;
   animation: smallTranslateCloud 7s ease-in-out infinite;
+  z-index: -1;
 }
 .myaccountpage-cloud-right {
   position: absolute;
@@ -4668,6 +4685,7 @@ swiper-container .swiper-notification {
   top: 24%;
   right: 0;
   animation: smallTranslateCloudReverse 7s ease-in-out infinite;
+  z-index: -1;
 }
 .myaccountpage__title {
   text-align: center;
@@ -4722,6 +4740,9 @@ swiper-container .swiper-notification {
 .myaccountpage .tabs-content-input {
   max-width: 325px;
   margin-bottom: 30px;
+}
+.myaccountpage .tabs-content-input:last-child {
+  margin-bottom: 0;
 }
 .myaccountpage .tabs-content-form {
   display: flex;
@@ -4878,7 +4899,7 @@ swiper-container .swiper-notification {
   line-height: normal;
 }
 .myaccountpage .tabs-content-order-item-count-text {
-  margin-bottom: 24px;
+  display: none;
 }
 .myaccountpage .tabs-content-order-item-count-wrapper {
   text-align: center;
@@ -4920,6 +4941,159 @@ swiper-container .swiper-notification {
   visibility: visible;
 }
 
+@media (max-width: 960px) {
+  .myaccountpage {
+    margin-bottom: 55px;
+  }
+  .myaccountpage .bestsellers__item {
+    padding: 0;
+  }
+  .myaccountpage .bestsellers__item-title {
+    font-size: 16px;
+  }
+  .myaccountpage .bestsellers__item-sup {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .myaccountpage .bestsellers__item-fav-wrapper {
+    top: 7px;
+    right: 7px;
+  }
+  .myaccountpage .bestsellers__item-fav-wrapper img {
+    width: 15px;
+    height: 15px;
+  }
+  .myaccountpage__tabs-container {
+    gap: 50px;
+  }
+  .myaccountpage__tabs-link {
+    padding: 6px 25px;
+  }
+  .myaccountpage .container__big {
+    padding: 0 60px;
+  }
+  .myaccountpage__tabs-wrapper {
+    flex: 0 0 215px;
+  }
+  .myaccountpage .catalog__content-bottom {
+    gap: 30px 15px;
+  }
+  .myaccountpage .tabs-content-order-top-count-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+  }
+  .myaccountpage .tabs-content-order-top-sum-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+  }
+  .myaccountpage .tabs-content-order-top-count-text,
+  .myaccountpage .tabs-content-order-top-sum-text {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 840px) {
+  .myaccountpage .tabs-content-input {
+    padding: 10px 0;
+  }
+  .myaccountpage .tabs-content-title {
+    margin-bottom: 10px;
+  }
+  .myaccountpage .container__big {
+    padding: 0 30px;
+  }
+  .myaccountpage__tabs-container {
+    gap: 20px;
+  }
+  .myaccountpage .tabs-content-catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .myaccountpage .catalog__content-bottom {
+    gap: 15px;
+  }
+}
+@media (max-width: 640px) {
+  .myaccountpage {
+    margin-bottom: 80px;
+  }
+  .myaccountpage .tabs-content-title {
+    text-align: center;
+  }
+  .myaccountpage__tabs-content-wrapper {
+    width: 100%;
+  }
+  .myaccountpage .tabs-content-input {
+    max-width: 100%;
+  }
+  .myaccountpage__tabs-container {
+    flex-direction: column;
+  }
+  .myaccountpage__tabs-wrapper {
+    width: 100%;
+    flex-basis: unset;
+  }
+  .myaccountpage__tabs-link {
+    border-radius: 0;
+    font-size: 18px;
+    color: #555555;
+    padding: 0;
+    border: none;
+  }
+  .myaccountpage__tabs-link.active {
+    border: none;
+    font-weight: 600;
+    color: #3f8f8d !important;
+  }
+  .myaccountpage__tabs-ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow: auto;
+  }
+  .myaccountpage .tabs-content-item {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 500px) {
+  .myaccountpage .tabs-content-order-top-title-done,
+  .myaccountpage .title-cancel {
+    font-size: 14px;
+  }
+  .myaccountpage .tabs-content-order-item {
+    grid-template-columns: 5fr 1fr 1fr;
+  }
+  .myaccountpage .tabs-content-order-item-img {
+    flex: 0 0 84px;
+  }
+  .myaccountpage .tabs-content-title {
+    border-bottom: 1px solid #555555;
+  }
+  .myaccountpage .tabs-content-order {
+    border-bottom: 1px solid #555555;
+  }
+  .myaccountpage .tabs-content-order-top-sum-wrapper,
+  .myaccountpage .tabs-content-order-top-count-wrapper {
+    justify-content: center;
+    gap: 10px;
+  }
+  .myaccountpage .tabs-content-order-top-arrow {
+    align-self: flex-start;
+  }
+  .myaccountpage .tabs-content-orders div h4 {
+    font-size: 14px;
+  }
+  .myaccountpage .tabs-content-button {
+    margin-top: 0;
+  }
+  .myaccountpage .tabs-content-form-wrapper {
+    flex-direction: column;
+  }
+}
 .cartpage {
   margin-bottom: clamp(3.125rem, 1.438rem + 8.44vw, 6.5rem);
   margin-top: 150px;
@@ -5085,9 +5259,6 @@ swiper-container .swiper-notification {
   .cartpage .myaccountpage-cloud-right {
     display: none;
   }
-  .cartpage__button {
-    width: 90%;
-  }
   .cartpage__summary {
     margin-right: 0;
     margin-top: 35px;
@@ -5193,7 +5364,7 @@ swiper-container .swiper-notification {
   .emptycart__popup-cloud {
     display: none;
   }
-  .emptycart__popup-title {
+  d .emptycart__popup-title {
     max-width: 190px;
   }
   .emptycart__popup-body {

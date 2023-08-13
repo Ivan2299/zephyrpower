@@ -1,4 +1,14 @@
 .myaccountpage {
+	.breadcrumps__item-arrow-back {
+		display: none;
+		&::after {
+			content: '';
+			display: none;
+		}
+		@media (max-width: (960px)) {
+			display: flex;
+		}
+	}
 	position: relative;
 	margin-bottom: 91px;
 	margin-top: 150px;
@@ -10,6 +20,7 @@
 		top: 30%;
 		left: 0;
 		animation: smallTranslateCloud 7s ease-in-out infinite;
+		z-index: -1;
 	}
 
 	&-cloud-right {
@@ -18,6 +29,7 @@
 		top: 24%;
 		right: 0;
 		animation: smallTranslateCloudReverse 7s ease-in-out infinite;
+		z-index: -1;
 	}
 
 	&__breadcrumps {
@@ -116,6 +128,9 @@
 		&-input {
 			max-width: 325px;
 			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 		&-form {
 			display: flex;
@@ -140,7 +155,7 @@
 				display: flex;
 				flex-direction: column;
 			}
-		}	
+		}
 		&-button {
 			align-self: center;
 			margin-top: clamp(2.5rem, 1.49rem + 5.05vw, 5.625rem);
@@ -289,7 +304,7 @@
 			}
 			&-count {
 				&-text {
-					margin-bottom: 24px;
+					display: none;
 				}
 				&-wrapper {
 					text-align: center;
@@ -397,5 +412,171 @@
 		transition: 0.2s ease-out;
 		opacity: 1;
 		visibility: visible;
+	}
+}
+
+@media (max-width: (960px)) {
+	.myaccountpage {
+		margin-bottom: 55px;
+		.bestsellers__item {
+			padding: 0;
+			&-title {
+				font-size: 16px;
+			}
+
+			&-sup {
+				font-size: 13px;
+				margin-bottom: 10px;
+			}
+			&-fav-wrapper {
+				top: 7px;
+				right: 7px;
+				img {
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+		&__tabs-container {
+			gap: 50px;
+		}
+		&__tabs-link {
+			padding: 6px 25px;
+		}
+		.container__big {
+			padding: 0 60px;
+		}
+		&__tabs-wrapper {
+			flex: 0 0 215px;
+		}
+		.catalog__content-bottom {
+			gap: 30px 15px;
+		}
+		.tabs-content-order-top-count-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-self: stretch;
+		}
+		.tabs-content-order-top-sum-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-self: stretch;
+		}
+		.tabs-content-order-top-count-text,
+		.tabs-content-order-top-sum-text {
+			margin-bottom: 0;
+		}
+		.tabs-content-order-bottom-text {
+		}
+	}
+}
+@media (max-width: (840px)) {
+	.myaccountpage {
+		.tabs-content-input {
+			padding: 10px 0;
+		}
+		.tabs-content-title {
+			margin-bottom: 10px;
+		}
+		.container__big {
+			padding: 0 30px;
+		}
+		&__tabs-container {
+			gap: 20px;
+		}
+		.tabs-content-catalog {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.catalog__content-bottom {
+			gap: 15px;
+		}
+	}
+}
+@media (max-width: (640px)) {
+	.myaccountpage {
+		margin-bottom: 80px;
+		.tabs-content-title {
+			text-align: center;
+		}
+		&__tabs-content-wrapper {
+			width: 100%;
+		}
+		.tabs-content-input {
+			max-width: 100%;
+		}
+		&__tabs-container {
+			flex-direction: column;
+		}
+		&__tabs-wrapper {
+			width: 100%;
+			flex-basis: unset;
+		}
+		&__tabs-link {
+			border-radius: 0;
+			font-size: 18px;
+			color: $mainGrey;
+			padding: 0;
+			border: none;
+			&.active {
+				border: none;
+				font-weight: 600;
+				color: $mainLightBlue !important;
+			}
+		}
+		&__tabs-ul {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			gap: 20px;
+			overflow: auto;
+		}
+		.tabs-content-item {
+			margin-bottom: 0;
+		}
+	}
+}
+@media (max-width: (500px)) {
+	.myaccountpage {
+		.tabs-content-order-top-title-done,
+		.title-cancel {
+			font-size: 14px;
+		}
+		.tabs-content-order-item {
+			grid-template-columns: 5fr 1fr 1fr;
+		}
+		.tabs-content-order-item-img {
+			flex: 0 0 84px;
+		}
+
+		.tabs-content-title {
+			border-bottom: 1px solid $mainGrey;
+		}
+		.tabs-content-order {
+			border-bottom: 1px solid $mainGrey;
+		}
+		.tabs-content-order-top-sum-wrapper,
+		.tabs-content-order-top-count-wrapper {
+			justify-content: center;
+			gap: 10px;
+		}
+		.tabs-content-order-top-arrow {
+			align-self: flex-start;
+		}
+		.tabs-content-orders div h4 {
+			font-size: 14px;
+		}
+		.tabs-content-button {
+			margin-top: 0;
+		}
+		.tabs-content-form-wrapper {
+			flex-direction: column;
+		}
+	}
+}
+@media (max-width: (375px)) {
+	.myaccountpage {
 	}
 }

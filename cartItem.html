@@ -146,8 +146,8 @@
 						</nav>
 						<div class="header__search-wrapper">
 							<form class="header__search">
-								<button type="submit" class="header__search-button">
-									<img src="/img/icons/search-icon.svg" alt="search" />
+								<button type="submit" class="header__search-button" data-title="Пошук">
+									<img class="header__search-icon" src="/img/icons/search-icon.svg" alt="search" />
 								</button>
 								<input type="search" class="header__search-input" />
 							</form>
@@ -159,12 +159,12 @@
 
 					<div class="header__actions-inner">
 						<div class="header__actions">
-							<a href="#" id="my-account-button" class="header__actions-user"><img src="img/icons/user-icon.svg"
-									alt="user" /></a>
-							<a href="#" class="header__actions-favorite"><img src="img/icons/favorite-icon.svg"
-									alt="favorite" /></a>
-							<a href="cartPage.html" class="header__actions-cart"><img src="img/icons/cart-icon.svg"
-									alt="cart" /></a>
+							<a href="#" id="my-account-button" class="header__actions-user" data-title="Особистий кабінет"><img
+									src="img/icons/user-icon.svg" alt="user" /></a>
+							<a href="#" class="header__actions-favorite" data-title="Обране"><img
+									src="img/icons/favorite-icon.svg" alt="favorite" /></a>
+							<a href="cartPage.html" class="header__actions-cart" data-title="Кошик"><img
+									src="img/icons/cart-icon.svg" alt="cart" /></a>
 						</div>
 					</div>
 
@@ -1339,44 +1339,99 @@
 			<div class="footer__container">
 				<div class="footer__inner">
 					<div class="footer__logo">
-						<a href="#" class="footer__logo-img">
+						<a href="/" class="footer__logo-img">
 							<img src="/img/images/footer-logo-zephyr.png" alt="zephyr_power_logo">
 						</a>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item footer__item-spoller1">
+						<div id="footerAccordionBtn1" class="footer__item-spoller1-title">
+							<h3 class="footer__item-title">Про нас</h3>
+							<svg class="footer__item-arrow" width="27" height="25" viewBox="0 0 27 25" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M18.5966 10.3852C18.2671 10.0801 17.7329 10.0801 17.4034 10.3852L13.5 13.9994L9.59662 10.3852C9.26712 10.0801 8.73288 10.0801 8.40338 10.3852C8.07387 10.6902 8.07387 11.1849 8.40338 11.49L12.9034 15.6567C13.2329 15.9618 13.7671 15.9618 14.0966 15.6567L18.5966 11.49C18.9261 11.1849 18.9261 10.6902 18.5966 10.3852Z"
+									fill="black" />
+							</svg>
+						</div>
+
+
+						<ul id="footerAccordionBody1" class="footer__item-list accordion-content ">
+							<li class="footer__item-li">
+								<a href="delivery.html" class="footer__item-link">Доставка та Оплата</a>
+							</li>
+							<li class="footer__item-li">
+								<a href="guarantee.html" class="footer__item-link">Повернення та гарантії</a>
+							</li>
+							<li class="footer__item-li">
+								<a href="confidentPage.html" class="footer__item-link">Політика конфіденційності</a>
+							</li>
+							<li class="footer__item-li">
+								<a href="specialOrder.html" class="footer__item-link">Індивідуальне замовлення</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item footer__item-notSpoller">
 						<h3 class="footer__item-title">Про нас</h3>
-						<ul class="footer__item-list">
+						<ul class="footer__item-list ">
 							<li class="footer__item-li">
-								<a href="#" class="footer__item-link">Доставка та Оплата</a>
+								<a href="catalog.html" class="footer__item-link">Доставка та Оплата</a>
 							</li>
 							<li class="footer__item-li">
-								<a href="#" class="footer__item-link">Повернення та гарантії</a>
+								<a href="catalog.html" class="footer__item-link">Повернення та гарантії</a>
 							</li>
 							<li class="footer__item-li">
-								<a href="#" class="footer__item-link">Політика конфіденційності</a>
+								<a href="catalog.html" class="footer__item-link">Політика конфіденційності</a>
 							</li>
 							<li class="footer__item-li">
-								<a href="#" class="footer__item-link">Індивідуальне замовлення</a>
+								<a href="catalog.html" class="footer__item-link">Індивідуальне замовлення</a>
 							</li>
 						</ul>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item footer__item-spoller2">
+						<div id="footerAccordionBtn2" class="footer__item-spoller2-title">
+							<h3 class="footer__item-title">Категорії</h3>
+							<svg class="footer__item-arrow" width="27" height="25" viewBox="0 0 27 25" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M18.5966 10.3852C18.2671 10.0801 17.7329 10.0801 17.4034 10.3852L13.5 13.9994L9.59662 10.3852C9.26712 10.0801 8.73288 10.0801 8.40338 10.3852C8.07387 10.6902 8.07387 11.1849 8.40338 11.49L12.9034 15.6567C13.2329 15.9618 13.7671 15.9618 14.0966 15.6567L18.5966 11.49C18.9261 11.1849 18.9261 10.6902 18.5966 10.3852Z"
+									fill="black" />
+							</svg>
+						</div>
+
+
+						<ul id="footerAccordionBody2" class="footer__item-list accordion-content ">
+							<li class="footer__item-li">
+								<a href="catalog.html" class="footer__item-link">Макіяж</a>
+							</li>
+							<li class="footer__item-li">
+								<a href="catalog.html" class="footer__item-link">Догляд</a>
+							</li>
+							<li class="footer__item-li">
+								<a href="catalog.html" class="footer__item-link">Парфуми</a>
+							</li>
+							<li class="footer__item-li">
+								<a href="catalog.html" class="footer__item-link">Акції</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__item footer__item-notSpoller">
 						<h3 class="footer__item-title">Категорії</h3>
-						<ul class="footer__item-list">
+						<ul class="footer__item-list ">
 							<li class="footer__item-li">
-								<a href="#" class="footer__item-link">Макіяж</a>
+								<a href="catalog.html" class="footer__item-link">Макіяж</a>
 							</li>
 							<li class="footer__item-li">
-								<a href="#" class="footer__item-link">Догляд</a>
+								<a href="catalog.html" class="footer__item-link">Догляд</a>
 							</li>
 							<li class="footer__item-li">
-								<a href="#" class="footer__item-link">Парфуми</a>
+								<a href="catalog.html" class="footer__item-link">Парфуми</a>
 							</li>
 							<li class="footer__item-li">
-								<a href="#" class="footer__item-link">Акції</a>
+								<a href="catalog.html" class="footer__item-link">Акції</a>
 							</li>
 						</ul>
 					</div>
+
 					<div class="footer__item">
 						<ul class="footer__item-list">
 							<li class="footer__item-li">
@@ -1394,20 +1449,24 @@
 						</ul>
 					</div>
 					<div class="footer__item">
-						<ul class="footer__item-list">
+						<ul class="footer__item-list footer__item-list-social ">
 							<li class="footer__item-li">
-								Зателефонувати за номером
+								<span>Зателефонувати за номером</span>
+								<a class="footer__item-li footer__item-tel footer__item-link" href="tel:+88005553535">8 800 555
+									3535</a>
+
 							</li>
-							<li class="footer__item-li footer__item-tel">
-								<a href="tel:+88005553535" class="footer__item-link">8 800 555 3535</a>
-							</li>
-							<li class="footer__item-li footer__item-socials">
-								<a href="#" class="footer__item-socials-img">
-									<img src="./img/icons/Instagram.svg" alt="Instagram">
-								</a>
-								<a href="#" class="footer__item-socials-img">
-									<img src="./img/icons/TikTok.svg" alt="TikTok">
-								</a>
+							<li class="footer__item-li footer__item-social">
+								<div class="footer__item-socials-img-inst">
+									<a href="instagram.com" class="footer__item-socials-img">
+										<img src="./img/icons/Instagram.svg" alt="Instagram">
+									</a>
+								</div>
+								<div class="footer__item-socials-img-tiktok">
+									<a href="tiktok.com" class="footer__item-socials-img">
+										<img src="./img/icons/TikTok.svg" alt="TikTok">
+									</a>
+								</div>
 							</li>
 							<li class="footer__item-li">
 								Дніпро, Україна
@@ -1431,7 +1490,14 @@
 					<img src="/img/images/myaccount/myaccount-popup-cloud-04.png" alt="cloud"
 						class="myaccount__popup-cloud-bottom-right">
 					<!-- Вміст попапу тут -->
-					<h2 class="myaccount__popup-title title">Мій аккаунт</h2>
+					<h2 class="myaccount__popup-title title">Мій аккаунт
+						<svg class="myaccount__popup-close-btn" id="myaccountPopupCloseBtn" width="17" height="17"
+							viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1 15.9995L16 1" stroke="#7F1F61" stroke-width="1.5" stroke-linecap="round" />
+							<path d="M1 1.00047L16 16" stroke="#7F1F61" stroke-width="1.5" stroke-linecap="round" />
+						</svg>
+
+					</h2>
 					<div class="myaccount__popup-tabs carttabs2__tabs">
 						<ul class="myaccount__popup-titles carttabs2__tabs-titles" id="myaccountTabs" role="tablist">
 							<li class="myaccount__popup-item carttabs2-item">
@@ -1716,7 +1782,7 @@
 		<!-- /footer -->
 	</div>
 
-	<!-- /footer -->
+
 
 
 

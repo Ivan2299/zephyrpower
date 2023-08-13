@@ -195,6 +195,9 @@
 }
 @media (max-width: (576px)) {
 	.footer {
+		&__logo {
+			align-self: center;
+		}
 		&__inner {
 			display: flex;
 			flex-direction: column;

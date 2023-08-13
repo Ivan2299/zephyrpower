@@ -139,6 +139,10 @@
 		&:focus {
 			border-bottom: 1px solid $mainPink;
 		}
+		@media (max-width: (768px)) {
+			font-size: 16px;
+			padding: 10px 30px 10px 0;
+		}
 	}
 }
 
