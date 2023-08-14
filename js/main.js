@@ -594,13 +594,30 @@ document.addEventListener('DOMContentLoaded', function () {
 	// ///////////////////////////////////////////////////
 
 	// burger ///////////////////////////////////////////////////
-	$(document).ready(function () {
-		$('.burger-menu-icon').click(function (event) {
-			$('.burger-menu-icon, .burger-menu-body').toggleClass('active');
-			body.classList.toggle('lock');
+
+	const burgerMenu = () => {
+		let burgerMenuIcon = document.querySelector('.burger-menu-icon');
+		let burgerMenuBody = document.querySelector('.burger-menu-body');
+		let burgerMenuLists = document.querySelector('.burger-menu-lists');
+
+		document.addEventListener('click', function (event) {
+			if (!burgerMenuLists.contains(event.target)) {
+				[burgerMenuIcon, burgerMenuBody].forEach(function (element) {
+					element.classList.remove('active');
+					body.classList.remove('lock');
+				});
+			}
+		});
+
+		burgerMenuIcon.addEventListener('click', function (event) {
+			[burgerMenuIcon, burgerMenuBody].forEach(function (element) {
+				element.classList.toggle('active');
+			});
+			body.classList.add('lock');
 			event.stopPropagation();
 		});
-	});
+	};
+	burgerMenu();
 
 	// ////	ORDER PAGE ANIMATION VERTICAL TIMELINE ///////////////////////////////////////////////
 	function handleFormOrder() {
