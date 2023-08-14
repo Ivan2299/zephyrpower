@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const sliderBestsellers = document.querySelector('.bestsellers-slider');
 	const sliderPower = document.querySelector('.power-slider');
 	const sliderSpecial = document.querySelector('.special-slider');
+	const sliderCategory = document.querySelector('.myaccountpage .swiper-container');
 
 	let slider1 = new Swiper(verrticalSliderBanner, {
 		direction: 'vertical',
@@ -324,6 +325,49 @@ document.addEventListener('DOMContentLoaded', function () {
 		// 	},
 		// },
 	});
+
+	let sliderCategoryfunction = () => {
+		let swiper;
+
+		function initSwiper() {
+			swiper = new Swiper(sliderCategory, {
+				slidesPerView: '2',
+				centeredSlides: true,
+				spaceBetween: 10,
+				navigation: {
+					nextEl: '.myaccountpage__tabs-icon-right',
+					prevEl: '.myaccountpage__tabs-icon-left',
+				},
+
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						centeredSlides: true,
+						spaceBetween: 10,
+					},
+				},
+			});
+		}
+
+		function destroySwiper() {
+			if (swiper) {
+				swiper.destroy();
+				swiper = null;
+			}
+		}
+
+		function handleWindowSizeChange() {
+			if (window.innerWidth <= 640) {
+				initSwiper();
+			} else {
+				destroySwiper();
+			}
+		}
+
+		window.addEventListener('resize', handleWindowSizeChange);
+		handleWindowSizeChange();
+	};
+	sliderCategoryfunction();
 
 	// slider1.controller.control = slider2;
 	slider2.controller.control = slider1;

@@ -1,4 +1,13 @@
 .myaccountpage {
+	.myaccountpage__tabs-icon-right,
+	.myaccountpage__tabs-icon-left {
+		display: none;
+		@media (max-width: (640px)) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
 	.tabs-content-item {
 		animation: fadeEffect 1s; /* Fading effect takes 1 second */
 	}
@@ -513,9 +522,11 @@
 			flex-direction: column;
 		}
 		&__tabs-wrapper {
+			position: relative;
 			width: 100%;
+			margin: 0 auto;
 			flex-basis: unset;
-			overflow: auto;
+			overflow: hidden;
 		}
 		&__tabs-link {
 			border-radius: 0;
@@ -529,12 +540,48 @@
 				color: $mainLightBlue !important;
 			}
 		}
+		&__tabs-icon-right {
+			position: absolute;
+			z-index: 2;
+			height: 100%;
+			right: 0;
+			top: 50%;
+			background-color: $white;
+			transform: translateY(-50%);
+
+			&.swiper-button-disabled {
+				display: none;
+			}
+		}
+		&__tabs-icon-left {
+			position: absolute;
+			z-index: 2;
+			height: 100%;
+			left: 0;
+			top: 50%;
+			background-color: $white;
+			transform: translateY(-50%);
+			&.swiper-button-disabled {
+				display: none;
+			}
+		}
+
 		&__tabs-ul {
 			display: flex;
+			width: 80%;
+			margin: 0 auto;
 			align-items: center;
 			flex-direction: row;
 			flex-wrap: nowrap;
-			gap: 20px;
+			gap: 10px;
+			// overflow-x: scroll;
+			// -ms-overflow-style: none;
+			// scrollbar-width: none;
+			// scroll-behavior: smooth;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 		.tabs-content-item {
 			margin-bottom: 0;
