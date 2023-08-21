@@ -2163,7 +2163,6 @@ swiper-container .swiper-notification {
      object-fit: cover;
   height: 220px;
   width: 100%;
-  transform: scale(1, 0.55);
   border-radius: 0px 100px 100px 0px;
 }
 .hero-section .vertical-slider .swiper-slide-next,
@@ -2182,7 +2181,6 @@ swiper-container .swiper-notification {
 }
 .hero-section .vertical-slider .swiper-slide-active img {
   height: 280px;
-  transform: scale(1, 1);
   border-radius: 0px 174.5px 174.5px 0px;
 }
 .hero-section .circle-slider-clouds-1200 {

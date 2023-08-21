@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		// slideToClickedSlice: true,
 		slidesPerGroup: 1,
 		// autoHeight: true,
-		speed: 800,
+		speed: 500,
 		effect: 'slide',
 
 		// Брейкпоинты
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		grabCursor: true,
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
-		speed: 800,
+		speed: 600,
 		effect: 'slide',
 		// 	// delay: 3000,
 		// 	reverseDirection: true,
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		grabCursor: false,
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
-		speed: 1000,
+		speed: 600,
 		effect: {
 			slide: {
 				shadow: true, // Add shadow to the slides
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
 		// autoHeight: true,
-		speed: 800,
+		speed: 600,
 		effect: {
 			slide: {
 				// Slide effect options
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
 		// autoHeight: true,
-		speed: 800,
+		speed: 600,
 		effect: {
 			slide: {
 				// Slide effect options
