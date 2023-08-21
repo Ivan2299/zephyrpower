@@ -1977,11 +1977,18 @@ swiper-container .swiper-notification {
   }
 }
 @media (max-width: 760px) {
+  .burger-menu-actions {
+    position: absolute;
+    bottom: 23px;
+    left: 0;
+    right: 0;
+  }
   .burger-menu-lists {
     padding: 20px;
+    height: 100%;
   }
   .burger-menu-body {
-    padding: 100px 0;
+    padding: 100px 0 0 0;
   }
 }
 @media (max-width: 600px) {
@@ -3243,7 +3250,7 @@ swiper-container .swiper-notification {
 .hi__container {
   max-width: 1310px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 .hi__inner {
   display: flex;
@@ -3428,7 +3435,7 @@ swiper-container .swiper-notification {
   animation: smallTranslateCloud 10s ease-in-out infinite;
 }
 .form-wrapper .form-cloud-2 {
-  bottom: -135%;
+  bottom: -100%;
   right: 0;
   left: unset;
 }
@@ -4175,7 +4182,7 @@ swiper-container .swiper-notification {
 .carttabs__content-delivery {
   color: #000;
   font-family: Cormorant Garamond;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -4217,6 +4224,7 @@ swiper-container .swiper-notification {
   margin-bottom: clamp(3.125rem, 1.388rem + 8.69vw, 8.5rem);
 }
 .carttabs2__bg-left {
+  pointer-events: none;
   position: absolute;
   left: 0;
   top: -30%;
@@ -4225,6 +4233,7 @@ swiper-container .swiper-notification {
   animation: smallTranslateCloud 6s ease-in-out infinite;
 }
 .carttabs2__bg-right {
+  pointer-events: none;
   position: absolute;
   right: 0;
   top: -200%;

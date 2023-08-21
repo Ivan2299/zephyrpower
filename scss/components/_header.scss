@@ -652,11 +652,18 @@
 }
 
 @media (max-width: (760px)) {
+	.burger-menu-actions {
+		position: absolute;
+		bottom: 23px;
+		left: 0;
+		right: 0;
+	}
 	.burger-menu-lists {
 		padding: 20px;
+		height: 100%;
 	}
 	.burger-menu-body {
-		padding: 100px 0;
+		padding: 100px 0 0 0;
 	}
 }
 @media (max-width: (600px)) {

@@ -822,6 +822,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
 					scrub: 3, // Збільшений scrub для плавної анімації
 					ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+					once: true,
 				},
 			});
 		});
@@ -1108,9 +1109,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (formCloud1) {
 					formCloud1.classList.add('animated');
 				}
-				if (formCloud2) {
-					formCloud2.classList.add('animated');
-				}
+				// if (formCloud2) {
+				// 	formCloud2.classList.add('animated');
+				// }
 			},
 		});
 
@@ -1132,12 +1133,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		tl.fromTo(
 			formCloud2,
 			{
-				y: '-300px',
 				x: '100%', // Start position (image off-screen to the left)
 			},
 			{
-				y: '0px',
-				x: '0', // Move image to the center of the screen
+				x: '40%', // Move image to the center of the screen
 				duration: 2, // Animation duration
 			},
 			'<',
@@ -1199,7 +1198,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.reviews',
-				start: 'top 120%',
+				start: 'top bottom',
 				end: 'center center',
 				scrub: false,
 				ease: 'power3.inOut',
@@ -1222,7 +1221,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				x: '0px',
 				duration: 1,
 			},
-			1,
 		);
 		tl.fromTo(
 			reviewContent,
