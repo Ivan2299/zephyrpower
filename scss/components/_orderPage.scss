@@ -264,6 +264,8 @@
 	// .form-order__item-cards
 
 	&__item-cards {
+		max-height: 45vh;
+		overflow: auto;
 		padding-left: 33px;
 		border-left: 1px solid $mainLightBlue;
 		margin-bottom: 10px;
@@ -373,6 +375,7 @@
 	&__item-callback-label {
 		column-gap: 40px;
 		pointer-events: none;
+		padding-left: 0;
 		&.active {
 			pointer-events: all;
 		}
@@ -473,10 +476,11 @@
 		font-size: 16px;
 		font-family: $fontFamily2;
 	}
-	.button-secondary {
-	}
-	.button {
-	}
-	.button-accent {
+}
+@media (max-width: (1200px)) {
+	.form-order {
+		&__inner {
+			column-gap: 10px;
+		}
 	}
 }

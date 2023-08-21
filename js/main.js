@@ -130,10 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let slider3 = new Swiper(sliderNew, {
 		direction: 'horizontal',
-		// paralax: true,
-		// observer: true,
-		// observeParents: true,
-		// watchOverflow: true,
 		centeredSlides: true,
 		slidesPerView: 3,
 		initialSlide: 2,
@@ -144,22 +140,34 @@ document.addEventListener('DOMContentLoaded', function () {
 		speed: 1000,
 		effect: {
 			slide: {
-				// Slide effect options
 				shadow: true, // Add shadow to the slides
 				fadeEffect: {
 					crossFade: true, // Cross-fade transition effect
 				},
 			},
 		},
+
+		on: {
+			slideChangeTransitionEnd: function () {
+				// Отримуємо всі елементи .new__item-bottom
+				const bottomElements = this.el.querySelectorAll('.new__item-bottom');
+
+				// Забираємо клас .active з усіх елементів .new__item-bottom
+				bottomElements.forEach(element => {
+					element.classList.remove('active');
+				});
+
+				// Знаходимо активний слайд і додаємо клас .active до його .new__item-bottom
+				const activeSlide = this.slides[this.activeIndex];
+				const activeSlideBottom = activeSlide.querySelector('.new__item-bottom');
+				activeSlideBottom.classList.add('active');
+			},
+		},
+
 		pagination: {
 			el: '.swiper-pagination',
 			dynamicBullets: true,
 		},
-
-		// autoplay: {
-		// 	delay: 4000, // Delay between slide transitions (in milliseconds)
-		// 	disableOnInteraction: false, // Autoplay continues even when the user interacts with the slider
-		// },
 
 		loop: true,
 		navigation: {
@@ -594,7 +602,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	// ///////////////////////////////////////////////////
 
 	// burger ///////////////////////////////////////////////////
-
 	const burgerMenu = () => {
 		let burgerMenuIcon = document.querySelector('.burger-menu-icon');
 		let burgerMenuBody = document.querySelector('.burger-menu-body');
@@ -613,12 +620,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			[burgerMenuIcon, burgerMenuBody].forEach(function (element) {
 				element.classList.toggle('active');
 			});
-			body.classList.add('lock');
+			body.classList.toggle('lock');
 			event.stopPropagation();
 		});
 	};
 	burgerMenu();
-
+	///////////////////////////////////////////////////
 	// ////	ORDER PAGE ANIMATION VERTICAL TIMELINE ///////////////////////////////////////////////
 	function handleFormOrder() {
 		const contactInputs = document.querySelectorAll('.form-order__contacts-input');
@@ -878,7 +885,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 
 	const newAnimation = function () {
-		// Selecting elements
 		const newBg = document.querySelector('.new-slider__bg');
 		const newImages = document.querySelectorAll('.new-image');
 		const newBodis = document.querySelectorAll('.new__item-body');
@@ -892,11 +898,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			return;
 		}
 
-		// Creating a new gsap.timeline()
 		const newTimeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.new', // The element that triggers the animation
-				start: 'top center', // The start position of the animation
+				start: 'top 67%', // The start position of the animation
 				end: 'top bottom', // The end position of the animation
 				scrub: 3, // The scrubbing effect duration
 				ease: 'power1.inOut', // The easing function for the animation

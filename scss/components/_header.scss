@@ -1,6 +1,6 @@
 .container__header {
 	max-width: 1310px;
-	padding: 0 10px;
+	padding: 0 30px;
 	margin: 0 auto;
 }
 
@@ -90,6 +90,7 @@
 					opacity: 1;
 					visibility: visible;
 					transform: rotateX(-0deg);
+					pointer-events: auto;
 				}
 			}
 		}
@@ -101,7 +102,6 @@
 		transition: $transition;
 		&.active {
 			color: $mainLightRed !important;
-			padding-bottom: 5px;
 		}
 
 		&-red {
@@ -149,6 +149,7 @@
 		transition: $transition_2;
 		box-shadow: 0px 8px 26px 6px rgba(0, 0, 0, 0.2);
 		border-radius: 0px 80px 0px 0px;
+		pointer-events: none;
 	}
 
 	// .header__submenu-lists
@@ -323,7 +324,7 @@
 	&__actions {
 		position: relative;
 		display: flex;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: center;
 		gap: 15px;
 		.header__actions-cart {

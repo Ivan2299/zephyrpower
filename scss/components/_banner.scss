@@ -6,6 +6,7 @@
 	overflow: hidden;
 
 	.vertical-slider {
+		position: relative;
 		max-width: 60%;
 		width: 100%;
 		max-height: 423px;
@@ -28,7 +29,8 @@
 				object-fit: cover;
 				height: 220px;
 				width: 100%;
-				border-radius: 0px 174.5px 174.5px 0px;
+				transform: scale(1, 0.55);
+				border-radius: 0px 100px 100px 0px;
 			}
 		}
 		.swiper-slide-next,
@@ -48,6 +50,8 @@
 			// transform: scale(1.2, 1.4);
 			img {
 				height: 280px;
+				transform: scale(1, 1);
+				border-radius: 0px 174.5px 174.5px 0px;
 			}
 		}
 	}
@@ -244,7 +248,7 @@
 	.hero-section {
 		.vertical-slider {
 			.swiper-slide {
-				max-width: 95%;
+				max-width: 85%;
 				margin: 0 auto;
 			}
 			.swiper-slide-active {
@@ -316,6 +320,18 @@
 }
 @media (max-width: (400px)) {
 	.hero-section {
+		.vertical-slider .vertical-slider-slide {
+			opacity: 0.3;
+			img {
+				transform: scale(1, 0.3);
+			}
+		}
+		.vertical-slider .swiper-slide-active {
+			opacity: 1;
+			img {
+				transform: scale(1, 1);
+			}
+		}
 		.circle-slider-cloud-1-1200 {
 			left: -23%;
 			bottom: 51px;
