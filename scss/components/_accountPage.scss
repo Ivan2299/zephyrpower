@@ -184,6 +184,9 @@
 		&-orders {
 			display: flex;
 			flex-direction: column;
+			&-375 {
+				display: none;
+			}
 		}
 		&-order {
 			display: flex;
@@ -633,5 +636,74 @@
 }
 @media (max-width: (375px)) {
 	.myaccountpage {
+		.tabs-content-orders {
+			display: none;
+		}
+		.tabs-content-orders-375 {
+			display: block;
+			.tabs-content-order-top {
+				display: grid;
+				grid-template-columns: 3fr 1fr 1fr;
+				align-items: center;
+			}
+			.tabs-content-order-top-title {
+				margin-bottom: 0;
+			}
+			.tabs-content-order-top-title-wrapper {
+				grid-column: span 2;
+			}
+			.tabs-content-order-top-arrow {
+				justify-content: flex-end;
+			}
+			.tabs-content-order-top-sum-wrapper {
+				font-size: 14px;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			.tabs-content-order-top-count-wrapper {
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				font-size: 14px;
+			}
+			.tabs-content-order-top-info {
+				grid-column: span 2;
+			}
+			.tabs-content-order-item-title {
+				font-size: 14px;
+			}
+			.tabs-content-order-item-sup {
+				font-size: 13px;
+			}
+			.tabs-content-order-item {
+				grid-template-columns: 84px 1fr;
+			}
+			.tabs-content-order-item-count-text {
+				display: block;
+
+				font-family: $fontFamily2;
+				font-size: 14px;
+				span {
+					font-family: $fontFamily1;
+					margin-left: 10px;
+				}
+			}
+			.tabs-content-order-item-right {
+				align-self: stretch;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+			}
+			.tabs-content-order-item-right-bottom {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				column-gap: 38px;
+			}
+			.tabs-content-order-bottom-text {
+				line-height: 2;
+			}
+		}
 	}
 }

@@ -2151,7 +2151,7 @@ swiper-container .swiper-notification {
   max-width: 700px;
   height: 220px;
   filter: blur(7.5px);
-  opacity: 0.1;
+  opacity: 0.2;
   pointer-events: none;
   display: flex;
   justify-content: center;
@@ -4852,6 +4852,9 @@ swiper-container .swiper-notification {
   display: flex;
   flex-direction: column;
 }
+.myaccountpage .tabs-content-orders-375 {
+  display: none;
+}
 .myaccountpage .tabs-content-order {
   display: flex;
   flex-direction: column;
@@ -5197,6 +5200,77 @@ swiper-container .swiper-notification {
   }
   .myaccountpage .tabs-content-form-wrapper {
     flex-direction: column;
+  }
+}
+@media (max-width: 375px) {
+  .myaccountpage .tabs-content-orders {
+    display: none;
+  }
+  .myaccountpage .tabs-content-orders-375 {
+    display: block;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-top {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items: center;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-top-title {
+    margin-bottom: 0;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-top-title-wrapper {
+    grid-column: span 2;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-top-arrow {
+    justify-content: flex-end;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-top-sum-wrapper {
+    font-size: 14px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-top-count-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-top-info {
+    grid-column: span 2;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-item-title {
+    font-size: 14px;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-item-sup {
+    font-size: 13px;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-item {
+    grid-template-columns: 84px 1fr;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-item-count-text {
+    display: block;
+    font-family: "Gotu", sans-serif;
+    font-size: 14px;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-item-count-text span {
+    font-family: "Raleway", sans-serif;
+    margin-left: 10px;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-item-right {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-item-right-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    -moz-column-gap: 38px;
+         column-gap: 38px;
+  }
+  .myaccountpage .tabs-content-orders-375 .tabs-content-order-bottom-text {
+    line-height: 2;
   }
 }
 .cartpage {
