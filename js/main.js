@@ -794,27 +794,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// Анімація хмаринок з використанням ScrollTrigger
 		cloudImgsPower.forEach((cloudImg, index) => {
-			const isLeftSide = [0, 1, 2, 6].includes(index); // Перевіряємо, чи хмаринка з лівої сторони
-			const direction = isLeftSide ? '-=50%' : '+=50%'; // Змінюємо напрямок руху для лівих та правих хмаринок
+			const isLeftSide = [0, 1, 2, 6].includes(index);
+			const direction = isLeftSide ? '-=50%' : '+=50%';
 
 			gsap.set(cloudImg, {
-				x: isLeftSide ? '-100%' : '100%', // Початкова позиція зліва або справа від екрану
-				opacity: 0, // Початкова прозорість
-				scale: 0.8, // Початковий масштаб (зменшимо для ефекту зближення)
+				x: isLeftSide ? '-100%' : '100%',
+				opacity: 0,
+				scale: 0.8,
 			});
 
 			gsap.to(cloudImg, {
-				x: '0%', // Виїжджаємо до центру горизонтально
-				opacity: 1, // Збільшуємо прозорість
-				scale: 1, // Повертаємо масштаб до нормального
-				duration: 3, // Тривалість анімації
+				x: '0%',
+				opacity: 1,
+				scale: 1,
+				duration: 3,
 				scrollTrigger: {
-					trigger: '.power', // Використовуємо клас "power" як тригер
-					start: 'top bottom', // Починаємо анімацію, коли верхній край тригера збігається з нижнім краєм екрану
-					end: 'center center', // Закінчуємо анімацію, коли центр тригера збігається з центром екрану
-					scrub: 3, // Збільшений scrub для плавної анімації
-					ease: 'power1.inOut', // Додано easing для більш плавного ефекту
+					trigger: '.power',
+					start: 'top bottom',
+					scrub: 3,
+					end: 'cener center',
+					ease: 'power1.inOut',
 					once: true,
+					// Додайте затримку в залежності від індексу хмаринки
 				},
 			});
 		});
@@ -838,6 +839,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				end: 'top bottom', // The end position of the animation
 				scrub: 2, // The scrubbing effect duration
 				ease: 'power1.inOut', // The easing function for the animation
+				once: true,
 			},
 		});
 
@@ -846,6 +848,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				opacity: 1, // Появлення power-slider-box
 				y: '0%', // Зсув вниз для появи
 				duration: 2, // Збільшимо тривалість анімації для більшої затримки
+				once: true,
 			})
 			.from('.power .swiper-slide-active', {
 				duration: 1, // Зробимо тривалість 1 секунду, щоб мати ефект збільшення
@@ -871,6 +874,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				end: 'top bottom',
 				scrub: 2.5,
 				ease: 'power1.inOut',
+				once: true,
 			},
 			onEnterBack: () => sliderTimeline.pause(), // Зупиняємо анімацію при прокрутці вгору
 			onLeaveBack: () => sliderTimeline.play(), // Відновлюємо анімацію при прокрутці вниз
@@ -889,10 +893,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		const newTimeline = gsap.timeline({
 			onComplete: () => {
-				newSlides.forEach((slide) => {
+				newSlides.forEach(slide => {
 					slide.classList.add('transitioned');
-				})
-			}
+				});
+			},
 		});
 
 		newTimeline
@@ -963,7 +967,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						end: 'center center',
 						scrub: 1,
 						ease: 'power3.inOut',
-						// once: true,
+						once: true,
 					},
 				},
 			);
