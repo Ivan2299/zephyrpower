@@ -787,38 +787,85 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Call the animation function
 
 	const powerAnimation = function () {
-		const cloudImgsPower = document.querySelectorAll('.power-cloud');
-		if (!cloudImgsPower) {
+		const cloudImgsPowerRight = document.querySelectorAll('.power-cloud-right');
+		const cloudImgsPowerLeft = document.querySelectorAll('.power-cloud-left');
+
+		if (!cloudImgsPowerRight || !cloudImgsPowerLeft) {
 			return;
 		}
 
-		// Анімація хмаринок з використанням ScrollTrigger
-		cloudImgsPower.forEach((cloudImg, index) => {
-			const isLeftSide = [0, 1, 2, 6].includes(index);
-			const direction = isLeftSide ? '-=50%' : '+=50%';
-
-			gsap.set(cloudImg, {
-				x: isLeftSide ? '-100%' : '100%',
+		gsap.fromTo(
+			cloudImgsPowerRight,
+			{
+				x: '100%',
 				opacity: 0,
 				scale: 0.8,
-			});
-
-			gsap.to(cloudImg, {
+			},
+			{
 				x: '0%',
 				opacity: 1,
 				scale: 1,
-				duration: 3,
+				scrub: 2,
+				duration: 2,
+				stagger: 0.5,
 				scrollTrigger: {
 					trigger: '.power',
 					start: 'top bottom',
-					scrub: 3,
-					end: 'cener center',
-					ease: 'power1.inOut',
+					// scrub: 3,
+					end: 'center center',
 					once: true,
-					// Додайте затримку в залежності від індексу хмаринки
 				},
-			});
-		});
+			},
+			'<',
+		);
+		gsap.fromTo(
+			cloudImgsPowerLeft,
+			{
+				x: '-100%',
+				opacity: 0,
+				scale: 0.8,
+			},
+			{
+				x: '0%',
+				opacity: 1,
+				scale: 1,
+				scrub: 2,
+				duration: 2,
+				stagger: 0.5,
+				scrollTrigger: {
+					trigger: '.power',
+					start: 'top bottom',
+					// scrub: 3,
+					end: 'center center',
+					once: true,
+				},
+			},
+			'<',
+		);
+
+		// Анімація хмаринок з використанням ScrollTrigger
+		// cloudImgsPowerRight.forEach((cloudImg, index) => {
+		// 	gsap.set(cloudImg, {
+		// 		x: '100%',
+		// 		opacity: 0,
+		// 		scale: 0.8,
+		// 	});
+
+		// 	gsap.to(cloudImg, {
+		// 		x: '0%',
+		// 		opacity: 1,
+		// 		scale: 1,
+		// 		duration: 3,
+		// 		scrollTrigger: {
+		// 			trigger: '.power',
+		// 			start: 'top bottom',
+		// 			scrub: 3,
+		// 			end: 'cener center',
+		// 			ease: 'power1.inOut',
+		// 			once: true,
+		// 		},
+		// 	});
+		// });
 
 		// Анімація для слайдера
 		const powerSliderBox = document.querySelector('.power-slider-box');
