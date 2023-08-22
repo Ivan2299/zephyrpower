@@ -43,9 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let slider1 = new Swiper(verrticalSliderBanner, {
 		direction: 'vertical',
 		centeredSlides: true,
-		preventClicks: true,
-		longswipes: false,
-		longswipesMs: 3000,
+		// longswipesMs: 3000,
 		maxBackfaceHiddenSlides: 1,
 		slidesPerView: 3,
 		loop: true,
@@ -131,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		grabCursor: false,
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
-		speed: 600,
+		speed: 500,
 		effect: {
 			slide: {
 				shadow: true, // Add shadow to the slides
@@ -882,26 +880,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	const newAnimation = function () {
 		const newBg = document.querySelector('.new-slider__bg');
 		const newImages = document.querySelectorAll('.new-image');
-		const newBodis = document.querySelectorAll('.new__item-body');
 		const newNavigation = document.querySelectorAll('.new__item-navigation');
-		const newSlides = document.querySelectorAll(
-			'.new .swiper-slide:not(.new .swiper-slide-active)',
-		);
-		const activeSlide = document.querySelector('.new .swiper-slide-active');
+		const newSlides = document.querySelectorAll('.new .swiper-slide');
 
 		if (!newBg || !newImages || !newSlides || !newNavigation) {
 			return;
 		}
 
 		const newTimeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: '.new', // The element that triggers the animation
-				start: 'top 67%', // The start position of the animation
-				end: 'top bottom', // The end position of the animation
-				scrub: 3, // The scrubbing effect duration
-				ease: 'power1.inOut', // The easing function for the animation
-				once: true,
-			},
+			onComplete: () => {
+				newSlides.forEach((slide) => {
+					slide.classList.add('transitioned');
+				})
+			}
 		});
 
 		newTimeline
@@ -918,26 +909,16 @@ document.addEventListener('DOMContentLoaded', function () {
 					ease: 'power1.inOut',
 				},
 			)
-			.fromTo(
-				activeSlide,
-				{
-					opacity: 0,
-				},
-				{
-					opacity: 1,
-					duration: 1,
-				},
-				'<',
-			)
+
 			.fromTo(
 				newSlides,
 				{
+					y: '20%',
 					opacity: 0,
-					y: 50,
 				},
 				{
-					opacity: 1,
 					y: 0,
+					opacity: 1,
 					duration: 1,
 				},
 				'<',

@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	// height: calc(100vh - 145px);
-	margin-top: clamp(6.25rem, 5.24rem + 5.05vw, 9.375rem); //150 = 100 px
+	margin-top: 120px;
 	overflow: hidden;
 
 	.vertical-slider {
@@ -134,7 +134,7 @@
 			align-items: center;
 			justify-content: center;
 			filter: blur(4.5px);
-			transition: $transition;
+
 			img {
 				display: flex;
 				object-fit: cover;
@@ -294,6 +294,7 @@
 }
 @media (max-width: (576px)) {
 	.hero-section {
+		margin-top: 65px;
 		.vertical-slider {
 			height: 280px;
 			.swiper-slide {

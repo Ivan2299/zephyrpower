@@ -19,8 +19,7 @@
 		padding: 60px 0 150px 0;
 	}
 	.swiper-slide {
-		transform: scale(0.7);
-		transition: $transition_2;
+		// transform: scale(0.7);
 	}
 
 	.new-slider__bg {
@@ -40,7 +39,7 @@
 		justify-content: center;
 		align-items: flex-end;
 		margin-bottom: 20px;
-		@media (min-width: (960px)) {
+		@media (min-width: (959px)) {
 			img {
 				height: 270px;
 			}
@@ -144,15 +143,7 @@
 	}
 
 	.swiper-slide-active {
-		transform: scale(1) !important;
-		.new__item {
-		}
-
-		.new-image {
-			// position: absolute;
-		}
-		.new__item-title {
-		}
+		// transform: scale(1);
 
 		.new__item-bottom {
 			&.active {
@@ -206,7 +197,7 @@
 	}
 }
 
-@media (max-width: (959px)) {
+@media (max-width: (961px)) {
 	.new {
 		.swiper-pagination {
 			display: block;
