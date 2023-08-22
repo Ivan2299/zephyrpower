@@ -2157,6 +2157,7 @@ swiper-container .swiper-notification {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  transform: scale(1, 0.45);
 }
 .hero-section .vertical-slider .vertical-slider-slide img {
   -o-object-fit: cover;
@@ -2178,6 +2179,7 @@ swiper-container .swiper-notification {
   position: relative;
   opacity: 1;
   z-index: 1;
+  transform: scale(1, 1.1);
 }
 .hero-section .vertical-slider .swiper-slide-active img {
   height: 280px;
@@ -2353,6 +2355,10 @@ swiper-container .swiper-notification {
   .hero-section .vertical-slider .swiper-slide-active {
     max-width: 100%;
     margin: 0 auto;
+    transform: scale(1, 1);
+  }
+  .hero-section .vertical-slider .swiper-slide-active img {
+    height: 305px;
   }
   .hero-section .circle-slider-cloud-1-1200 {
     bottom: 25%;

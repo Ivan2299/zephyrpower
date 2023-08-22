@@ -42,10 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let slider1 = new Swiper(verrticalSliderBanner, {
 		direction: 'vertical',
-		// allowSlideNext: false,
-		// allowSlidePrev: false,
-		// allowTouchMove: false,
-		// mousewheel: false,
 		centeredSlides: true,
 		preventClicks: true,
 		longswipes: false,
@@ -53,11 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		maxBackfaceHiddenSlides: 1,
 		slidesPerView: 3,
 		loop: true,
-		// spaceBetween: 10,
+		spaceBetween: 50,
 		grabCursor: true,
-		// slideToClickedSlice: true,
 		slidesPerGroup: 1,
-		// autoHeight: true,
 		speed: 500,
 		effect: 'slide',
 

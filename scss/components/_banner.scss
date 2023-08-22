@@ -24,6 +24,7 @@
 			justify-content: center;
 			align-items: center;
 			transition: $transition;
+			transform: scale(1, 0.45);
 
 			img {
 				object-fit: cover;
@@ -47,10 +48,9 @@
 			position: relative;
 			opacity: 1;
 			z-index: 1;
-			// transform: scale(1.2, 1.4);
+			transform: scale(1, 1.1);
 			img {
 				height: 280px;
-				// transform: scale(1, 1);
 				border-radius: 0px 174.5px 174.5px 0px;
 			}
 		}
@@ -251,9 +251,14 @@
 				max-width: 85%;
 				margin: 0 auto;
 			}
+
 			.swiper-slide-active {
 				max-width: 100%;
 				margin: 0 auto;
+				transform: scale(1, 1);
+				img {
+					height: 305px;
+				}
 			}
 		}
 		.circle-slider-cloud-1-1200 {
