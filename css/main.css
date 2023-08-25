@@ -611,6 +611,26 @@ svg {
   font-weight: 400;
 }
 
+.breadcrumps__list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.breadcrumps__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #555;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.breadcrumps__item-active {
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 @keyframes fadeEffect {
   from {
     opacity: 0;
@@ -3088,6 +3108,9 @@ swiper-container .swiper-notification {
   max-width: 320px;
   max-height: 400px;
 }
+.power-slider .swiper-slide .power-image {
+  pointer-events: none;
+}
 .power-slider .swiper-slide-active {
   transform: scale(1.32) translateY(-15%) !important;
   transition: transform 0.3s ease-in-out; /* Анімація для зміни розміру та позиції */
@@ -3099,6 +3122,7 @@ swiper-container .swiper-notification {
   align-self: flex-end;
 }
 .power-slider .swiper-slide-active .power-image {
+  pointer-events: all;
   border-radius: 15px;
 }
 .power-slider .swiper-wrapper {
@@ -6222,4 +6246,78 @@ swiper-container .swiper-notification {
   .notfound__back-block {
     height: 150px;
   }
+}
+.garant {
+  position: relative;
+  margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
+  margin-top: 150px;
+}
+.garant__breadcrumps {
+  margin-bottom: 40px;
+}
+.garant__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.garant-block {
+  max-width: 995px;
+  margin: 0 auto;
+}
+.garant-block__inner div {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.garant-block__inner div span {
+  font-weight: 600;
+  font-size: 16px;
+}
+.garant-block__inner ul {
+  margin-bottom: 20px;
+  list-style: outside;
+  padding-left: 20px;
+}
+
+.politics {
+  position: relative;
+  margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
+  margin-top: 150px;
+}
+.politics__breadcrumps {
+  margin-bottom: 40px;
+}
+.politics__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.politics__text {
+  max-width: 995px;
+  margin: 0 auto;
+}
+.politics__subtitle {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.politics__ol {
+  list-style: auto;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.politics__ol li {
+  margin-bottom: 10px;
+}
+.politics__ol li:last-child {
+  margin-bottom: 0;
+}
+.politics p {
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+.politics__ul {
+  list-style: outside;
+  padding-left: 20px;
+}
+.politics__ul li {
+  margin-bottom: 10px;
 }

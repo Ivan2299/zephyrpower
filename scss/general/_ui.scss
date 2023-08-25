@@ -154,3 +154,37 @@
 		font-weight: 400;
 	}
 }
+.breadcrumps {
+	// .breadcrumps__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	// .breadcrumps__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		color: #555;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	// .breadcrumps__link
+
+	&__link {
+	}
+
+	// .breadcrumps__item-active
+
+	&__item-active {
+		color: #000;
+		font-weight: 600;
+		font-size: 14px;
+	}
+}

@@ -171,6 +171,10 @@
 				max-width: 320px;
 				max-height: 400px;
 			}
+
+			.power-image {
+				pointer-events: none;
+			}
 		}
 
 		.swiper-slide-active {
@@ -185,6 +189,7 @@
 				align-self: flex-end;
 			}
 			.power-image {
+				pointer-events: all;
 				border-radius: 15px;
 			}
 		}
@@ -214,7 +219,6 @@
 		}
 	}
 	@media (max-width: (960px)) {
-	 
 		.power-cloud-1 {
 			left: -69%;
 			top: 16%;

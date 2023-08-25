@@ -1,0 +1,42 @@
+.garant {
+	position: relative;
+	margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
+	margin-top: 150px;
+
+	&__breadcrumps {
+		margin-bottom: 40px;
+	}
+
+	// .garant__title
+
+	&__title {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	// .garant__text
+
+	&__text {
+	}
+}
+
+.garant-block {
+	max-width: 995px;
+	margin: 0 auto;
+
+	&__inner {
+		div {
+			margin-bottom: 20px;
+			font-size: 16px;
+			span {
+				font-weight: 600;
+				font-size: 16px;
+			}
+		}
+		ul {
+			margin-bottom: 20px;
+			list-style: outside;
+			padding-left: 20px;
+		}
+	}
+}

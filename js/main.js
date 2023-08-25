@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerGroupAuto: true,
 		speed: 400,
 		effect: 'slide',
-
 	});
 
 	let slider3 = new Swiper(sliderNew, {
@@ -185,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	let slider5 = new Swiper(sliderPower, {
 		direction: 'horizontal',
 		centeredSlides: true,
+		slideToClickedSlide: true,
 		loop: true,
 		slidesPerView: 3,
 		initialSlide: 1,
