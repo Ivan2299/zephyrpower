@@ -43,81 +43,39 @@ document.addEventListener('DOMContentLoaded', function () {
 	let slider1 = new Swiper(verrticalSliderBanner, {
 		direction: 'vertical',
 		centeredSlides: true,
+		longSwipes: false,
 		// longswipesMs: 3000,
-		maxBackfaceHiddenSlides: 1,
+		// maxBackfaceHiddenSlides: 1,
 		slidesPerView: 3,
 		loop: true,
 		spaceBetween: 50,
-		grabCursor: true,
+		// grabCursor: true,
 		slidesPerGroup: 1,
-		speed: 500,
+		speed: 400,
 		effect: 'slide',
-
-		// Брейкпоинты
-		// breakpoints: {
-		// 	640: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 0,
-		// 		autoHeight: true,
-		// 	},
-		// 	768: {
-		// 		slidesPerView: 2,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	992: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	1268: {
-		// 		slidesPerView: 4,
-		// 		spaceBetween: 30,
-		// 	},
-		// },
 	});
 
 	let slider2 = new Swiper(circleSlider, {
 		direction: 'horizontal',
-		// // paralax: true,
-		// observer: true,
-		// observeParents: true,
-		// watchOverflow: true,
-		// allowSlideNext: false,
-		// allowSlidePrev: false,
 		preventClicks: true,
-		allowTouchMove: true,
-		// mousewheel: false,
+		preventClicksPropagation: true,
+		followFingers: true,
+		lazyPreloadPrevNext: 3,
+		simulateTouch: true,
+		grabCursor: true,
+		// oneWayMovement: true,
+		longSwipesRatio: 0.2,
+		longSwipes: false,
+		longSwipesMs: 2000,
+		enabled: true,
 		centeredSlides: true,
 		slidesPerView: 3,
 		loop: true,
-		grabCursor: true,
-		slideToClickedSlice: true,
-		slidesPerGroup: 1,
-		speed: 600,
+		slideToClickedSlide: true,
+		slidesPerGroupAuto: true,
+		speed: 400,
 		effect: 'slide',
-		// 	// delay: 3000,
-		// 	reverseDirection: true,
-		// },
 
-		// Брейкпоинты
-		// breakpoints: {
-		// 	640: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 0,
-		// 		autoHeight: true,
-		// 	},
-		// 	768: {
-		// 		slidesPerView: 2,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	992: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	1268: {
-		// 		slidesPerView: 4,
-		// 		spaceBetween: 30,
-		// 	},
-		// },
 	});
 
 	let slider3 = new Swiper(sliderNew, {
@@ -127,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		initialSlide: 2,
 		spaceBetween: 20,
 		grabCursor: false,
-		slideToClickedSlice: true,
+		// slideToClickedSlide: true,
 		slidesPerGroup: 1,
-		speed: 500,
+		speed: 400,
 		effect: {
 			slide: {
 				shadow: true, // Add shadow to the slides
@@ -189,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slideToClickedSlice: true,
 		slidesPerGroup: 1,
 		// autoHeight: true,
-		speed: 600,
+		speed: 400,
 		effect: {
 			slide: {
 				// Slide effect options
@@ -231,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		slidesPerView: 3,
 		initialSlide: 1,
 		spaceBetween: 60,
-		speed: 500,
+		speed: 400,
 		effect: {
 			slide: {
 				shadow: true, // Add shadow to the slides
@@ -369,9 +327,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 	sliderCategoryfunction();
 
-	// slider1.controller.control = slider2;
-	slider2.controller.control = slider1;
 	slider1.controller.control = slider2;
+	slider2.controller.control = slider1;
 
 	// Function   ACCORDIONS///////////////////////////////////////////////////
 
@@ -1496,7 +1453,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		tl.set([cloudContainer, slideFigureAfter, slideFigure, slides, verticalSlider], {
 			opacity: 0,
 			transformOrigin: 'center',
-			pointerEvents: 'none', // Initially disable interactions for all slides
+			// pointerEvents: 'none', // Initially disable interactions for all slides
 		});
 
 		// Animation for cloudContainer

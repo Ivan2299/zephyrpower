@@ -134,17 +134,15 @@
 			align-items: center;
 			justify-content: center;
 			filter: blur(4.5px);
-
-			img {
-				display: flex;
-				object-fit: cover;
-				align-items: center;
-				justify-content: center;
-				transition: $transition;
-				// transform: scale(0.8);
-			}
 			a {
-				// pointer-events: none;
+				pointer-events: none;
+				img {
+					display: flex;
+					object-fit: cover;
+					align-items: center;
+					justify-content: center;
+					transition: $transition;
+				}
 			}
 		}
 		.swiper-slide-active {

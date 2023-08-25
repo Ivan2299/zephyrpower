@@ -2259,7 +2259,10 @@ swiper-container .swiper-notification {
   justify-content: center;
   filter: blur(4.5px);
 }
-.hero-section .circle-slider .swiper-slide img {
+.hero-section .circle-slider .swiper-slide a {
+  pointer-events: none;
+}
+.hero-section .circle-slider .swiper-slide a img {
   display: flex;
   -o-object-fit: cover;
      object-fit: cover;
@@ -3699,6 +3702,9 @@ swiper-container .swiper-notification {
   padding-top: 150px;
   padding-bottom: 122px;
 }
+.specialorder .specialorder-clouds {
+  z-index: -1;
+}
 .specialorder-cloud-top-right {
   position: absolute;
   right: 0;
@@ -3708,7 +3714,7 @@ swiper-container .swiper-notification {
 }
 .specialorder-cloud-bottom-left {
   position: absolute;
-  left: 30%;
+  left: 42%;
   bottom: 0;
   z-index: -1;
   animation: smallTranslateCloudReverse 9s ease-in-out infinite;
