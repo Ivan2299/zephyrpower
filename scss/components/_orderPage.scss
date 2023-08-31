@@ -269,11 +269,12 @@
 		padding-left: 33px;
 		border-left: 1px solid $mainLightBlue;
 		margin-bottom: 10px;
+		direction: rtl;
 	}
 
 	// .form-order__item-card
-
 	&__item-card {
+		direction: ltr;
 	}
 
 	&__item-footer {

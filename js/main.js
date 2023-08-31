@@ -74,7 +74,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		slideToClickedSlide: true,
 		slidesPerGroupAuto: true,
 		speed: 400,
-		effect: 'slide',
+		effect: 'coverflow',
+
+		coverflowEffect: {
+			rotate: 10,
+			stretch: 10,
+			depth: 80,
+			modifier: 1,
+			slideShadows: false,
+		},
 	});
 
 	let slider3 = new Swiper(sliderNew, {

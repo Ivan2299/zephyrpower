@@ -25,7 +25,7 @@
 		z-index: 2;
 	}
 	.power-cloud-1 {
-		left: -38%;
+		left: -41%;
 		top: 16%;
 	}
 	.power-cloud-2 {
@@ -42,14 +42,14 @@
 	}
 	.power-cloud-5 {
 		top: 7%;
-		left: -21%;
+		left: -26%;
 		@media (max-width: (1200px)) {
 			display: none;
 		}
 	}
 	.power-cloud-6 {
 		top: 7%;
-		right: -21%;
+		right: -26%;
 		@media (max-width: (1200px)) {
 			display: none;
 		}
@@ -160,7 +160,7 @@
 			.power-slider-instagram,
 			.swiper-button-next,
 			.swiper-button-prev {
-				filter: drop-shadow(0px 15px 8px #bf4c4c);
+			filter: drop-shadow(0px 7px 5px #f8acac);
 			}
 		}
 		.swiper-slide {
@@ -198,6 +198,14 @@
 
 		.swiper-wrapper {
 			align-items: flex-end;
+		}
+	}
+	@media (max-width: (1441px)) {
+		.power .power-cloud-2 {
+			right: -28%;
+		}
+		.power-cloud-2 {
+			right: -29%;
 		}
 	}
 	@media (max-width: (1300px)) {
