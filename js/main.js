@@ -751,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Call the animation function
 
-	const powerAnimation = function () {
+const powerAnimation = function () {
 		const cloudImgsPowerRight = document.querySelectorAll('.power-cloud-right');
 		const cloudImgsPowerLeft = document.querySelectorAll('.power-cloud-left');
 

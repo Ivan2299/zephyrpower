@@ -291,8 +291,16 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
-		text-decoration-line: underline;
+		// text-decoration-line: underline;
 		margin-top: 42px;
+		transition: all 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainLightBlue !important;
+				text-shadow: 1px 3px 3px rgba(4, 95, 60, 0.5);
+			}
+		}
 	}
 
 	/* Reset Bootstrap tabs styles */
