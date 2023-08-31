@@ -504,7 +504,7 @@ svg {
 .two__sections-wrapper .two___sections-cloud-img-right {
   position: absolute;
   top: 0;
-  right: -30%;
+  right: -60%;
   z-index: -1;
 }
 .two__sections-wrapper .two___sections-cloud-img-right.animated {
@@ -524,7 +524,7 @@ svg {
 .two__sections-wrapper .two___sections-cloud-img-left {
   position: absolute;
   top: 40%;
-  left: -30%;
+  left: -60%;
   z-index: -1;
 }
 .two__sections-wrapper .two___sections-cloud-img-left.animated {

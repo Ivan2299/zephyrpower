@@ -673,10 +673,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			cloudImgNew,
 			{
 				x: '-100%',
+				y: '-100%',
 				opacity: 0,
 			},
 			{
 				x: '0%',
+				y: '0%',
 				opacity: 1,
 				duration: 5,
 				delay: 0.5,
@@ -692,10 +694,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		gsap.fromTo(
 			cloudImgNew2,
 			{
+				y: '-100%',
 				x: '100%',
 				opacity: 0,
 			},
 			{
+				y: '0%',
 				x: '0%',
 				opacity: 1,
 				duration: 5,
@@ -751,7 +755,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Call the animation function
 
-const powerAnimation = function () {
+	const powerAnimation = function () {
 		const cloudImgsPowerRight = document.querySelectorAll('.power-cloud-right');
 		const cloudImgsPowerLeft = document.querySelectorAll('.power-cloud-left');
 
