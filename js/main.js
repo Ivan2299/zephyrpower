@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		longSwipesMs: 2000,
 		enabled: true,
 		centeredSlides: true,
-		slidesPerView: 3,
+		slidesPerView: 2.8,
 		loop: true,
 		slideToClickedSlide: true,
 		slidesPerGroupAuto: true,

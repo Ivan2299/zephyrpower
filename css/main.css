@@ -2290,11 +2290,11 @@ swiper-container .swiper-notification {
   transition: all 0.3s ease;
 }
 .hero-section .circle-slider .swiper-slide-prev {
-  transform: translateY(-30px) !important;
+  transform: translate(30px, -30px) !important;
   transition: all 0.5s ease 0s;
 }
 .hero-section .circle-slider .swiper-slide-next {
-  transform: translateY(30px) !important;
+  transform: translate(-30px, 30px) !important;
   transition: all 0.5s ease 0s;
 }
 .hero-section .circle-slider .swiper-slide-active a {
@@ -3635,7 +3635,7 @@ swiper-container .swiper-notification {
   font-weight: 500;
   color: #000;
 }
-@media (min-width: 1200px) {
+@media (min-width: 959px) {
   .footer__item-mail {
     margin-bottom: 90px;
   }
@@ -4617,6 +4617,7 @@ swiper-container .swiper-notification {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
   z-index: 10;
+  overflow-y: auto;
 }
 .myaccount__popup-content {
   position: relative;

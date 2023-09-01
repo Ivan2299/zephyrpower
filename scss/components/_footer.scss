@@ -6,7 +6,7 @@
 	}
 	&__item-spoller2 {
 		display: none;
-}
+	}
 
 	&__container {
 		max-width: 1310px;
@@ -96,7 +96,7 @@
 		text-decoration: underline;
 		font-weight: 500;
 		color: $black;
-		@media (min-width: (1200px)) {
+		@media (min-width: (959px)) {
 			margin-bottom: 90px;
 		}
 	}
