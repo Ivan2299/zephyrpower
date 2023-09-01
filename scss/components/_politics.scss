@@ -2,6 +2,9 @@
 	position: relative;
 	margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
 	margin-top: 150px;
+	span{
+		font-weight: 600;
+	}
 
 	&__breadcrumps {
 		margin-bottom: 40px;

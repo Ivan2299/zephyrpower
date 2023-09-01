@@ -6308,6 +6308,9 @@ swiper-container .swiper-notification {
   margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
   margin-top: 150px;
 }
+.politics span {
+  font-weight: 600;
+}
 .politics__breadcrumps {
   margin-bottom: 40px;
 }
