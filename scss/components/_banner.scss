@@ -267,11 +267,20 @@
 				}
 			}
 		}
+		.circle-slider-clouds-1200 {
+			z-index: 1;
+		}
 		.circle-slider-cloud-1-1200 {
-			bottom: 25%;
+			bottom: 20%;
 		}
 		.circle-slider-cloud-2-1200 {
-			bottom: 17%;
+			bottom: 9%;
+		}
+		.circle-slider .swiper-slide-next {
+			transform: translate(0px, 0px) !important;
+		}
+		.circle-slider .swiper-slide-prev {
+			transform: translate(0px, 0px) !important;
 		}
 	}
 }

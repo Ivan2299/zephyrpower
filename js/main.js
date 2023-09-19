@@ -1093,6 +1093,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const animateForm = function () {
 		const formCloud1 = document.querySelector('.form-cloud-1');
 		const formCloud2 = document.querySelector('.form-cloud-2');
+		const formCloudYellow = document.querySelector('.form-cloud-2-yellow');
 		// Timeline for the animation
 
 		const tl = gsap.timeline({
@@ -1104,6 +1105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (formCloud1) {
 					formCloud1.classList.add('animated');
 				}
+
 				// if (formCloud2) {
 				// 	formCloud2.classList.add('animated');
 				// }

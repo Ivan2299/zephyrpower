@@ -10,8 +10,11 @@
 
 	&__container {
 		max-width: 1310px;
-		padding: 0 10 px;
+		padding: 0 10px;
 		margin: 0 auto;
+		@media (max-width: (960px)) {
+			padding: 0 20px;
+		}
 	}
 
 	// .footer__inner
