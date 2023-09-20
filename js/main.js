@@ -1581,18 +1581,17 @@ document.addEventListener('DOMContentLoaded', function () {
 		);
 	};
 
-	if (innerWidth > 1200) {
-		reviewsAnimation();
-		animateForm();
-		newAnimation();
-		powerAnimation();
-		animateClouds();
-		animateHiSection();
-		bestsellersAnimation();
-		carttabsCloudsAnimation();
-		filterCloudsAnimate();
-		bannerAnimation();
-	}
+	// виклик анімацій (якщо потрібно , просто добавити розширення екрану на якому викликати ці анімації)
+	reviewsAnimation();
+	animateForm();
+	newAnimation();
+	powerAnimation();
+	animateClouds();
+	animateHiSection();
+	bestsellersAnimation();
+	carttabsCloudsAnimation();
+	filterCloudsAnimate();
+	bannerAnimation();
 	// GSAP ANIMATIONS END ///////////////////////////////////////////////////
 
 	// tabs///////////////////////////////////////////////////

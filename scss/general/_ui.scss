@@ -173,11 +173,25 @@
 		font-size: 14px;
 		font-style: normal;
 		font-weight: 400;
+		&:not(:last-child)::after {
+			content: '' !important;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="%239E9E9E"/></svg>');
+		}
 	}
 
 	// .breadcrumps__link
 
 	&__link {
+		@media (max-width: (960px)) {
+			color: #9e9e9e !important;
+			font-size: 14px;
+		}
+		@media (max-width: (500px)) {
+			font-size: 10px;
+		}
 	}
 
 	// .breadcrumps__item-active
@@ -186,5 +200,41 @@
 		color: #000;
 		font-weight: 600;
 		font-size: 14px;
+	}
+	&__item-home-960 {
+		display: none;
+	}
+	.breadcrumps &__item-arrow-back {
+		display: none;
+
+		@media (max-width: (960px)) {
+			display: flex;
+		}
+		@media (max-width: (500px)) {
+			svg {
+				width: 37px;
+				height: 28px;
+			}
+		}
+	}
+
+	.breadcrumps &__item:first-child::after {
+		content: '';
+		display: none;
+	}
+	@media (max-width: (960px)) {
+		&__item-home {
+			display: none;
+		}
+		&__item-home-960 {
+			display: block;
+		}
+	}
+
+	@media (max-width: (500px)) {
+		&__item-home-960 {
+			width: 17px;
+			height: 17px;
+		}
 	}
 }

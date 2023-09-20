@@ -22,10 +22,16 @@
 			animation: smallTranslateCloudReverse 10s ease-in-out infinite;
 		}
 	}
+
 	.form-cloud-2-yellow {
 		bottom: -180%;
 		right: 20%;
 		left: unset;
+	}
+	@media (min-width: (1440px)) {
+		.form-cloud-2-yellow {
+			right: 13%;
+		}
 	}
 	.main-form {
 		max-width: 670px;
