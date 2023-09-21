@@ -266,6 +266,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		// 	disableOnInteraction: false, // Autoplay continues even when the user interacts with the slider
 		// },
 
+		pagination: {
+			el: '.swiper-pagination',
+			dynamicBullets: true,
+		},
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',

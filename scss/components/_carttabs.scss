@@ -431,3 +431,253 @@
 		}
 	}
 }
+.reviews {
+	&__button-wrapper {
+		display: none;
+	}
+}
+@media (max-width: (960px)) {
+	.carttabs {
+		padding: 0 50px;
+	}
+	.carttabs__tabs {
+		row-gap: 40px;
+	}
+	.carttabs__inner {
+		flex: 1 0 490px;
+	}
+	.carttabs__tabs-cloud-1 {
+		width: 380px;
+		height: 140px;
+		bottom: -5%;
+		z-index: 1;
+	}
+	.carttabs__tabs-cloud-2 {
+		width: 341px;
+		height: 140px;
+		right: 12%;
+	}
+	.carttabs__tabs-figure {
+		width: 230px;
+		height: 430px;
+	}
+	.carttabs__tabs-images {
+		min-height: 417px;
+		column-gap: 52px;
+		justify-content: space-between;
+	}
+	.carttabs__tabs-image-1 {
+		flex: 0 0 215px;
+		max-width: 215px;
+		max-height: 256px;
+		object-fit: cover;
+	}
+	.carttabs__tabs-image-2 {
+		flex: 0 0 215px;
+		max-height: 281px;
+		height: 281px;
+		object-fit: cover;
+		max-width: 215px;
+	}
+	.carttabs__tabs-titles {
+		column-gap: 30px;
+		img {
+			width: 71px;
+			height: 48px;
+		}
+	}
+	.carttabs__content-button {
+		padding: 15px;
+		width: 100%;
+	}
+	.carttabs__content-button-add {
+		justify-content: space-between;
+		column-gap: 20px;
+	}
+	.carttabs__content-button svg {
+		position: relative;
+		right: unset;
+		top: unset;
+		transform: translate(0px, 0px);
+	}
+	.carttabs__content-delivery {
+		font-size: 14px;
+		text-decoration: underline;
+		font-weight: 400;
+	}
+
+	.carttabs2 {
+		&-link {
+			padding: 10px 20px;
+			font-size: 16px;
+			&-padding {
+				padding: 10px 62px;
+			}
+		}
+		&__bg-left {
+			z-index: -1;
+		}
+		&__bg-right {
+			z-index: -1;
+		}
+		&__tabs-titles {
+			column-gap: 51px;
+			max-width: 550px;
+			margin: 0 auto 10px;
+		}
+		&__body {
+			max-width: 700px;
+		}
+	}
+	.reviews {
+		&__wrapper {
+			padding: 0 45px;
+			flex-direction: column-reverse;
+		}
+		&__form-wrapper {
+			max-width: 740px;
+			width: 100%;
+			margin: 0 auto;
+			flex: 1 1 auto;
+			align-self: stretch;
+			padding: 30px 70px;
+			margin-bottom: 40px;
+		}
+		&__form {
+			display: grid;
+			justify-items: flex-start;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(4, minmax(50px, 1fr));
+		}
+		&__form-button {
+			margin: unset;
+			margin-top: 40px;
+		}
+
+		&__form-area {
+			grid-row: 1/6;
+			grid-column: 2 / 3;
+			margin-bottom: 0;
+		}
+
+		&__content {
+			max-width: 100%;
+		}
+		&__item {
+			column-gap: 50px;
+		}
+		&__item-image-wrapper {
+			row-gap: 20px;
+		}
+		.reviews-pagination {
+			display: none;
+		}
+		&__button-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 40px;
+		}
+	}
+	.form-wrapper .form-cloud-1,
+	.form-wrapper .form-cloud-2 {
+		display: block;
+	}
+	.form-wrapper .form-cloud-1 {
+		bottom: -153%;
+		left: -12%;
+	}
+	.form-wrapper .form-cloud-2 {
+		bottom: -147%;
+		right: 27%;
+		left: unset;
+	}
+}
+@media (max-width: (800px)) {
+	.carttabs {
+		padding: 0 20px;
+		margin-bottom: 40px;
+		&__wrapper {
+			gap: 20px;
+			flex-direction: column;
+		}
+		&__inner {
+			margin: 0 auto;
+		}
+		&__content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			margin-bottom: 0;
+			&-rating {
+				margin-bottom: 10px;
+			}
+			&-price-wrapper {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+@media (max-width: (500px)) {
+	.carttabs {
+		margin-top: 80px;
+
+		.carttabs__content-button-wrapper{
+			
+		}
+
+		.carttabs__content {
+			align-items: stretch;
+		}
+		.carttabs__content-title {
+			align-self: center;
+		}
+
+		.carttabs__content-sup {
+			font-size: 13px;
+			color: #555;
+			align-self: center;
+		}
+		.carttabs__content-rating {
+			display: none;
+		}
+		.carttabs__content-price-wrapper {
+			justify-items: start;
+		}
+
+		.carttabs__inner {
+			flex: unset;
+		}
+		&__tabs-image-1 {
+			width: 148px;
+			flex: unset;
+			height: 250px;
+			border-radius: 100px 0px 0px 0px;
+		}
+		&__tabs-image-2 {
+			width: 148px;
+			flex: unset;
+			height: 250px;
+			border-radius: 0px 100px 0px 0px;
+		}
+		&__tabs-titles {
+			flex-wrap: nowrap;
+			gap: 20px;
+		}
+		&__tabs-images {
+			column-gap: 10px;
+			min-height: 326px;
+		}
+		.carttabs__tabs-figure {
+			width: 146px;
+			height: 274px;
+		}
+		.carttabs__tabs-cloud-2 {
+			right: 0;
+		}
+		.carttabs__tabs-cloud-1 {
+			left: -20%;
+		}
+	}
+}
