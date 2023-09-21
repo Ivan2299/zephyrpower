@@ -33,6 +33,9 @@
 			max-width: 790px;
 			padding: 0 10px;
 		}
+		@media (max-width: (768px)) {
+			padding: 0 30px;
+		}
 	}
 	&__60p {
 		max-width: 1310px;
@@ -238,7 +241,6 @@
 	}
 
 	@media (max-width: (500px)) {
-		
 		.breadcrumps__item-arrow-back {
 			margin-right: 5px;
 		}

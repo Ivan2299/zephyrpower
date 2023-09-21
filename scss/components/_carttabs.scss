@@ -618,13 +618,32 @@
 			}
 		}
 	}
+	.carttabs2 {
+		.carttabs2-link-padding {
+			padding: 10px 20px;
+		}
+	}
+	.reviews {
+		&__form-wrapper {
+			padding: 30px 20px;
+		}
+		&__form {
+			display: block;
+		}
+	}
 }
 @media (max-width: (500px)) {
 	.carttabs {
 		margin-top: 80px;
 
-		.carttabs__content-button-wrapper{
-			
+		.carttabs__content-button-add {
+			justify-content: center;
+			margin-bottom: 0;
+		}
+		.carttabs__content-delivery {
+			margin: 0;
+			align-self: center;
+			text-decoration: underline;
 		}
 
 		.carttabs__content {
@@ -679,5 +698,96 @@
 		.carttabs__tabs-cloud-1 {
 			left: -20%;
 		}
+	}
+	.carttabs2 {
+		.carttabs2__tabs-titles {
+			column-gap: 10px;
+			justify-content: space-between;
+		}
+		.carttabs2__body {
+			padding: 20px;
+		}
+		.carttabs2-link {
+			font-size: 13px;
+		}
+		.carttabs2__bg-left {
+			display: none;
+		}
+		.carttabs2__bg-right {
+			display: none;
+		}
+
+		.carttabs2__body-title {
+			margin-bottom: 20px;
+		}
+		.carttabs2__body-text:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	.reviews {
+		.reviews__title {
+			margin-bottom: 20px;
+		}
+		.reviews__form-title {
+			text-align: left;
+		}
+		.reviews__wrapper {
+			padding: 0 15px;
+		}
+		.reviews__form-wrapper {
+			border-radius: 5px 20px 5px 5px;
+		}
+		.reviews__form-title {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+		.reviews__form-input {
+			font-size: 13px;
+		}
+		.reviews__form-rating-label {
+			font-size: 13px;
+		}
+		.reviews__form-area {
+			padding: 20px;
+			font-size: 10px;
+		}
+		.reviews__form-button {
+			display: flex;
+			margin: 0 auto;
+			margin-top: 40px;
+		}
+		.reviews__item {
+			column-gap: 44px;
+		}
+		.reviews__item-image {
+			width: 30px;
+			height: 30px;
+		}
+		.reviews__item-image-wrapper {
+			row-gap: 10px;
+		}
+		.reviews__item-image::before {
+			width: 40px;
+			height: 40px;
+		}
+		.reviews__item-info-date {
+			font-size: 10px;
+		}
+		.reviews__item-info-wrapper {
+			row-gap: 15px;
+		}
+		.reviews__item-info-text {
+			font-size: 12px;
+		}
+	}
+	.form-wrapper {
+		margin: 40px 0;
+	}
+	.form-wrapper .form-cloud-1 {
+		display: none;
+	}
+	.form-wrapper .form-cloud-2 {
+		bottom: -50%;
+		right: 28%;
 	}
 }

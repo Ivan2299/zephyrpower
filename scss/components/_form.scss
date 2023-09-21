@@ -127,7 +127,7 @@
 	.form-wrapper {
 		margin-top: 60px;
 		.form-group {
-			width: 80%;
+			width: 90%;
 			margin: 0 auto;
 			row-gap: 20px;
 		}
@@ -139,6 +139,7 @@
 		}
 	}
 }
+
 @media (max-width: (425px)) {
 	.form-wrapper {
 		.form-button {

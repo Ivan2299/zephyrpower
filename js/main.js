@@ -274,26 +274,15 @@ document.addEventListener('DOMContentLoaded', function () {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-
-		// breakpoints: {
-		// 	640: {
-		// 		slidesPerView: 1,
-		// 		spaceBetween: 0,
-		// 		autoHeight: true,
-		// 	},
-		// 	768: {
-		// 		slidesPerView: 2,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	992: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 20,
-		// 	},
-		// 	1268: {
-		// 		slidesPerView: 4,
-		// 		spaceBetween: 30,
-		// 	},
-		// },
+		breakpoints: {
+			320: {
+				slidesPerView: 2,
+				centeredSlides: false,
+			},
+			600: {
+				slidesPerView: 3,
+			},
+		},
 	});
 
 	let sliderCategoryfunction = () => {
