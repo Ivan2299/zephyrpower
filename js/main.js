@@ -627,9 +627,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const filterBtn = document.querySelector('.catalog__content-top-left-filter');
 	const filterBlock = document.querySelector('.catalog__filter-block');
+	const filterBlockContent = document.querySelector('.catalog__filter-block-content');
 
 	const toggleFilterBlock = () => {
 		filterBlock.classList.toggle('active');
+		filterBlockContent.classList.toggle('active');
 	};
 
 	if (filterBtn) {

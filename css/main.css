@@ -4902,30 +4902,39 @@ swiper-container .swiper-notification {
   position: fixed;
   display: none;
   top: 0;
-  left: -100%; /* Змінено з -100% на 100% */
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
   width: 100%;
   height: 100%;
   z-index: 10;
   transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 960px) {
   .catalog__filter-block {
     display: block;
   }
   .catalog__filter-block.active {
-    left: 0;
+    opacity: 1;
+    visibility: visible;
   }
 }
 .catalog__filter-block-content {
   position: relative;
   display: grid;
   row-gap: 100px;
+  left: -100%;
   width: 80%;
   height: 100%;
   background-color: #fff;
-  padding: 33px 45px 20px 64px;
+  padding: 33px 30px 60px 30px;
   overflow: auto;
   box-shadow: 0px 16px 53px 14px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease 0s;
+}
+.catalog__filter-block-content.active {
+  left: 0;
 }
 .catalog__filter-block-title {
   text-align: center;
@@ -5045,6 +5054,7 @@ swiper-container .swiper-notification {
 
 @media (max-width: 960px) {
   .catalog {
+    margin-top: 120px;
     padding: 0 40px;
   }
   .catalog .catalog__accordion-1440 {
@@ -5064,12 +5074,144 @@ swiper-container .swiper-notification {
   .catalog .breads__item {
     padding: 10px 15px;
     display: flex;
+    align-items: center;
     gap: 10px;
     border-radius: 15px;
     background: rgba(158, 158, 158, 0.2);
   }
   .catalog .catalog__filter-block-buttons .button-accent {
     padding: 15px 60px;
+  }
+  .catalog .bestsellers__item {
+    padding: 0;
+  }
+  .catalog .bestsellers__item-info {
+    padding: 20px 0 0 0;
+  }
+  .catalog .catalog__cloud-1 {
+    right: -12%;
+  }
+  .catalog .catalog__cloud-2 {
+    top: 32%;
+    left: -19%;
+  }
+  .catalog .bestsellers__item-select,
+  .catalog .bestsellers__item-button {
+    display: none;
+  }
+  .catalog .reviews-pagination {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .catalog .catalog__content-top-title {
+    display: none;
+  }
+  .catalog .catalog__content-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .catalog .catalog__content-top {
+    gap: 20px;
+  }
+  .catalog .catalog__content-top-wrapper-select {
+    align-items: stretch;
+  }
+}
+@media (max-width: 600px) {
+  .catalog {
+    margin-top: 80px;
+    padding: 0 30px;
+  }
+  .catalog .container__big {
+    padding: 0;
+  }
+  .catalog .catalog__accordion-item {
+    padding: 0 20px;
+  }
+  .catalog .catalog__filter-block-close {
+    width: 19px;
+    height: 20px;
+    right: 35px;
+  }
+  .catalog .catalog__accordion-button {
+    font-size: 14px;
+  }
+  .catalog .catalog__accordion-button::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+  }
+  .catalog .catalog__filter-block-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 57px;
+    width: 100%;
+    padding: 30px 20px 30px 30px;
+  }
+  .catalog .catalog__accordion {
+    flex: 1 1 auto;
+  }
+  .catalog .catalog__filter-block-buttons {
+    gap: 20px;
+    padding-right: 10px;
+  }
+  .catalog .catalog__filter-block-buttons button {
+    padding: 18px !important;
+    flex: 0 1 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .catalog .bestsellers__item-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .catalog .bestsellers__item-sup {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .catalog .bestsellers__item-rating-wrapper {
+    font-size: 12px;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  .catalog .catalog__content-more {
+    width: 100%;
+  }
+  .catalog .catalog__content-more a {
+    width: 100%;
+  }
+  .catalog .catalog .bestsellers__item-info {
+    padding: 10px 0 0 0;
+  }
+  .catalog .breads__item {
+    font-size: 13px;
+  }
+  .catalog .breads__item svg {
+    width: 12px;
+    height: 12px;
+  }
+  .catalog .catalog__content {
+    gap: 20px;
+    padding: 0;
+  }
+  .catalog .breads__wrapper {
+    gap: 10px;
+  }
+  .catalog .catalog__title {
+    margin-bottom: 20px;
+  }
+  .catalog .catalog__content-top div {
+    flex: 0 1 50%;
+    font-size: 14px;
+  }
+  .catalog .catalog__content-top-left-filter {
+    padding: 15px;
+    gap: 10px;
+  }
+  .catalog .catalog__content-top-select {
+    padding: 18px 42px 18px 10px;
+    width: 100%;
   }
 }
 .myaccount__popup-cloud-top-left {
