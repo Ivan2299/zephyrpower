@@ -440,6 +440,9 @@
 	.carttabs {
 		padding: 0 50px;
 	}
+	.carttabs__breadcrumps {
+		margin-bottom: 30px;
+	}
 	.carttabs__tabs {
 		row-gap: 40px;
 	}
@@ -758,6 +761,7 @@
 		}
 		.reviews__item {
 			column-gap: 44px;
+			padding: 20px 0;
 		}
 		.reviews__item-image {
 			width: 30px;

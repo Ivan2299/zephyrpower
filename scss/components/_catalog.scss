@@ -81,11 +81,12 @@
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+		padding: 0 15px;
 	}
 	&__content-top {
 		display: flex;
 		justify-content: space-between;
-		margin: 0 10px;
+
 		align-self: flex-end;
 		z-index: 1;
 	}
@@ -110,7 +111,7 @@
 			position: relative;
 			display: grid;
 			row-gap: 100px;
-			width: 40%;
+			width: 80%;
 			height: 100%;
 			background-color: $white;
 			padding: 33px 45px 20px 64px;
@@ -240,5 +241,41 @@
 	}
 	&__content-pagination {
 		text-align: center;
+	}
+
+	.breads {
+		display: none;
+	}
+}
+
+@media (max-width: (960px)) {
+	.catalog {
+		padding: 0 40px;
+		.catalog__accordion-1440 {
+			display: none;
+		}
+		.catalog__content-top {
+			align-self: stretch;
+		}
+		.breads {
+			display: block;
+			&__wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+			&__item {
+				padding: 10px 15px;
+				display: flex;
+				gap: 10px;
+				border-radius: 15px;
+				background: rgba(158, 158, 158, 0.2);
+			}
+		}
+		.catalog__filter-block-buttons {
+			.button-accent {
+				padding: 15px 60px;
+			}
+		}
 	}
 }

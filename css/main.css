@@ -4481,6 +4481,9 @@ swiper-container .swiper-notification {
   .carttabs {
     padding: 0 50px;
   }
+  .carttabs__breadcrumps {
+    margin-bottom: 30px;
+  }
   .carttabs__tabs {
     row-gap: 40px;
   }
@@ -4790,6 +4793,7 @@ swiper-container .swiper-notification {
   .reviews .reviews__item {
     -moz-column-gap: 44px;
          column-gap: 44px;
+    padding: 20px 0;
   }
   .reviews .reviews__item-image {
     width: 30px;
@@ -4886,11 +4890,11 @@ swiper-container .swiper-notification {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 0 15px;
 }
 .catalog__content-top {
   display: flex;
   justify-content: space-between;
-  margin: 0 10px;
   align-self: flex-end;
   z-index: 1;
 }
@@ -4916,7 +4920,7 @@ swiper-container .swiper-notification {
   position: relative;
   display: grid;
   row-gap: 100px;
-  width: 40%;
+  width: 80%;
   height: 100%;
   background-color: #fff;
   padding: 33px 45px 20px 64px;
@@ -5035,7 +5039,39 @@ swiper-container .swiper-notification {
 .catalog__content-pagination {
   text-align: center;
 }
+.catalog .breads {
+  display: none;
+}
 
+@media (max-width: 960px) {
+  .catalog {
+    padding: 0 40px;
+  }
+  .catalog .catalog__accordion-1440 {
+    display: none;
+  }
+  .catalog .catalog__content-top {
+    align-self: stretch;
+  }
+  .catalog .breads {
+    display: block;
+  }
+  .catalog .breads__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .catalog .breads__item {
+    padding: 10px 15px;
+    display: flex;
+    gap: 10px;
+    border-radius: 15px;
+    background: rgba(158, 158, 158, 0.2);
+  }
+  .catalog .catalog__filter-block-buttons .button-accent {
+    padding: 15px 60px;
+  }
+}
 .myaccount__popup-cloud-top-left {
   position: absolute;
   bottom: -40px;
