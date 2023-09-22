@@ -5079,6 +5079,19 @@ swiper-container .swiper-notification {
     border-radius: 15px;
     background: rgba(158, 158, 158, 0.2);
   }
+  .catalog .catalog__filter-block-buttons {
+    position: relative;
+    padding-top: 40px;
+  }
+  .catalog .catalog__filter-block-buttons::before {
+    content: "";
+    border-top: 1px solid #3f8f8d;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    left: -30px;
+    height: 2px;
+  }
   .catalog .catalog__filter-block-buttons .button-accent {
     padding: 15px 60px;
   }
@@ -5154,6 +5167,7 @@ swiper-container .swiper-notification {
   .catalog .catalog__filter-block-buttons {
     gap: 20px;
     padding-right: 10px;
+    padding-top: 30px;
   }
   .catalog .catalog__filter-block-buttons button {
     padding: 18px !important;
@@ -5974,7 +5988,15 @@ swiper-container .swiper-notification {
 }
 @media (max-width: 640px) {
   .cartpage {
-    margin-top: 100px;
+    margin-top: 80px;
+  }
+}
+.cartpage .container__big {
+  padding: 0 30px;
+}
+@media (max-width: 500px) {
+  .cartpage .container__big {
+    padding: 0 15px;
   }
 }
 .cartpage .myaccountpage-cloud-right {
@@ -6921,6 +6943,14 @@ swiper-container .swiper-notification {
   margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
   margin-top: 150px;
 }
+.garant .container__big {
+  padding: 0 60px;
+}
+@media (max-width: 500px) {
+  .garant .container__big {
+    padding: 0 30px;
+  }
+}
 .garant__breadcrumps {
   margin-bottom: 40px;
 }
@@ -6946,6 +6976,28 @@ swiper-container .swiper-notification {
   padding-left: 20px;
 }
 
+@media (max-width: 960px) {
+  .garant {
+    margin-top: 120px;
+  }
+}
+@media (max-width: 960px) and (max-width: 500px) {
+  .garant {
+    margin-top: 80px;
+  }
+  .garant .garant__breadcrumps {
+    margin-bottom: 30px;
+  }
+  .garant .politics__breadcrumps {
+    margin-bottom: 0;
+  }
+  .garant .carttabs__breadcrumps {
+    margin-bottom: 0;
+  }
+  .garant .garant__title {
+    margin-bottom: 20px;
+  }
+}
 .politics {
   position: relative;
   margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
@@ -6953,6 +7005,14 @@ swiper-container .swiper-notification {
 }
 .politics span {
   font-weight: 600;
+}
+.politics .container__big {
+  padding: 0 60px;
+}
+@media (max-width: 500px) {
+  .politics .container__big {
+    padding: 0 30px;
+  }
 }
 .politics__breadcrumps {
   margin-bottom: 40px;
@@ -6992,4 +7052,25 @@ swiper-container .swiper-notification {
 }
 .politics__ul li {
   margin-bottom: 10px;
+}
+
+@media (max-width: 960px) {
+  .politics {
+    margin-top: 120px;
+  }
+  .politics .politics__title {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .politics {
+    margin-top: 80px;
+  }
+  .politics .politics__breadcrumps {
+    margin-bottom: 28px;
+  }
+  .politics .politics__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 }

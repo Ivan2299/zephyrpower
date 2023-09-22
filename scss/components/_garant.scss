@@ -2,6 +2,12 @@
 	position: relative;
 	margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
 	margin-top: 150px;
+	.container__big {
+		padding: 0 60px;
+		@media (max-width: (500px)) {
+			padding: 0 30px;
+		}
+	}
 
 	&__breadcrumps {
 		margin-bottom: 40px;
@@ -37,6 +43,29 @@
 			margin-bottom: 20px;
 			list-style: outside;
 			padding-left: 20px;
+		}
+	}
+}
+
+@media (max-width: (960px)) {
+	.garant {
+		margin-top: 120px;
+	}
+	@media (max-width: (500px)) {
+		.garant {
+			margin-top: 80px;
+			.garant__breadcrumps {
+				margin-bottom: 30px;
+			}
+			.politics__breadcrumps {
+				margin-bottom: 0;
+			}
+			.carttabs__breadcrumps {
+				margin-bottom: 0;
+			}
+			.garant__title {
+				margin-bottom: 20px;
+			}
 		}
 	}
 }

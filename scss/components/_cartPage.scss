@@ -2,7 +2,14 @@
 	margin-bottom: clamp(3.125rem, 1.438rem + 8.44vw, 6.5rem); //104-50px
 	margin-top: 150px;
 	@media (max-width: (640px)) {
-		margin-top: 100px;
+		margin-top: 80px;
+	}
+
+	.container__big {
+		padding: 0 30px;
+		@media (max-width: (500px)) {
+			padding: 0 15px;
+		}
 	}
 
 	.myaccountpage-cloud-right {
@@ -249,4 +256,3 @@
 		margin-right: -10px;
 	}
 }
-

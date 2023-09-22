@@ -2,8 +2,15 @@
 	position: relative;
 	margin-bottom: clamp(3.75rem, 2.376rem + 6.87vw, 8rem);
 	margin-top: 150px;
-	span{
+	span {
 		font-weight: 600;
+	}
+
+	.container__big {
+		padding: 0 60px;
+		@media (max-width: (500px)) {
+			padding: 0 30px;
+		}
 	}
 
 	&__breadcrumps {
@@ -94,5 +101,26 @@
 	// .politics-block__inner
 
 	&__inner {
+	}
+}
+
+@media (max-width: (960px)) {
+	.politics {
+		margin-top: 120px;
+		.politics__title {
+			margin-bottom: 30px;
+		}
+	}
+}
+@media (max-width: (500px)) {
+	.politics {
+		margin-top: 80px;
+		.politics__breadcrumps {
+			margin-bottom: 28px;
+		}
+		.politics__title {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
 	}
 }
