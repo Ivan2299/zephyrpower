@@ -3943,6 +3943,89 @@ swiper-container .swiper-notification {
   margin-bottom: 40px;
 }
 
+@media (max-width: 960px) {
+  .specialorder {
+    padding-top: 120px;
+    padding-bottom: 90px;
+  }
+  .specialorder .container {
+    padding: 0 60px;
+  }
+  .specialorder .container__big {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 960px) and (max-width: 600px) {
+  .specialorder .container__big {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 960px) {
+  .specialorder__inner {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+  .specialorder .specialorder__contacts-block {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .specialorder .specialorder__contacts-textarea {
+    border-radius: 0px 0px 50px 0px;
+    padding: 30px 52px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    margin-bottom: 0;
+  }
+  .specialorder .specialorder__contacts-btn {
+    grid-column: 2/3;
+  }
+  .specialorder .specialorder-cloud-top-right {
+    display: none;
+  }
+  .specialorder .specialorder__contacts-title {
+    margin-bottom: 0;
+  }
+  .specialorder .specialorder__contacts-inputs {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-row: span 2;
+  }
+  .specialorder .specialorder__contacts-inputs input {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  .specialorder .specialorder__form-title {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .specialorder {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  .specialorder .container {
+    padding: 0 30px;
+  }
+  .specialorder .specialorder__contacts-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .specialorder .specialorder__contacts-textarea {
+    padding: 20px;
+  }
+  .specialorder .specialorder__contacts-btn {
+    display: inline-flex;
+    justify-self: center;
+    align-self: center;
+    padding: 15px 53px;
+  }
+  .specialorder .specialorder__inner {
+    row-gap: 60px;
+  }
+}
 .reviews {
   margin-bottom: clamp(2.5rem, 1.49rem + 5.05vw, 5.625rem);
 }
@@ -6807,7 +6890,7 @@ swiper-container .swiper-notification {
     left: -48%;
   }
   .order .order-cloud-3 {
-    top: 43%;
+    bottom: -1%;
     left: 6%;
   }
   .order .container__big {
