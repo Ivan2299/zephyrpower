@@ -664,14 +664,120 @@
 }
 @media (max-width: (500px)) {
 	.order {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		.order-cloud {
+			pointer-events: none;
+			// z-index: 1;
+		}
+		.order-cloud-1 {
+			top: 40%;
+			left: -48%;
+		}
+		.order-cloud-2 {
+			top: 37%;
+			left: -48%;
+		}
+
+		.order-cloud-3 {
+			top: 43%;
+			left: 6%;
+		}
 		.container__big {
 			padding: 0 30px;
 		}
-		.carttabs__breadcrumps{
+		.carttabs__breadcrumps {
 			margin-bottom: 20px;
 		}
 		.order__title {
 			font-size: 24px;
+		}
+		.tabs-content-order-item-count-num,
+		.tabs-content-order-item-price {
+			font-size: 16px;
+		}
+		.form-order {
+			&__info {
+				padding-left: 30px;
+			}
+			&__list {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			&__title {
+				margin-top: 0;
+				font-size: 16px;
+			}
+			&__list li {
+				border-left: 5px solid transparent !important;
+				border-top: none !important;
+				padding: 0 0 42px 53px;
+
+				&::before {
+					left: 0;
+					top: 10px;
+				}
+				&.active {
+					border-top: none !important;
+					border-left: 5px solid #ffd3de !important;
+				}
+				&.preActive {
+					border-left: 5px solid #fbf9f9 !important;
+					&.active {
+						border-left: 5px solid #ffd3de !important;
+					}
+				}
+				&:not(:last-child) {
+					padding-right: 0;
+				}
+			}
+			&__delivery-body {
+				padding-left: 0;
+			}
+			&__item {
+				width: unset;
+				margin-right: -30px;
+				margin-left: -30px;
+				&-cards {
+					padding-right: 10px;
+					border-right: none;
+					max-height: 60vh;
+				}
+				&-footer {
+					padding-left: 0;
+				}
+				&-promo {
+					margin-bottom: 30px;
+					&-button {
+						font-size: 16px;
+					}
+				}
+				&-price-wrapper {
+					margin-bottom: 20px;
+					div {
+						font-size: 16px;
+					}
+				}
+				&-delivery-price-wrapper {
+					margin-bottom: 30px;
+					div {
+						font-size: 16px;
+					}
+				}
+				&-summary-price-wrapper {
+					font-size: 18px;
+					margin-bottom: 30px;
+				}
+				&-callback-label {
+					font-size: 13px;
+				}
+				&-actions {
+					row-gap: 20px;
+				}
+			}
+
+			.tabs-content-order-item:last-child {
+				padding-bottom: 30px;
+			}
 		}
 	}
 }
