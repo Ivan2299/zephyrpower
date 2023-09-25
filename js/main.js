@@ -858,7 +858,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			.to(powerSliderBox, {
 				opacity: 1, // Появлення power-slider-box
 				y: '0%', // Зсув вниз для появи
-				duration: 2, // Збільшимо тривалість анімації для більшої затримки
+				duration: 1, // Збільшимо тривалість анімації для більшої затримки
 				once: true,
 			})
 			.from('.power .swiper-slide-active', {
@@ -876,14 +876,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Додамо затримку для появи слайдів після анімації power-slider-box
 		gsap.from('.power .swiper-slide', {
 			opacity: 0,
-			y: '-100px',
+			y: '-50px',
 			// stagger: 0.15,
-			duration: 0.5,
+			duration: 0.1,
 			scrollTrigger: {
 				trigger: '.power',
 				start: 'top center',
 				end: 'top bottom',
-				scrub: 2.5,
+				scrub: 1.5,
 				ease: 'power1.inOut',
 				once: true,
 			},

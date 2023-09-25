@@ -3695,6 +3695,11 @@ swiper-container .swiper-notification {
 }
 @media (max-width: 960px) {
   .footer__container {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 600px) {
+  .footer__container {
     padding: 0 20px;
   }
 }
@@ -6396,7 +6401,8 @@ swiper-container .swiper-notification {
 }
 .form-order__payment__label .checkmark {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex: 0 0 20px;
   width: 20px;
   height: 20px;
   border: 1px solid #ccc; /* Колір неактивного чекбоксу */
@@ -6426,7 +6432,6 @@ swiper-container .swiper-notification {
 }
 .form-order__delivery-wrapper {
   display: grid;
-  row-gap: 20px;
 }
 .form-order__delivery-title {
   margin-bottom: 40px;
@@ -6516,6 +6521,7 @@ swiper-container .swiper-notification {
   font-weight: 400;
 }
 .form-order__item-summary-price-wrapper {
+  font-size: 18px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -6613,6 +6619,186 @@ swiper-container .swiper-notification {
   .form-order__inner {
     -moz-column-gap: 10px;
          column-gap: 10px;
+  }
+}
+@media (max-width: 960px) {
+  .order {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+  .order .container__big {
+    padding: 0 60px;
+  }
+  .order .form-order__inner {
+    flex-direction: column;
+    gap: 70px;
+  }
+  .order .form-order__info {
+    flex-wrap: nowrap;
+    width: 100%;
+    flex-basis: unset;
+    padding-left: 0;
+  }
+  .order .form-order__list {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
+  .order .form-order__list li {
+    border-top: 5px solid transparent;
+  }
+  .order .form-order__list li:not(:last-child) {
+    padding-right: 36px;
+  }
+  .order .form-order__list li {
+    padding: 0;
+    border-left: none;
+  }
+  .order .form-order__list li.active {
+    border-top: 5px solid #ffd3de !important;
+    border-left: none;
+  }
+  .order .form-order__list li.preActive {
+    border-top: 5px solid #fbf9f9;
+    border-left: none;
+  }
+  .order .form-order__title {
+    margin-top: 60px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .order .form-order__list li::before {
+    left: 30px;
+  }
+  .order .form-order__contacts-inputs input {
+    pointer-events: all;
+    padding: 10px 0;
+  }
+  .order .form-order__contacts-inputs input:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .order .form-order__payment-buttons {
+    row-gap: 35px;
+  }
+  .order .form-order__payment__label {
+    padding-left: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+  }
+  .order .form-order__delivery-body {
+    row-gap: 10px;
+    padding-left: 30px;
+    padding-top: 20px;
+  }
+  .order .form-order__delivery-body input {
+    font-size: 13px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+  }
+  .order .form-order__delivery__inputs-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .order .form-order__item {
+    flex: 1 1 100%;
+    width: 100%;
+    padding: 30px 30px 40px 30px;
+    box-shadow: 0px 1px 29px 2px rgba(0, 0, 0, 0.25);
+  }
+  .order .form-order__item-title {
+    margin-bottom: 30px;
+    grid-column: span 2;
+  }
+  .order .form-order__item-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .order .form-order__item-cards {
+    padding-left: 0;
+    border-right: 1px solid #3f8f8d;
+    border-left: 0;
+    padding-right: 20px;
+    direction: ltr;
+    max-height: 52vh;
+  }
+  .order .tabs-content-order-item-img {
+    flex: 0 0 113px;
+  }
+  .order .form-order .tabs-content-order-item-title {
+    font-size: 16px;
+  }
+  .order .tabs-content-order-item-sup {
+    font-size: 12px;
+  }
+  .order .form-order .tabs-content-order-item {
+    margin-bottom: 30px;
+  }
+  .order .order-cloud-1 {
+    top: 44%;
+    left: 0;
+  }
+  .order .tabs-content-order-item-count-num {
+    font-size: 14px;
+  }
+  .order .tabs-content-order-item-price {
+    font-size: 14px;
+  }
+  .order .form-order input {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+  .order .form-order__item-footer {
+    padding-left: 40px;
+  }
+  .order .form-order__item-promo-button {
+    justify-self: inherit;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .order .form-order__item-delivery-price-wrapper {
+    margin-bottom: 40px;
+  }
+  .order .form-order__item-callback-label {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    font-size: 14px;
+  }
+  .order .form-order__item-callback-wrapper {
+    margin-bottom: 30px;
+  }
+  .order .form-order__item-actions {
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 30px;
+  }
+  .order .form-order__item-actions button {
+    padding: 15px 40px;
+  }
+  .order .form-order__item-actions a {
+    font-size: 13px;
+    text-decoration: underline;
+    text-align: center;
+  }
+  .order .form-order__item-summary-price-wrapper {
+    font-size: 16px;
+  }
+  .order .form-order__item-summary-price-wrapper .form-order__item-summary-price {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .order .form-order__item-inner {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .order .container__big {
+    padding: 0 30px;
+  }
+  .order .carttabs__breadcrumps {
+    margin-bottom: 20px;
+  }
+  .order .order__title {
+    font-size: 24px;
   }
 }
 .thanks__popup {
