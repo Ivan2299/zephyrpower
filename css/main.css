@@ -3054,6 +3054,11 @@ swiper-container .swiper-notification {
   padding-bottom: clamp(3.125rem, 2.216rem + 4.55vw, 5.625rem);
   overflow: hidden;
 }
+@media (max-width: 960px) {
+  .power {
+    padding-bottom: 0;
+  }
+}
 .power .swiper-pagination {
   visibility: hidden;
 }
@@ -3260,7 +3265,6 @@ swiper-container .swiper-notification {
     top: 16%;
   }
   .power .power-cloud-3 {
-    bottom: 15%;
     left: -43%;
   }
   .power .power-cloud-2 {
@@ -3268,7 +3272,6 @@ swiper-container .swiper-notification {
     top: 16%;
   }
   .power .power-cloud-4 {
-    bottom: 15%;
     right: -43%;
   }
   .power .power-slider {
@@ -3388,7 +3391,12 @@ swiper-container .swiper-notification {
 .hi__container {
   max-width: 1310px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 60px;
+}
+@media (max-width: 768px) {
+  .hi__container {
+    padding: 0 30px;
+  }
 }
 .hi__inner {
   display: flex;
@@ -3436,7 +3444,7 @@ swiper-container .swiper-notification {
 .hi__image-block::before {
   content: "";
   position: absolute;
-  bottom: -5%;
+  bottom: 0;
   left: 50%;
   width: 130%;
   height: 70%;
@@ -3463,23 +3471,58 @@ swiper-container .swiper-notification {
   }
 }
 @media (max-width: 960px) {
+  .hi__image {
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 960px) and (min-width: 768px) {
+  .hi__image img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+  }
+}
+@media (max-width: 960px) {
   .hi__image-block {
     margin: 0 50px;
+    display: flex;
   }
+}
+@media (max-width: 960px) and (min-width: 768px) {
+  .hi__image-block {
+    gap: 20px;
+    height: 100%;
+    margin: 0 35px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 960px) {
   .hi__image-block::before {
-    bottom: -7%;
+    bottom: 0;
   }
   .hi__image-ibg {
     padding-bottom: 169%;
   }
   .hi__image-wrapper {
+    display: flex;
+    flex-direction: column;
     align-self: stretch;
+    justify-content: flex-end;
   }
   .hi__image-name {
     text-align: center;
   }
+}
+@media (max-width: 960px) and (min-width: 768px) {
+  .hi__image-name {
+    padding-bottom: 58px;
+  }
+}
+@media (max-width: 960px) {
   .hi {
-    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 50px;
   }
   .hi__inner {
     -moz-column-gap: 50px;
@@ -3557,6 +3600,16 @@ swiper-container .swiper-notification {
   }
   .hi__title {
     text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  .hi__image-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hi__image-name {
+    padding-bottom: 20px;
   }
 }
 .form-wrapper {
@@ -3650,7 +3703,7 @@ swiper-container .swiper-notification {
 }
 @media (max-width: 960px) {
   .form-wrapper {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .form-wrapper .form-cloud-1,
   .form-wrapper .form-cloud-2 {

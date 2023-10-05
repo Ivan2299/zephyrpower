@@ -2,6 +2,9 @@
 	position: relative;
 	padding-bottom: clamp(3.125rem, 2.216rem + 4.55vw, 5.625rem);
 	overflow: hidden;
+	@media (max-width: (960px)) {
+		padding-bottom: 0;
+	}
 	.swiper-pagination {
 		visibility: hidden;
 		@media (max-width: (960px)) {
@@ -160,7 +163,7 @@
 			.power-slider-instagram,
 			.swiper-button-next,
 			.swiper-button-prev {
-			filter: drop-shadow(0px 7px 5px #f8acac);
+				filter: drop-shadow(0px 7px 5px #f8acac);
 			}
 		}
 		.swiper-slide {
@@ -232,7 +235,6 @@
 			top: 16%;
 		}
 		.power-cloud-3 {
-			bottom: 15%;
 			left: -43%;
 		}
 		.power-cloud-2 {
@@ -240,7 +242,6 @@
 			top: 16%;
 		}
 		.power-cloud-4 {
-			bottom: 15%;
 			right: -43%;
 		}
 		.power-slider {
