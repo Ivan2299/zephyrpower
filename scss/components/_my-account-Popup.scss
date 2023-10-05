@@ -193,6 +193,18 @@
 
 @media (max-width: (960px)) {
 	.myaccount__popup {
+		&-cloud-top-left {
+			left: -56%;
+		}
+		&-cloud-bottom-left {
+			left: -25%;
+		}
+		&-cloud-bottom-right {
+			right: -25%;
+		}
+		&-cloud-top-right {
+			right: -56%;
+		}
 		&-content {
 			max-width: 595px;
 			padding: 40px 144px;

@@ -440,6 +440,10 @@
 	.carttabs {
 		padding: 0 50px;
 	}
+	.reviews__form-rating-label {
+		font-size: 15px;
+		font-weight: 500;
+	}
 	.carttabs__breadcrumps {
 		margin-bottom: 30px;
 	}
@@ -561,6 +565,13 @@
 			grid-row: 1/6;
 			grid-column: 2 / 3;
 			margin-bottom: 0;
+			padding: 30px 63px 30px 30px;
+			&::placeholder {
+				font-size: 12px;
+				font-weight: 300;
+				color: #9e9e9e;
+				line-height: 1.2;
+			}
 		}
 
 		&__content {
