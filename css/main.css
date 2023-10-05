@@ -3707,7 +3707,7 @@ swiper-container .swiper-notification {
   }
   .form-wrapper .form-cloud-1,
   .form-wrapper .form-cloud-2 {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 768px) {
@@ -3762,6 +3762,14 @@ swiper-container .swiper-notification {
   align-items: flex-start;
   -moz-column-gap: clamp(1.25rem, 0.644rem + 3.03vw, 3.125rem);
        column-gap: clamp(1.25rem, 0.644rem + 3.03vw, 3.125rem);
+}
+@media (min-width: 960px) {
+  .footer__inner :nth-child(5) {
+    margin-left: 40px;
+  }
+}
+.footer__inner .footer__item-social {
+  margin-left: 40px;
 }
 .footer__logo {
   display: flex;

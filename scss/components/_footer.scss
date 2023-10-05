@@ -27,6 +27,14 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		column-gap: clamp(1.25rem, 0.644rem + 3.03vw, 3.125rem);
+		@media (min-width: (960px)) {
+			:nth-child(5) {
+				margin-left: 40px;
+			}
+		}
+		.footer__item-social {
+			margin-left: 40px;
+		}
 	}
 
 	// .footer__logo
