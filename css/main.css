@@ -6628,6 +6628,9 @@ swiper-container .swiper-notification {
   opacity: 0;
   pointer-events: none;
 }
+.form-order__delivery {
+  border-left: transparent !important;
+}
 .form-order__delivery-wrapper {
   display: grid;
 }
@@ -6855,6 +6858,9 @@ swiper-container .swiper-notification {
     border-top: 5px solid #ffd3de !important;
     border-left: none;
   }
+  .order .form-order__list li:last-child {
+    border-top: transparent !important;
+  }
   .order .form-order__list li.preActive {
     border-top: 5px solid #fbf9f9;
     border-left: none;
@@ -7050,54 +7056,60 @@ swiper-container .swiper-notification {
   .order .form-order__list li.preActive.active {
     border-left: 5px solid #ffd3de !important;
   }
+  .order .form-order__list li.preActive.active:last-child {
+    border-left: transparent !important;
+  }
   .order .form-order__list li:not(:last-child) {
     padding-right: 0;
   }
-  .order .form-order__delivery-body {
+  .order .form-order__list li:last-child {
+    border-left: transparent !important;
+  }
+  .order__delivery-body {
     padding-left: 0;
   }
-  .order .form-order__item {
+  .order__item {
     width: unset;
     margin-right: -30px;
     margin-left: -30px;
   }
-  .order .form-order__item-cards {
+  .order__item-cards {
     padding-right: 10px;
     border-right: none;
     max-height: 60vh;
   }
-  .order .form-order__item-footer {
+  .order__item-footer {
     padding-left: 0;
   }
-  .order .form-order__item-promo {
+  .order__item-promo {
     margin-bottom: 30px;
   }
-  .order .form-order__item-promo-button {
+  .order__item-promo-button {
     font-size: 16px;
   }
-  .order .form-order__item-price-wrapper {
+  .order__item-price-wrapper {
     margin-bottom: 20px;
   }
-  .order .form-order__item-price-wrapper div {
+  .order__item-price-wrapper div {
     font-size: 16px;
   }
-  .order .form-order__item-delivery-price-wrapper {
+  .order__item-delivery-price-wrapper {
     margin-bottom: 30px;
   }
-  .order .form-order__item-delivery-price-wrapper div {
+  .order__item-delivery-price-wrapper div {
     font-size: 16px;
   }
-  .order .form-order__item-summary-price-wrapper {
+  .order__item-summary-price-wrapper {
     font-size: 18px;
     margin-bottom: 30px;
   }
-  .order .form-order__item-callback-label {
+  .order__item-callback-label {
     font-size: 13px;
   }
-  .order .form-order__item-actions {
+  .order__item-actions {
     row-gap: 20px;
   }
-  .order .form-order .tabs-content-order-item:last-child {
+  .order .tabs-content-order-item:last-child {
     padding-bottom: 30px;
   }
 }

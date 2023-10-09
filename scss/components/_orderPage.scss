@@ -49,6 +49,7 @@
 	&__list {
 		counter-reset: custom-counter;
 		list-style-type: none;
+
 		li {
 			position: relative;
 			counter-increment: custom-counter;
@@ -202,6 +203,7 @@
 	}
 
 	&__delivery {
+		border-left: transparent !important;
 		&-wrapper {
 			display: grid;
 		}
@@ -523,6 +525,12 @@
 			border-top: 5px solid #ffd3de !important;
 			border-left: none;
 		}
+		.form-order__list li {
+			&:last-child {
+				border-top: transparent !important;
+			}
+		}
+
 		.form-order__list li.preActive {
 			border-top: 5px solid #fbf9f9;
 			border-left: none;
@@ -724,60 +732,67 @@
 					border-left: 5px solid #fbf9f9 !important;
 					&.active {
 						border-left: 5px solid #ffd3de !important;
+						&:last-child{
+							border-left: transparent !important;
+						}
 					}
 				}
 				&:not(:last-child) {
 					padding-right: 0;
 				}
+				&:last-child {
+					border-left: transparent !important;
+				}
 			}
-			&__delivery-body {
+		}
+
+		&__delivery-body {
+			padding-left: 0;
+		}
+		&__item {
+			width: unset;
+			margin-right: -30px;
+			margin-left: -30px;
+			&-cards {
+				padding-right: 10px;
+				border-right: none;
+				max-height: 60vh;
+			}
+			&-footer {
 				padding-left: 0;
 			}
-			&__item {
-				width: unset;
-				margin-right: -30px;
-				margin-left: -30px;
-				&-cards {
-					padding-right: 10px;
-					border-right: none;
-					max-height: 60vh;
-				}
-				&-footer {
-					padding-left: 0;
-				}
-				&-promo {
-					margin-bottom: 30px;
-					&-button {
-						font-size: 16px;
-					}
-				}
-				&-price-wrapper {
-					margin-bottom: 20px;
-					div {
-						font-size: 16px;
-					}
-				}
-				&-delivery-price-wrapper {
-					margin-bottom: 30px;
-					div {
-						font-size: 16px;
-					}
-				}
-				&-summary-price-wrapper {
-					font-size: 18px;
-					margin-bottom: 30px;
-				}
-				&-callback-label {
-					font-size: 13px;
-				}
-				&-actions {
-					row-gap: 20px;
+			&-promo {
+				margin-bottom: 30px;
+				&-button {
+					font-size: 16px;
 				}
 			}
+			&-price-wrapper {
+				margin-bottom: 20px;
+				div {
+					font-size: 16px;
+				}
+			}
+			&-delivery-price-wrapper {
+				margin-bottom: 30px;
+				div {
+					font-size: 16px;
+				}
+			}
+			&-summary-price-wrapper {
+				font-size: 18px;
+				margin-bottom: 30px;
+			}
+			&-callback-label {
+				font-size: 13px;
+			}
+			&-actions {
+				row-gap: 20px;
+			}
+		}
 
-			.tabs-content-order-item:last-child {
-				padding-bottom: 30px;
-			}
+		.tabs-content-order-item:last-child {
+			padding-bottom: 30px;
 		}
 	}
 }
