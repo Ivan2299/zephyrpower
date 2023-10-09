@@ -638,6 +638,7 @@
 		display: grid;
 		grid-template-columns: 1fr auto auto;
 		justify-items: center;
+		background-color: white;
 	}
 
 	.burger-menu-button-wrapper {
@@ -739,6 +740,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		bottom: 0;
+		padding: 0 30px 30px 30px;
 	}
 	.burger-menu-button-wrapper {
 		margin-left: unset;
