@@ -261,6 +261,15 @@
 	.hi__title {
 		text-align: center;
 	}
+	.hi .hi-cloud-1 {
+		display: none;
+		&-375 {
+			display: block;
+			position: absolute;
+			top: -7%;
+			right: 0;
+		}
+	}
 }
 
 @media (min-width: (1200px)) {
