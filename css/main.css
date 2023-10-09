@@ -3928,6 +3928,18 @@ swiper-container .swiper-notification {
     transform: rotate(180deg);
   }
 }
+@media (max-width: 400px) {
+  .footer__item:nth-child(6) ul li:first-child {
+    margin-bottom: 30px;
+  }
+  .footer__item:nth-child(7) ul li:first-child span {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  .footer__item-social {
+    margin-left: 0 !important;
+  }
+}
 .specialorder {
   position: relative;
   padding-top: 150px;
