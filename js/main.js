@@ -426,6 +426,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	function initializeMyAccountPopup(buttonSelector) {
 		const buttons = document.querySelectorAll(buttonSelector);
 		const popup = document.getElementById('my-account-Popup');
+		const header = document.querySelector('.burger-menu-body');
 
 		buttons.forEach(button => {
 			button.addEventListener('click', () => {
@@ -433,6 +434,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				myaccaountPopupAnimation();
 				fadeIn(popup, 500);
 				document.body.style.overflow = 'hidden';
+				header.classList.remove('active');
 			});
 		});
 
@@ -556,6 +558,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let burgerMenuIcon = document.querySelector('.burger-menu-icon');
 		let burgerMenuBody = document.querySelector('.burger-menu-body');
 		let burgerMenuLists = document.querySelector('.burger-menu-lists');
+		
 
 		document.addEventListener('click', function (event) {
 			if (!burgerMenuLists.contains(event.target)) {

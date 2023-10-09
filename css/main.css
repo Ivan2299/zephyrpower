@@ -3378,6 +3378,9 @@ swiper-container .swiper-notification {
   bottom: 0;
   right: 0;
 }
+.hi .hi-cloud-1-375 {
+  display: none;
+}
 .hi .hi-cloud-1.animated {
   animation: smallTranslateCloudReverse 10s ease-in-out infinite;
 }
@@ -5600,6 +5603,7 @@ swiper-container .swiper-notification {
 @media (max-width: 499px) {
   .myaccount__popup {
     z-index: 8;
+    overflow: hidden;
   }
   .myaccount__popup-content {
     border-top: 1px solid #3f8f8d;
@@ -5916,6 +5920,10 @@ swiper-container .swiper-notification {
 .myaccountpage .bestsellers__item-info {
   padding: 10px 0;
 }
+.myaccountpage .swiper-container {
+  padding: 5px 0;
+}
+
 .accordion-content {
   max-height: 0;
   overflow: hidden;
