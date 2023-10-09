@@ -4027,10 +4027,10 @@ swiper-container .swiper-notification {
     row-gap: 50px;
   }
   .specialorder .specialorder__contacts-block {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    -moz-column-gap: 23px;
+         column-gap: 23px;
     row-gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 335px 1fr;
   }
   .specialorder .specialorder__contacts-textarea {
     border-radius: 0px 0px 50px 0px;
@@ -4041,6 +4041,7 @@ swiper-container .swiper-notification {
   }
   .specialorder .specialorder__contacts-btn {
     grid-column: 2/3;
+    padding: 14px 57px;
   }
   .specialorder .specialorder-cloud-top-right {
     display: none;
