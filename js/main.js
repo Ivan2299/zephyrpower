@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const sliderPower = document.querySelector('.power-slider');
 	const sliderSpecial = document.querySelector('.special-slider');
 	const sliderCategory = document.querySelector('.myaccountpage .swiper-container');
+	const sliderTabs = document.querySelector('.carttabs .swiper-container');
 
 	let slider1 = new Swiper(verrticalSliderBanner, {
 		direction: 'vertical',
@@ -327,6 +328,49 @@ document.addEventListener('DOMContentLoaded', function () {
 		handleWindowSizeChange();
 	};
 	sliderCategoryfunction();
+	let sliderTabsFunction = () => {
+		let swiper;
+
+		function initSwiper() {
+			swiper = new Swiper(sliderTabs, {
+				slidesPerView: '5',
+				spaceBetween: 20,
+
+				pagination: {
+					el: '.swiper-pagination',
+					dynamicBullets: true,
+				},
+
+				breakpoints: {
+					320: {
+						slidesPerView: 4,
+					},
+					960: {
+						slidesPerView: 6,
+					},
+				},
+			});
+		}
+
+		function destroySwiper() {
+			if (swiper) {
+				swiper.destroy();
+				swiper = null;
+			}
+		}
+
+		function handleWindowSizeChange() {
+			if (window.innerWidth <= 960) {
+				initSwiper();
+			} else {
+				destroySwiper();
+			}
+		}
+
+		window.addEventListener('resize', handleWindowSizeChange);
+		handleWindowSizeChange();
+	};
+	sliderTabsFunction();
 
 	slider1.controller.control = slider2;
 	slider2.controller.control = slider1;
@@ -558,7 +602,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		let burgerMenuIcon = document.querySelector('.burger-menu-icon');
 		let burgerMenuBody = document.querySelector('.burger-menu-body');
 		let burgerMenuLists = document.querySelector('.burger-menu-lists');
-		
 
 		document.addEventListener('click', function (event) {
 			if (!burgerMenuLists.contains(event.target)) {

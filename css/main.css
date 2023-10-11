@@ -4356,6 +4356,49 @@ swiper-container .swiper-notification {
     margin-top: 120px;
   }
 }
+.carttabs .swiper {
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .carttabs .swiper {
+    width: 60vw;
+  }
+}
+@media (max-width: 960px) {
+  .carttabs .swiper {
+    width: 50vw;
+  }
+}
+@media (max-width: 500px) {
+  .carttabs .swiper {
+    width: 80vw;
+  }
+}
+.carttabs .swiper-pagination {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.carttabs .swiper-pagination .swiper-pagination-bullet {
+  background-color: #555555;
+}
+.carttabs .swiper-slide {
+  margin-left: 30px;
+  width: 88px;
+  height: 60px;
+}
+@media (max-width: 960px) {
+  .carttabs .swiper-slide {
+    width: 71px;
+    height: 48px;
+    margin-left: 0;
+  }
+}
 .carttabs .tab-pane {
   animation: fadeEffect 2s; /* Fading effect takes 1 second */
 }
@@ -4874,6 +4917,9 @@ swiper-container .swiper-notification {
 @media (max-width: 500px) {
   .carttabs {
     margin-top: 80px;
+  }
+  .carttabs .carttabs__tabs {
+    row-gap: 20px;
   }
   .carttabs .carttabs__content-button-add {
     justify-content: center;
