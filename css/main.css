@@ -7359,6 +7359,21 @@ swiper-container .swiper-notification {
     z-index: 1;
   }
 }
+@media (max-width: 500px) {
+  .thanks__popup .orderthanks__popup-content {
+    padding: 20px;
+  }
+  .thanks__popup-sup {
+    margin-top: 20px;
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
 .notfound {
   min-height: 100vh;
   background: url("/img/images/404/bg.png") center center no-repeat;
