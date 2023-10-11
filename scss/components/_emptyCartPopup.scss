@@ -80,11 +80,12 @@
 }
 @media (max-width: (500px)) {
 	.emptycart__popup {
+		overflow: hidden;
 		z-index: 7;
 		&-cloud {
 			display: none;
 		}
-		d &-title {
+		&-title {
 			max-width: 190px;
 		}
 
@@ -94,7 +95,7 @@
 		}
 
 		&-content {
-			padding: 30px 20px;
+			padding: 30px 30px;
 			border-radius: 0;
 			border-top: 1px solid $mainLightBlue;
 			margin: 70px auto 0;
@@ -102,6 +103,19 @@
 		}
 		&-top {
 			margin-bottom: 30px;
+		}
+		.cartpage__item {
+			grid-template-columns: 2fr 1fr 1fr;
+			border-right: none;
+		}
+		.cartpage__button-wrapper {
+			width: 100%;
+			a {
+				width: 100%;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
 		}
 	}
 }

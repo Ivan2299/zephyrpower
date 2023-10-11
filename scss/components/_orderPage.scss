@@ -705,6 +705,47 @@
 			font-size: 16px;
 		}
 		.form-order {
+			&__item {
+				width: unset;
+				margin-right: -30px;
+				margin-left: -30px;
+				&-cards {
+					padding-right: 10px;
+					border-right: none;
+					max-height: 60vh;
+				}
+				&-footer {
+					padding-left: 0;
+				}
+				&-promo {
+					margin-bottom: 30px;
+					&-button {
+						font-size: 16px;
+					}
+				}
+				&-price-wrapper {
+					margin-bottom: 20px;
+					div {
+						font-size: 16px;
+					}
+				}
+				&-delivery-price-wrapper {
+					margin-bottom: 30px;
+					div {
+						font-size: 16px;
+					}
+				}
+				&-summary-price-wrapper {
+					font-size: 18px;
+					margin-bottom: 30px;
+				}
+				&-callback-label {
+					font-size: 13px;
+				}
+				&-actions {
+					row-gap: 20px;
+				}
+			}
 			&__info {
 				padding-left: 30px;
 			}
@@ -732,7 +773,7 @@
 					border-left: 5px solid #fbf9f9 !important;
 					&.active {
 						border-left: 5px solid #ffd3de !important;
-						&:last-child{
+						&:last-child {
 							border-left: transparent !important;
 						}
 					}
@@ -748,47 +789,6 @@
 
 		&__delivery-body {
 			padding-left: 0;
-		}
-		&__item {
-			width: unset;
-			margin-right: -30px;
-			margin-left: -30px;
-			&-cards {
-				padding-right: 10px;
-				border-right: none;
-				max-height: 60vh;
-			}
-			&-footer {
-				padding-left: 0;
-			}
-			&-promo {
-				margin-bottom: 30px;
-				&-button {
-					font-size: 16px;
-				}
-			}
-			&-price-wrapper {
-				margin-bottom: 20px;
-				div {
-					font-size: 16px;
-				}
-			}
-			&-delivery-price-wrapper {
-				margin-bottom: 30px;
-				div {
-					font-size: 16px;
-				}
-			}
-			&-summary-price-wrapper {
-				font-size: 18px;
-				margin-bottom: 30px;
-			}
-			&-callback-label {
-				font-size: 13px;
-			}
-			&-actions {
-				row-gap: 20px;
-			}
 		}
 
 		.tabs-content-order-item:last-child {
